@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FINALObservatorioNet.Models.Secciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Secciones</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Titulo Pregunta
+        </th>
+        
+        <th>
+            Fecha
+        </th>
+        
+        <th>
+            Tipo
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdSecciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TituloRedes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha2)
+        </td>
+        <td>
+            @switch (item.Tipo)
+            {
+                case 0:
+                    <p>Principal</p>
+                    break;
+                case 1:
+                    <p>Aplicación</p>
+                    break;
+                case 2:
+                    <p>Visualización</p>
+                    break;
+                case 3:
+                    <p>Publicación</p>
+                    break;
+                case 4:
+                    <p>Proyecto</p>
+                    break;
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdSecciones }) @*|
+            @Html.ActionLink("Detalles", "Details", new { id=item.IdSecciones }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdSecciones })*@
+        </td>
+    
+        </tr>
+}
+
+</table>

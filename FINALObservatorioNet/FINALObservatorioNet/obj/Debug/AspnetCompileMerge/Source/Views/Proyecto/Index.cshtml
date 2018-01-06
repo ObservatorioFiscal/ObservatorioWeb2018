@@ -1,0 +1,188 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+
+    ViewData["menu4"] = "active";
+}
+
+
+<div class="row cuadro-contenido">
+    <div class="cuadro-padding">
+        <section class="col-md-12">
+            <h1>@Model.TituloInterna</h1>
+            <h6>@Model.SubTitulo</h6>
+            <p>@Model.DescripcionSuperior<br /></p>
+            <hr />
+        </section>
+        <div class="row">
+            <section class="col-md-12">
+                <div class="row" id="divProyectos">
+                    <article class="col-md-6 col-lg-6 rowdiv div-item-proyecto">
+                        <div class="cuadro-contenido">
+                            <a href="/proyecto/gastoamigable">
+                                <div class="div-relative">
+                                    <figure>
+                                        <img src="~/Content/images/seccion/4003.png" />
+                                    </figure>
+                                </div>
+                                <div class="div-relative cuadro-padding-destacado">
+                                    <header>
+                                        <h5>Portal de gasto amigable Municipal</h5>
+                                    </header>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="col-md-6 col-lg-6 rowdiv div-item-proyecto">
+                        <div class="cuadro-contenido">
+                            <div class="div-relative">
+                                <figure>
+                                    <a href="/proyecto/datosentendibles">
+                                        <img src="~/Content/images/seccion/4002.png" class="img-width" />
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="div-relative cuadro-padding-destacado">
+                                <header>
+                                    <h5><a href="">Agenda de transparencia y rendición de cuentas públicas</a></h5>
+                                </header>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-6 col-lg-6 rowdiv div-item-proyecto">
+                        <div class="cuadro-contenido">
+                            <div class="div-relative">
+                                <figure>
+                                    <a href="/proyecto/compraspublicas">
+                                        <img src="~/Content/images/seccion/4001.png" class="img-width" />
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="div-relative cuadro-padding-destacado">
+                                <header>
+                                    <h5><a href="">Observatorio Ciudadano de Compras Públicas</a></h5>
+                                </header>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+        </div>
+        <div class="row">
+            <p>@Model.DescripcionInferior</p>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+    {
+    <script>
+        var pagina = 0;
+        var etiqueta = "";
+        var orden = "";
+
+        document.addEventListener("DOMContentLoaded", function () {
+            filtroVisualizacion();
+        }, false);
+
+        function filtroVisualizacion() {
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    pagina: pagina,
+                    tags: etiqueta,
+                    orden: orden
+                },
+                url: '../../Visualizacion/FiltroListadoVisualizacion',
+                dataType: 'json',
+                success: function (data) {
+                    var aux = 0;
+                    $.each(data, function (i, item) {
+                        aux++;
+                        $("#divVisualizaciones").append(nuevaVisualizacion(item));
+                    });
+                    if (aux > 12) {
+                        $("#divVisualizaciones").append('<div class="col-12"><div class="cuadro-contenido"><p class="text-center"><a onclick="filtroAplicacion()"> Ver más</a></p></div></div>');
+                    }
+                    else {
+                        $("#divVisualizaciones").append('<div class="col-12"><div class="cuadro-contenido"><p class="text-center">No hay más.</p></div></div>');
+                    }
+                    pagina = pagina + 1;
+                },
+                error: function (msg) {
+                    $('#btnagendar').attr('disabled', false);
+                }
+            });
+        }
+
+        function nuevaVisualizacion(item) {
+            return '\
+                <article class="col-md-6 col-lg-4 rowdiv div-item-visualizacion">\
+                    <div class="cuadro-contenido">\
+                        <div class="div-relative img-div">\
+                            <small class="etiqueta">'+ item.etiquetas + '</small>\
+                            <img src="images/seccion/visualizacion/'+ item.imagenUrl+'" />\
+                        </div>\
+                        <div class="div-relative cuadro-padding-destacado cont-heigh">\
+                            <header>\
+                                <h5><a href="'+ item.urlDireccion +'">'+ item.tituloPregunta+'</a></h5>\
+                            </header>\
+                            <section>\
+                                <p class="cuadro-texto">'+ item.resumen + '</p>\
+                            </section>\
+                            <footer class="fecha-left">\
+                                <p class="small">'+ item.fecha + '</p>\
+                            </footer>\
+                        </div>\
+                    </div>\
+                </article>\
+                ';
+        }
+
+        function MostrarFiltro() {
+            if ($(".filtro").css("display") == "block") {
+                $(".filtro").css("display", "none")
+            }
+            else {
+                $(".filtro").css("display", "block")
+            }
+
+        }
+
+        $(document).ready(function () {
+            $("#orden-Busqueda").change(function () {
+                orden = $(this).val();
+                pagina = 0;
+                $("#divVisualizaciones").empty();
+                filtroVisualizacion()
+
+            });
+
+            $(".tags-Busqueda").click(function () {
+                if ($(this).children(".tags-selecter")[0]) {
+                    etiqueta = "";
+                    $(".tags").removeClass("tags-selecter");
+                }
+                else {
+                    etiqueta = $(this).attr('name');
+                    $(".tags").removeClass("tags-selecter");
+                    $(this).children(".tags").addClass("tags-selecter");
+                }
+                pagina = 0;
+                $("#divVisualizaciones").empty();
+                filtroVisualizacion()
+
+            });
+        });
+    </script>
+}

@@ -1,0 +1,1613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="base999Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="base999Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abuelo_Biblioteca" EntityType="base999Model.Abuelo_Biblioteca" />
+    <EntitySet Name="AbueloCirculosVarios" EntityType="base999Model.AbueloCirculosVarios" />
+    <EntitySet Name="AplicacionQuiz" EntityType="base999Model.AplicacionQuiz" />
+    <EntitySet Name="AppMunicipalidad" EntityType="base999Model.AppMunicipalidad" />
+    <EntitySet Name="Area_googleChart_Area" EntityType="base999Model.Area_googleChart_Area" />
+    <EntitySet Name="Barra_amChart_HorizontalBar" EntityType="base999Model.Barra_amChart_HorizontalBar" />
+    <EntitySet Name="Categoria_Plotly_Listbox" EntityType="base999Model.Categoria_Plotly_Listbox" />
+    <EntitySet Name="Circulos_Grafico_d3Object_Bubble" EntityType="base999Model.Circulos_Grafico_d3Object_Bubble" />
+    <EntitySet Name="Cuadrados_d3Object_TreeMap" EntityType="base999Model.Cuadrados_d3Object_TreeMap" />
+    <EntitySet Name="Datos_googleChart_Area" EntityType="base999Model.Datos_googleChart_Area" />
+    <EntitySet Name="Datos_googleChart_Line" EntityType="base999Model.Datos_googleChart_Line" />
+    <EntitySet Name="Datos_Grafico_Plotly_Line" EntityType="base999Model.Datos_Grafico_Plotly_Line" />
+    <EntitySet Name="DatosAPP" EntityType="base999Model.DatosAPP" />
+    <EntitySet Name="DatosApp2" EntityType="base999Model.DatosApp2" />
+    <EntitySet Name="DatosdupliCirculosVarios" EntityType="base999Model.DatosdupliCirculosVarios" />
+    <EntitySet Name="DatosSoloUnoCirculosVarios" EntityType="base999Model.DatosSoloUnoCirculosVarios" />
+    <EntitySet Name="Encuesta" EntityType="base999Model.Encuesta" />
+    <EntitySet Name="Estudio" EntityType="base999Model.Estudio" />
+    <EntitySet Name="EstudioCategoria" EntityType="base999Model.EstudioCategoria" />
+    <EntitySet Name="FeedSocial" EntityType="base999Model.FeedSocial" />
+    <EntitySet Name="FeedSocial2" EntityType="base999Model.FeedSocial2" />
+    <EntitySet Name="Formulario" EntityType="base999Model.Formulario" />
+    <EntitySet Name="Grafico_amChart_HorizontalBar" EntityType="base999Model.Grafico_amChart_HorizontalBar" />
+    <EntitySet Name="Grafico_Biblioteca" EntityType="base999Model.Grafico_Biblioteca" />
+    <EntitySet Name="Grafico_d3Object_Bubble" EntityType="base999Model.Grafico_d3Object_Bubble" />
+    <EntitySet Name="Grafico_d3Object_TreeMap" EntityType="base999Model.Grafico_d3Object_TreeMap" />
+    <EntitySet Name="Grafico_googleChart_Area" EntityType="base999Model.Grafico_googleChart_Area" />
+    <EntitySet Name="Grafico_googleChart_Line" EntityType="base999Model.Grafico_googleChart_Line" />
+    <EntitySet Name="Grafico_googleChart_Pie" EntityType="base999Model.Grafico_googleChart_Pie" />
+    <EntitySet Name="Grafico_Plotly_Line" EntityType="base999Model.Grafico_Plotly_Line" />
+    <EntitySet Name="Grafico_Plotly_Listbox" EntityType="base999Model.Grafico_Plotly_Listbox" />
+    <EntitySet Name="Grafico_Timeline" EntityType="base999Model.Grafico_Timeline" />
+    <EntitySet Name="GraficoCircularesVarios" EntityType="base999Model.GraficoCircularesVarios" />
+    <EntitySet Name="GraficoLineasSeparadas" EntityType="base999Model.GraficoLineasSeparadas" />
+    <EntitySet Name="Hijo_Biblioteca" EntityType="base999Model.Hijo_Biblioteca" />
+    <EntitySet Name="Hijo_Grafico_Timeline" EntityType="base999Model.Hijo_Grafico_Timeline" />
+    <EntitySet Name="HijoCirculosVarios" EntityType="base999Model.HijoCirculosVarios" />
+    <EntitySet Name="HijoLineasSeparadas" EntityType="base999Model.HijoLineasSeparadas" />
+    <EntitySet Name="Indicadores" EntityType="base999Model.Indicadores" />
+    <EntitySet Name="Json" EntityType="base999Model.Json" />
+    <EntitySet Name="JsonVistas" EntityType="base999Model.JsonVistas" />
+    <EntitySet Name="Lineas_googleChart_Line" EntityType="base999Model.Lineas_googleChart_Line" />
+    <EntitySet Name="Lineas_Grafico_Plotly_Line" EntityType="base999Model.Lineas_Grafico_Plotly_Line" />
+    <EntitySet Name="Lineas_Plotly_Listbox" EntityType="base999Model.Lineas_Plotly_Listbox" />
+    <EntitySet Name="nivel1" EntityType="base999Model.nivel1" />
+    <EntitySet Name="nivel11" EntityType="base999Model.nivel11" />
+    <EntitySet Name="nivel2" EntityType="base999Model.nivel2" />
+    <EntitySet Name="nivel22" EntityType="base999Model.nivel22" />
+    <EntitySet Name="nivel3" EntityType="base999Model.nivel3" />
+    <EntitySet Name="nivel4" EntityType="base999Model.nivel4" />
+    <EntitySet Name="nivel5" EntityType="base999Model.nivel5" />
+    <EntitySet Name="Noticias" EntityType="base999Model.Noticias" />
+    <EntitySet Name="Padre_Biblioteca" EntityType="base999Model.Padre_Biblioteca" />
+    <EntitySet Name="Padre_Grafico_Timeline" EntityType="base999Model.Padre_Grafico_Timeline" />
+    <EntitySet Name="PadreLineasSeparados" EntityType="base999Model.PadreLineasSeparados" />
+    <EntitySet Name="PapaCirculosVarios" EntityType="base999Model.PapaCirculosVarios" />
+    <EntitySet Name="PreguntasFrecuentes" EntityType="base999Model.PreguntasFrecuentes" />
+    <EntitySet Name="RegistroAppMunicipal" EntityType="base999Model.RegistroAppMunicipal" />
+    <EntitySet Name="Secciones" EntityType="base999Model.Secciones" />
+    <EntitySet Name="SubCategoria_Plotly_Listbox" EntityType="base999Model.SubCategoria_Plotly_Listbox" />
+    <EntitySet Name="SubCirculos_Grafico_d3Object_Bubble" EntityType="base999Model.SubCirculos_Grafico_d3Object_Bubble" />
+    <EntitySet Name="SubCuadrados_d3Object_TreeMap" EntityType="base999Model.SubCuadrados_d3Object_TreeMap" />
+    <EntitySet Name="Tabla_amChart_HorizontalBar" EntityType="base999Model.Tabla_amChart_HorizontalBar" />
+    <EntitySet Name="Torta_Grafico_googleChart_Pie" EntityType="base999Model.Torta_Grafico_googleChart_Pie" />
+    <EntitySet Name="view_ListaSeccionAplicacion" EntityType="base999Model.view_ListaSeccionAplicacion" />
+    <EntitySet Name="view_ListaSeccionEtiqueta" EntityType="base999Model.view_ListaSeccionEtiqueta" />
+    <EntitySet Name="view_ListaSeccionNoticia" EntityType="base999Model.view_ListaSeccionNoticia" />
+    <EntitySet Name="view_ListaSeccionPublicacion" EntityType="base999Model.view_ListaSeccionPublicacion" />
+    <EntitySet Name="view_ListaSeccionVisualizacion" EntityType="base999Model.view_ListaSeccionVisualizacion" />
+    <AssociationSet Name="FK__Abuelo_Bi__Idgra__25869641" Association="base999Model.FK__Abuelo_Bi__Idgra__25869641">
+      <End Role="Grafico_Biblioteca" EntitySet="Grafico_Biblioteca" />
+      <End Role="Abuelo_Biblioteca" EntitySet="Abuelo_Biblioteca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Padre_Bib__IdAbu__0A9D95DB" Association="base999Model.FK__Padre_Bib__IdAbu__0A9D95DB">
+      <End Role="Abuelo_Biblioteca" EntitySet="Abuelo_Biblioteca" />
+      <End Role="Padre_Biblioteca" EntitySet="Padre_Biblioteca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AbueloCir__IdGra__2A4B4B5E" Association="base999Model.FK__AbueloCir__IdGra__2A4B4B5E">
+      <End Role="GraficoCircularesVarios" EntitySet="GraficoCircularesVarios" />
+      <End Role="AbueloCirculosVarios" EntitySet="AbueloCirculosVarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PapaCircu__IdAbu__160F4887" Association="base999Model.FK__PapaCircu__IdAbu__160F4887">
+      <End Role="AbueloCirculosVarios" EntitySet="AbueloCirculosVarios" />
+      <End Role="PapaCirculosVarios" EntitySet="PapaCirculosVarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Area_goog__IdGra__38996AB5" Association="base999Model.FK__Area_goog__IdGra__38996AB5">
+      <End Role="Grafico_googleChart_Area" EntitySet="Grafico_googleChart_Area" />
+      <End Role="Area_googleChart_Area" EntitySet="Area_googleChart_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Datos_goo__IdLin__5812160E" Association="base999Model.FK__Datos_goo__IdLin__5812160E">
+      <End Role="Area_googleChart_Area" EntitySet="Area_googleChart_Area" />
+      <End Role="Datos_googleChart_Area" EntitySet="Datos_googleChart_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Barra_amC__IdGra__46E78A0C" Association="base999Model.FK__Barra_amC__IdGra__46E78A0C">
+      <End Role="Grafico_amChart_HorizontalBar" EntitySet="Grafico_amChart_HorizontalBar" />
+      <End Role="Barra_amChart_HorizontalBar" EntitySet="Barra_amChart_HorizontalBar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tabla_amC__idlin__3A4CA8FD" Association="base999Model.FK__Tabla_amC__idlin__3A4CA8FD">
+      <End Role="Barra_amChart_HorizontalBar" EntitySet="Barra_amChart_HorizontalBar" />
+      <End Role="Tabla_amChart_HorizontalBar" EntitySet="Tabla_amChart_HorizontalBar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Categoria__IdGra__4BAC3F29" Association="base999Model.FK__Categoria__IdGra__4BAC3F29">
+      <End Role="Grafico_Plotly_Listbox" EntitySet="Grafico_Plotly_Listbox" />
+      <End Role="Categoria_Plotly_Listbox" EntitySet="Categoria_Plotly_Listbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCatego__IdCat__2645B050" Association="base999Model.FK__SubCatego__IdCat__2645B050">
+      <End Role="Categoria_Plotly_Listbox" EntitySet="Categoria_Plotly_Listbox" />
+      <End Role="SubCategoria_Plotly_Listbox" EntitySet="SubCategoria_Plotly_Listbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Circulos___IdGra__5070F446" Association="base999Model.FK__Circulos___IdGra__5070F446">
+      <End Role="Grafico_d3Object_Bubble" EntitySet="Grafico_d3Object_Bubble" />
+      <End Role="Circulos_Grafico_d3Object_Bubble" EntitySet="Circulos_Grafico_d3Object_Bubble" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCircul__IdCir__3493CFA7" Association="base999Model.FK__SubCircul__IdCir__3493CFA7">
+      <End Role="Circulos_Grafico_d3Object_Bubble" EntitySet="Circulos_Grafico_d3Object_Bubble" />
+      <End Role="SubCirculos_Grafico_d3Object_Bubble" EntitySet="SubCirculos_Grafico_d3Object_Bubble" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cuadrados__IdGra__5535A963" Association="base999Model.FK__Cuadrados__IdGra__5535A963">
+      <End Role="Grafico_d3Object_TreeMap" EntitySet="Grafico_d3Object_TreeMap" />
+      <End Role="Cuadrados_d3Object_TreeMap" EntitySet="Cuadrados_d3Object_TreeMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCuadra__IdCir__37703C52" Association="base999Model.FK__SubCuadra__IdCir__37703C52">
+      <End Role="Cuadrados_d3Object_TreeMap" EntitySet="Cuadrados_d3Object_TreeMap" />
+      <End Role="SubCuadrados_d3Object_TreeMap" EntitySet="SubCuadrados_d3Object_TreeMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Datos_goo__IdLin__5AEE82B9" Association="base999Model.FK__Datos_goo__IdLin__5AEE82B9">
+      <End Role="Lineas_googleChart_Line" EntitySet="Lineas_googleChart_Line" />
+      <End Role="Datos_googleChart_Line" EntitySet="Datos_googleChart_Line" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Datos_Gra__IdLin__6383C8BA" Association="base999Model.FK__Datos_Gra__IdLin__6383C8BA">
+      <End Role="Lineas_Grafico_Plotly_Line" EntitySet="Lineas_Grafico_Plotly_Line" />
+      <End Role="Datos_Grafico_Plotly_Line" EntitySet="Datos_Grafico_Plotly_Line" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Datosdupl__IdGra__6A30C649" Association="base999Model.FK__Datosdupl__IdGra__6A30C649">
+      <End Role="GraficoCircularesVarios" EntitySet="GraficoCircularesVarios" />
+      <End Role="DatosdupliCirculosVarios" EntitySet="DatosdupliCirculosVarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DatosSolo__IdGra__6D0D32F4" Association="base999Model.FK__DatosSolo__IdGra__6D0D32F4">
+      <End Role="GraficoCircularesVarios" EntitySet="GraficoCircularesVarios" />
+      <End Role="DatosSoloUnoCirculosVarios" EntitySet="DatosSoloUnoCirculosVarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Estudio__IdEstud__76969D2E" Association="base999Model.FK__Estudio__IdEstud__76969D2E">
+      <End Role="EstudioCategoria" EntitySet="EstudioCategoria" />
+      <End Role="Estudio" EntitySet="Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FeedSocia__IdSec__7D439ABD" Association="base999Model.FK__FeedSocia__IdSec__7D439ABD">
+      <End Role="Secciones" EntitySet="Secciones" />
+      <End Role="FeedSocial" EntitySet="FeedSocial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FeedSocia__IdSec__00200768" Association="base999Model.FK__FeedSocia__IdSec__00200768">
+      <End Role="Secciones" EntitySet="Secciones" />
+      <End Role="FeedSocial2" EntitySet="FeedSocial2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grafico_g__IdLin__35BCFE0A" Association="base999Model.FK__Grafico_g__IdLin__35BCFE0A">
+      <End Role="Lineas_googleChart_Line" EntitySet="Lineas_googleChart_Line" />
+      <End Role="Grafico_googleChart_Area" EntitySet="Grafico_googleChart_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lineas_go__IdGra__32E0915F" Association="base999Model.FK__Lineas_go__IdGra__32E0915F">
+      <End Role="Grafico_googleChart_Line" EntitySet="Grafico_googleChart_Line" />
+      <End Role="Lineas_googleChart_Line" EntitySet="Lineas_googleChart_Line" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Torta_Gra__IdGra__3D2915A8" Association="base999Model.FK__Torta_Gra__IdGra__3D2915A8">
+      <End Role="Grafico_googleChart_Pie" EntitySet="Grafico_googleChart_Pie" />
+      <End Role="Torta_Grafico_googleChart_Pie" EntitySet="Torta_Grafico_googleChart_Pie" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lineas_Gr__IdGra__60A75C0F" Association="base999Model.FK__Lineas_Gr__IdGra__60A75C0F">
+      <End Role="Grafico_Plotly_Line" EntitySet="Grafico_Plotly_Line" />
+      <End Role="Lineas_Grafico_Plotly_Line" EntitySet="Lineas_Grafico_Plotly_Line" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lineas_Pl__IdGra__29221CFB" Association="base999Model.FK__Lineas_Pl__IdGra__29221CFB">
+      <End Role="Grafico_Plotly_Listbox" EntitySet="Grafico_Plotly_Listbox" />
+      <End Role="Lineas_Plotly_Listbox" EntitySet="Lineas_Plotly_Listbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Padre_Gra__IdGra__10566F31" Association="base999Model.FK__Padre_Gra__IdGra__10566F31">
+      <End Role="Grafico_Timeline" EntitySet="Grafico_Timeline" />
+      <End Role="Padre_Grafico_Timeline" EntitySet="Padre_Grafico_Timeline" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PadreLine__IdGra__1BC821DD" Association="base999Model.FK__PadreLine__IdGra__1BC821DD">
+      <End Role="GraficoLineasSeparadas" EntitySet="GraficoLineasSeparadas" />
+      <End Role="PadreLineasSeparados" EntitySet="PadreLineasSeparados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hijo_Bibl__IdPad__0D7A0286" Association="base999Model.FK__Hijo_Bibl__IdPad__0D7A0286">
+      <End Role="Padre_Biblioteca" EntitySet="Padre_Biblioteca" />
+      <End Role="Hijo_Biblioteca" EntitySet="Hijo_Biblioteca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hijo_Graf__IdPad__1332DBDC" Association="base999Model.FK__Hijo_Graf__IdPad__1332DBDC">
+      <End Role="Padre_Grafico_Timeline" EntitySet="Padre_Grafico_Timeline" />
+      <End Role="Hijo_Grafico_Timeline" EntitySet="Hijo_Grafico_Timeline" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HijoCircu__IdPad__18EBB532" Association="base999Model.FK__HijoCircu__IdPad__18EBB532">
+      <End Role="PapaCirculosVarios" EntitySet="PapaCirculosVarios" />
+      <End Role="HijoCirculosVarios" EntitySet="HijoCirculosVarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HijoLinea__IdPad__1EA48E88" Association="base999Model.FK__HijoLinea__IdPad__1EA48E88">
+      <End Role="PadreLineasSeparados" EntitySet="PadreLineasSeparados" />
+      <End Role="HijoLineasSeparadas" EntitySet="HijoLineasSeparadas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__JsonVista__IdJso__236943A5" Association="base999Model.FK__JsonVista__IdJso__236943A5">
+      <End Role="Json" EntitySet="Json" />
+      <End Role="JsonVistas" EntitySet="JsonVistas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lineas_Pl__IdSub__2A164134" Association="base999Model.FK__Lineas_Pl__IdSub__2A164134">
+      <End Role="SubCategoria_Plotly_Listbox" EntitySet="SubCategoria_Plotly_Listbox" />
+      <End Role="Lineas_Plotly_Listbox" EntitySet="Lineas_Plotly_Listbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nivel2__Fk_IdNiv__0A688BB1" Association="base999Model.FK__nivel2__Fk_IdNiv__0A688BB1">
+      <End Role="nivel1" EntitySet="nivel1" />
+      <End Role="nivel2" EntitySet="nivel2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nivel22__Fk_IdNi__1D7B6025" Association="base999Model.FK__nivel22__Fk_IdNi__1D7B6025">
+      <End Role="nivel11" EntitySet="nivel11" />
+      <End Role="nivel22" EntitySet="nivel22" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nivel3__Fk_IdNiv__0D44F85C" Association="base999Model.FK__nivel3__Fk_IdNiv__0D44F85C">
+      <End Role="nivel2" EntitySet="nivel2" />
+      <End Role="nivel3" EntitySet="nivel3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nivel4__Fk_IdNiv__10216507" Association="base999Model.FK__nivel4__Fk_IdNiv__10216507">
+      <End Role="nivel3" EntitySet="nivel3" />
+      <End Role="nivel4" EntitySet="nivel4" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nivel5__Fk_IdNiv__12FDD1B2" Association="base999Model.FK__nivel5__Fk_IdNiv__12FDD1B2">
+      <End Role="nivel4" EntitySet="nivel4" />
+      <End Role="nivel5" EntitySet="nivel5" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Abuelo_Biblioteca">
+    <Key>
+      <PropertyRef Name="IdAbuelo" />
+    </Key>
+    <Property Name="IdAbuelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="IdgraficoFK" Type="Int32" />
+    <NavigationProperty Name="Grafico_Biblioteca" Relationship="base999Model.FK__Abuelo_Bi__Idgra__25869641" FromRole="Abuelo_Biblioteca" ToRole="Grafico_Biblioteca" />
+    <NavigationProperty Name="Padre_Biblioteca" Relationship="base999Model.FK__Padre_Bib__IdAbu__0A9D95DB" FromRole="Abuelo_Biblioteca" ToRole="Padre_Biblioteca" />
+  </EntityType>
+  <EntityType Name="AbueloCirculosVarios">
+    <Key>
+      <PropertyRef Name="IdAbuelo" />
+    </Key>
+    <Property Name="IdAbuelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Montonominal" Type="Int32" />
+    <Property Name="MontoPercapita" Type="Int32" />
+    <Property Name="sizePercapita" Type="Int32" />
+    <Property Name="Size" Type="Int32" />
+    <NavigationProperty Name="GraficoCircularesVarios" Relationship="base999Model.FK__AbueloCir__IdGra__2A4B4B5E" FromRole="AbueloCirculosVarios" ToRole="GraficoCircularesVarios" />
+    <NavigationProperty Name="PapaCirculosVarios" Relationship="base999Model.FK__PapaCircu__IdAbu__160F4887" FromRole="AbueloCirculosVarios" ToRole="PapaCirculosVarios" />
+  </EntityType>
+  <EntityType Name="AplicacionQuiz">
+    <Key>
+      <PropertyRef Name="IdAplicacionQuiz" />
+    </Key>
+    <Property Name="IdAplicacionQuiz" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Double" />
+  </EntityType>
+  <EntityType Name="AppMunicipalidad">
+    <Key>
+      <PropertyRef Name="IdAppMunicipalidad" />
+    </Key>
+    <Property Name="IdAppMunicipalidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreComuna" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AEducacion" Type="Int32" />
+    <Property Name="ASalud" Type="Int32" />
+    <Property Name="AInterno" Type="Int32" />
+    <Property Name="ACultural" Type="Int32" />
+    <Property Name="AComunidad" Type="Int32" />
+    <Property Name="BEducacion" Type="Int32" />
+    <Property Name="BSalud" Type="Int32" />
+    <Property Name="BInterno" Type="Int32" />
+    <Property Name="BCultural" Type="Int32" />
+    <Property Name="BComunidad" Type="Int32" />
+    <Property Name="Poblacion" Type="Int32" />
+    <Property Name="Alcalde" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Partido" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Votos" Type="Int32" />
+    <Property Name="Reelecciones" Type="Int32" />
+    <Property Name="PobrezaPorciento" Type="Int32" />
+    <Property Name="Distancia" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Area_googleChart_Area">
+    <Key>
+      <PropertyRef Name="IdArea" />
+    </Key>
+    <Property Name="IdArea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <NavigationProperty Name="Grafico_googleChart_Area" Relationship="base999Model.FK__Area_goog__IdGra__38996AB5" FromRole="Area_googleChart_Area" ToRole="Grafico_googleChart_Area" />
+    <NavigationProperty Name="Datos_googleChart_Area" Relationship="base999Model.FK__Datos_goo__IdLin__5812160E" FromRole="Area_googleChart_Area" ToRole="Datos_googleChart_Area" />
+  </EntityType>
+  <EntityType Name="Barra_amChart_HorizontalBar">
+    <Key>
+      <PropertyRef Name="IdCuadrado" />
+    </Key>
+    <Property Name="IdCuadrado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Double" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="valor" Type="Int32" />
+    <Property Name="Idregion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ValorPercapita" Type="Int32" />
+    <Property Name="tooltip" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Grafico_amChart_HorizontalBar" Relationship="base999Model.FK__Barra_amC__IdGra__46E78A0C" FromRole="Barra_amChart_HorizontalBar" ToRole="Grafico_amChart_HorizontalBar" />
+    <NavigationProperty Name="Tabla_amChart_HorizontalBar" Relationship="base999Model.FK__Tabla_amC__idlin__3A4CA8FD" FromRole="Barra_amChart_HorizontalBar" ToRole="Tabla_amChart_HorizontalBar" />
+  </EntityType>
+  <EntityType Name="Categoria_Plotly_Listbox">
+    <Key>
+      <PropertyRef Name="IdCategoria" />
+    </Key>
+    <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Numero" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <NavigationProperty Name="Grafico_Plotly_Listbox" Relationship="base999Model.FK__Categoria__IdGra__4BAC3F29" FromRole="Categoria_Plotly_Listbox" ToRole="Grafico_Plotly_Listbox" />
+    <NavigationProperty Name="SubCategoria_Plotly_Listbox" Relationship="base999Model.FK__SubCatego__IdCat__2645B050" FromRole="Categoria_Plotly_Listbox" ToRole="SubCategoria_Plotly_Listbox" />
+  </EntityType>
+  <EntityType Name="Circulos_Grafico_d3Object_Bubble">
+    <Key>
+      <PropertyRef Name="IdCirculo" />
+    </Key>
+    <Property Name="IdCirculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Double" />
+    <Property Name="valorPeso" Type="Int32" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="Tipo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Texto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tooltip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tooltip2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Grafico_d3Object_Bubble" Relationship="base999Model.FK__Circulos___IdGra__5070F446" FromRole="Circulos_Grafico_d3Object_Bubble" ToRole="Grafico_d3Object_Bubble" />
+    <NavigationProperty Name="SubCirculos_Grafico_d3Object_Bubble" Relationship="base999Model.FK__SubCircul__IdCir__3493CFA7" FromRole="Circulos_Grafico_d3Object_Bubble" ToRole="SubCirculos_Grafico_d3Object_Bubble" />
+  </EntityType>
+  <EntityType Name="Cuadrados_d3Object_TreeMap">
+    <Key>
+      <PropertyRef Name="IdCuadrado" />
+    </Key>
+    <Property Name="IdCuadrado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="valorPercapita" Type="Int32" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="IdRegion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="valorNominal" Type="Int32" />
+    <Property Name="Tipo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Grafico_d3Object_TreeMap" Relationship="base999Model.FK__Cuadrados__IdGra__5535A963" FromRole="Cuadrados_d3Object_TreeMap" ToRole="Grafico_d3Object_TreeMap" />
+    <NavigationProperty Name="SubCuadrados_d3Object_TreeMap" Relationship="base999Model.FK__SubCuadra__IdCir__37703C52" FromRole="Cuadrados_d3Object_TreeMap" ToRole="SubCuadrados_d3Object_TreeMap" />
+  </EntityType>
+  <EntityType Name="Datos_googleChart_Area">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="ValorPeso" Type="Int64" />
+    <Property Name="Ano" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdLineasFK" Type="Int32" />
+    <NavigationProperty Name="Area_googleChart_Area" Relationship="base999Model.FK__Datos_goo__IdLin__5812160E" FromRole="Datos_googleChart_Area" ToRole="Area_googleChart_Area" />
+  </EntityType>
+  <EntityType Name="Datos_googleChart_Line">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="ValorPeso" Type="Int64" />
+    <Property Name="Ano" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdLineasFK" Type="Int32" />
+    <NavigationProperty Name="Lineas_googleChart_Line" Relationship="base999Model.FK__Datos_goo__IdLin__5AEE82B9" FromRole="Datos_googleChart_Line" ToRole="Lineas_googleChart_Line" />
+  </EntityType>
+  <EntityType Name="Datos_Grafico_Plotly_Line">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="ValorPeso" Type="Int64" />
+    <Property Name="Ano" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdLineasFK" Type="Int32" />
+    <Property Name="ValorCapital" Type="Int32" />
+    <Property Name="ValorPorcentajeCapital" Type="Double" />
+    <NavigationProperty Name="Lineas_Grafico_Plotly_Line" Relationship="base999Model.FK__Datos_Gra__IdLin__6383C8BA" FromRole="Datos_Grafico_Plotly_Line" ToRole="Lineas_Grafico_Plotly_Line" />
+  </EntityType>
+  <EntityType Name="DatosAPP">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ingreso" Type="Int32" />
+    <Property Name="Genero" Type="Boolean" />
+    <Property Name="Personaje" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Alcoholicas" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Analcoholicas" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Tabaco" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Combustitble" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="ImpRenta" Type="Decimal" Precision="15" Scale="7" />
+    <Property Name="TotalImpuesto" Type="Decimal" Precision="15" Scale="7" />
+  </EntityType>
+  <EntityType Name="DatosApp2">
+    <Key>
+      <PropertyRef Name="IdDatosApp2" />
+    </Key>
+    <Property Name="IdDatosApp2" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="subcategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="valorCategoria" Type="Double" />
+    <Property Name="valorsubcategoria" Type="Double" />
+  </EntityType>
+  <EntityType Name="DatosdupliCirculosVarios">
+    <Key>
+      <PropertyRef Name="IdDatos" />
+    </Key>
+    <Property Name="IdDatos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="numeroOpcion" Type="Int32" />
+    <NavigationProperty Name="GraficoCircularesVarios" Relationship="base999Model.FK__Datosdupl__IdGra__6A30C649" FromRole="DatosdupliCirculosVarios" ToRole="GraficoCircularesVarios" />
+  </EntityType>
+  <EntityType Name="DatosSoloUnoCirculosVarios">
+    <Key>
+      <PropertyRef Name="IdDatos" />
+    </Key>
+    <Property Name="IdDatos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="numeroOpcion" Type="Int32" />
+    <NavigationProperty Name="GraficoCircularesVarios" Relationship="base999Model.FK__DatosSolo__IdGra__6D0D32F4" FromRole="DatosSoloUnoCirculosVarios" ToRole="GraficoCircularesVarios" />
+  </EntityType>
+  <EntityType Name="Encuesta">
+    <Key>
+      <PropertyRef Name="IdEncuesta" />
+    </Key>
+    <Property Name="IdEncuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pregunta1" Type="Int32" />
+    <Property Name="Pregunta2" Type="Int32" />
+    <Property Name="Pregunta3" Type="Int32" />
+    <Property Name="Pregunta4" Type="Int32" />
+    <Property Name="Pregunta5" Type="Int32" />
+    <Property Name="Pregunta6" Type="Int32" />
+    <Property Name="Pregunta7" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Ip" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Estudio">
+    <Key>
+      <PropertyRef Name="IdEstudio" />
+    </Key>
+    <Property Name="IdEstudio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IdEstudioCategoriaFK" Type="Int32" />
+    <Property Name="Destacados" Type="Boolean" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="Imagen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EstudioCategoria" Relationship="base999Model.FK__Estudio__IdEstud__76969D2E" FromRole="Estudio" ToRole="EstudioCategoria" />
+  </EntityType>
+  <EntityType Name="EstudioCategoria">
+    <Key>
+      <PropertyRef Name="IdEstudioCategoria" />
+    </Key>
+    <Property Name="IdEstudioCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estudio" Relationship="base999Model.FK__Estudio__IdEstud__76969D2E" FromRole="EstudioCategoria" ToRole="Estudio" />
+  </EntityType>
+  <EntityType Name="FeedSocial">
+    <Key>
+      <PropertyRef Name="IdFeedSocial" />
+    </Key>
+    <Property Name="IdFeedSocial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SiNo" Type="Boolean" />
+    <Property Name="PorQue" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdSeccionesFK" Type="Int32" />
+    <Property Name="Ipp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Texto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Secciones" Relationship="base999Model.FK__FeedSocia__IdSec__7D439ABD" FromRole="FeedSocial" ToRole="Secciones" />
+  </EntityType>
+  <EntityType Name="FeedSocial2">
+    <Key>
+      <PropertyRef Name="IdFeedSocial" />
+    </Key>
+    <Property Name="IdFeedSocial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Otros" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Ip" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdSeccionesFK" Type="Int32" />
+    <NavigationProperty Name="Secciones" Relationship="base999Model.FK__FeedSocia__IdSec__00200768" FromRole="FeedSocial2" ToRole="Secciones" />
+  </EntityType>
+  <EntityType Name="Formulario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Fono" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Utilidad" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Pregunta1" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Pregunta2" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Grafico_amChart_HorizontalBar">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Barra_amChart_HorizontalBar" Relationship="base999Model.FK__Barra_amC__IdGra__46E78A0C" FromRole="Grafico_amChart_HorizontalBar" ToRole="Barra_amChart_HorizontalBar" />
+  </EntityType>
+  <EntityType Name="Grafico_Biblioteca">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Abuelo_Biblioteca" Relationship="base999Model.FK__Abuelo_Bi__Idgra__25869641" FromRole="Grafico_Biblioteca" ToRole="Abuelo_Biblioteca" />
+  </EntityType>
+  <EntityType Name="Grafico_d3Object_Bubble">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ano" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Circulos_Grafico_d3Object_Bubble" Relationship="base999Model.FK__Circulos___IdGra__5070F446" FromRole="Grafico_d3Object_Bubble" ToRole="Circulos_Grafico_d3Object_Bubble" />
+  </EntityType>
+  <EntityType Name="Grafico_d3Object_TreeMap">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IdRegion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Cuadrados_d3Object_TreeMap" Relationship="base999Model.FK__Cuadrados__IdGra__5535A963" FromRole="Grafico_d3Object_TreeMap" ToRole="Cuadrados_d3Object_TreeMap" />
+  </EntityType>
+  <EntityType Name="Grafico_googleChart_Area">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdLineaOpc" Type="Int32" />
+    <NavigationProperty Name="Area_googleChart_Area" Relationship="base999Model.FK__Area_goog__IdGra__38996AB5" FromRole="Grafico_googleChart_Area" ToRole="Area_googleChart_Area" />
+    <NavigationProperty Name="Lineas_googleChart_Line" Relationship="base999Model.FK__Grafico_g__IdLin__35BCFE0A" FromRole="Grafico_googleChart_Area" ToRole="Lineas_googleChart_Line" />
+  </EntityType>
+  <EntityType Name="Grafico_googleChart_Line">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Lineas_googleChart_Line" Relationship="base999Model.FK__Lineas_go__IdGra__32E0915F" FromRole="Grafico_googleChart_Line" ToRole="Lineas_googleChart_Line" />
+  </EntityType>
+  <EntityType Name="Grafico_googleChart_Pie">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Torta_Grafico_googleChart_Pie" Relationship="base999Model.FK__Torta_Gra__IdGra__3D2915A8" FromRole="Grafico_googleChart_Pie" ToRole="Torta_Grafico_googleChart_Pie" />
+  </EntityType>
+  <EntityType Name="Grafico_Plotly_Line">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Lineas_Grafico_Plotly_Line" Relationship="base999Model.FK__Lineas_Gr__IdGra__60A75C0F" FromRole="Grafico_Plotly_Line" ToRole="Lineas_Grafico_Plotly_Line" />
+  </EntityType>
+  <EntityType Name="Grafico_Plotly_Listbox">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="GlobalColor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Categoria_Plotly_Listbox" Relationship="base999Model.FK__Categoria__IdGra__4BAC3F29" FromRole="Grafico_Plotly_Listbox" ToRole="Categoria_Plotly_Listbox" />
+    <NavigationProperty Name="Lineas_Plotly_Listbox" Relationship="base999Model.FK__Lineas_Pl__IdGra__29221CFB" FromRole="Grafico_Plotly_Listbox" ToRole="Lineas_Plotly_Listbox" />
+  </EntityType>
+  <EntityType Name="Grafico_Timeline">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Padre_Grafico_Timeline" Relationship="base999Model.FK__Padre_Gra__IdGra__10566F31" FromRole="Grafico_Timeline" ToRole="Padre_Grafico_Timeline" />
+  </EntityType>
+  <EntityType Name="GraficoCircularesVarios">
+    <Key>
+      <PropertyRef Name="Idgrafico" />
+    </Key>
+    <Property Name="Idgrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="AbueloCirculosVarios" Relationship="base999Model.FK__AbueloCir__IdGra__2A4B4B5E" FromRole="GraficoCircularesVarios" ToRole="AbueloCirculosVarios" />
+    <NavigationProperty Name="DatosdupliCirculosVarios" Relationship="base999Model.FK__Datosdupl__IdGra__6A30C649" FromRole="GraficoCircularesVarios" ToRole="DatosdupliCirculosVarios" />
+    <NavigationProperty Name="DatosSoloUnoCirculosVarios" Relationship="base999Model.FK__DatosSolo__IdGra__6D0D32F4" FromRole="GraficoCircularesVarios" ToRole="DatosSoloUnoCirculosVarios" />
+  </EntityType>
+  <EntityType Name="GraficoLineasSeparadas">
+    <Key>
+      <PropertyRef Name="IdGrafico" />
+    </Key>
+    <Property Name="IdGrafico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PadreLineasSeparados" Relationship="base999Model.FK__PadreLine__IdGra__1BC821DD" FromRole="GraficoLineasSeparadas" ToRole="PadreLineasSeparados" />
+  </EntityType>
+  <EntityType Name="Hijo_Biblioteca">
+    <Key>
+      <PropertyRef Name="IdHijo" />
+    </Key>
+    <Property Name="IdHijo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Autores" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Institucion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="IdPadreFK" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Ano" Type="Int32" />
+    <NavigationProperty Name="Padre_Biblioteca" Relationship="base999Model.FK__Hijo_Bibl__IdPad__0D7A0286" FromRole="Hijo_Biblioteca" ToRole="Padre_Biblioteca" />
+  </EntityType>
+  <EntityType Name="Hijo_Grafico_Timeline">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Caption" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Headline" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Texto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Credito" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Monthh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dayy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Yearr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdPadreFK" Type="Int32" />
+    <NavigationProperty Name="Padre_Grafico_Timeline" Relationship="base999Model.FK__Hijo_Graf__IdPad__1332DBDC" FromRole="Hijo_Grafico_Timeline" ToRole="Padre_Grafico_Timeline" />
+  </EntityType>
+  <EntityType Name="HijoCirculosVarios">
+    <Key>
+      <PropertyRef Name="IdHijo" />
+    </Key>
+    <Property Name="IdHijo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Montonominal" Type="Int32" />
+    <Property Name="MontoPercapita" Type="Int32" />
+    <Property Name="IdPadreFK" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="sizePercapita" Type="Int32" />
+    <Property Name="Size" Type="Int32" />
+    <NavigationProperty Name="PapaCirculosVarios" Relationship="base999Model.FK__HijoCircu__IdPad__18EBB532" FromRole="HijoCirculosVarios" ToRole="PapaCirculosVarios" />
+  </EntityType>
+  <EntityType Name="HijoLineasSeparadas">
+    <Key>
+      <PropertyRef Name="IdHijo" />
+    </Key>
+    <Property Name="IdHijo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ano" Type="Int32" />
+    <Property Name="Mes" Type="Int32" />
+    <Property Name="MontoCapitalAprobado" Type="Double" />
+    <Property Name="MontoCapitalVigente" Type="Double" />
+    <Property Name="MontoCorrienteAprobado" Type="Double" />
+    <Property Name="MontoCorrienteVigente" Type="Double" />
+    <Property Name="IdPadreFK" Type="Int32" />
+    <NavigationProperty Name="PadreLineasSeparados" Relationship="base999Model.FK__HijoLinea__IdPad__1EA48E88" FromRole="HijoLineasSeparadas" ToRole="PadreLineasSeparados" />
+  </EntityType>
+  <EntityType Name="Indicadores">
+    <Key>
+      <PropertyRef Name="IdIndicadores" />
+    </Key>
+    <Property Name="IdIndicadores" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Unidadmedida" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Nota" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TipoI" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="IndicadorI" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="UnidadI" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="Json">
+    <Key>
+      <PropertyRef Name="IdJson" />
+    </Key>
+    <Property Name="IdJson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="JsonVistas" Relationship="base999Model.FK__JsonVista__IdJso__236943A5" FromRole="Json" ToRole="JsonVistas" />
+  </EntityType>
+  <EntityType Name="JsonVistas">
+    <Key>
+      <PropertyRef Name="IdJsonVistas" />
+    </Key>
+    <Property Name="IdJsonVistas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Texto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdJsonFK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Json" Relationship="base999Model.FK__JsonVista__IdJso__236943A5" FromRole="JsonVistas" ToRole="Json" />
+  </EntityType>
+  <EntityType Name="Lineas_googleChart_Line">
+    <Key>
+      <PropertyRef Name="IdLinea" />
+    </Key>
+    <Property Name="IdLinea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <NavigationProperty Name="Datos_googleChart_Line" Relationship="base999Model.FK__Datos_goo__IdLin__5AEE82B9" FromRole="Lineas_googleChart_Line" ToRole="Datos_googleChart_Line" />
+    <NavigationProperty Name="Grafico_googleChart_Area" Relationship="base999Model.FK__Grafico_g__IdLin__35BCFE0A" FromRole="Lineas_googleChart_Line" ToRole="Grafico_googleChart_Area" />
+    <NavigationProperty Name="Grafico_googleChart_Line" Relationship="base999Model.FK__Lineas_go__IdGra__32E0915F" FromRole="Lineas_googleChart_Line" ToRole="Grafico_googleChart_Line" />
+  </EntityType>
+  <EntityType Name="Lineas_Grafico_Plotly_Line">
+    <Key>
+      <PropertyRef Name="IdLinea" />
+    </Key>
+    <Property Name="IdLinea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="Visible" Type="Boolean" />
+    <NavigationProperty Name="Datos_Grafico_Plotly_Line" Relationship="base999Model.FK__Datos_Gra__IdLin__6383C8BA" FromRole="Lineas_Grafico_Plotly_Line" ToRole="Datos_Grafico_Plotly_Line" />
+    <NavigationProperty Name="Grafico_Plotly_Line" Relationship="base999Model.FK__Lineas_Gr__IdGra__60A75C0F" FromRole="Lineas_Grafico_Plotly_Line" ToRole="Grafico_Plotly_Line" />
+  </EntityType>
+  <EntityType Name="Lineas_Plotly_Listbox">
+    <Key>
+      <PropertyRef Name="IdLinea" />
+    </Key>
+    <Property Name="IdLinea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="Visible" Type="Boolean" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <Property Name="IdSubCategoriaFK" Type="Int32" />
+    <Property Name="ano1" Type="Int32" />
+    <Property Name="ano2" Type="Int32" />
+    <Property Name="ano3" Type="Int32" />
+    <Property Name="ano4" Type="Int32" />
+    <Property Name="ano5" Type="Int32" />
+    <Property Name="ano6" Type="Int32" />
+    <Property Name="ano7" Type="Int32" />
+    <Property Name="ano8" Type="Int32" />
+    <Property Name="ano9" Type="Int32" />
+    <NavigationProperty Name="Grafico_Plotly_Listbox" Relationship="base999Model.FK__Lineas_Pl__IdGra__29221CFB" FromRole="Lineas_Plotly_Listbox" ToRole="Grafico_Plotly_Listbox" />
+    <NavigationProperty Name="SubCategoria_Plotly_Listbox" Relationship="base999Model.FK__Lineas_Pl__IdSub__2A164134" FromRole="Lineas_Plotly_Listbox" ToRole="SubCategoria_Plotly_Listbox" />
+  </EntityType>
+  <EntityType Name="nivel1">
+    <Key>
+      <PropertyRef Name="IdNivel1" />
+    </Key>
+    <Property Name="IdNivel1" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Valor2" Type="Int32" />
+    <Property Name="PorcentajeGastadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajePresupeustadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="nivel2" Relationship="base999Model.FK__nivel2__Fk_IdNiv__0A688BB1" FromRole="nivel1" ToRole="nivel2" />
+  </EntityType>
+  <EntityType Name="nivel11">
+    <Key>
+      <PropertyRef Name="IdNivel11" />
+    </Key>
+    <Property Name="IdNivel11" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Valor2" Type="Int32" />
+    <Property Name="PorcentajeGastadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajePresupeustadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="nivel22" Relationship="base999Model.FK__nivel22__Fk_IdNi__1D7B6025" FromRole="nivel11" ToRole="nivel22" />
+  </EntityType>
+  <EntityType Name="nivel2">
+    <Key>
+      <PropertyRef Name="IdNivel2" />
+    </Key>
+    <Property Name="IdNivel2" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Fk_IdNivel1" Type="Int32" />
+    <Property Name="Valor2" Type="Int32" />
+    <Property Name="PorcentajeGastadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajePresupeustadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="nivel1" Relationship="base999Model.FK__nivel2__Fk_IdNiv__0A688BB1" FromRole="nivel2" ToRole="nivel1" />
+    <NavigationProperty Name="nivel3" Relationship="base999Model.FK__nivel3__Fk_IdNiv__0D44F85C" FromRole="nivel2" ToRole="nivel3" />
+  </EntityType>
+  <EntityType Name="nivel22">
+    <Key>
+      <PropertyRef Name="IdNivel22" />
+    </Key>
+    <Property Name="IdNivel22" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Fk_IdNivel11" Type="Int32" />
+    <Property Name="Valor2" Type="Int32" />
+    <Property Name="PorcentajeGastadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajePresupeustadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="nivel11" Relationship="base999Model.FK__nivel22__Fk_IdNi__1D7B6025" FromRole="nivel22" ToRole="nivel11" />
+  </EntityType>
+  <EntityType Name="nivel3">
+    <Key>
+      <PropertyRef Name="IdNivel3" />
+    </Key>
+    <Property Name="IdNivel3" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Fk_IdNivel2" Type="Int32" />
+    <Property Name="Valor2" Type="Int32" />
+    <Property Name="PorcentajeGastadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajePresupeustadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="nivel2" Relationship="base999Model.FK__nivel3__Fk_IdNiv__0D44F85C" FromRole="nivel3" ToRole="nivel2" />
+    <NavigationProperty Name="nivel4" Relationship="base999Model.FK__nivel4__Fk_IdNiv__10216507" FromRole="nivel3" ToRole="nivel4" />
+  </EntityType>
+  <EntityType Name="nivel4">
+    <Key>
+      <PropertyRef Name="IdNivel4" />
+    </Key>
+    <Property Name="IdNivel4" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Fk_IdNivel3" Type="Int32" />
+    <Property Name="Valor2" Type="Int32" />
+    <Property Name="PorcentajeGastadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajePresupeustadoAlPapa" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="nivel3" Relationship="base999Model.FK__nivel4__Fk_IdNiv__10216507" FromRole="nivel4" ToRole="nivel3" />
+    <NavigationProperty Name="nivel5" Relationship="base999Model.FK__nivel5__Fk_IdNiv__12FDD1B2" FromRole="nivel4" ToRole="nivel5" />
+  </EntityType>
+  <EntityType Name="nivel5">
+    <Key>
+      <PropertyRef Name="IdNivel5" />
+    </Key>
+    <Property Name="IdNivel5" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Tipo" Type="Boolean" />
+    <Property Name="Fk_IdNivel4" Type="Int32" />
+    <Property Name="Valor2" Type="Int32" />
+    <NavigationProperty Name="nivel4" Relationship="base999Model.FK__nivel5__Fk_IdNiv__12FDD1B2" FromRole="nivel5" ToRole="nivel4" />
+  </EntityType>
+  <EntityType Name="Noticias">
+    <Key>
+      <PropertyRef Name="IdNoticias" />
+    </Key>
+    <Property Name="IdNoticias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Fuente" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Internas" Type="Boolean" />
+    <Property Name="IdProyecto" Type="Int32" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Padre_Biblioteca">
+    <Key>
+      <PropertyRef Name="IdPadre" />
+    </Key>
+    <Property Name="IdPadre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="IdAbueloFK" Type="Int32" />
+    <NavigationProperty Name="Abuelo_Biblioteca" Relationship="base999Model.FK__Padre_Bib__IdAbu__0A9D95DB" FromRole="Padre_Biblioteca" ToRole="Abuelo_Biblioteca" />
+    <NavigationProperty Name="Hijo_Biblioteca" Relationship="base999Model.FK__Hijo_Bibl__IdPad__0D7A0286" FromRole="Padre_Biblioteca" ToRole="Hijo_Biblioteca" />
+  </EntityType>
+  <EntityType Name="Padre_Grafico_Timeline">
+    <Key>
+      <PropertyRef Name="IdLinea" />
+    </Key>
+    <Property Name="IdLinea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Caption" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Headline" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Texto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Credito" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <NavigationProperty Name="Grafico_Timeline" Relationship="base999Model.FK__Padre_Gra__IdGra__10566F31" FromRole="Padre_Grafico_Timeline" ToRole="Grafico_Timeline" />
+    <NavigationProperty Name="Hijo_Grafico_Timeline" Relationship="base999Model.FK__Hijo_Graf__IdPad__1332DBDC" FromRole="Padre_Grafico_Timeline" ToRole="Hijo_Grafico_Timeline" />
+  </EntityType>
+  <EntityType Name="PadreLineasSeparados">
+    <Key>
+      <PropertyRef Name="IdPadre" />
+    </Key>
+    <Property Name="IdPadre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ColorCorriente" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="ColorCapital" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <NavigationProperty Name="GraficoLineasSeparadas" Relationship="base999Model.FK__PadreLine__IdGra__1BC821DD" FromRole="PadreLineasSeparados" ToRole="GraficoLineasSeparadas" />
+    <NavigationProperty Name="HijoLineasSeparadas" Relationship="base999Model.FK__HijoLinea__IdPad__1EA48E88" FromRole="PadreLineasSeparados" ToRole="HijoLineasSeparadas" />
+  </EntityType>
+  <EntityType Name="PapaCirculosVarios">
+    <Key>
+      <PropertyRef Name="IdPadre" />
+    </Key>
+    <Property Name="IdPadre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IdAbueloFK" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="tooltipRegion" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="tooltipGastoNominal" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="tooltipGastoPercapita" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Montonominal" Type="Int32" />
+    <Property Name="MontoPercapita" Type="Int32" />
+    <Property Name="sizePercapita" Type="Int32" />
+    <Property Name="Proper1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="Proper2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TituloConsulta" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AbueloCirculosVarios" Relationship="base999Model.FK__PapaCircu__IdAbu__160F4887" FromRole="PapaCirculosVarios" ToRole="AbueloCirculosVarios" />
+    <NavigationProperty Name="HijoCirculosVarios" Relationship="base999Model.FK__HijoCircu__IdPad__18EBB532" FromRole="PapaCirculosVarios" ToRole="HijoCirculosVarios" />
+  </EntityType>
+  <EntityType Name="PreguntasFrecuentes">
+    <Key>
+      <PropertyRef Name="IdPreguntasFrecuentes" />
+    </Key>
+    <Property Name="IdPreguntasFrecuentes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pregunta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Respuesta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroAppMunicipal">
+    <Key>
+      <PropertyRef Name="IdRegistroAppMunicipal" />
+    </Key>
+    <Property Name="IdRegistroAppMunicipal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Educacion" Type="Int32" />
+    <Property Name="Salud" Type="Int32" />
+    <Property Name="Interno" Type="Int32" />
+    <Property Name="Cultural" Type="Int32" />
+    <Property Name="Comunidad" Type="Int32" />
+    <Property Name="NombreComuna" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ip" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Secciones">
+    <Key>
+      <PropertyRef Name="IdSecciones" />
+    </Key>
+    <Property Name="IdSecciones" Type="Int32" Nullable="false" />
+    <Property Name="Retroalimentacion" Type="Boolean" Nullable="false" />
+    <Property Name="Archivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TituloPregunta" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="TituloRedes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Resumen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ImagenUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UrlDireccion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TituloInterna" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionSuperior" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionCentral" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionInferior" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionScript" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Etiquetas" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha2" Type="DateTime" Precision="0" />
+    <Property Name="Destacar" Type="Boolean" />
+    <Property Name="Megusta" Type="Int32" />
+    <Property Name="autor" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TipoPublicacion" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Recomendado" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="dataset" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionCentralM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FeedSocial" Relationship="base999Model.FK__FeedSocia__IdSec__7D439ABD" FromRole="Secciones" ToRole="FeedSocial" />
+    <NavigationProperty Name="FeedSocial2" Relationship="base999Model.FK__FeedSocia__IdSec__00200768" FromRole="Secciones" ToRole="FeedSocial2" />
+  </EntityType>
+  <EntityType Name="SubCategoria_Plotly_Listbox">
+    <Key>
+      <PropertyRef Name="IdSubCategoria" />
+    </Key>
+    <Property Name="IdSubCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IdCategoriaFK" Type="Int32" />
+    <NavigationProperty Name="Categoria_Plotly_Listbox" Relationship="base999Model.FK__SubCatego__IdCat__2645B050" FromRole="SubCategoria_Plotly_Listbox" ToRole="Categoria_Plotly_Listbox" />
+    <NavigationProperty Name="Lineas_Plotly_Listbox" Relationship="base999Model.FK__Lineas_Pl__IdSub__2A164134" FromRole="SubCategoria_Plotly_Listbox" ToRole="Lineas_Plotly_Listbox" />
+  </EntityType>
+  <EntityType Name="SubCirculos_Grafico_d3Object_Bubble">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Size" Type="Double" />
+    <Property Name="valorPeso" Type="Int32" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdCirculoFK" Type="Int32" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Tipo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Texto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tooltip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tooltip2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Circulos_Grafico_d3Object_Bubble" Relationship="base999Model.FK__SubCircul__IdCir__3493CFA7" FromRole="SubCirculos_Grafico_d3Object_Bubble" ToRole="Circulos_Grafico_d3Object_Bubble" />
+  </EntityType>
+  <EntityType Name="SubCuadrados_d3Object_TreeMap">
+    <Key>
+      <PropertyRef Name="IdDato" />
+    </Key>
+    <Property Name="IdDato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="valorPercapita" Type="Int32" />
+    <Property Name="ValorPorcentaje" Type="Double" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdCirculoFK" Type="Int32" />
+    <Property Name="IdRegion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="valorNominal" Type="Int32" />
+    <Property Name="Tipo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cuadrados_d3Object_TreeMap" Relationship="base999Model.FK__SubCuadra__IdCir__37703C52" FromRole="SubCuadrados_d3Object_TreeMap" ToRole="Cuadrados_d3Object_TreeMap" />
+  </EntityType>
+  <EntityType Name="Tabla_amChart_HorizontalBar">
+    <Key>
+      <PropertyRef Name="idtabla" />
+    </Key>
+    <Property Name="idtabla" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Iniciativa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="valorNominal" Type="Int32" />
+    <Property Name="valorPercapita" Type="Int32" />
+    <Property Name="idlinea" Type="Int32" />
+    <Property Name="Idregion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Barra_amChart_HorizontalBar" Relationship="base999Model.FK__Tabla_amC__idlin__3A4CA8FD" FromRole="Tabla_amChart_HorizontalBar" ToRole="Barra_amChart_HorizontalBar" />
+  </EntityType>
+  <EntityType Name="Torta_Grafico_googleChart_Pie">
+    <Key>
+      <PropertyRef Name="IdTorta" />
+    </Key>
+    <Property Name="IdTorta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Valor" Type="Double" />
+    <Property Name="Color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="IdGraficoFK" Type="Int32" />
+    <NavigationProperty Name="Grafico_googleChart_Pie" Relationship="base999Model.FK__Torta_Gra__IdGra__3D2915A8" FromRole="Torta_Grafico_googleChart_Pie" ToRole="Grafico_googleChart_Pie" />
+  </EntityType>
+  <EntityType Name="view_ListaSeccionAplicacion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Resumen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Destacar" Type="Boolean" />
+    <Property Name="Etiqueta" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Megusta" Type="Int32" />
+    <Property Name="FechaFecha" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="view_ListaSeccionEtiqueta">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TituloPregunta" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Resumen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="UrlDireccion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="FechaFecha" Type="DateTime" Precision="0" />
+    <Property Name="Tipo" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="ImagenUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Etiquetas" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="view_ListaSeccionNoticia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fuente" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Urldireccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="FechaFecha" Type="DateTime" Precision="0" />
+    <Property Name="Internas" Type="Boolean" />
+    <Property Name="Imagen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IdProyecto" Type="Int32" />
+  </EntityType>
+  <EntityType Name="view_ListaSeccionPublicacion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Resumen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Destacar" Type="Boolean" />
+    <Property Name="Etiqueta" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Megusta" Type="Int32" />
+    <Property Name="autor" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TipoPublicacion" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="FechaFecha" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="view_ListaSeccionVisualizacion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Resumen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="Destacar" Type="Boolean" />
+    <Property Name="Etiqueta" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Megusta" Type="Int32" />
+    <Property Name="FechaFecha" Type="DateTime" Precision="0" />
+  </EntityType>
+  <Association Name="FK__Abuelo_Bi__Idgra__25869641">
+    <End Type="base999Model.Grafico_Biblioteca" Role="Grafico_Biblioteca" Multiplicity="0..1" />
+    <End Type="base999Model.Abuelo_Biblioteca" Role="Abuelo_Biblioteca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_Biblioteca">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Abuelo_Biblioteca">
+        <PropertyRef Name="IdgraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Padre_Bib__IdAbu__0A9D95DB">
+    <End Type="base999Model.Abuelo_Biblioteca" Role="Abuelo_Biblioteca" Multiplicity="0..1" />
+    <End Type="base999Model.Padre_Biblioteca" Role="Padre_Biblioteca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Abuelo_Biblioteca">
+        <PropertyRef Name="IdAbuelo" />
+      </Principal>
+      <Dependent Role="Padre_Biblioteca">
+        <PropertyRef Name="IdAbueloFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AbueloCir__IdGra__2A4B4B5E">
+    <End Type="base999Model.GraficoCircularesVarios" Role="GraficoCircularesVarios" Multiplicity="0..1" />
+    <End Type="base999Model.AbueloCirculosVarios" Role="AbueloCirculosVarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GraficoCircularesVarios">
+        <PropertyRef Name="Idgrafico" />
+      </Principal>
+      <Dependent Role="AbueloCirculosVarios">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PapaCircu__IdAbu__160F4887">
+    <End Type="base999Model.AbueloCirculosVarios" Role="AbueloCirculosVarios" Multiplicity="0..1" />
+    <End Type="base999Model.PapaCirculosVarios" Role="PapaCirculosVarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AbueloCirculosVarios">
+        <PropertyRef Name="IdAbuelo" />
+      </Principal>
+      <Dependent Role="PapaCirculosVarios">
+        <PropertyRef Name="IdAbueloFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Area_goog__IdGra__38996AB5">
+    <End Type="base999Model.Grafico_googleChart_Area" Role="Grafico_googleChart_Area" Multiplicity="0..1" />
+    <End Type="base999Model.Area_googleChart_Area" Role="Area_googleChart_Area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_googleChart_Area">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Area_googleChart_Area">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Datos_goo__IdLin__5812160E">
+    <End Type="base999Model.Area_googleChart_Area" Role="Area_googleChart_Area" Multiplicity="0..1" />
+    <End Type="base999Model.Datos_googleChart_Area" Role="Datos_googleChart_Area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Area_googleChart_Area">
+        <PropertyRef Name="IdArea" />
+      </Principal>
+      <Dependent Role="Datos_googleChart_Area">
+        <PropertyRef Name="IdLineasFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Barra_amC__IdGra__46E78A0C">
+    <End Type="base999Model.Grafico_amChart_HorizontalBar" Role="Grafico_amChart_HorizontalBar" Multiplicity="0..1" />
+    <End Type="base999Model.Barra_amChart_HorizontalBar" Role="Barra_amChart_HorizontalBar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_amChart_HorizontalBar">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Barra_amChart_HorizontalBar">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tabla_amC__idlin__3A4CA8FD">
+    <End Type="base999Model.Barra_amChart_HorizontalBar" Role="Barra_amChart_HorizontalBar" Multiplicity="0..1" />
+    <End Type="base999Model.Tabla_amChart_HorizontalBar" Role="Tabla_amChart_HorizontalBar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Barra_amChart_HorizontalBar">
+        <PropertyRef Name="IdCuadrado" />
+      </Principal>
+      <Dependent Role="Tabla_amChart_HorizontalBar">
+        <PropertyRef Name="idlinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Categoria__IdGra__4BAC3F29">
+    <End Type="base999Model.Grafico_Plotly_Listbox" Role="Grafico_Plotly_Listbox" Multiplicity="0..1" />
+    <End Type="base999Model.Categoria_Plotly_Listbox" Role="Categoria_Plotly_Listbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_Plotly_Listbox">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Categoria_Plotly_Listbox">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCatego__IdCat__2645B050">
+    <End Type="base999Model.Categoria_Plotly_Listbox" Role="Categoria_Plotly_Listbox" Multiplicity="0..1" />
+    <End Type="base999Model.SubCategoria_Plotly_Listbox" Role="SubCategoria_Plotly_Listbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria_Plotly_Listbox">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="SubCategoria_Plotly_Listbox">
+        <PropertyRef Name="IdCategoriaFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Circulos___IdGra__5070F446">
+    <End Type="base999Model.Grafico_d3Object_Bubble" Role="Grafico_d3Object_Bubble" Multiplicity="0..1" />
+    <End Type="base999Model.Circulos_Grafico_d3Object_Bubble" Role="Circulos_Grafico_d3Object_Bubble" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_d3Object_Bubble">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Circulos_Grafico_d3Object_Bubble">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCircul__IdCir__3493CFA7">
+    <End Type="base999Model.Circulos_Grafico_d3Object_Bubble" Role="Circulos_Grafico_d3Object_Bubble" Multiplicity="0..1" />
+    <End Type="base999Model.SubCirculos_Grafico_d3Object_Bubble" Role="SubCirculos_Grafico_d3Object_Bubble" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Circulos_Grafico_d3Object_Bubble">
+        <PropertyRef Name="IdCirculo" />
+      </Principal>
+      <Dependent Role="SubCirculos_Grafico_d3Object_Bubble">
+        <PropertyRef Name="IdCirculoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cuadrados__IdGra__5535A963">
+    <End Type="base999Model.Grafico_d3Object_TreeMap" Role="Grafico_d3Object_TreeMap" Multiplicity="0..1" />
+    <End Type="base999Model.Cuadrados_d3Object_TreeMap" Role="Cuadrados_d3Object_TreeMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_d3Object_TreeMap">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Cuadrados_d3Object_TreeMap">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCuadra__IdCir__37703C52">
+    <End Type="base999Model.Cuadrados_d3Object_TreeMap" Role="Cuadrados_d3Object_TreeMap" Multiplicity="0..1" />
+    <End Type="base999Model.SubCuadrados_d3Object_TreeMap" Role="SubCuadrados_d3Object_TreeMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuadrados_d3Object_TreeMap">
+        <PropertyRef Name="IdCuadrado" />
+      </Principal>
+      <Dependent Role="SubCuadrados_d3Object_TreeMap">
+        <PropertyRef Name="IdCirculoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Datos_goo__IdLin__5AEE82B9">
+    <End Type="base999Model.Lineas_googleChart_Line" Role="Lineas_googleChart_Line" Multiplicity="0..1" />
+    <End Type="base999Model.Datos_googleChart_Line" Role="Datos_googleChart_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lineas_googleChart_Line">
+        <PropertyRef Name="IdLinea" />
+      </Principal>
+      <Dependent Role="Datos_googleChart_Line">
+        <PropertyRef Name="IdLineasFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Datos_Gra__IdLin__6383C8BA">
+    <End Type="base999Model.Lineas_Grafico_Plotly_Line" Role="Lineas_Grafico_Plotly_Line" Multiplicity="0..1" />
+    <End Type="base999Model.Datos_Grafico_Plotly_Line" Role="Datos_Grafico_Plotly_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lineas_Grafico_Plotly_Line">
+        <PropertyRef Name="IdLinea" />
+      </Principal>
+      <Dependent Role="Datos_Grafico_Plotly_Line">
+        <PropertyRef Name="IdLineasFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Datosdupl__IdGra__6A30C649">
+    <End Type="base999Model.GraficoCircularesVarios" Role="GraficoCircularesVarios" Multiplicity="0..1" />
+    <End Type="base999Model.DatosdupliCirculosVarios" Role="DatosdupliCirculosVarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GraficoCircularesVarios">
+        <PropertyRef Name="Idgrafico" />
+      </Principal>
+      <Dependent Role="DatosdupliCirculosVarios">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DatosSolo__IdGra__6D0D32F4">
+    <End Type="base999Model.GraficoCircularesVarios" Role="GraficoCircularesVarios" Multiplicity="0..1" />
+    <End Type="base999Model.DatosSoloUnoCirculosVarios" Role="DatosSoloUnoCirculosVarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GraficoCircularesVarios">
+        <PropertyRef Name="Idgrafico" />
+      </Principal>
+      <Dependent Role="DatosSoloUnoCirculosVarios">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Estudio__IdEstud__76969D2E">
+    <End Type="base999Model.EstudioCategoria" Role="EstudioCategoria" Multiplicity="0..1" />
+    <End Type="base999Model.Estudio" Role="Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstudioCategoria">
+        <PropertyRef Name="IdEstudioCategoria" />
+      </Principal>
+      <Dependent Role="Estudio">
+        <PropertyRef Name="IdEstudioCategoriaFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FeedSocia__IdSec__7D439ABD">
+    <End Type="base999Model.Secciones" Role="Secciones" Multiplicity="0..1" />
+    <End Type="base999Model.FeedSocial" Role="FeedSocial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Secciones">
+        <PropertyRef Name="IdSecciones" />
+      </Principal>
+      <Dependent Role="FeedSocial">
+        <PropertyRef Name="IdSeccionesFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FeedSocia__IdSec__00200768">
+    <End Type="base999Model.Secciones" Role="Secciones" Multiplicity="0..1" />
+    <End Type="base999Model.FeedSocial2" Role="FeedSocial2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Secciones">
+        <PropertyRef Name="IdSecciones" />
+      </Principal>
+      <Dependent Role="FeedSocial2">
+        <PropertyRef Name="IdSeccionesFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grafico_g__IdLin__35BCFE0A">
+    <End Type="base999Model.Lineas_googleChart_Line" Role="Lineas_googleChart_Line" Multiplicity="0..1" />
+    <End Type="base999Model.Grafico_googleChart_Area" Role="Grafico_googleChart_Area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lineas_googleChart_Line">
+        <PropertyRef Name="IdLinea" />
+      </Principal>
+      <Dependent Role="Grafico_googleChart_Area">
+        <PropertyRef Name="IdLineaOpc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lineas_go__IdGra__32E0915F">
+    <End Type="base999Model.Grafico_googleChart_Line" Role="Grafico_googleChart_Line" Multiplicity="0..1" />
+    <End Type="base999Model.Lineas_googleChart_Line" Role="Lineas_googleChart_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_googleChart_Line">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Lineas_googleChart_Line">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Torta_Gra__IdGra__3D2915A8">
+    <End Type="base999Model.Grafico_googleChart_Pie" Role="Grafico_googleChart_Pie" Multiplicity="0..1" />
+    <End Type="base999Model.Torta_Grafico_googleChart_Pie" Role="Torta_Grafico_googleChart_Pie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_googleChart_Pie">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Torta_Grafico_googleChart_Pie">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lineas_Gr__IdGra__60A75C0F">
+    <End Type="base999Model.Grafico_Plotly_Line" Role="Grafico_Plotly_Line" Multiplicity="0..1" />
+    <End Type="base999Model.Lineas_Grafico_Plotly_Line" Role="Lineas_Grafico_Plotly_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_Plotly_Line">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Lineas_Grafico_Plotly_Line">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lineas_Pl__IdGra__29221CFB">
+    <End Type="base999Model.Grafico_Plotly_Listbox" Role="Grafico_Plotly_Listbox" Multiplicity="0..1" />
+    <End Type="base999Model.Lineas_Plotly_Listbox" Role="Lineas_Plotly_Listbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_Plotly_Listbox">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Lineas_Plotly_Listbox">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Padre_Gra__IdGra__10566F31">
+    <End Type="base999Model.Grafico_Timeline" Role="Grafico_Timeline" Multiplicity="0..1" />
+    <End Type="base999Model.Padre_Grafico_Timeline" Role="Padre_Grafico_Timeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grafico_Timeline">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="Padre_Grafico_Timeline">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PadreLine__IdGra__1BC821DD">
+    <End Type="base999Model.GraficoLineasSeparadas" Role="GraficoLineasSeparadas" Multiplicity="0..1" />
+    <End Type="base999Model.PadreLineasSeparados" Role="PadreLineasSeparados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GraficoLineasSeparadas">
+        <PropertyRef Name="IdGrafico" />
+      </Principal>
+      <Dependent Role="PadreLineasSeparados">
+        <PropertyRef Name="IdGraficoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hijo_Bibl__IdPad__0D7A0286">
+    <End Type="base999Model.Padre_Biblioteca" Role="Padre_Biblioteca" Multiplicity="0..1" />
+    <End Type="base999Model.Hijo_Biblioteca" Role="Hijo_Biblioteca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Padre_Biblioteca">
+        <PropertyRef Name="IdPadre" />
+      </Principal>
+      <Dependent Role="Hijo_Biblioteca">
+        <PropertyRef Name="IdPadreFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hijo_Graf__IdPad__1332DBDC">
+    <End Type="base999Model.Padre_Grafico_Timeline" Role="Padre_Grafico_Timeline" Multiplicity="0..1" />
+    <End Type="base999Model.Hijo_Grafico_Timeline" Role="Hijo_Grafico_Timeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Padre_Grafico_Timeline">
+        <PropertyRef Name="IdLinea" />
+      </Principal>
+      <Dependent Role="Hijo_Grafico_Timeline">
+        <PropertyRef Name="IdPadreFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HijoCircu__IdPad__18EBB532">
+    <End Type="base999Model.PapaCirculosVarios" Role="PapaCirculosVarios" Multiplicity="0..1" />
+    <End Type="base999Model.HijoCirculosVarios" Role="HijoCirculosVarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PapaCirculosVarios">
+        <PropertyRef Name="IdPadre" />
+      </Principal>
+      <Dependent Role="HijoCirculosVarios">
+        <PropertyRef Name="IdPadreFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HijoLinea__IdPad__1EA48E88">
+    <End Type="base999Model.PadreLineasSeparados" Role="PadreLineasSeparados" Multiplicity="0..1" />
+    <End Type="base999Model.HijoLineasSeparadas" Role="HijoLineasSeparadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PadreLineasSeparados">
+        <PropertyRef Name="IdPadre" />
+      </Principal>
+      <Dependent Role="HijoLineasSeparadas">
+        <PropertyRef Name="IdPadreFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__JsonVista__IdJso__236943A5">
+    <End Type="base999Model.Json" Role="Json" Multiplicity="1" />
+    <End Type="base999Model.JsonVistas" Role="JsonVistas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Json">
+        <PropertyRef Name="IdJson" />
+      </Principal>
+      <Dependent Role="JsonVistas">
+        <PropertyRef Name="IdJsonFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lineas_Pl__IdSub__2A164134">
+    <End Type="base999Model.SubCategoria_Plotly_Listbox" Role="SubCategoria_Plotly_Listbox" Multiplicity="0..1" />
+    <End Type="base999Model.Lineas_Plotly_Listbox" Role="Lineas_Plotly_Listbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategoria_Plotly_Listbox">
+        <PropertyRef Name="IdSubCategoria" />
+      </Principal>
+      <Dependent Role="Lineas_Plotly_Listbox">
+        <PropertyRef Name="IdSubCategoriaFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nivel2__Fk_IdNiv__0A688BB1">
+    <End Type="base999Model.nivel1" Role="nivel1" Multiplicity="0..1" />
+    <End Type="base999Model.nivel2" Role="nivel2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel1">
+        <PropertyRef Name="IdNivel1" />
+      </Principal>
+      <Dependent Role="nivel2">
+        <PropertyRef Name="Fk_IdNivel1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nivel22__Fk_IdNi__1D7B6025">
+    <End Type="base999Model.nivel11" Role="nivel11" Multiplicity="0..1" />
+    <End Type="base999Model.nivel22" Role="nivel22" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel11">
+        <PropertyRef Name="IdNivel11" />
+      </Principal>
+      <Dependent Role="nivel22">
+        <PropertyRef Name="Fk_IdNivel11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nivel3__Fk_IdNiv__0D44F85C">
+    <End Type="base999Model.nivel2" Role="nivel2" Multiplicity="0..1" />
+    <End Type="base999Model.nivel3" Role="nivel3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel2">
+        <PropertyRef Name="IdNivel2" />
+      </Principal>
+      <Dependent Role="nivel3">
+        <PropertyRef Name="Fk_IdNivel2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nivel4__Fk_IdNiv__10216507">
+    <End Type="base999Model.nivel3" Role="nivel3" Multiplicity="0..1" />
+    <End Type="base999Model.nivel4" Role="nivel4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel3">
+        <PropertyRef Name="IdNivel3" />
+      </Principal>
+      <Dependent Role="nivel4">
+        <PropertyRef Name="Fk_IdNivel3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nivel5__Fk_IdNiv__12FDD1B2">
+    <End Type="base999Model.nivel4" Role="nivel4" Multiplicity="0..1" />
+    <End Type="base999Model.nivel5" Role="nivel5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel4">
+        <PropertyRef Name="IdNivel4" />
+      </Principal>
+      <Dependent Role="nivel5">
+        <PropertyRef Name="Fk_IdNivel4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

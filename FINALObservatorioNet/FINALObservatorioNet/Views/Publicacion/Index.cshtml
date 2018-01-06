@@ -1,0 +1,235 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+
+    ViewData["menu3"] = "active";
+}
+
+
+
+
+<div class="row cuadro-contenido">
+    <div class="cuadro-padding">
+        <section class="col-md-12">
+            <h1>@Model.TituloInterna</h1>
+            <h6>@Model.SubTitulo</h6>
+            <p>@Model.DescripcionSuperior<br /></p>
+            <hr />
+        </section>
+        <div class="row">
+            <div class="col-md-12" id="filtrobtn">
+                <h6 class="sinmargen celeste text-right">
+                    <a onclick="MostrarFiltro()" class="btn btn-border">Filtrar Contenido <i class="material-icons">filter_list</i> </a>
+                </h6>
+                <hr />
+            </div>
+            <aside id="Filtro" class="col-md-2 border-right filtro">
+                <div class="row">
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Tipo</h5>
+                        @Html.DropDownList("orden-TipoPublicacion", (SelectList)ViewBag.tipo, new { @class = "form-control form-control-sm" })
+                        
+                        @*<select class="input" id="orden-TipoPublicacion">
+
+                            <option value=" ">Todas</option>
+                            <option value="1">Columnas</option>
+                            <option value="2">Estudios</option>
+                            <option value="3">Infografías</option>
+                            <option value="4">Informes</option>
+                            <option value="5">Principios</option>
+                            <option value="6">Reportajes</option>
+                        </select>*@
+                    </div>
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Temas</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul id="tag-Busqueda">
+                                    @foreach (var item in ViewBag.Tags)
+                                    {
+                                        <li>
+                                            <a name="@item.Key" class="tags-Busqueda"><h6 class="tags">@item.Value</h6></a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">reorder</i> Ordenar por</h5>
+                        <ul id="orden-Busqueda">
+                            <li><a href="#" name="1" class="orden-Busqueda"><h6 class="tags tags-selecter">Nuevos</h6></a></li>
+                            @*<li><a href="#" name="2" class="orden-Busqueda"><h6 class="tags">Más votados</h6></a></li>*@
+                            <li><a href="#" name="3" class="orden-Busqueda"><h6 class="tags">Recomendados</h6></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <section class="col-md-10">
+                <div class="row" id="divPublicaciones">
+                    <article class="col-12 div-item-publicacion"></article>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <p>@Model.DescripcionInferior</p>           
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="tipp" value="@ViewBag.i" />
+@section Scripts
+{
+    <script>
+        var pagina = 0;
+        var etiqueta = "";
+        var orden = "";
+        var TipoPublicacion = $("#tipp").val();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            filtroPublicacion();
+        }, false);
+
+        function filtroPublicacion() {
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    pagina: pagina,
+                    tags: etiqueta,
+                    orden: orden,
+                    tipo: TipoPublicacion
+                },
+                url: '../../Publicacion/FiltroListadoPublicacion',
+                dataType: 'json',
+                success: function (data) {
+                    var aux = 0;
+                    $(".mascuadro").remove();
+                    $.each(data, function (i, item) {
+                        aux++;
+                        $("#divPublicaciones").append(nuevaPublicacion(item));
+                    });
+                    if (aux > 8) {
+                        $("#divPublicaciones").append('<div class="col-12 mascuadro"><div class="cuadro-contenido"><p class="text-center"><a class="btn" onclick= "filtroPublicacion()" > Ver más</a ></p ></div ></div > ');
+                    }
+                    else {
+                        $("#divPublicaciones").append('<div class="col-12 mascuadro"><div class="cuadro-contenido"><p class="text-center">No hay más.</p></div></div>');
+                    }
+                    pagina = pagina + 1;
+                    if (TipoPublicacion == " ") {
+                        history.pushState(null, "", "/publicacion");
+                    } else{
+                        history.pushState(null, "", "/publicacion?id=" + TipoPublicacion);
+                    }
+                },
+                error: function (msg) {
+                    $('#btnagendar').attr('disabled', false);
+                }
+            });
+        }
+
+        function nuevaPublicacion(item) {
+            return '\
+                <article class="col-md-12 rowdiv div-item-publicaciones">\
+                    <div class="cuadro-contenido">\
+                        <div class="row">\
+                            <div class="col-4">\
+                                <figure>\
+                                    <a href="'+ item.Direccion + '">\
+                                        <img src="Content/images/seccion/'+ item.Imagen +'" class="img-height" />\
+                                    </a>\
+                                    <small class="etiqueta">'+ item.TipoPublicacion +'</small>\
+                                </figure>\
+                            </div>\
+                            <div class="col-8">\
+                                <div class="cuadro-padding-interno">\
+                                    <div class="tamano">\
+                                    <header>\
+                                        <h5><a href="'+ item.Direccion + '">' + item.Titulo +'</a></h5>\
+                                        <p class="small">'+ item.Fecha+'</p>\
+                                    </header>\
+                                    <section>\
+                                        <p class="cuadro-texto">'+ item.Resumen + '</p>\
+                                        <p class="small tag-cuadro">'+ item.Etiqueta + '</p>\
+                                    </section>\
+                                    </div>\
+                                    <footer>\
+                                        <hr />\
+                                        <div class="row">\
+                                            <div class="col-6 align-self-center">\
+                                                <p class="sinmargen">'+ item.autor + '</p>\
+                                            </div>\
+                                            <div class="col-6">\
+                                                <p class="text-right sinmargen">\
+                                                    <a href="'+ item.Direccion +'" class="btn btn-xs">Ir a Publicación <i class="material-icons">launch</i></a>\
+                                                </p>\
+                                            </div>\
+                                        </div>\
+                                        \
+                                    </footer>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </article>\
+                ';
+        }
+
+        function MostrarFiltro() {
+            if ($(".filtro").css("display") == "block") {
+                $(".filtro").css("display", "none")
+            }
+            else {
+                $(".filtro").css("display", "block")
+            }
+
+        }
+
+        $(document).ready(function () {
+            $(".orden-Busqueda").click(function () {
+                if ($(this).children(".tags-selecter")[0]) {
+                    orden = "";
+                    $(".orden-Busqueda").children(".tags").removeClass("tags-selecter");
+                }
+                else {
+                    orden = $(this).attr('name');
+                    $(".orden-Busqueda").children(".tags").removeClass("tags-selecter");
+                    $(this).children(".tags").addClass("tags-selecter");
+                }
+                pagina = 0;
+                $("#divPublicaciones").empty();
+                filtroPublicacion();
+            });
+
+            $("#orden-TipoPublicacion").change(function () {
+                TipoPublicacion = $(this).val();
+                pagina = 0;
+                $("#divPublicaciones").empty();
+                filtroPublicacion();
+            });
+
+            $(".tags-Busqueda").click(function () {
+                if ($(this).children(".tags-selecter")[0]) {
+                    etiqueta = "";
+                    $(".tags-Busqueda").children(".tags").removeClass("tags-selecter");
+                }
+                else {
+                    etiqueta = $(this).attr('name');
+                    $(".tags-Busqueda").children(".tags").removeClass("tags-selecter");
+                    $(this).children(".tags").addClass("tags-selecter");
+                }
+                pagina = 0;
+                $("#divPublicaciones").empty();
+                filtroPublicacion()
+            });
+
+
+        });
+    </script>
+}

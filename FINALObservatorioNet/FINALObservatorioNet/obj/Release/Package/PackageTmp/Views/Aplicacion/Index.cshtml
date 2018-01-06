@@ -1,0 +1,208 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+    ViewData["menu2"] = "active";
+}
+
+<div class="row cuadro-contenido">
+    <div class="cuadro-padding">
+        <section class="col-md-12">
+            <h1>@Model.TituloInterna</h1>
+            <h6>@Model.SubTitulo</h6>
+            <p>@Model.DescripcionSuperior<br /></p>
+            <hr />
+        </section>
+        <div class="row">
+            @*<aside class="col-md-2 border-right">
+                <div class="row">
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Temas</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul id="tag-Busqueda">
+                                    @foreach (var item in ViewBag.Tags)
+                                    {
+                                        <li>
+                                            <a href="#" name="@item.Key" class="tags-Busqueda"><h6 class="tags">@item.Value</h6></a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">reorder</i> Ordenar por</h5>
+                        <ul id="orden-Busqueda">
+                            <li><a href="#" name="1" class="orden-Busqueda"><h6 class="tags tags-selecter">Nuevos</h6></a></li>
+                            <li><a href="#" name="2" class="orden-Busqueda"><h6 class="tags">Más votados</h6></a></li>
+                            <li><a href="#" name="3" class="orden-Busqueda"><h6 class="tags">Recomendados</h6></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>*@
+            <section class="col-md-12">
+                <div class="row" id="divAplicaciones">
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <p>@Model.DescripcionInferior</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script>
+        var pagina = 0;
+        var etiqueta = "";
+        var orden = "";
+
+        document.addEventListener("DOMContentLoaded", function () {
+            filtroAplicacion();
+        }, false);
+
+        function filtroAplicacion() {
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    pagina: pagina,
+                    tags: etiqueta,
+                    orden: orden
+                },
+                url: '../../Aplicacion/FiltroListadoAplicacion',
+                dataType: 'json',
+                success: function (data) {
+                    var aux = 0;
+                    $.each(data, function (i, item) {
+                        aux++;
+                        $("#divAplicaciones").append(nuevaAplicacion(item));
+                    });
+                    if (aux > 12) {
+                        $("#divAplicaciones").append('<div class="col-12"><div class="cuadro-contenido"><p class="text-center"><a onclick="filtroAplicacion()"> Ver más</a></p></div></div>');
+                    }
+                    else {
+                        if (pagina > 0) {
+                            $("#divAplicaciones").append('<div class="col-12"><div class="cuadro-contenido"><p class="text-center">No hay más.</p></div></div>');
+                        }
+                        
+                    }
+                    pagina = pagina + 1;
+                },
+                error: function (msg) {
+                    $('#btnagendar').attr('disabled', false);
+                }
+            });
+        }
+
+        function Megusta(id, cantidad) {
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    IDVISTA: id,
+                    VAL: 1
+                },
+                url: '../../ajaxGraficos/formulario1',
+                dataType: 'json',
+                success: function (data, textStatus, jqXHR) {
+                    if (data == true) {
+                        $("#" + id).addClass("celeste");
+                        var aux = cantidad + 1;
+                        $("#A" + id).text(aux);
+                    }
+                    else {
+                        $("#" + id).addClass("celeste");
+                    }
+                },
+                error: function (ID) {
+                }
+            });
+        }
+
+        function nuevaAplicacion(item) {
+            return '\
+                <article class="col-md-6 rowdiv div-item-aplicacion">\
+                    <div class="cuadro-contenido">\
+                        <div class="div-relative">\
+                            <figure>\
+                                <img src="Content/images/seccion/'+ item.Imagen + '" alt="' + item.Titulo +'" />\
+                            </figure>\
+                            <div class="capablanca"></div>\
+                            <div class="cuadro-padding">\
+                                <div class="row">\
+                                    <div class="col-4"></div>\
+                                    <div class="col-8">\
+                                        <header>\
+                                            <h5><a href="/aplicacion/'+ item.Direccion + '">' + item.Titulo + '</a></h5>\
+                                        </header>\
+                                        <section>\
+                                            <p class="cuadro-texto">'+ item.Resumen + '</p>\
+                                            <p class="small tag-cuadro">'+ item.Etiqueta + '</p>\
+                                        </section>\
+                                        <footer>\
+                                            <hr />\
+                                            <div class="row">\
+                                                <div class="col-5">\
+                                                    <p class="text-left sinmargen">\
+                                                        <a onclick="Megusta('+ item.Id + ',' + item.Megusta + ')" >\
+                                                    <i id="'+ item.Id + '" class="material-icons megusta md-24">thumb_up</i><span id="A' + item.Id + '"> ' + item.Megusta + '</span>\
+                                                </a>\
+                                                    </p >\
+                                                </div>\
+                                                <div class="col-7">\
+                                                    <p class="text-right sinmargen">\
+                                                        <a href="/aplicacion/'+ item.Direccion + '" class="btn btn-xs">Ir a aplicación <i class="material-icons">launch</i></a>\
+                                                    </p>\
+                                                </div>\
+                                            </div>\
+                                        </footer>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div> \
+                </article>\
+                ';
+        }
+
+        $(document).ready(function () {
+            $(".orden-Busqueda").click(function () {
+                if ($(this).children(".tags-selecter")[0]) {
+                    orden = "";
+                    $(".orden-Busqueda").children(".tags").removeClass("tags-selecter");
+                }
+                else {
+                    orden = $(this).attr('name');
+                    $(".orden-Busqueda").children(".tags").removeClass("tags-selecter");
+                    $(this).children(".tags").addClass("tags-selecter");
+                }
+                pagina = 0;
+                $("#divAplicaciones").empty();
+                filtroAplicacion()
+            });
+
+            $(".tags-Busqueda").click(function () {
+                if ($(this).children(".tags-selecter")[0]) {
+                    etiqueta = "";
+                    $(".tags-Busqueda").children(".tags").removeClass("tags-selecter");
+                }
+                else {
+                    etiqueta = $(this).attr('name');
+                    $(".tags-Busqueda").children(".tags").removeClass("tags-selecter");
+                    $(this).children(".tags").addClass("tags-selecter");
+                }
+                pagina = 0;
+                $("#divAplicaciones").empty();
+                filtroAplicacion()
+            });
+        });
+    </script>
+}

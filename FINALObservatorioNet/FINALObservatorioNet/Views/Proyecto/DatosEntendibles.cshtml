@@ -1,0 +1,220 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+    ViewData["menu4"] = "active";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="cuadro-contenido">
+            <figure>
+                <img src="~/Content/images/seccion/4002.png" class="img-fluid" />
+            </figure>
+            <div class="cuadro-padding-interno">
+                <h1>Observatorio Ciudadano de Compras Municipales</h1>
+            </div>
+            <hr />
+            <div class="cuadro-padding-interno">
+                <div class="list-group">
+                    <a onclick="menuproyecto(1)"><span id="1" class="list-group-item seleccionado"><i class="material-icons md-36 celeste">description</i> Descripción</span></a>
+                    <a onclick="menuproyecto(2)"><span id="2" class="list-group-item"><i class="material-icons md-36 celeste">filter_tilt_shift</i> Objetivos</span></a>
+                    <a onclick="menuproyecto(3)"><span id="3" class="list-group-item"><i class="material-icons md-36 celeste">change_history</i> Etapas</span></a>
+                    <a onclick="menuproyecto(4)"><span id="4" class="list-group-item"><i class="material-icons md-36 celeste">comment</i> Noticias</span></a>
+                    <a onclick="menuproyecto(5)"><span id="5" class="list-group-item"><i class="material-icons md-36 celeste">file_download</i> Documentos</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8" id="Descripcion">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Descripción</h2>
+            <h6 class="text-left">Datos entendibles</h6>
+            <hr />
+            <p>
+                <br /><br />
+                La rendición de cuentas es esencial en el sistema democrático, en donde las autoridades son mandatarios de sus electores. La gestión de gobierno, sus prioridades e impacto, se reflejan principalmente en el modo en que se diseña y ejecuta el Presupuesto de la Nación. Por ello, la transparencia y rendición de cuentas relativas al gasto público son la base del buen gobierno democrático, además de ser un elemento crucial a la hora de fortalecer la confianza de los ciudadanos hacia el Estado. 
+                <br /><br />
+                La contrapartida del gasto público son, esencialmente, los impuestos que lo financian. La legitimidad tributaria, importante también para favorecer una cultura de cumplimiento de las obligaciones tributarias, exige demostrar pertinencia, eficiencia, eficacia y probidad del gasto público. 
+                <br /><br />
+                Una mayor transparencia y rendición de cuentas del gasto público, no solo tendrá efectos positivos en el ámbito de los contribuyentes y ciudadanos -usuarios de los respectivos datos-, sino también en el ámbito del propio sector público. De esta forma, la ciudadanía sabrá mejor qué hace el Estado, cómo y con cuántos recursos y, además, los propios servicios públicos se verán sometidos a un escrutinio que es condición sine qua non para facilitar un ambiente de continua mejora de procesos.
+                <br /><br />
+                Basado en estas consideraciones, el equipo del Observatorio elaboró diez principios para una rendición de cuentas efectiva del sector público. Se trata de una selección de temas principales que hemos juntado durante meses en múltiples conversaciones, tanto con expertos como no expertos, y que no aspira a ser definitiva ni excluyente. Entre otros, sugieren la transparencia pro-activa de información que permitiría contestar preguntas como ¿Cuáles son los productos y resultados logrados del gasto público?, ¿Quiénes son los beneficiarios del gasto público?, ¿Cuáles son los lugares beneficiados por el gasto público?, ¿Cómo se compone el gasto del sector público?, ¿Cuánto se gasta en el empleo público? y ¿Quiénes son las personas detrás de las empresas proveedoras del Estado?
+                <br /><br />
+                Con apoyo de los parlamentarios Jaime Pilowsky, Patricio Vallespín, Hernán Larraín y ,nuestro Consejero Asesor, Alejandro Ferreiro pedimos al actual Ministerio de Hacienda dar un primer paso hacia una mejor rendición de cuentas del gasto público en Chile. Desde mayo 2016 gestionamos múltiples reuniones con el propio Ministerio de Hacienda, la Dirección de Presupuestos, la Subsecretaría de Desarrollo Regional, la Secretaría General de la Presidencia, la Contraloría General de la República y el Congreso, para entusiasmar al Gobierno a avanzar en términos concretos. Para ello, levantamos propuestas para avanzar en el corto plazo, y propusimos materializarlos vía un compromiso formal entre Gobierno y Congreso. 
+                <br /><br /><br /><br />
+            </p>
+            <h6 class="text-left">Las propuestas hechas a Hacienda y el Congreso fueron las siguientes: </h6>
+            <hr />
+            <br />
+            <ol>
+                <li><p>Publicar Datos abiertos del gasto público del Gobierno Central.</p></li>
+                <li><p>Medir y publicar continuamente la satisfacción de usuarios de la información sobre el gasto público (web Dipres).</p></li>
+                <li><p>Implementar un Consejo de la Sociedad Civil en la Dipres.</p></li>
+                <li><p>Implementar una mayor usabilidad para los informes financieros de Proyectos de Leyes (Dipres).</p></li>
+                <li><p>Implementar una mesa de trabajo para avanzar hacia una mejor clasificación de los productos y resultados del gasto público.</p></li>
+                <li><p>Mejorar la usabilidad de la información acerca de las Compras Públicas.</p></li>
+                <li><p>Realizar un análisis y propuesta conceptual para evitar la alta concentración de la ejecución del gasto durante el mes de diciembre.</p></li>
+                <li><p>Estudiar factibilidad para un sistema de "Gobernabilidad, Calidad y Publicidad de Datos de las Instituciones Públicas” en los PMGs.</p></li>
+                <li><p>Mejorar la transparencia de los documentos presupuestarios (Internacional Open Budget Survey).</p></li>
+                <li><p>Mayor Participación ciudadana en el ciclo presupuestario (Internacional Open Budget Survey).</p></li>
+                <li><p>Como Gobierno, hacerse miembro de la red Global Initiative For Fiscal Transparency (GIFT: http://www.fiscaltransparency.net/ ).</p></li>
+                <li><p>Publicar en la web de Dipres, de manera periódica, la información que el articulado permanente y las glosas de la Ley de Presupuestos exigen enviar al Congreso, como parte de la rendición digitalmente legible.</p></li>
+                <li><p>Poner una indicación en una ley permanente de que la información de las glosas y del articulado permanente debe entregarse  "digitalmente legible".</p></li>
+                <li><p>Como Gobierno, suscribir Chile al Global Partnership for Social Accountability del Banco Mundial (GPSA:  www.thegpsa.org/ ), y fomentar así la participación ciudadana en materia rendición de cuentas.</p></li>
+                <li><p>Incorporar los datos de socios de empresas proveedoras en una base de datos (Chile Compra, CPLT y CGR).</p></li>
+                <li><p>Analizar cómo hacer evaluaciones sobre programas de la Ley de Ppto - y no sobre programas gubernamentales.</p></li>
+                <li><p>Coordinar un plan de trabajo entre DIPRES y ChileCompra para integrar el SIGFE con las Compras Públicas.</p></li>
+                <li><p>Avanzar hacia una Oficina de Análisis Presupuestario (Congreso).</p></li>
+                <li><p>Incorporarse 100% al Sistema de ChileCompra (Congreso).</p></li>
+            </ol>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Objetivos">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Objetivos</h2>
+            <h6 class="text-left">especificos</h6>
+            <hr />
+            <p>
+                <br /><br />
+                <i class="material-icons md-24 celeste">check_circle</i> Ayudar a disminuir las brechas existentes hoy en día en términos de accesibilidad y usabilidad de la información del gasto público, a través de la publicación de datos relevantes para los usuarios.
+            </p>
+            <p>
+                <i class="material-icons md-24 celeste">check_circle</i> Dar un primer paso hacia la transparencia útil del gasto público, siendo este la expresión financiera de todo qué hacer el Estado. 
+            </p>
+            <p>
+                <i class="material-icons md-24 celeste">check_circle</i> Incentivar un Protocolo de Acuerdo entre el Ministerio de Hacienda y el Congreso con compromisos de ambas partes en materia transparencia fiscal. 
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Etapas">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Etapas</h2>
+            <h6 class="text-left">Enumeración</h6>
+            <hr />
+            <img class="img-fluid" src="~/Content/images/seccion/4002_etapa.png" />
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="noticias">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <div class="row">
+
+                <div class="col-12">
+                    <h2 class="text-left">Noticias</h2>
+                    <h6 class="text-left">Actividades de este proyecto</h6>
+                    <hr />
+                </div>
+                @foreach (var item in ViewBag.noticias)
+                {
+                    <div class="col-2 align-self-center">
+                        <figure>
+                            <img src="~/Content/images/noticia/@item.Imagen" class="img-fluid" />
+                        </figure>
+                    </div>
+                    <div class="col-10">
+                        <h5><a href="@item.Urldireccion">@item.Titulo</a></h5>
+                        <p>
+                            @item.Descripcion
+                        </p>
+                        <p class="text-left small">@item.Fecha</p>
+                        <hr />
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Documentos">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Documentos</h2>
+            <h6 class="text-left">Archivos creados para este proyecto.</h6>
+            <hr />
+            <div class="row">
+                <div class="col-md-4 rowdiv">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Principios de Rendición de Cuentas</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://observatoriofiscal.cl/Blog/category/principios/" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 rowdiv">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Usabilidad de la Transparencia</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://www.observatoriofiscal.cl/ARCHIVOS/Biblioteca/Documento_de_trabajo_Usabilidad_transparencia_gasto_publico.pdf" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+@section Scripts
+{
+    <script>
+        function slider(aux) {
+            $('.slider-item').addClass("hidden");
+            $('.slider-item:nth-child(' + aux + ')').removeClass("hidden");
+            $('.slider-menu .nav-item:nth-child(' + aux + ')').addClass("active-top");
+
+            $('.slider-menu .nav-item').removeClass("active-top");
+            $('.slider-menu .nav-item:nth-child(' + aux + ')').addClass("active-top");
+
+        }
+
+
+        function menuproyecto(aux) {
+            $('#Descripcion').addClass("hidden");
+            $('#Objetivos').addClass("hidden");
+            $('#Etapas').addClass("hidden");
+            $('#noticias').addClass("hidden");
+            $('#Documentos').addClass("hidden");
+            switch (aux) {
+                case 1:
+                    $('#Descripcion').removeClass("hidden");
+                    break;
+                case 2:
+                    $('#Objetivos').removeClass("hidden");
+                    break;
+                case 3:
+                    $('#Etapas').removeClass("hidden");
+                    break;
+                case 4:
+                    $('#noticias').removeClass("hidden");
+                    break;
+                case 5:
+                    $('#Documentos').removeClass("hidden");
+                    break;
+            }
+        }
+    </script>
+}

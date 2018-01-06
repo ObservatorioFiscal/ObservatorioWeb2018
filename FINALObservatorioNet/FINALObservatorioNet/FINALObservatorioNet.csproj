@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BEABDB5-B87E-405E-9313-3C2301808EF2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FINALObservatorioNet</RootNamespace>
+    <AssemblyName>FINALObservatorioNet</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActionMailer.Net, Version=0.7.4.0, Culture=neutral, PublicKeyToken=e62db3114c02a1c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ActionMailer.0.7.4\lib\Net40\ActionMailer.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ActionMailer.Net.Mvc, Version=0.7.4.0, Culture=neutral, PublicKeyToken=e62db3114c02a1c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ActionMailer.0.7.4\lib\Net40\ActionMailer.Net.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.4.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.4.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.4.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.4.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.4.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.4.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Classes\auxiliares.cs" />
+    <Compile Include="Classes\Charts.cs" />
+    <Compile Include="Classes\Diccionario.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AjaxGraficosController.cs" />
+    <Compile Include="Controllers\AplicacionController.cs" />
+    <Compile Include="Controllers\EtiquetaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\ProyectoController.cs" />
+    <Compile Include="Controllers\PruebasController.cs" />
+    <Compile Include="Controllers\PublicacionController.cs" />
+    <Compile Include="Controllers\ReddeObservadoresController.cs" />
+    <Compile Include="Controllers\SeccionesController.cs" />
+    <Compile Include="Controllers\VisualizacionController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AbueloCirculosVarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Abuelo_Biblioteca.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AplicacionQuiz.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppMunicipalidad.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Area_googleChart_Area.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Barra_amChart_HorizontalBar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Categoria_Plotly_Listbox.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Circulos_Grafico_d3Object_Bubble.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cuadrados_d3Object_TreeMap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatosAPP.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatosApp2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatosdupliCirculosVarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatosSoloUnoCirculosVarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Datos_googleChart_Area.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Datos_googleChart_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Datos_Grafico_Plotly_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Encuesta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estudio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstudioCategoria.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FeedSocial.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FeedSocial2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Formulario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GraficoCircularesVarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GraficoLineasSeparadas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_amChart_HorizontalBar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_Biblioteca.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_d3Object_Bubble.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_d3Object_TreeMap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_googleChart_Area.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_googleChart_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_googleChart_Pie.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_Plotly_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_Plotly_Listbox.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico_Timeline.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HijoCirculosVarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HijoLineasSeparadas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hijo_Biblioteca.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hijo_Grafico_Timeline.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Indicadores.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Json.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JsonVistas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lineas_googleChart_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lineas_Grafico_Plotly_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lineas_Plotly_Listbox.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel11.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel22.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel4.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nivel5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Noticias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PadreLineasSeparados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Padre_Biblioteca.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Padre_Grafico_Timeline.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PapaCirculosVarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PreguntasFrecuentes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RegistroAppMunicipal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Secciones.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubCategoria_Plotly_Listbox.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubCirculos_Grafico_d3Object_Bubble.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubCuadrados_d3Object_TreeMap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tabla_amChart_HorizontalBar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Torta_Grafico_googleChart_Pie.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\view_ListaSeccionAplicacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\view_ListaSeccionEtiqueta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\view_ListaSeccionNoticia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\view_ListaSeccionPublicacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\view_ListaSeccionVisualizacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\deboot.css" />
+    <Content Include="Content\css\grid-bootstrap.css" />
+    <Content Include="Content\css\grid-bootstrap.min.css" />
+    <Content Include="Content\css\normalize.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\stylefinal.css" />
+    <Content Include="Content\css\stylefinal.min.css" />
+    <Content Include="Content\images\1.jpg" />
+    <Content Include="Content\images\2.jpg" />
+    <Content Include="Content\images\3.jpg" />
+    <Content Include="Content\images\4.jpg" />
+    <Content Include="Content\images\ampolleta.png" />
+    <Content Include="Content\images\app\app1\app1-1.png" />
+    <Content Include="Content\images\app\app1\app1-2.png" />
+    <Content Include="Content\images\app\app1\app1-3.png" />
+    <Content Include="Content\images\app\app1\app1-4.png" />
+    <Content Include="Content\images\app\app1\app1-5.png" />
+    <Content Include="Content\images\app\app1\app1-6.png" />
+    <Content Include="Content\images\app\app1\app1-7.png" />
+    <Content Include="Content\images\app\app1\app1-8.png" />
+    <Content Include="Content\images\app\app1\app1.png" />
+    <Content Include="Content\images\app\app1\app10-1.png" />
+    <Content Include="Content\images\app\app1\app10-2.png" />
+    <Content Include="Content\images\app\app1\app10.png" />
+    <Content Include="Content\images\app\app1\app2-1.png" />
+    <Content Include="Content\images\app\app1\app2-10.png" />
+    <Content Include="Content\images\app\app1\app2-2.png" />
+    <Content Include="Content\images\app\app1\app2-3.png" />
+    <Content Include="Content\images\app\app1\app2-4.png" />
+    <Content Include="Content\images\app\app1\app2-5.png" />
+    <Content Include="Content\images\app\app1\app2-6.png" />
+    <Content Include="Content\images\app\app1\app2-7.png" />
+    <Content Include="Content\images\app\app1\app2-8.png" />
+    <Content Include="Content\images\app\app1\app2-9.png" />
+    <Content Include="Content\images\app\app1\app2.png" />
+    <Content Include="Content\images\app\app1\app3-1.png" />
+    <Content Include="Content\images\app\app1\app3-2.png" />
+    <Content Include="Content\images\app\app1\app3.png" />
+    <Content Include="Content\images\app\app1\app4-1.png" />
+    <Content Include="Content\images\app\app1\app4-2.png" />
+    <Content Include="Content\images\app\app1\app4-3.png" />
+    <Content Include="Content\images\app\app1\app4.png" />
+    <Content Include="Content\images\app\app1\app5-1.png" />
+    <Content Include="Content\images\app\app1\app5-2.png" />
+    <Content Include="Content\images\app\app1\app5-3.png" />
+    <Content Include="Content\images\app\app1\app5-4.png" />
+    <Content Include="Content\images\app\app1\app5.png" />
+    <Content Include="Content\images\app\app1\app6-1.png" />
+    <Content Include="Content\images\app\app1\app6-2.png" />
+    <Content Include="Content\images\app\app1\app6-3.png" />
+    <Content Include="Content\images\app\app1\app6-4.png" />
+    <Content Include="Content\images\app\app1\app6-5.png" />
+    <Content Include="Content\images\app\app1\app6.png" />
+    <Content Include="Content\images\app\app1\app7-1.png" />
+    <Content Include="Content\images\app\app1\app7-2.png" />
+    <Content Include="Content\images\app\app1\app7-3.png" />
+    <Content Include="Content\images\app\app1\app7-4.png" />
+    <Content Include="Content\images\app\app1\app7-5.png" />
+    <Content Include="Content\images\app\app1\app7-6.png" />
+    <Content Include="Content\images\app\app1\app7.png" />
+    <Content Include="Content\images\app\app1\app8-1.png" />
+    <Content Include="Content\images\app\app1\app8-2.png" />
+    <Content Include="Content\images\app\app1\app8-3.png" />
+    <Content Include="Content\images\app\app1\app8-4.png" />
+    <Content Include="Content\images\app\app1\app8-5.png" />
+    <Content Include="Content\images\app\app1\app8.png" />
+    <Content Include="Content\images\app\app1\app9-1.png" />
+    <Content Include="Content\images\app\app1\app9-2.png" />
+    <Content Include="Content\images\app\app1\app9-3.png" />
+    <Content Include="Content\images\app\app1\app9-4.png" />
+    <Content Include="Content\images\app\app1\app9-5.png" />
+    <Content Include="Content\images\app\app1\app9.png" />
+    <Content Include="Content\images\app\app1\hombre1.png" />
+    <Content Include="Content\images\app\app1\hombre2.png" />
+    <Content Include="Content\images\app\app1\hombre3.png" />
+    <Content Include="Content\images\app\app1\Iconos1.png" />
+    <Content Include="Content\images\app\app1\Iconos10.png" />
+    <Content Include="Content\images\app\app1\Iconos2.png" />
+    <Content Include="Content\images\app\app1\Iconos3.png" />
+    <Content Include="Content\images\app\app1\Iconos4.png" />
+    <Content Include="Content\images\app\app1\Iconos5.png" />
+    <Content Include="Content\images\app\app1\Iconos6.png" />
+    <Content Include="Content\images\app\app1\Iconos7.png" />
+    <Content Include="Content\images\app\app1\Iconos8.png" />
+    <Content Include="Content\images\app\app1\Iconos9.png" />
+    <Content Include="Content\images\app\app1\mujer1.png" />
+    <Content Include="Content\images\app\app1\mujer2.png" />
+    <Content Include="Content\images\app\app1\mujer3.png" />
+    <Content Include="Content\images\app\app2\2app1.png" />
+    <Content Include="Content\images\app\app2\2app2.png" />
+    <Content Include="Content\images\app\app2\2app3.png" />
+    <Content Include="Content\images\app\app2\2app4.png" />
+    <Content Include="Content\images\app\app2\2app5.png" />
+    <Content Include="Content\images\app\app2\alcalde.png" />
+    <Content Include="Content\images\app\app2\alcaldecartelhombre.png" />
+    <Content Include="Content\images\app\app2\alcaldecartelmujer.png" />
+    <Content Include="Content\images\app\app2\alcaldehombreno.png" />
+    <Content Include="Content\images\app\app2\alcaldemujerno.png" />
+    <Content Include="Content\images\app\app2\alcaldesa.png" />
+    <Content Include="Content\images\app\app2\fondograficomuni.png" />
+    <Content Include="Content\images\app\app2\monedas.png" />
+    <Content Include="Content\images\colorburbujas.png" />
+    <Content Include="Content\images\contextousach.png" />
+    <Content Include="Content\images\convenio\avina.png" />
+    <Content Include="Content\images\convenio\chilecompra_logo.png" />
+    <Content Include="Content\images\convenio\chiletransparente.png" />
+    <Content Include="Content\images\convenio\inapi_logo.png" />
+    <Content Include="Content\images\convenio\islapascua.png" />
+    <Content Include="Content\images\convenio\konrad.png" />
+    <Content Include="Content\images\convenio\labgobierno.png" />
+    <Content Include="Content\images\convenio\penalolen.png" />
+    <Content Include="Content\images\convenio\recoleta.png" />
+    <Content Include="Content\images\convenio\vitacura_logo.png" />
+    <Content Include="Content\images\graf.png" />
+    <Content Include="Content\images\graf3_nivel.png" />
+    <Content Include="Content\images\graf3_presupuestario.png" />
+    <Content Include="Content\images\graf3_tipo.png" />
+    <Content Include="Content\images\graf3_total.png" />
+    <Content Include="Content\images\isotipoblanco.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\log_pascua.png" />
+    <Content Include="Content\images\log_penalolen.png" />
+    <Content Include="Content\images\log_recoleta.png" />
+    <Content Include="Content\images\log_vitacura.png" />
+    <Content Include="Content\images\marcadeagua.png" />
+    <Content Include="Content\images\muestra-obsevatorioenaccion.png" />
+    <Content Include="Content\images\Preloader.gif" />
+    <Content Include="Content\images\red.png" />
+    <Content Include="Content\images\redes.png" />
+    <Content Include="Content\images\redessociales.png" />
+    <Content Include="Content\images\redes\face.png" />
+    <Content Include="Content\images\redes\goog.png" />
+    <Content Include="Content\images\redes\link.png" />
+    <Content Include="Content\images\redes\twit.png" />
+    <Content Include="Content\images\redes\yout.png" />
+    <Content Include="Content\images\volver.png" />
+    <Content Include="Content\js\d3Object_Bubble.js" />
+    <Content Include="Content\js\googleChart_Line.js" />
+    <Content Include="Content\js\amChart_HorizontalBar.js" />
+    <Content Include="Content\js\amChartMapa.js" />
+    <Content Include="Content\js\Bubble_Pack.js" />
+    <Content Include="Content\js\plotlyListbox.js" />
+    <Content Include="Content\js\treemapMapa.js" />
+    <Content Include="Content\js\site.js" />
+    <Content Include="Content\lib\amchart\amcharts.js" />
+    <Content Include="Content\lib\amchart\light.js" />
+    <Content Include="Content\lib\amchart\RadarChart.js" />
+    <Content Include="Content\lib\amchart\serial.js" />
+    <Content Include="Content\lib\ammap\ammap.css" />
+    <Content Include="Content\lib\ammap\ammap.js" />
+    <Content Include="Content\lib\ammap\maps\js\chileHigh.js" />
+    <Content Include="Content\lib\ammap\maps\js\chileLow.js" />
+    <Content Include="Content\lib\ammap\maps\js\ChileSVG - Copy.js" />
+    <Content Include="Content\lib\ammap\maps\js\ChileSVG.js" />
+    <Content Include="Content\lib\ammap\maps\svg\chileHigh.svg" />
+    <Content Include="Content\lib\ammap\maps\svg\chileLow.svg" />
+    <Content Include="Content\lib\ammap\maps\svg\Mapa_de_Chile_%28regiones%29.svg" />
+    <Content Include="Content\lib\d3.v3.min.js" />
+    <Content Include="Content\lib\jquery-3.2.1.min.js" />
+    <Content Include="Content\lib\jquery.loader.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\jquery.tinymce.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\license.txt" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\advlist\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\anchor\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\autolink\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\autoresize\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\autosave\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\bbcode\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\charmap\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\codesample\css\prism.css" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\codesample\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\code\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\directionality\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\emoticons\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\fullpage\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\help\img\logo.png" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\help\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\hr\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\imagetools\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\image\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\importcss\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\link\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\lists\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\media\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\noneditable\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\paste\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\preview\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\print\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\save\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\table\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\template\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\textcolor\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\textpattern\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\toc\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\visualchars\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\plugins\wordcount\plugin.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\content.inline.min.css" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\content.min.css" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\img\anchor.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\img\loader.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\img\object.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\img\trans.gif" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\skin.min.css" />
+    <Content Include="Content\lib\tinymce4.6.6\themes\inlite\theme.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\themes\modern\theme.min.js" />
+    <Content Include="Content\lib\tinymce4.6.6\tinymce.min.js" />
+    <Content Include="Content\lib\tiny_mce.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ARCHIVOS\biblioteca\" />
+    <Folder Include="ARCHIVOS\convenio\" />
+    <Folder Include="Content\datasets\" />
+    <Folder Include="Content\images\personas\" />
+    <Folder Include="Content\images\seccion\aplicacion\" />
+    <Folder Include="Content\images\seccion\proyecto\" />
+    <Folder Include="Content\images\seccion\publicacion\" />
+    <Folder Include="Content\images\seccion\visualizacion\" />
+    <Folder Include="favicon\" />
+    <Folder Include="Views\AjaxGraficos\" />
+    <Folder Include="Views\Noticiasyestudios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\lib\tinymce4.6.6\langs\readme.md" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Content\lib\tinymce4.6.6\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Content\js\site.min.js" />
+    <None Include="packages.config" />
+    <Content Include="Views\Secciones\Create.cshtml" />
+    <Content Include="Views\Secciones\Delete.cshtml" />
+    <Content Include="Views\Secciones\Details.cshtml" />
+    <Content Include="Views\Secciones\Edit.cshtml" />
+    <Content Include="Views\Secciones\Index.cshtml" />
+    <Content Include="Views\Aplicacion\Index.cshtml" />
+    <Content Include="Views\Proyecto\Index.cshtml" />
+    <Content Include="Views\Proyecto\DatosEntendibles.cshtml" />
+    <Content Include="Views\Publicacion\Index.cshtml" />
+    <Content Include="Views\Visualizacion\Index.cshtml" />
+    <Content Include="Views\Visualizacion\Repo.cshtml" />
+    <Content Include="Views\Aplicacion\Cuantoconstribuyesalestado.cshtml" />
+    <Content Include="Views\Aplicacion\Situfueraselalcalde.cshtml" />
+    <Content Include="Views\Home\Nosotros.cshtml" />
+    <Content Include="Views\Home\Contacto.cshtml" />
+    <Content Include="Views\Proyecto\ComprasPublicas.cshtml" />
+    <Content Include="Views\Shared\_Feedback.cshtml" />
+    <Content Include="Views\Proyecto\GastoAmigable.cshtml" />
+    <Content Include="Views\Home\Indicadores.cshtml" />
+    <Content Include="Views\Noticia\Index.cshtml" />
+    <Content Include="Views\Etiqueta\Index.cshtml" />
+    <Content Include="Views\Aplicacion\Quizdelestado.cshtml" />
+    <Content Include="Views\Home\Datasets.cshtml" />
+    <Content Include="Views\ReddeObservadores\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\WebObservatorio2017 - Web Deploy.pubxml" />
+    <Content Include="Views\Home\CorreoEnviado.cshtml" />
+    <Content Include="Views\Mail\CorreoContacto.html.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
+    <Content Include="Views\Home\CreativeCommons.cshtml" />
+    <Content Include="Views\Secciones\IndexNoticias.cshtml" />
+    <Content Include="Views\Secciones\EditNoticias.cshtml" />
+    <Content Include="Views\Secciones\CreateNoticias.cshtml" />
+    <Content Include="Views\Pruebas\Index.cshtml" />
+    <Content Include="Views\Pruebas\Index2.cshtml" />
+    <Content Include="Views\Pruebas\Index3.cshtml" />
+    <Content Include="Views\Pruebas\Index4.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58358</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58359/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

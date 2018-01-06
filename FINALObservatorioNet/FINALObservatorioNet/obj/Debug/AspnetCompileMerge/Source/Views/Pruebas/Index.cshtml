@@ -1,0 +1,653 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GRAFICO</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="/Content/lib/d3.v3.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+</head>
+<body style="width:1000px; display:block; margin:0 auto">
+    <style>
+        body{
+            font-family:Roboto;
+        }
+        .flecha{
+            color:white;
+            font-size:31px;
+        }
+
+        .numero1 {
+            text-align: center;
+            position: relative;
+        }
+        .numero2 {
+            width: 977px;
+            vertical-align: middle;
+            position: absolute;
+            top: 8px;
+            border-right: 2px solid #dadada;
+            border-left: 2px solid #dadada;
+        }
+        hr {
+            border-color: #ffffff;
+        }
+        .numero3 {
+            position: absolute;
+            top: 0px;
+            background-color: white;
+            padding: 0px 10px;
+            left: 40%;
+        }
+
+        .seleccionadomiga {
+            border-bottom: 4px solid #F1C330 !important;
+        }
+        .migapan {
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .cadamiga:hover .contenmiga {
+            background-color: #F1C330;
+            color: red;
+        }
+        .cadamiga:hover .contenmiga span {
+            color: white;
+        }
+        .cadamiga:hover .flecha {
+            border-left: 24px solid #F1C330;
+        }
+
+
+        .normal{
+            font-weight:300;
+        }
+        .cadamiga {
+            display: inline-block;
+        }
+            .cadamiga .contenmiga {
+                background-color: #EDF1F2;
+                display: inline-block;
+                float: left;
+                height: 40px;
+                border-bottom: 4px solid transparent;
+            }
+            .cadamiga .flecha2 {
+                color: white;
+                width: 0;
+                height: 0;
+                border-top: 24px solid transparent;
+                border-left: 24px solid white;
+                display: inline-block;
+                vertical-align: middle;
+                border-bottom: 20px solid transparent;
+            }
+            .cadamiga .flecha {
+                color: white;
+                width: 0px;
+                height: 0;
+                border-top: 24px solid transparent;
+                border-left: 24px solid #EDF1F2;
+                display: inline-block;
+                border-bottom: 20px solid transparent;
+                margin: 0;
+                padding: 0;
+                float: left;
+            }
+            .cadamiga .flechContenido {
+                display: inline-block;
+                padding: 0px 20px;
+                vertical-align:middle;
+            }
+                .cadamiga .flechContenido span{
+                    color: #34495C
+                }
+
+            .cadamiga .flechContenido small {
+                display: block;
+                font-size:11px;
+            }
+
+
+        .categoria {
+                vertical-align: bottom;
+                font-size: 14px;
+                text-align: right;
+            }
+        .valor {
+            display: block;
+            text-align: center;
+        }
+        .node {
+            border: solid 1px white;
+            position: absolute;
+            display: flex;
+            text-align: left;
+            justify-content: space-between;
+            flex-direction: column;
+            color: #4e4e4e;
+            font-size: 14px;
+            overflow: hidden;
+            cursor:hand;
+            cursor:pointer;
+        }
+            .node:hover {
+                overflow: hidden;
+                background-color: #F1C330 !important;
+            }
+
+        .textos {
+            padding: 10px;
+            text-anchor: middle;
+            pointer-events: none;
+            font-family: Roboto;
+            color: white;
+            font-size: 24px;
+            top: 0px;
+            font-weight: 400;
+            padding-bottom: 1px;
+            margin-right: 20px;
+        }
+
+        .textos2 {
+            text-anchor: middle;
+            pointer-events: none;
+            font-family: Roboto;
+            color: white;
+            font-size: 16px;
+            top: 0px;
+            font-weight: 300;
+            display:block;
+        }
+
+        .tooltiptremap {
+            width: 300px;
+            position: absolute;
+            height: auto;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #95989A;
+            
+            pointer-events: none;
+            top:0;
+            visibility: hidden;
+        }
+            .tooltiptremap .titulo {
+                padding: 10px 10px 0px 10px;
+                font-size: 26px;
+                font-weight: 400;
+                margin: 0px;
+                background-color: #EDF1F2;
+            }
+            .tooltiptremap .conten {
+                text-align: left;
+                padding: 10px 10px 0px 10px;
+                margin: 0;
+                font-size: 16px;
+            }
+            .tooltiptremap .conten2 {
+                padding: 0px 10px;
+                margin: 0px;
+                text-align: left;
+                font-size: 24px;
+            }
+            .tooltiptremap .descrip {
+                padding: 0px 10px 10px 10px;
+                font-size: 12px;
+                margin: 0px;
+                background-color: #EDF1F2;
+            }
+            .tooltiptremap .text {
+                text-align: left;
+                font-size: 12px;
+                padding: 0px 0px 20px 10px;
+                margin: 0;
+            }
+            .tooltiptremap .mensaje {
+                text-align: left;
+                font-size: 11px;
+                background: #fbfbfb;
+                padding: 10px;
+                margin: 0px 10px 10px 10px;
+                color: #f1c330;
+            }
+
+        .Titulo {
+            font-size: 30px;
+            font-weight: 400;
+            margin-top:10px;
+        }
+        .Titulo span{
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .selector {
+            display: inline-block;
+            font-size: 19px;
+            margin: 20px 20px 0px 0px;
+            font-weight: 300;
+        }
+        .left {
+            text-align: right;
+        }
+        .right {
+            text-align: left;
+            float: right;
+        }
+        select {
+            font-size: 19px;
+            color: #F1C330;
+            border: 0px solid;
+            border-bottom: 4px solid;
+            cursor:pointer;
+        }
+
+        .seleccionc {
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+            color: #314b6a;
+            font-weight: 400;
+        }
+
+        .seleccioncambio {
+            color: #F1C330;
+            border-bottom: 4px solid #F1C330 !important;
+        }
+
+        
+    </style>
+
+
+    
+
+
+    <input type="hidden" id="IDPAPA" name="IDPAPA" value="0" />
+    <input type="hidden" id="NOMBREPAPA" name="NOMBREPAPA" value="Gastos" />
+    <input type="hidden" id="FUNCECONO" name="FUNCECONO"  value="0" />
+    <input type="hidden" id="NIVEL" name="NIVEL" value="1" />
+    <input type="hidden" id="COLOR" name="COLOR" value="1" />
+    <br />
+    <div id="miga">
+        @*<div class="cadamiga" id="miga1">
+            <a href="#" onclick="devolver(1,0,0,25900,'Gastos')">  
+                <div class="contenmiga">
+                    <div class="flecha2"></div>
+                    <div class="flechContenido">
+                        <small>Cuenta</small>
+                        <span>Gastos</span>
+                    </div>
+                </div>
+                <div class="flecha"></div>
+            </a>
+        </div>*@
+
+
+        @*<div class="cadamiga">
+            <div class="contenmiga">
+                <div class="flecha2">
+                </div>
+                <div class="flechContenido">
+                    <small>Tema</small>
+                    <span>HOLA MUNDO</span>
+                </div>
+            </div>
+            <div class="flecha">
+            </div>
+        </div>*@
+    </div>
+    
+    <p class="selector">
+        Ver detalle por: 
+        <span id="cuuuu" class="seleccionc seleccioncambio" onclick="cambio(0)">Cuenta</span> /
+        <span id="arrrr" class="seleccionc" onclick="cambio(1)">Area</span>
+        @*<select id="selector">
+            <option value="0" class="img-uno"> Cuenta</option>
+            <option value="1" class="img-dos"> Area</option>
+        </select>*@
+    </p>
+    <p class="selector right">
+        Año:
+        <select >
+            <option value="0">2017 a Junio</option>
+            <option value="1">2016</option>
+            <option value="2">2015</option>
+            <option value="3">2014</option>
+        </select>
+    </p>
+    <div id="chart_div" style="width: 1000px; height:400px;" oncontextmenu="return false;"></div>
+    <div  class="Titulo numero1">
+        <div class="numero2">
+
+            <hr />
+        </div>
+        <div class="numero3" id="Titulo">
+            Gastos <span> (15.000 millones)</span>
+        </div>
+    </div>
+
+    <script>
+    var idpapa = "0";
+    var tipo = 0;
+    var nombretipo = "Cuenta";
+    var value = "15.000";
+    var className = "Gastos";
+    var ID = "0";
+    var nivel = 1;
+    function classes(root) {
+        var classes = [];
+
+        var colores = [
+            "rgba(13,43,80,1)",
+            "rgba(13,43,80,0.95)",
+            "rgba(13,43,80,0.90)",
+            "rgba(13,43,80,0.85)",
+            "rgba(13,43,80,0.80)",
+            "rgba(13,43,80,0.75)",
+            "rgba(13,43,80,0.70)",
+            "rgba(13,43,80,0.65)",
+            "rgba(13,43,80,0.60)"
+        ]
+        var i = 0;
+
+        function recurse(name, node) {
+            if (node.children) node.children.forEach(function (child) {
+                recurse(node.name, child, null);
+            });
+            else {
+                i++;
+                if (i > 7){
+                    i = 7;
+                }
+                classes.push({
+                    packageName: name,
+                    className: node.name,
+                    fondo: colores[i],
+                    value: node.size,
+                    tipo: node.tipo,
+                    valueTooltip1: node.valueTooltip1,
+                    valueTooltip2: node.valueTooltip2,
+                    porcentaje1: node.porcentaje1,
+                    porcentaje2: node.porcentaje2,
+                    descripcion: node.descripcion,
+                    id:node.id
+                });
+            }
+        }
+        recurse(null, root);
+        return {
+            children: classes
+        };
+        }
+    function drawChart(aux)
+    {
+        var IDPAPA = $("#IDPAPA").val();
+        var FUNCECONO = $("#FUNCECONO").val();
+        var NombrePapa = $("#NOMBREPAPA").val();
+        var margin = { top: 10, right: 10, bottom: 10, left: 10 };
+        var width = document.getElementById("chart_div").parentElement.clientWidth - margin.left - margin.right;
+        var height = 400;//document.getElementById("chart_div").parentElement.clientHeight - margin.top - margin.bottom;
+        var treemap = d3.layout.treemap().size([width, height]).sticky(true).round(true).sort(function (a, b) { return b.value - a.value; }).value(function (d) { return d.value; });
+        var div = d3.select("body").select("#chart_div").append("div").attr("id", "treeChart").style("position", "relative").style("height", (height + margin.top + margin.bottom) + "px").style("top", margin.top + "px");
+        var tooltip = d3.select("body").append("div").attr('class', 'tooltiptremap');
+        var url = "@Url.Action("GetDatosQuienInvierte29999nivel1", "Pruebas")" + "/" + FUNCECONO + ";" + nivel + ";" + IDPAPA;
+
+        d3.json(url, function (error, root) {
+            var Format = root.Format;
+            var Formato;
+            var node = div.selectAll(".node")
+                .data(treemap.nodes(classes(root, null)))
+                .enter().append("div")
+                .attr("class", "node")
+                .attr("Id", function (d) {
+                    return d.id;
+                })
+                .call(position)
+                .style("background", function (d)
+                {
+                    Formato = d.tipo;
+                    return d.fondo;
+                })
+                .on("mouseover", function (d) {
+                    tooltip.append("p").attr("id", "texto3").attr("class", "titulo").text(d.className);                    
+                    tooltip.append("p").attr("id", "texto33").attr("class", "descrip").text(d.descripcion);
+                    tooltip.append("p").attr("id", "texto1").attr("class", "conten").text("Gastado:");
+                    tooltip.append("p").attr("id", "texto11").attr("class", "conten2").text("$" + d.valueTooltip1 + " millones");
+
+                    var aux1 = "Equivale al " + d.porcentaje1 + "% del gasto de " + NombrePapa + ".";
+                    var aux2 = "Equivale al " + d.porcentaje2 + "% del presupuesto de " + NombrePapa + ".";
+                    if (NombrePapa == "Gastos") {
+                        aux1 = "Equivale al " + d.porcentaje1 + "% del gasto total del municipio";
+                        aux2 = "Equivale al " + d.porcentaje2 + "% del presupuesto total del municipio";
+                    }
+                    tooltip.append("p").attr("id", "texto34").attr("class", "text").text(aux1);
+                    tooltip.append("p").attr("id", "texto2").attr("class", "conten normal").text("Presupuestado:");
+                    tooltip.append("p").attr("id", "texto22").attr("class", "conten2 normal").text("$" + d.valueTooltip2 + " millones");
+                    tooltip.append("p").attr("id", "texto35").attr("class", "text normal").text(aux2);
+                    tooltip.append("p").attr("id", "texto36").attr("class", "mensaje").text("* Click en bloque para ver detalle");
+                    tooltip.style("visibility", "visible");
+                })
+                .on("mousemove", function () {
+                    return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
+                })
+                .on("mouseout", function () {
+                    tooltip.style("visibility", "hidden");
+                    $("#texto1").remove();
+                    $("#texto2").remove();
+                    $("#texto3").remove();
+                    $("#texto11").remove();
+                    $("#texto22").remove();
+                    $("#texto3").remove();
+                    $("#texto33").remove();
+                    $("#texto34").remove();
+                    $("#texto35").remove();
+                    $("#texto36").remove();
+
+                    return 1;
+                })
+                .on("click", function (d) {
+                    nivel = document.getElementById("NIVEL").value;
+                    if (nivel < "4") {
+                        $("#texto1").remove();
+                        $("#texto2").remove();
+                        $("#texto3").remove();
+                        $("#texto11").remove();
+                        $("#texto22").remove();
+                        $("#texto3").remove();
+                        $("#texto33").remove();
+                        $("#texto34").remove();
+                        $("#texto35").remove();
+                        $("#texto36").remove();
+                        tooltip.style("visibility", "hidden");
+                         idpapa = document.getElementById("IDPAPA").value;
+                         tipo = document.getElementById("FUNCECONO").value;
+                         nombretipo = (tipo == 1) ? "Area" : "Cuenta";
+
+                         nivel = parseInt(nivel) + 1;
+                         value = d.value;
+                         className = d.className;
+                         ID = d.id;
+                        document.getElementById("Titulo").innerHTML = d.className + "<span> ( $" + puntos(d.value) + " mill) </span>";
+                        
+                        
+                        document.getElementById("NIVEL").value = nivel;
+                        document.getElementById("NOMBREPAPA").value = d.className;
+                        document.getElementById("IDPAPA").value = d.id;
+                        document.getElementById("COLOR").value = d.fondo;
+                        drawChart(0);
+                        document.getElementById("treeChart").remove();
+                    };
+                })
+            
+            node.append("text").attr("class", "textos").text(function (d) {
+                if (d.className != null) {
+                    var largo = d.className.length;
+                    var x = d.dx;
+                    var y = d.dy;
+                    if (((largo * 15) < d.dx) && (d.dy > 60)) {
+                        return d.children ? null : d.className;
+                    }
+                    else {
+                    }
+                }
+            }).append("text").attr("class", "textos2").text(function (d) {
+                if (d.value != null) {
+                    var largo = String(d.value).length;
+                    var x = d.dx;
+                    var y = d.dy;
+                    if (((largo / 3) < d.dx) && (d.dy > 80)) {
+                        return d.children ? null : "Gasto: $" + puntos(d.value) +" millones";
+                    }
+                    else {
+                    }
+                }
+            });
+            
+            $("#cuuuu").text("");
+            $("#arrrr").text("");
+            switch (Format) {
+                case "1 ":
+                    if (Formato == 0) {
+
+                        $("#cuuuu").text("Cuenta");
+                        //tipo = Formato;
+                    }
+                    else {
+                        $("#arrrr").text("Area");
+                        //tipo = Formato;
+                    }
+                    break;
+                case "0 ":
+                    $("#cuuuu").text("Cuenta");
+                    $("#arrrr").text("Area");
+                    break;
+                case "3 ":
+                    if (Formato == 0) {
+                        $("#cuuuu").text("Cuenta");
+                    }
+                    else {
+                        $("#arrrr").text("Area");
+                    }
+                    break;
+            }
+
+            if (aux == 1) {
+                //document.getElementById("small" + nivel).innerHTML = (Formato == "0") ? "Cuenta" : "Area";
+            }
+            else {
+                //nombretipo = (tipo == 1) ? "Area" : "Cuenta";
+                var stringgg = document.getElementById("miga").innerHTML;
+                stringgg = stringgg.replace("seleccionadomiga", "")
+
+                document.getElementById("miga").innerHTML = stringgg + '<div class="cadamiga" id="miga' + nivel + '"><a href="#" onclick="devolver(' + nivel + ',' + ID + ',' + tipo + ',' + value + ',\'' + className + '\')">  <div class="contenmiga seleccionadomiga"><div class="flecha2"></div><div class="flechContenido"><span>' + className + '</span></div></div><div class="flecha"></div></a></div>';
+            }
+
+            if (Formato == 0) {
+                $("#cuuuu").removeClass("seleccioncambio");
+                $("#arrrr").removeClass("seleccioncambio");
+                $("#cuuuu").addClass("seleccioncambio");
+            }
+            else {
+                $("#cuuuu").removeClass("seleccioncambio");
+                $("#arrrr").removeClass("seleccioncambio");
+                $("#arrrr").addClass("seleccioncambio");
+            }
+            //document.getElementById("selector").value = Formato;
+            document.getElementById("FUNCECONO").value = Formato;
+
+
+
+            
+
+            
+
+    });
+        function position() {
+            this.style("left", function (d) { return d.x + "px"; })
+                .style("top", function (d) { return d.y + "px"; })
+                .style("width", function (d) { return Math.max(0, d.dx - 1) + "px"; })
+                .style("height", function (d) { return Math.max(0, d.dy - 1) + "px"; });
+        } 
+    }
+
+        function puntos(aux) {
+            aux = aux.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            aux = aux.split('').reverse().join('').replace(/^[\.]/, '');
+            return aux;
+        }
+    
+    function devolver(nivell, Idpapa, funci, valor, nombre) {
+
+            //var iiii = $("#miga" + nivell).children(".contenmiga");
+            //iiii.className = "contenmiga seleccionadomiga";
+        
+                $("#miga" + nivell).find(".contenmiga").addClass("seleccionadomiga");
+            
+
+
+
+            var i = nivell + 1;
+
+
+        for (i; i < 5; i++) {
+            $("#miga"+i).remove();
+        }
+        document.getElementById("NIVEL").value = (nivell);
+        nivel = nivell
+        document.getElementById("NOMBREPAPA").value = nombre;
+        document.getElementById("treeChart").remove();
+        document.getElementById("IDPAPA").value = Idpapa;
+        document.getElementById("COLOR").value = "";
+        document.getElementById("FUNCECONO").value = funci;
+
+        document.getElementById("Titulo").innerHTML = nombre + "<span> ( $" + puntos(valor) + " millones) </span>"
+
+        drawChart(1);
+    }
+    function back() {
+        drawChart();
+    }
+
+    $(document).ready(function () {
+        drawChart(0);
+
+        $("#selector").change(function () {
+            var aux = $("#selector").val();
+            $("#FUNCECONO").val(aux);
+            document.getElementById("treeChart").remove();
+            drawChart(1);
+        });
+        
+
+        });
+
+        function cambio(aux) {
+            $("#FUNCECONO").val(aux);
+            document.getElementById("treeChart").remove();
+            drawChart(1);
+            if (aux == 0) {
+                $("#cuuuu").removeClass("seleccioncambio");
+                $("#arrrr").removeClass("seleccioncambio");
+                $("#cuuuu").addClass("seleccioncambio");
+            }
+            else {
+                $("#cuuuu").removeClass("seleccioncambio");
+                $("#arrrr").removeClass("seleccioncambio");
+                $("#arrrr").addClass("seleccioncambio");
+
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+
+@*//Gasto municipal total.
+//del presupuesto muncipal total.*@

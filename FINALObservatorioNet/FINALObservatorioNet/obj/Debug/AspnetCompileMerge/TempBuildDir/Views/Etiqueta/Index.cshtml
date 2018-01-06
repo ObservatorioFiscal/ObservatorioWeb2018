@@ -1,0 +1,150 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = "Temas Principales:"+ @ViewBag.Etiqueta + " | ObservatorioFiscal";
+    ViewData["Resumen"] = "";
+}
+
+
+
+
+<div class="row cuadro-contenido">
+    <div class="cuadro-padding">
+        <section class="col-md-12">
+            <h1>Etiquetas</h1>
+            <h6>filtro tu contenido</h6>
+            <p>Aqui podras filtrar los diferentes productos (visualizaciones, publicaciones y apliciones) por el tema que necesites y verlos agrupados en orden descendente por las fecha de actualización y/o publicación<br /></p>
+            <hr />
+        </section>
+        <div class="row">
+            <div class="col-md-12" id="filtrobtn"><h3 class="celeste text-right"><a onclick="MostrarFiltro()" class="btn">Filtrar Contenido <i class="material-icons">filter_list</i> </a></h3></div>
+            <aside id="Filtro" class="col-md-2 border-right filtro">
+                <div class="row">
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Temas</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul id="tag-Busqueda">
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Gobierno Central" name="1" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[1]">Gobierno Central</h6></a>
+                                    </li>                             
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Regional" name="2" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[2]">Regional</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Municipal" name="3" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[3]">Municipal</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Ley de Presupuesto" name="4" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[4]">Ley de Presupuesto</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Personal del Estado" name="4" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[5]">Personal del Estado</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Calidad de Datos" name="4" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[6]">Calidad de Datos</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Transparencia" name="4" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[7]">Transparencia</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Rendición de Cuentas" name="4" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[8]">Rendición de Cuentas</h6></a>
+                                    </li>
+                                    <li>
+                                        <a href="../Etiqueta?nombre=Compras Públicas" name="4" class="tags-Busqueda"><h6 class="tags @ViewBag.lista[9]">Compras Públicas</h6></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section id="Contenido" class="col-md-10">
+                <div class="row" id="divEtiquetas">
+                    <article class="col-12 div-item-etiqueta"></article>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+    {
+    <script>
+        var pagina = 0;
+        var etiqueta = "@ViewBag.Etiqueta";
+
+        document.addEventListener("DOMContentLoaded", function () {
+            filtroVisualizacion();
+        }, false);
+
+        function filtroVisualizacion() {
+            etiqueta = etiqueta.replace("&#225;", "__a__");
+            etiqueta = etiqueta.replace("&#233;", "__e__");
+            etiqueta = etiqueta.replace("&#237;", "__y__");
+            etiqueta = etiqueta.replace("&#243;", "__o__");
+            etiqueta = etiqueta.replace("&#250;", "__u__");
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    pagina: pagina,
+                    etiqueta: etiqueta
+                },
+                url: '../../Etiqueta/FiltroListadoEtiqueta',
+                dataType: 'json',
+                success: function (data) {
+                    var aux = 0;
+                    $(".mascuadro").remove();
+                    $.each(data, function (i, item) {
+                        aux++;
+                        $("#divEtiquetas").append(nuevaEtiqueta(item));
+                    });
+                    if (aux > 8) {
+                        $("#divEtiquetas").append('<div class="col-12 mascuadro"><div class="cuadro-contenido"><p class="text-center"><a class="btn" onclick= "filtroVisualizacion()" > Ver más</a ></p ></div ></div > ');
+                    }
+                    else {
+                        $("#divEtiquetas").append('<div class="col-12 mascuadro"><div class="cuadro-contenido"><p class="text-center">No hay más.</p></div></div>');
+                    }
+                    pagina = pagina + 1;
+                },
+                error: function (msg) {
+                    $('#btnagendar').attr('disabled', false);
+                }
+            });
+        }
+
+        function nuevaEtiqueta(item) {
+            return '\
+                <div class="col-2 align-self-center">\
+                    <figure>\
+                        <img src="' + item.ImagenUrl + '" class="img-fluid" />\
+                        <p class="etiqueta celesteB">'+ item.Etiquetas+'</p>\
+                    </figure>\
+                </div>\
+                <div class="col-10">\
+                    <h5><a href="'+ item.UrlDireccion + '">' + item.TituloPregunta + '</a></h5>\
+                    <p>'+ item.Resumen + ' </p>\
+                    <div class="row">\
+                        <div class="col-12" >\
+                            <p class="text-right small">'+ item.Fecha + '</p>\
+                        </div>\
+                    </div>\
+                    <hr />\
+                </div>\
+            ';
+        }
+
+        function MostrarFiltro() {
+            if ($(".filtro").css("display") == "block") {
+                $(".filtro").css("display", "none")
+            }
+            else {
+                $(".filtro").css("display", "block")
+            }
+        }
+        
+    </script>
+}

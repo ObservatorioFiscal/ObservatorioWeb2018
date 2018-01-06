@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="base999ModelStoreContainer" CdmEntityContainer="base999Entities">
+    <EntitySetMapping Name="Abuelo_Biblioteca">
+      <EntityTypeMapping TypeName="base999Model.Abuelo_Biblioteca">
+        <MappingFragment StoreEntitySet="Abuelo_Biblioteca">
+          <ScalarProperty Name="IdgraficoFK" ColumnName="IdgraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdAbuelo" ColumnName="IdAbuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AbueloCirculosVarios">
+      <EntityTypeMapping TypeName="base999Model.AbueloCirculosVarios">
+        <MappingFragment StoreEntitySet="AbueloCirculosVarios">
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="sizePercapita" ColumnName="sizePercapita" />
+          <ScalarProperty Name="MontoPercapita" ColumnName="MontoPercapita" />
+          <ScalarProperty Name="Montonominal" ColumnName="Montonominal" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdAbuelo" ColumnName="IdAbuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AplicacionQuiz">
+      <EntityTypeMapping TypeName="base999Model.AplicacionQuiz">
+        <MappingFragment StoreEntitySet="AplicacionQuiz">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdAplicacionQuiz" ColumnName="IdAplicacionQuiz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppMunicipalidad">
+      <EntityTypeMapping TypeName="base999Model.AppMunicipalidad">
+        <MappingFragment StoreEntitySet="AppMunicipalidad">
+          <ScalarProperty Name="Distancia" ColumnName="Distancia" />
+          <ScalarProperty Name="PobrezaPorciento" ColumnName="PobrezaPorciento" />
+          <ScalarProperty Name="Reelecciones" ColumnName="Reelecciones" />
+          <ScalarProperty Name="Votos" ColumnName="Votos" />
+          <ScalarProperty Name="Partido" ColumnName="Partido" />
+          <ScalarProperty Name="Alcalde" ColumnName="Alcalde" />
+          <ScalarProperty Name="Poblacion" ColumnName="Poblacion" />
+          <ScalarProperty Name="BComunidad" ColumnName="BComunidad" />
+          <ScalarProperty Name="BCultural" ColumnName="BCultural" />
+          <ScalarProperty Name="BInterno" ColumnName="BInterno" />
+          <ScalarProperty Name="BSalud" ColumnName="BSalud" />
+          <ScalarProperty Name="BEducacion" ColumnName="BEducacion" />
+          <ScalarProperty Name="AComunidad" ColumnName="AComunidad" />
+          <ScalarProperty Name="ACultural" ColumnName="ACultural" />
+          <ScalarProperty Name="AInterno" ColumnName="AInterno" />
+          <ScalarProperty Name="ASalud" ColumnName="ASalud" />
+          <ScalarProperty Name="AEducacion" ColumnName="AEducacion" />
+          <ScalarProperty Name="NombreComuna" ColumnName="NombreComuna" />
+          <ScalarProperty Name="IdAppMunicipalidad" ColumnName="IdAppMunicipalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Area_googleChart_Area">
+      <EntityTypeMapping TypeName="base999Model.Area_googleChart_Area">
+        <MappingFragment StoreEntitySet="Area_googleChart_Area">
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Barra_amChart_HorizontalBar">
+      <EntityTypeMapping TypeName="base999Model.Barra_amChart_HorizontalBar">
+        <MappingFragment StoreEntitySet="Barra_amChart_HorizontalBar">
+          <ScalarProperty Name="tooltip" ColumnName="tooltip" />
+          <ScalarProperty Name="ValorPercapita" ColumnName="ValorPercapita" />
+          <ScalarProperty Name="Idregion" ColumnName="Idregion" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdCuadrado" ColumnName="IdCuadrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categoria_Plotly_Listbox">
+      <EntityTypeMapping TypeName="base999Model.Categoria_Plotly_Listbox">
+        <MappingFragment StoreEntitySet="Categoria_Plotly_Listbox">
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Circulos_Grafico_d3Object_Bubble">
+      <EntityTypeMapping TypeName="base999Model.Circulos_Grafico_d3Object_Bubble">
+        <MappingFragment StoreEntitySet="Circulos_Grafico_d3Object_Bubble">
+          <ScalarProperty Name="Tooltip2" ColumnName="Tooltip2" />
+          <ScalarProperty Name="Tooltip" ColumnName="Tooltip" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="valorPeso" ColumnName="valorPeso" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdCirculo" ColumnName="IdCirculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuadrados_d3Object_TreeMap">
+      <EntityTypeMapping TypeName="base999Model.Cuadrados_d3Object_TreeMap">
+        <MappingFragment StoreEntitySet="Cuadrados_d3Object_TreeMap">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="valorNominal" ColumnName="valorNominal" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="valorPercapita" ColumnName="valorPercapita" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdCuadrado" ColumnName="IdCuadrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Datos_googleChart_Area">
+      <EntityTypeMapping TypeName="base999Model.Datos_googleChart_Area">
+        <MappingFragment StoreEntitySet="Datos_googleChart_Area">
+          <ScalarProperty Name="IdLineasFK" ColumnName="IdLineasFK" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="ValorPeso" ColumnName="ValorPeso" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Datos_googleChart_Line">
+      <EntityTypeMapping TypeName="base999Model.Datos_googleChart_Line">
+        <MappingFragment StoreEntitySet="Datos_googleChart_Line">
+          <ScalarProperty Name="IdLineasFK" ColumnName="IdLineasFK" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="ValorPeso" ColumnName="ValorPeso" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Datos_Grafico_Plotly_Line">
+      <EntityTypeMapping TypeName="base999Model.Datos_Grafico_Plotly_Line">
+        <MappingFragment StoreEntitySet="Datos_Grafico_Plotly_Line">
+          <ScalarProperty Name="ValorPorcentajeCapital" ColumnName="ValorPorcentajeCapital" />
+          <ScalarProperty Name="ValorCapital" ColumnName="ValorCapital" />
+          <ScalarProperty Name="IdLineasFK" ColumnName="IdLineasFK" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="ValorPeso" ColumnName="ValorPeso" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosAPP">
+      <EntityTypeMapping TypeName="base999Model.DatosAPP">
+        <MappingFragment StoreEntitySet="DatosAPP">
+          <ScalarProperty Name="TotalImpuesto" ColumnName="TotalImpuesto" />
+          <ScalarProperty Name="ImpRenta" ColumnName="ImpRenta" />
+          <ScalarProperty Name="Combustitble" ColumnName="Combustitble" />
+          <ScalarProperty Name="Tabaco" ColumnName="Tabaco" />
+          <ScalarProperty Name="Analcoholicas" ColumnName="Analcoholicas" />
+          <ScalarProperty Name="Alcoholicas" ColumnName="Alcoholicas" />
+          <ScalarProperty Name="Personaje" ColumnName="Personaje" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Ingreso" ColumnName="Ingreso" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosApp2">
+      <EntityTypeMapping TypeName="base999Model.DatosApp2">
+        <MappingFragment StoreEntitySet="DatosApp2">
+          <ScalarProperty Name="valorsubcategoria" ColumnName="valorsubcategoria" />
+          <ScalarProperty Name="valorCategoria" ColumnName="valorCategoria" />
+          <ScalarProperty Name="subcategoria" ColumnName="subcategoria" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="IdDatosApp2" ColumnName="IdDatosApp2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosdupliCirculosVarios">
+      <EntityTypeMapping TypeName="base999Model.DatosdupliCirculosVarios">
+        <MappingFragment StoreEntitySet="DatosdupliCirculosVarios">
+          <ScalarProperty Name="numeroOpcion" ColumnName="numeroOpcion" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosSoloUnoCirculosVarios">
+      <EntityTypeMapping TypeName="base999Model.DatosSoloUnoCirculosVarios">
+        <MappingFragment StoreEntitySet="DatosSoloUnoCirculosVarios">
+          <ScalarProperty Name="numeroOpcion" ColumnName="numeroOpcion" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Encuesta">
+      <EntityTypeMapping TypeName="base999Model.Encuesta">
+        <MappingFragment StoreEntitySet="Encuesta">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Pregunta7" ColumnName="Pregunta7" />
+          <ScalarProperty Name="Pregunta6" ColumnName="Pregunta6" />
+          <ScalarProperty Name="Pregunta5" ColumnName="Pregunta5" />
+          <ScalarProperty Name="Pregunta4" ColumnName="Pregunta4" />
+          <ScalarProperty Name="Pregunta3" ColumnName="Pregunta3" />
+          <ScalarProperty Name="Pregunta2" ColumnName="Pregunta2" />
+          <ScalarProperty Name="Pregunta1" ColumnName="Pregunta1" />
+          <ScalarProperty Name="IdEncuesta" ColumnName="IdEncuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estudio">
+      <EntityTypeMapping TypeName="base999Model.Estudio">
+        <MappingFragment StoreEntitySet="Estudio">
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Destacados" ColumnName="Destacados" />
+          <ScalarProperty Name="IdEstudioCategoriaFK" ColumnName="IdEstudioCategoriaFK" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdEstudio" ColumnName="IdEstudio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstudioCategoria">
+      <EntityTypeMapping TypeName="base999Model.EstudioCategoria">
+        <MappingFragment StoreEntitySet="EstudioCategoria">
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEstudioCategoria" ColumnName="IdEstudioCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeedSocial">
+      <EntityTypeMapping TypeName="base999Model.FeedSocial">
+        <MappingFragment StoreEntitySet="FeedSocial">
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Ipp" ColumnName="Ipp" />
+          <ScalarProperty Name="IdSeccionesFK" ColumnName="IdSeccionesFK" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="PorQue" ColumnName="PorQue" />
+          <ScalarProperty Name="SiNo" ColumnName="SiNo" />
+          <ScalarProperty Name="IdFeedSocial" ColumnName="IdFeedSocial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeedSocial2">
+      <EntityTypeMapping TypeName="base999Model.FeedSocial2">
+        <MappingFragment StoreEntitySet="FeedSocial2">
+          <ScalarProperty Name="IdSeccionesFK" ColumnName="IdSeccionesFK" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Otros" ColumnName="Otros" />
+          <ScalarProperty Name="IdFeedSocial" ColumnName="IdFeedSocial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formulario">
+      <EntityTypeMapping TypeName="base999Model.Formulario">
+        <MappingFragment StoreEntitySet="Formulario">
+          <ScalarProperty Name="Pregunta2" ColumnName="Pregunta2" />
+          <ScalarProperty Name="Pregunta1" ColumnName="Pregunta1" />
+          <ScalarProperty Name="Utilidad" ColumnName="Utilidad" />
+          <ScalarProperty Name="Fono" ColumnName="Fono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_amChart_HorizontalBar">
+      <EntityTypeMapping TypeName="base999Model.Grafico_amChart_HorizontalBar">
+        <MappingFragment StoreEntitySet="Grafico_amChart_HorizontalBar">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_Biblioteca">
+      <EntityTypeMapping TypeName="base999Model.Grafico_Biblioteca">
+        <MappingFragment StoreEntitySet="Grafico_Biblioteca">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_d3Object_Bubble">
+      <EntityTypeMapping TypeName="base999Model.Grafico_d3Object_Bubble">
+        <MappingFragment StoreEntitySet="Grafico_d3Object_Bubble">
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_d3Object_TreeMap">
+      <EntityTypeMapping TypeName="base999Model.Grafico_d3Object_TreeMap">
+        <MappingFragment StoreEntitySet="Grafico_d3Object_TreeMap">
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_googleChart_Area">
+      <EntityTypeMapping TypeName="base999Model.Grafico_googleChart_Area">
+        <MappingFragment StoreEntitySet="Grafico_googleChart_Area">
+          <ScalarProperty Name="IdLineaOpc" ColumnName="IdLineaOpc" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_googleChart_Line">
+      <EntityTypeMapping TypeName="base999Model.Grafico_googleChart_Line">
+        <MappingFragment StoreEntitySet="Grafico_googleChart_Line">
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_googleChart_Pie">
+      <EntityTypeMapping TypeName="base999Model.Grafico_googleChart_Pie">
+        <MappingFragment StoreEntitySet="Grafico_googleChart_Pie">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_Plotly_Line">
+      <EntityTypeMapping TypeName="base999Model.Grafico_Plotly_Line">
+        <MappingFragment StoreEntitySet="Grafico_Plotly_Line">
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_Plotly_Listbox">
+      <EntityTypeMapping TypeName="base999Model.Grafico_Plotly_Listbox">
+        <MappingFragment StoreEntitySet="Grafico_Plotly_Listbox">
+          <ScalarProperty Name="GlobalColor" ColumnName="GlobalColor" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafico_Timeline">
+      <EntityTypeMapping TypeName="base999Model.Grafico_Timeline">
+        <MappingFragment StoreEntitySet="Grafico_Timeline">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GraficoCircularesVarios">
+      <EntityTypeMapping TypeName="base999Model.GraficoCircularesVarios">
+        <MappingFragment StoreEntitySet="GraficoCircularesVarios">
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Idgrafico" ColumnName="Idgrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GraficoLineasSeparadas">
+      <EntityTypeMapping TypeName="base999Model.GraficoLineasSeparadas">
+        <MappingFragment StoreEntitySet="GraficoLineasSeparadas">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdGrafico" ColumnName="IdGrafico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hijo_Biblioteca">
+      <EntityTypeMapping TypeName="base999Model.Hijo_Biblioteca">
+        <MappingFragment StoreEntitySet="Hijo_Biblioteca">
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdPadreFK" ColumnName="IdPadreFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Institucion" ColumnName="Institucion" />
+          <ScalarProperty Name="Autores" ColumnName="Autores" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdHijo" ColumnName="IdHijo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hijo_Grafico_Timeline">
+      <EntityTypeMapping TypeName="base999Model.Hijo_Grafico_Timeline">
+        <MappingFragment StoreEntitySet="Hijo_Grafico_Timeline">
+          <ScalarProperty Name="IdPadreFK" ColumnName="IdPadreFK" />
+          <ScalarProperty Name="Yearr" ColumnName="Yearr" />
+          <ScalarProperty Name="Dayy" ColumnName="Dayy" />
+          <ScalarProperty Name="Monthh" ColumnName="Monthh" />
+          <ScalarProperty Name="Credito" ColumnName="Credito" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Headline" ColumnName="Headline" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HijoCirculosVarios">
+      <EntityTypeMapping TypeName="base999Model.HijoCirculosVarios">
+        <MappingFragment StoreEntitySet="HijoCirculosVarios">
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="sizePercapita" ColumnName="sizePercapita" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPadreFK" ColumnName="IdPadreFK" />
+          <ScalarProperty Name="MontoPercapita" ColumnName="MontoPercapita" />
+          <ScalarProperty Name="Montonominal" ColumnName="Montonominal" />
+          <ScalarProperty Name="IdHijo" ColumnName="IdHijo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HijoLineasSeparadas">
+      <EntityTypeMapping TypeName="base999Model.HijoLineasSeparadas">
+        <MappingFragment StoreEntitySet="HijoLineasSeparadas">
+          <ScalarProperty Name="IdPadreFK" ColumnName="IdPadreFK" />
+          <ScalarProperty Name="MontoCorrienteVigente" ColumnName="MontoCorrienteVigente" />
+          <ScalarProperty Name="MontoCorrienteAprobado" ColumnName="MontoCorrienteAprobado" />
+          <ScalarProperty Name="MontoCapitalVigente" ColumnName="MontoCapitalVigente" />
+          <ScalarProperty Name="MontoCapitalAprobado" ColumnName="MontoCapitalAprobado" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="IdHijo" ColumnName="IdHijo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Indicadores">
+      <EntityTypeMapping TypeName="base999Model.Indicadores">
+        <MappingFragment StoreEntitySet="Indicadores">
+          <ScalarProperty Name="UnidadI" ColumnName="UnidadI" />
+          <ScalarProperty Name="IndicadorI" ColumnName="IndicadorI" />
+          <ScalarProperty Name="TipoI" ColumnName="TipoI" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Unidadmedida" ColumnName="Unidadmedida" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdIndicadores" ColumnName="IdIndicadores" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Json">
+      <EntityTypeMapping TypeName="base999Model.Json">
+        <MappingFragment StoreEntitySet="Json">
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdJson" ColumnName="IdJson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JsonVistas">
+      <EntityTypeMapping TypeName="base999Model.JsonVistas">
+        <MappingFragment StoreEntitySet="JsonVistas">
+          <ScalarProperty Name="IdJsonFK" ColumnName="IdJsonFK" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdJsonVistas" ColumnName="IdJsonVistas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lineas_googleChart_Line">
+      <EntityTypeMapping TypeName="base999Model.Lineas_googleChart_Line">
+        <MappingFragment StoreEntitySet="Lineas_googleChart_Line">
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdLinea" ColumnName="IdLinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lineas_Grafico_Plotly_Line">
+      <EntityTypeMapping TypeName="base999Model.Lineas_Grafico_Plotly_Line">
+        <MappingFragment StoreEntitySet="Lineas_Grafico_Plotly_Line">
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdLinea" ColumnName="IdLinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lineas_Plotly_Listbox">
+      <EntityTypeMapping TypeName="base999Model.Lineas_Plotly_Listbox">
+        <MappingFragment StoreEntitySet="Lineas_Plotly_Listbox">
+          <ScalarProperty Name="ano9" ColumnName="ano9" />
+          <ScalarProperty Name="ano8" ColumnName="ano8" />
+          <ScalarProperty Name="ano7" ColumnName="ano7" />
+          <ScalarProperty Name="ano6" ColumnName="ano6" />
+          <ScalarProperty Name="ano5" ColumnName="ano5" />
+          <ScalarProperty Name="ano4" ColumnName="ano4" />
+          <ScalarProperty Name="ano3" ColumnName="ano3" />
+          <ScalarProperty Name="ano2" ColumnName="ano2" />
+          <ScalarProperty Name="ano1" ColumnName="ano1" />
+          <ScalarProperty Name="IdSubCategoriaFK" ColumnName="IdSubCategoriaFK" />
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdLinea" ColumnName="IdLinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel1">
+      <EntityTypeMapping TypeName="base999Model.nivel1">
+        <MappingFragment StoreEntitySet="nivel1">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajePresupeustadoAlPapa" ColumnName="PorcentajePresupeustadoAlPapa" />
+          <ScalarProperty Name="PorcentajeGastadoAlPapa" ColumnName="PorcentajeGastadoAlPapa" />
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel1" ColumnName="IdNivel1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel11">
+      <EntityTypeMapping TypeName="base999Model.nivel11">
+        <MappingFragment StoreEntitySet="nivel11">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajePresupeustadoAlPapa" ColumnName="PorcentajePresupeustadoAlPapa" />
+          <ScalarProperty Name="PorcentajeGastadoAlPapa" ColumnName="PorcentajeGastadoAlPapa" />
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel11" ColumnName="IdNivel11" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel2">
+      <EntityTypeMapping TypeName="base999Model.nivel2">
+        <MappingFragment StoreEntitySet="nivel2">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajePresupeustadoAlPapa" ColumnName="PorcentajePresupeustadoAlPapa" />
+          <ScalarProperty Name="PorcentajeGastadoAlPapa" ColumnName="PorcentajeGastadoAlPapa" />
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Fk_IdNivel1" ColumnName="Fk_IdNivel1" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel2" ColumnName="IdNivel2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel22">
+      <EntityTypeMapping TypeName="base999Model.nivel22">
+        <MappingFragment StoreEntitySet="nivel22">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajePresupeustadoAlPapa" ColumnName="PorcentajePresupeustadoAlPapa" />
+          <ScalarProperty Name="PorcentajeGastadoAlPapa" ColumnName="PorcentajeGastadoAlPapa" />
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Fk_IdNivel11" ColumnName="Fk_IdNivel11" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel22" ColumnName="IdNivel22" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel3">
+      <EntityTypeMapping TypeName="base999Model.nivel3">
+        <MappingFragment StoreEntitySet="nivel3">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajePresupeustadoAlPapa" ColumnName="PorcentajePresupeustadoAlPapa" />
+          <ScalarProperty Name="PorcentajeGastadoAlPapa" ColumnName="PorcentajeGastadoAlPapa" />
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Fk_IdNivel2" ColumnName="Fk_IdNivel2" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel3" ColumnName="IdNivel3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel4">
+      <EntityTypeMapping TypeName="base999Model.nivel4">
+        <MappingFragment StoreEntitySet="nivel4">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajePresupeustadoAlPapa" ColumnName="PorcentajePresupeustadoAlPapa" />
+          <ScalarProperty Name="PorcentajeGastadoAlPapa" ColumnName="PorcentajeGastadoAlPapa" />
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Fk_IdNivel3" ColumnName="Fk_IdNivel3" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel4" ColumnName="IdNivel4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivel5">
+      <EntityTypeMapping TypeName="base999Model.nivel5">
+        <MappingFragment StoreEntitySet="nivel5">
+          <ScalarProperty Name="Valor2" ColumnName="Valor2" />
+          <ScalarProperty Name="Fk_IdNivel4" ColumnName="Fk_IdNivel4" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdNivel5" ColumnName="IdNivel5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Noticias">
+      <EntityTypeMapping TypeName="base999Model.Noticias">
+        <MappingFragment StoreEntitySet="Noticias">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="Internas" ColumnName="Internas" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Fuente" ColumnName="Fuente" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdNoticias" ColumnName="IdNoticias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Padre_Biblioteca">
+      <EntityTypeMapping TypeName="base999Model.Padre_Biblioteca">
+        <MappingFragment StoreEntitySet="Padre_Biblioteca">
+          <ScalarProperty Name="IdAbueloFK" ColumnName="IdAbueloFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Padre_Grafico_Timeline">
+      <EntityTypeMapping TypeName="base999Model.Padre_Grafico_Timeline">
+        <MappingFragment StoreEntitySet="Padre_Grafico_Timeline">
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Credito" ColumnName="Credito" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Headline" ColumnName="Headline" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdLinea" ColumnName="IdLinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PadreLineasSeparados">
+      <EntityTypeMapping TypeName="base999Model.PadreLineasSeparados">
+        <MappingFragment StoreEntitySet="PadreLineasSeparados">
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="ColorCapital" ColumnName="ColorCapital" />
+          <ScalarProperty Name="ColorCorriente" ColumnName="ColorCorriente" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PapaCirculosVarios">
+      <EntityTypeMapping TypeName="base999Model.PapaCirculosVarios">
+        <MappingFragment StoreEntitySet="PapaCirculosVarios">
+          <ScalarProperty Name="TituloConsulta" ColumnName="TituloConsulta" />
+          <ScalarProperty Name="Proper2" ColumnName="Proper2" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Proper1" ColumnName="Proper1" />
+          <ScalarProperty Name="sizePercapita" ColumnName="sizePercapita" />
+          <ScalarProperty Name="MontoPercapita" ColumnName="MontoPercapita" />
+          <ScalarProperty Name="Montonominal" ColumnName="Montonominal" />
+          <ScalarProperty Name="tooltipGastoPercapita" ColumnName="tooltipGastoPercapita" />
+          <ScalarProperty Name="tooltipGastoNominal" ColumnName="tooltipGastoNominal" />
+          <ScalarProperty Name="tooltipRegion" ColumnName="tooltipRegion" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="IdAbueloFK" ColumnName="IdAbueloFK" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreguntasFrecuentes">
+      <EntityTypeMapping TypeName="base999Model.PreguntasFrecuentes">
+        <MappingFragment StoreEntitySet="PreguntasFrecuentes">
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+          <ScalarProperty Name="Pregunta" ColumnName="Pregunta" />
+          <ScalarProperty Name="IdPreguntasFrecuentes" ColumnName="IdPreguntasFrecuentes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAppMunicipal">
+      <EntityTypeMapping TypeName="base999Model.RegistroAppMunicipal">
+        <MappingFragment StoreEntitySet="RegistroAppMunicipal">
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="NombreComuna" ColumnName="NombreComuna" />
+          <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
+          <ScalarProperty Name="Cultural" ColumnName="Cultural" />
+          <ScalarProperty Name="Interno" ColumnName="Interno" />
+          <ScalarProperty Name="Salud" ColumnName="Salud" />
+          <ScalarProperty Name="Educacion" ColumnName="Educacion" />
+          <ScalarProperty Name="IdRegistroAppMunicipal" ColumnName="IdRegistroAppMunicipal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Secciones">
+      <EntityTypeMapping TypeName="base999Model.Secciones">
+        <MappingFragment StoreEntitySet="Secciones">
+          <ScalarProperty Name="DescripcionCentralM" ColumnName="DescripcionCentralM" />
+          <ScalarProperty Name="dataset" ColumnName="dataset" />
+          <ScalarProperty Name="Recomendado" ColumnName="Recomendado" />
+          <ScalarProperty Name="TipoPublicacion" ColumnName="TipoPublicacion" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="Megusta" ColumnName="Megusta" />
+          <ScalarProperty Name="Destacar" ColumnName="Destacar" />
+          <ScalarProperty Name="Fecha2" ColumnName="Fecha2" />
+          <ScalarProperty Name="Etiquetas" ColumnName="Etiquetas" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="DescripcionScript" ColumnName="DescripcionScript" />
+          <ScalarProperty Name="DescripcionInferior" ColumnName="DescripcionInferior" />
+          <ScalarProperty Name="DescripcionCentral" ColumnName="DescripcionCentral" />
+          <ScalarProperty Name="DescripcionSuperior" ColumnName="DescripcionSuperior" />
+          <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+          <ScalarProperty Name="TituloInterna" ColumnName="TituloInterna" />
+          <ScalarProperty Name="UrlDireccion" ColumnName="UrlDireccion" />
+          <ScalarProperty Name="ImagenUrl" ColumnName="ImagenUrl" />
+          <ScalarProperty Name="Resumen" ColumnName="Resumen" />
+          <ScalarProperty Name="TituloRedes" ColumnName="TituloRedes" />
+          <ScalarProperty Name="TituloPregunta" ColumnName="TituloPregunta" />
+          <ScalarProperty Name="Archivo" ColumnName="Archivo" />
+          <ScalarProperty Name="Retroalimentacion" ColumnName="Retroalimentacion" />
+          <ScalarProperty Name="IdSecciones" ColumnName="IdSecciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategoria_Plotly_Listbox">
+      <EntityTypeMapping TypeName="base999Model.SubCategoria_Plotly_Listbox">
+        <MappingFragment StoreEntitySet="SubCategoria_Plotly_Listbox">
+          <ScalarProperty Name="IdCategoriaFK" ColumnName="IdCategoriaFK" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdSubCategoria" ColumnName="IdSubCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCirculos_Grafico_d3Object_Bubble">
+      <EntityTypeMapping TypeName="base999Model.SubCirculos_Grafico_d3Object_Bubble">
+        <MappingFragment StoreEntitySet="SubCirculos_Grafico_d3Object_Bubble">
+          <ScalarProperty Name="Tooltip2" ColumnName="Tooltip2" />
+          <ScalarProperty Name="Tooltip" ColumnName="Tooltip" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdCirculoFK" ColumnName="IdCirculoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="valorPeso" ColumnName="valorPeso" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCuadrados_d3Object_TreeMap">
+      <EntityTypeMapping TypeName="base999Model.SubCuadrados_d3Object_TreeMap">
+        <MappingFragment StoreEntitySet="SubCuadrados_d3Object_TreeMap">
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="valorNominal" ColumnName="valorNominal" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdCirculoFK" ColumnName="IdCirculoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ValorPorcentaje" ColumnName="ValorPorcentaje" />
+          <ScalarProperty Name="valorPercapita" ColumnName="valorPercapita" />
+          <ScalarProperty Name="IdDato" ColumnName="IdDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabla_amChart_HorizontalBar">
+      <EntityTypeMapping TypeName="base999Model.Tabla_amChart_HorizontalBar">
+        <MappingFragment StoreEntitySet="Tabla_amChart_HorizontalBar">
+          <ScalarProperty Name="Idregion" ColumnName="Idregion" />
+          <ScalarProperty Name="idlinea" ColumnName="idlinea" />
+          <ScalarProperty Name="valorPercapita" ColumnName="valorPercapita" />
+          <ScalarProperty Name="valorNominal" ColumnName="valorNominal" />
+          <ScalarProperty Name="Iniciativa" ColumnName="Iniciativa" />
+          <ScalarProperty Name="idtabla" ColumnName="idtabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Torta_Grafico_googleChart_Pie">
+      <EntityTypeMapping TypeName="base999Model.Torta_Grafico_googleChart_Pie">
+        <MappingFragment StoreEntitySet="Torta_Grafico_googleChart_Pie">
+          <ScalarProperty Name="IdGraficoFK" ColumnName="IdGraficoFK" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdTorta" ColumnName="IdTorta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_ListaSeccionAplicacion">
+      <EntityTypeMapping TypeName="base999Model.view_ListaSeccionAplicacion">
+        <MappingFragment StoreEntitySet="view_ListaSeccionAplicacion">
+          <ScalarProperty Name="FechaFecha" ColumnName="FechaFecha" />
+          <ScalarProperty Name="Megusta" ColumnName="Megusta" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Etiqueta" ColumnName="Etiqueta" />
+          <ScalarProperty Name="Destacar" ColumnName="Destacar" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Resumen" ColumnName="Resumen" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_ListaSeccionEtiqueta">
+      <EntityTypeMapping TypeName="base999Model.view_ListaSeccionEtiqueta">
+        <MappingFragment StoreEntitySet="view_ListaSeccionEtiqueta">
+          <ScalarProperty Name="Etiquetas" ColumnName="Etiquetas" />
+          <ScalarProperty Name="ImagenUrl" ColumnName="ImagenUrl" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="FechaFecha" ColumnName="FechaFecha" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="UrlDireccion" ColumnName="UrlDireccion" />
+          <ScalarProperty Name="Resumen" ColumnName="Resumen" />
+          <ScalarProperty Name="TituloPregunta" ColumnName="TituloPregunta" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_ListaSeccionNoticia">
+      <EntityTypeMapping TypeName="base999Model.view_ListaSeccionNoticia">
+        <MappingFragment StoreEntitySet="view_ListaSeccionNoticia">
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Internas" ColumnName="Internas" />
+          <ScalarProperty Name="FechaFecha" ColumnName="FechaFecha" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Urldireccion" ColumnName="Urldireccion" />
+          <ScalarProperty Name="Fuente" ColumnName="Fuente" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_ListaSeccionPublicacion">
+      <EntityTypeMapping TypeName="base999Model.view_ListaSeccionPublicacion">
+        <MappingFragment StoreEntitySet="view_ListaSeccionPublicacion">
+          <ScalarProperty Name="FechaFecha" ColumnName="FechaFecha" />
+          <ScalarProperty Name="TipoPublicacion" ColumnName="TipoPublicacion" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="Megusta" ColumnName="Megusta" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Etiqueta" ColumnName="Etiqueta" />
+          <ScalarProperty Name="Destacar" ColumnName="Destacar" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Resumen" ColumnName="Resumen" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_ListaSeccionVisualizacion">
+      <EntityTypeMapping TypeName="base999Model.view_ListaSeccionVisualizacion">
+        <MappingFragment StoreEntitySet="view_ListaSeccionVisualizacion">
+          <ScalarProperty Name="FechaFecha" ColumnName="FechaFecha" />
+          <ScalarProperty Name="Megusta" ColumnName="Megusta" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Etiqueta" ColumnName="Etiqueta" />
+          <ScalarProperty Name="Destacar" ColumnName="Destacar" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Resumen" ColumnName="Resumen" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

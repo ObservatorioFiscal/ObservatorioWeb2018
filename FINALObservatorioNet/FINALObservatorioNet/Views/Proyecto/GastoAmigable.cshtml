@@ -1,0 +1,247 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+    ViewData["menu4"] = "active";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="cuadro-contenido">
+            <figure>
+                <img src="~/Content/images/seccion/4003.png" class="img-fluid" />
+            </figure>
+            <div class="cuadro-padding-interno">
+                <h1>Portal de gasto amigable</h1>
+            </div>
+            <hr />
+            <div class="cuadro-padding-interno">
+                <div class="list-group">
+                    <a onclick="menuproyecto(1)"><span id="1" class="list-group-item seleccionado"><i class="material-icons md-36 celeste">description</i> Descripción</span></a>
+                    <a onclick="menuproyecto(2)"><span id="2" class="list-group-item"><i class="material-icons md-36 celeste">filter_tilt_shift</i> Objetivos</span></a>
+                    <a onclick="menuproyecto(3)"><span id="3" class="list-group-item"><i class="material-icons md-36 celeste">change_history</i> Etapas</span></a>
+                    <a onclick="menuproyecto(4)"><span id="4" class="list-group-item"><i class="material-icons md-36 celeste">comment</i> Noticias</span></a>
+                    <a onclick="menuproyecto(5)"><span id="5" class="list-group-item"><i class="material-icons md-36 celeste">file_download</i> Documentos</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8" id="Descripcion">
+        <div class="cuadro-contenido cuadro-padding minproyecto">
+            <h2 class="text-left">Descripción</h2>
+            <h6 class="text-left">Antecedentes</h6>
+            <hr />
+            <p>
+                <br /><br />
+                El proyecto “Gasto Amigable Municipal” es una iniciativa que impulsamos como Observatorio del Gasto Fiscal, que consiste en el diseño y la creación de un portal de rendición de cuentas que los municipios pueden implementar en su propio sitio web para publicar información de su gasto de forma amigable, entendible y de interés para la comunidad.
+                <br /><br />
+                De esta manera, buscamos promover una mejor rendición de cuentas del gasto municipal que atraiga a los vecinos y que les otorgue mayores capacidades de control. De esta manera, incentivamos no solamente la publicación de datos brutos relevantes, sino también el uso de visualizaciones que posibiliten la mayor obtención de conclusiones para los vecinos, comprendiendo en qué y cómo se gastan los recursos municipales.
+                <br /><br />
+                El Proyecto se inició en Junio 2016.<br /> 
+                En Octubre del mismo año, el Laboratorio de Gobierno nos apoyó el proyecto con $4,5 millones, por su aporte a la rendición de cuentas municipal.
+                <br /><br />
+                En Julio 2017, el Consejo para la Transparencia (CPLT)  el Observatorio firmaron un convenio de colaboración, para impulsar y gestionar juntos Modelos de Transparencia Presupuestaria. Por lo anterior, desde Septiembre 2017, el CPLT se suma a la iniciativa “Gasto Amigable Municipal”, para reforzar esta iniciativa pública privado.
+                <br /><br />
+
+                <br /><br /><br /><br />
+            </p>
+            <h6 class="text-left">Municipios pilotos</h6>
+            <hr />
+            <p>
+                <br /><br />
+                Mediante la firma de un convenio, los alcaldes de las comunas de Peñalolén, La Reina, Vitacura, Recoleta e Isla de Pascua acordaron ser parte del grupo de municipalidades pilotos de este proyecto. Esperamos concluir el trabajo con ellos durante el primer trimestre de 2018.
+                <br /><br />
+                Posteriormente, como Observatorio, dejaremos disponible el Portal de Rendición de Cuentas Municipal como open source, de forma gratuita, para incentivar su uso por otras municipalidades.
+                <br /><br />
+            </p>
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="~/Content/images/log_pascua.png" />
+                </div>
+                <div class="col-md-3">
+                    <img class="img-fluid" src="~/Content/images/log_penalolen.png" />
+                </div>
+                <div class="col-md-3">
+                    <img class="img-fluid" src="~/Content/images/log_recoleta.png" />
+                </div>
+                <div class="col-md-3">
+                    <img class="img-fluid" src="~/Content/images/log_vitacura.png" />
+                </div>
+            </div>
+
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Objetivos">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Objetivos</h2>
+            <h6 class="text-left">especificos</h6>
+            <hr />
+            <p>
+                <br /><br />
+                <i class="material-icons md-24 celeste">check_circle</i> Mejorar la rendición de cuentas públicas.
+            </p>
+            <p>
+                <i class="material-icons md-24 celeste">check_circle</i> Facilitar la comprensión ciudadana de la información del gasto municipal
+            </p>
+
+            <p>
+                <i class="material-icons md-24 celeste">check_circle</i> Aumentar la participación ciudadana en la asignación y control de recursos públicos
+            </p>
+
+            <p>
+                <i class="material-icons md-24 celeste">check_circle</i> Aumentar la confianza ciudadana
+            </p>
+            <p class="text-center">
+                <br /><br />
+                <img class="img-fluid" src="~/Content/images/seccion/4003_circulos.png" />
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Etapas">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Etapas</h2>
+            <h6 class="text-left">Enumeración</h6>
+            <hr />
+            <img class="img-fluid" src="~/Content/images/seccion/4003_etapa.png" />
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="noticias">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <div class="row">
+
+                <div class="col-12">
+                    <h2 class="text-left">Noticias</h2>
+                    <h6 class="text-left">Actividades de este proyecto</h6>
+                    <hr />
+                </div>
+                @foreach (var item in ViewBag.noticias)
+                {
+                    <div class="col-2 align-self-center">
+                        <figure>
+                            <img src="~/Content/images/noticia/@item.Imagen" class="img-fluid" />
+                        </figure>
+                    </div>
+                    <div class="col-10">
+                        <h5><a href="@item.Urldireccion">@item.Titulo</a></h5>
+                        <p>
+                            @item.Descripcion
+                        </p>
+                        <p class="text-left small">@item.Fecha</p>
+                        <hr />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Documentos">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Documentos</h2>
+            <h6 class="text-left">Archivos creados para este proyecto.</h6>
+            <hr />
+            <div class="row">
+                <div class="col-md-4 rowdiv">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Convenio con Peñalolen</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://observatoriofiscal.cl/ARCHIVOS/convenio/Penalolen.pdf" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 rowdiv">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Convenio con Recoleta</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://observatoriofiscal.cl/ARCHIVOS/convenio/Recoleta.pdf" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 rowdiv">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Convenio con Vitacura</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://observatoriofiscal.cl/ARCHIVOS/convenio/Vitacura.pdf" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 rowdiv">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Convenio con Isla de Pascua</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://observatoriofiscal.cl/ARCHIVOS/convenio/Rapanui.pdf" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section Scripts
+{
+    <script>
+    function menuproyecto(aux) {
+        $('#Descripcion').addClass("hidden");
+        $('#Objetivos').addClass("hidden");
+        $('#Etapas').addClass("hidden");
+        $('#noticias').addClass("hidden");
+        $('#Documentos').addClass("hidden");
+        $('.list-group-item').removeClass("seleccionado");
+        $('#' + aux).addClass("seleccionado");
+        switch (aux) {
+            case 1:
+                $('#Descripcion').removeClass("hidden");
+                break;
+            case 2:
+                $('#Objetivos').removeClass("hidden");
+                break;
+            case 3:
+                $('#Etapas').removeClass("hidden");
+                break;
+            case 4:
+                $('#noticias').removeClass("hidden");
+                break;
+            case 5:
+                $('#Documentos').removeClass("hidden");
+                break;
+        }
+
+    }
+    </script>
+}

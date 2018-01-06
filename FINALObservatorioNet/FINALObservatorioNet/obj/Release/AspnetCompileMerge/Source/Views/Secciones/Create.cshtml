@@ -1,0 +1,608 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="col-12">
+    <a onclick="Mostrar(1)" class="btn btn-primary">Global</a>
+    <a onclick="Mostrar(2)" class="btn btn-primary">Visualización</a>
+    <a onclick="Mostrar(3)" class="btn btn-primary">Publicación</a>
+</div>
+
+<div id="global" class="hidden">
+    <h2>Agregar</h2>
+    @using (Html.BeginForm("Create", "Secciones", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Secciones</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdSecciones, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IdSecciones, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.IdSecciones, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Retroalimentacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Retroalimentacion)
+                        @Html.ValidationMessageFor(model => model.Retroalimentacion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                Dataset
+                <div class="col-md-10">
+                    <input name="Files" class="form-control" type="file" />
+                    @Html.HiddenFor(model => model.Archivo)
+                </div>
+            </div>
+
+            <div class="form-group">
+                Periodo Datatest
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.dataset, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.dataset, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo Pregunta (entrada a seccion)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloPregunta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloPregunta, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo Redes sociales
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloRedes, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloRedes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Resumen (redes y entrada)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Resumen, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Resumen, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Imagen
+                <div class="col-md-10">
+                    <input name="Files2" class="form-control" type="file" />
+                    @Html.HiddenFor(model => model.ImagenUrl)
+                </div>
+            </div>
+
+            <div class="form-group">
+                Url Direccion
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UrlDireccion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UrlDireccion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo (interno de seccion)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloInterna, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloInterna, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Subtitulo
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SubTitulo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SubTitulo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion superior
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionSuperior, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionSuperior, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion central
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionCentral, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionCentral, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion inferior
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionInferior, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionInferior, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion Script
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionScript, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionScript, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Tipo ( aplicacion=1 - visualizacion=2 - publicacion=3)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Tipo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Etiquetas (GobiernoCentral= 1 - Regional= 2 - Municipal= 3 - Leydepresupuesto= 4 - PersonaldelEstado= 5 - Calidaddedatos= 6 - Transparencia= 7 - RendiciondeCuentas= 8 - Compraspublicas= 9 - ModernizacionEstado= 10)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Etiquetas, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Etiquetas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Fecha
+                <div class="col-md-10">
+                    <input type="date" name="Fecha2" id="Fecha2" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Fecha2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Destacar
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Destacar)
+                        @Html.ValidationMessageFor(model => model.Destacar, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                Cantidad Me Gusta
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Megusta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Megusta, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Autor (solo publicacion   Guillermo= 1 - Jeannete= 2 - Jose= 3 - Manuel= 4 - Orlando= 5 - Matias= 6 - Paula= 7)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.autor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.autor, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Tipo Publicacion (Columna=1 - Estudio=2 - Infografia=3 - Informe=4 - Principio=5 - Reportaje=6)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TipoPublicacion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TipoPublicacion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Recomendados (el ID-ID)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Recomendado, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Recomendado, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Agregar Guardar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div id="visualizacion" class="hidden">
+    <h2>Agregar Visualizacion</h2>
+    @using (Html.BeginForm("Create", "Secciones", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Secciones</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdSecciones, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IdSecciones, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.IdSecciones, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Retroalimentacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Retroalimentacion)
+                        @Html.ValidationMessageFor(model => model.Retroalimentacion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                Dataset
+                <div class="col-md-10">
+                    <input name="Files" class="form-control" type="file" />
+                    @Html.HiddenFor(model => model.Archivo)
+                </div>
+            </div>
+
+            <div class="form-group">
+                Periodo Datatest
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.dataset, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.dataset, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo Pregunta (entrada a seccion)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloPregunta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloPregunta, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo Redes sociales
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloRedes, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloRedes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Resumen (redes y entrada)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Resumen, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Resumen, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Imagen
+                <div class="col-md-10">
+                    <input name="Files2" class="form-control" type="file" />
+                    @Html.HiddenFor(model => model.ImagenUrl)
+                </div>
+            </div>
+
+            <div class="form-group">
+                Url Direccion
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UrlDireccion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UrlDireccion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo (interno de seccion)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloInterna, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloInterna, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Subtitulo
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SubTitulo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SubTitulo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion superior
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionSuperior, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionSuperior, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion central
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionCentral, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionCentral, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion inferior
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionInferior, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionInferior, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Descripcion Script
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionScript, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionScript, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Tipo ( aplicacion=1 - visualizacion=2 - publicacion=3)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Tipo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Etiquetas (GobiernoCentral= 1 - Regional= 2 - Municipal= 3 - Leydepresupuesto= 4 - PersonaldelEstado= 5 - Calidaddedatos= 6 - Transparencia= 7 - RendiciondeCuentas= 8 - Compraspublicas= 9 - ModernizacionEstado= 10)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Etiquetas, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Etiquetas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Fecha
+                <div class="col-md-10">
+                    <input type="date" name="Fecha2" id="Fecha2" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Fecha2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Destacar
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Destacar)
+                        @Html.ValidationMessageFor(model => model.Destacar, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                Cantidad Me Gusta
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Megusta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Megusta, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                Recomendados (el ID-ID)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Recomendado, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Recomendado, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <input type="hidden" name="autor" value="" />
+            <input type="hidden" name="autor" value="" />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Agregar Guardar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div id="publicacion" class="hidden">
+    <h2>Agregar Pulicacion</h2>
+    @using (Html.BeginForm("Create", "Secciones", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Secciones</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdSecciones, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IdSecciones, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.IdSecciones, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                Titulo Pregunta (entrada a seccion)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloPregunta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloPregunta, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo Redes sociales
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloRedes, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloRedes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Resumen (redes y entrada)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Resumen, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Resumen, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Imagen
+                <div class="col-md-10">
+                    <input name="Files2" class="form-control" type="file" />
+                    @Html.HiddenFor(model => model.ImagenUrl)
+                </div>
+            </div>
+
+            <div class="form-group">
+                Seleccion
+                <div class="col-md-10">
+                    <input type="radio" name="RRRR" value="1" > Subir PDF
+                    <input type="radio" name="RRRR" value="2" checked> Url direccion
+                </div>
+            </div>
+
+            <div id="URL" class="form-group">
+                Url Direccion
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UrlDireccion, new { htmlAttributes = new { id = "URL222", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UrlDireccion, "",         new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div id="PDF" class="hidden form-group">
+                PDF
+                <div class="col-md-10">
+                    <input name="Files" class="form-control" id="PDF222" type="file" />
+                    @Html.HiddenFor(model => model.Archivo)
+                </div>
+            </div>
+
+            <div class="form-group">
+                Titulo (interno de seccion)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TituloInterna, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TituloInterna, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                Etiquetas (GobiernoCentral= 1 - Regional= 2 - Municipal= 3 - Leydepresupuesto= 4 - PersonaldelEstado= 5 - Calidaddedatos= 6 - Transparencia= 7 - RendiciondeCuentas= 8 - Compraspublicas= 9 - ModernizacionEstado= 10)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Etiquetas, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Etiquetas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                Fecha
+                <div class="col-md-10">
+                    <input type="date" name="Fecha2" id="Fecha2" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Fecha2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                Destacar
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Destacar)
+                        @Html.ValidationMessageFor(model => model.Destacar, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                Autor (solo publicacion   Guillermo= 1 - Jeannete= 2 - Jose= 3 - Manuel= 4 - Orlando= 5 - Matias= 6 - Paula= 7)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.autor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.autor, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                Tipo Publicacion (Columna=1 - Estudio=2 - Infografia=3 - Informe=4 - Principio=5 - Reportaje=6)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TipoPublicacion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TipoPublicacion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="hidden">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Retroalimentacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Retroalimentacion)
+                            @Html.ValidationMessageFor(model => model.Retroalimentacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="dataset" value="" />
+            <input type="hidden" name="SubTitulo" value="" />
+            <input type="hidden" name="DescripcionSuperior" value="" />
+            <input type="hidden" name="DescripcionCentral" value="" />
+            <input type="hidden" name="DescripcionInferior" value="" />
+            <input type="hidden" name="DescripcionScript" value="" />
+            <input type="hidden" name="Tipo" value="3" />
+            <input type="hidden" name="Megusta" value="0" />
+            <input type="hidden" name="Recomendado" value="" />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Agregar Guardar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    @Html.ActionLink("Volver a la Lista", "Index")
+</div>
+
+<script>
+    function Mostrar(aux) {
+        $("#global").removeClass("hidden");
+        $("#visualizacion").removeClass("hidden");
+        $("#publicacion").removeClass("hidden");
+        switch (aux) {
+            case 1:
+                $("#visualizacion").addClass("hidden");
+                $("#publicacion").addClass("hidden");
+                break;
+            case 2:
+                $("#global").addClass("hidden");
+                $("#publicacion").addClass("hidden");
+                break;
+            case 3:
+                $("#global").addClass("hidden");
+                $("#visualizacion").addClass("hidden");
+                break;
+        }
+    }
+</script>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("input[name=RRRR]").change(function () {
+                if ($(this).val() != "1") {
+                    $("#URL").removeClass("hidden");
+                    $("#PDF").addClass("hidden");
+                }
+                else {
+                    $("#PDF").removeClass("hidden");
+                    $("#URL").addClass("hidden");
+                }
+                $('#URL222').val("");
+                $('#PDF222').val("");
+            });
+
+        });
+    </script>
+}

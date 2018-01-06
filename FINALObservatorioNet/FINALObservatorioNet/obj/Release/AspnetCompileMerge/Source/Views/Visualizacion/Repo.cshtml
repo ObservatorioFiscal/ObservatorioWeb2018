@@ -1,0 +1,155 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+    ViewData["menu1"] = "active";
+}
+
+<section class="row cuadro-contenido">
+    <ol class="breadcrumb small" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../../" itemscope itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">Inicio</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../visualizacion" itemscope itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">Visualizaciones</span></a>
+            <meta itemprop="position" content="2" />
+        </li>
+
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../visualizacion/repo/@Model.UrlDireccion" itemscope itemtype="http://schema.org/Thing" itemprop="item"><span class="breadcrumb-item-active" itemprop="name">@Model.TituloPregunta</span></a>
+            <meta itemprop="position" content="3" />
+        </li>
+
+    </ol>
+    <article class="cuadro-padding">
+        <header class="col-md-12">
+            <h1 >@Model.TituloInterna</h1>
+            <h6>@Model.SubTitulo</h6>
+            <hr />
+            <div class="conmargen">
+                @Html.Raw(Model.DescripcionSuperior)
+            </div>
+            <div class="hidden" itemprop="description">
+                @Model.Resumen
+            </div>
+        </header>
+        <section class="conmargen row" id="central">
+            @if (Request.Browser.IsMobileDevice)
+            {
+                if (string.IsNullOrEmpty(Model.DescripcionCentralM))
+                {
+                    @Html.Raw(Model.DescripcionCentral)
+                }
+                else
+                {
+                    @Html.Raw(Model.DescripcionCentralM)
+                    <p>Version simplificada para Mobile.</p>
+                }
+
+            }
+            else
+            {
+                @Html.Raw(Model.DescripcionCentral)
+            }
+        </section>
+        <footer class="conmargen">
+            @Html.Raw(Model.DescripcionInferior)
+        </footer>
+
+
+        
+        <div class="col-12 hidden-print">
+            <hr />
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    @if (!string.IsNullOrEmpty(Model.Archivo))
+                    {
+                        <h4 class="text-left sinmargen">
+                            <a target="_blank" href="~/Content/datasets/@Model.Archivo" class="btn btn-xs btn-border"><i class="material-icons celeste">cloud_download</i> Descarga Dataset</a>
+                        </h4>
+                    }
+                    
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <p class="text-right sinmargen celeste">
+                        Compartir:
+                        <a onclick="redesclick('facebook')" class="nav-link-redes facebook"></a>
+                        <a onclick="redesclick('linkedin')" class="nav-link-redes linkedin"></a>
+                        <a onclick="redesclick('twitter')" class="nav-link-redes twitter"></a>
+                    </p>
+                </div>
+            </div>
+
+            <input type="hidden" id="IdVista" value="@Model.IdSecciones" />
+            @if (Model.Retroalimentacion == true)
+            {
+                Html.RenderPartial("_Feedback"); 
+            }
+        </div>
+        <br /><br />
+    </article>
+</section>
+
+@if (Model.Recomendado != "")
+{
+    <section class="row conmargen cuadro-contenido">
+        <div class="cuadro-padding">           
+            <h3><br /><i class="material-icons celeste">add_alert</i> Si te interesó esto, también te puede gustar:<br /><br /></h3>
+            <hr />
+            <div class="row">
+                @foreach (var item in ViewBag.Recomendado)
+                {
+                    <article class="col-md-6 col-lg-6 rowdiv div-item-visualizacion">
+                        <div class="cuadro-contenido">
+                            <div class="div-relative img-div">
+                                @*<small class="etiqueta">@item.Etiqueta</small>*@
+                                <a href="../../visualizacion/repo/@item.Direccion">
+                                    <img src="/Content/images/seccion/@item.Imagen" />
+                                </a>
+                            </div>
+                            <div class="div-relative cuadro-padding-destacado">
+                                <div class="cont-heigh">
+                                    <header>
+                                        <h5><a href="../../visualizacion/repo/@item.Direccion">@item.Titulo</a></h5>
+                                    </header>
+                                    <section>
+                                        <p class="cuadro-texto"> @item.Resumen </p>
+                                    </section>
+                                </div>
+                                <footer class="rowdiv">
+                                    <div class="cuadro-padding-destacado">
+                                        <hr class="sinmargen" />
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <p class="text-left sinmargen">@item.Fecha</p>
+                                            </div>
+                                            <div class="col-6  align-self-center">
+                                                <p class="text-right sinmargen">
+                                                    <a href="../../visualizacion/repo/@item.Direccion">
+                                                        <i class="material-icons megusta md-24">thumb_up</i><span>@item.Megusta</span>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
+}
+@section Scripts
+{
+    @Html.Raw(Model.DescripcionScript)
+
+    
+}

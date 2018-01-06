@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- INICIO ICON FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="~/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/favicon/favicon-16x16.png">
+    <link rel="manifest" href="~/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#00b3e3">
+    <meta name="msapplication-TileImage" content="~/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00b3e3">
+    <!-- FIN ICON FAVICON -->
+
+    <title>@ViewData["Titulo"]</title>
+    <meta name="description" content="@ViewData["Resumen"]" />
+    <meta name="keywords" content="observatorio gasto fiscal, chile, presupuesto publico, rendicion cuentas">
+    <meta property="og:url" content="@ViewData["Url"]" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@ViewData["Titulo"]" />
+    <meta property="og:description" content="@ViewData["Resumen"]" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="400" />
+    @{
+        if (ViewBag.Imagen == null)
+        {
+            ViewBag.Imagen = "http://observatoriofiscal.cl/Content/images/redessociales.png";
+        }
+        else
+        {
+            ViewBag.Imagen = "http://observatoriofiscal.cl/Content/images/" + @ViewData["Imagen"];
+        }
+    }
+    <meta property="og:image" content="@ViewBag.Imagen" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="observafiscalcl">
+    <meta name="twitter:title" content="@ViewData["Titulo"]">
+    <meta name="twitter:description" content="@ViewData["Resumen"]">
+    <meta name="twitter:image" content="@ViewData["Imagen"]">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/stylefinal.css?v=2.0" />
+</head>
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-10 col-10 align-self-center">
+                <h1>
+                    <a class="text-center" href="http://observatoriofiscal.cl/">
+                        <img src="~/Content/images/logo.png" class="img-fluid cuadro-padding-interno" alt="Observatorio del Gasto Fiscal en Chile" />
+                    </a>
+                </h1>
+            </div>
+            <div class="col-sm-2 col-2 Menucelular2 align-self-center" onclick="Menu()">
+                <i class="material-icons md-36">menu</i>
+            </div>
+
+            <div class="col-lg-7 col-md-6 Menucelular">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="nav justify-content-center">
+                            <ul class="nav">
+                                <li class="nav-item"><a target="_blank" class="nav-link nav-link-redes facebook" href="https://www.facebook.com/observafiscalcl"></a></li>
+                                <li class="nav-item"><a target="_blank" class="nav-link nav-link-redes youtube" href="https://www.youtube.com/channel/UC4tkZz6M5_VGl5R93WO2meQ"></a></li>
+                                <li class="nav-item"><a target="_blank" class="nav-link nav-link-redes linkedin" href="http://www.linkedin.com/company/observafiscalcl"></a></li>
+                                <li class="nav-item"><a target="_blank" class="nav-link nav-link-redes twitter" href="https://twitter.com/observafiscalcl"></a></li>
+                                <li class="nav-item"><a target="_blank" class="nav-link nav-link-redes googleplus" href="https://plus.google.com/b/113548614432745922065/113548614432745922065"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="nav justify-content-center">
+                            <ul class="nav men-top">
+                                <li class="nav-item @ViewData["menu11"]"><a class="nav-link" href="../../home/nosotros">Nosotros</a></li>
+                                <li class="nav-item @ViewData["menu16"]"><a class="nav-link" href="../../noticia">Noticias</a></li>
+                                <li class="nav-item @ViewData["menu13"]"><a class="nav-link" href="../../home/contacto">Contacto</a></li>
+                                <li class="nav-item @ViewData["menu17"]"><a class="nav-link" href="../../home/indicadores">Indicadores</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="cuadro-padding visible-lg">
+                    <em>
+                        Iniciativa Ciudadana<br />
+                        "Creemos en el uso de la tecnología para el cambio social"
+                    </em>
+                </h3>
+            </div>
+            <div class="col-12"><hr class="sinmargen" /></div>
+        </div>
+    </header>
+    <div class="nav-content">
+        <nav class="container nav justify-content-start">
+            <ul class="nav nav-resp">
+                @if (Request.FilePath != "/")
+                {
+                    <li class="nav-item"><a class=" btn btn-xs nav-link" onclick="volver()"><i class="material-icons">keyboard_return</i></a></li>
+                }
+
+                <li class="nav-item @ViewData["menu1"]">@Html.ActionLink("Visualizaciones", "index", "visualizacion", null, new { @class = "nav-link" })</li>
+                <li class="nav-item @ViewData["menu2"]">@Html.ActionLink("Aplicaciones", "index", "aplicacion", null, new { @class = "nav-link" })</li>
+                <li class="nav-item @ViewData["menu3"]">@Html.ActionLink("Publicaciones", "index", "publicacion", null, new { @class = "nav-link" })</li>
+                <li class="nav-item @ViewData["menu4"]">@Html.ActionLink("Proyectos", "Index", "proyecto", null, new { @class = "nav-link" })</li>
+                @*<li class="nav-item @ViewData["menu5"]">@Html.ActionLink("Red de Observadores", "Index", "Visualizacion", null, new { @class = "nav-link" })</li>*@
+                @*@await Html.PartialAsync("_LoginPartial")*@
+            </ul>
+        </nav>
+    </div>
+    <section class="body-content">
+        <div class="container">
+            @RenderBody()
+            <hr />
+        </div>
+    </section>
+    <footer class="cuadro-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4  align-self-center">
+                            <p class="text-center">
+                                <i class="material-icons celeste md-36">add_location</i><br />
+                                <a href="https://goo.gl/maps/SJcvaSZwbXM2">
+                                    Apoquindo 3910, piso 3<br />
+                                    Las Condes<br />
+                                    Santiago, Chile<br />
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-4  align-self-center">
+                            <p class="text-center">
+                                <i class="material-icons celeste md-36">mail_outline</i><br />
+                                <a href="mailto:contacto@observatoriofiscal.cl">contacto@observatoriofiscal.cl</a>
+                                <br />
+                                <a href="tel:+56923862850">+562 23862850</a><br /><br />
+                            </p>
+                        </div>
+                        <div class="col-md-4  align-self-center">
+                            <p class="text-center">
+                                <i class="material-icons celeste md-36">copyright</i><br />
+                                Esta obra de Observatorio Fiscal está bajo una <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Licencia Creative Commons Atribución 4.0 Internacional.</a><br />
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="nav men-top justify-content-center">
+                        <li class="nav-item @ViewData["menu15"]">@Html.ActionLink("Contenido Copyright", "creativecommons", "home", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item @ViewData["menu12"]">@Html.ActionLink("Datasets", "Datasets", "home", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item @ViewData["menu14"]">@Html.ActionLink("FAQ", "faq", "home", null, new { @class = "nav-link" })</li>
+
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+                <div class="col-md-12">
+                    <p class="text-center">Derechos Reservados © 2016-2017 - <a href="../../../"></a> Observatorio del gasto fiscal en Chile</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/jquery.loader.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/d3.v3.min.js"></script>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/Content/js/site.js"></script>
+
+
+
+    <script>
+        function Menu() {
+            var display = $(".Menucelular").css("display");
+            if (display == "none"){
+                $(".Menucelular").css("display","block")
+            }
+            else {
+                $(".Menucelular").css("display", "none")
+            }
+        }
+        function volver() {
+            history.back();
+        }
+    </script>
+
+
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "Organization",
+        "name": "Observatorio del gasto fiscal en Chile",
+        "url": "http://observatoriofiscal.cl/",
+        "sameAs": [
+        "https://www.facebook.com/observafiscalcl",
+        "https://twitter.com/observafiscalcl",
+        "https://www.linkedin.com/company/15086872",
+        "https://plus.google.com/113548614432745922065"
+        ],
+        "potentialAction": {
+        "@@type": "SearchAction",
+        "target": "http://observatoriofiscal.cl/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+        }
+        }
+    </script>
+    <script>
+        (function () {
+            var cx = '006131131978246849826:car7wfwk7de';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+    <gcse:search></gcse:search>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84666147-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84666147-1');
+    </script>
+
+</body>
+</html>

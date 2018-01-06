@@ -1,0 +1,144 @@
+﻿@model IEnumerable<FINALObservatorioNet.Models.Secciones>
+
+@{
+    ViewData["Titulo"] = "Datasets | Observatorio Fiscal";
+    ViewData["Resumen"] = "Te exponemos todos los datos que utilizamos, ya trabajados, para realizar analisis.";
+    ViewData["menu12"] = "active";
+}
+
+<section class="row cuadro-contenido">
+    <article class="cuadro-padding">
+        <header class="col-md-12">
+            <h1><br />Datos que utilizamos y Nuestros datasets</h1>
+            <hr />
+        </header>
+        <section class="conmargen row">
+            <div class="col-md-12 rowdiv">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Dataset</th>
+                                <th>Periodo</th>
+                                <th>Fecha de última actualización</th>
+                                <th>Descargas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.TituloInterna</td>
+                                    <td>@item.dataset</td>
+                                    <td>@item.Fecha2.Value.ToString("dd-MM-yyyy")</td>
+                                    <td><a class="btn btn-xs" target="_blank" href="~/Content/datasets/@item.Archivo"><i class="material-icons md-18">cloud_download</i> Descarga</a></td>
+                                </tr>
+                            }
+
+                            @*<tr>
+                                <td>1. ¿Cómo gasta el Estado? - ¿En qué gasta el Estado? - Por área de gasto</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Clasificación_funcional_del_gasto.xlsx"><i class="material-icons md-18">cloud_download</i> 1990 a 2016</a></td>
+                                <td>24-05-2016</td>
+                            </tr>
+                            <tr>
+                                <td>2. ¿Cómo gasta el Estado? - ¿En qué gasta el Estado? - Comparación</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/historico_clasficiacion_funcional.xlsx"><i class="material-icons md-18">cloud_download</i> 1990 a 2016</a></td>
+                                <td>24-05-2016</td>
+                            </tr>
+                            <tr>
+                                <td>3. ¿Cómo gasta el Estado? - ¿En qué gasta el Estado? - Programas</td>
+                                <td>
+                                    <a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Burbujas_Programas.xlsx"><i class="material-icons md-18">cloud_download</i> 2005 a 2016</a>
+                                </td>
+                                <td>12-05-2017</td>
+                            </tr>
+                            <tr>
+                                <td>4. ¿Cómo gasta el Estado? - ¿Cómo ha cambiado el gasto neto anual? - Gobierno Central</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Gobierno_Central.rar"><i class="material-icons md-18">cloud_download</i> 1990 a 2016</a> </td>
+                                <td>24-05-2016</td>
+                            </tr>
+                            <tr>
+                                <td>5. ¿Cómo gasta el Estado? - ¿Cómo ha cambiado el gasto neto anual? - Por Ministerio</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Evolucion_Corriente_Capital_Ministerio.xlsx"><i class="material-icons md-18">cloud_download</i> 2005 a 2016</a></td>
+                                <td>12-05-2017</td>
+                            </tr>
+                            <tr>
+                                <td>6. ¿Cómo gasta el Estado? - ¿Cómo ha cambiado el gasto neto mensual? - Historia del gasto Gobierno Central</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Historia_del_Gasto.rar"><i class="material-icons md-18">cloud_download</i> 2015 a 2017</a></td>
+                                <td>07-03-2017</td>
+                            </tr>
+                            <tr>
+                                <td>7. ¿Cómo gasta el Estado? - ¿Cómo ha cambiado el gasto neto mensual? - Siete Ministerios</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Ejecuion_mensual_siete_min.csv"><i class="material-icons md-18">cloud_download</i> 2015 a 2017</a></td>
+                                <td>07-03-2017</td>
+                            </tr>
+                            <tr>
+                                <td>8. ¿Cómo gasta el Estado? - ¿Cuánto aportas tú al Estado?</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/app.rar"><i class="material-icons md-18">cloud_download</i> 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>9. ¿Cómo gasta el Estado? - Análisis de Leyes de Presupuesto</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/AnalisisdeLeyesdePresupuestoDataset.xlsx"><i class="material-icons md-18">cloud_download</i> 2016</a></td>
+                                <td>07-04-2017</td>
+                            </tr>
+                            <tr>
+                                <td>10. ¿Cómo se gasta en tu región? - Cifras Generales</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Cifras_generales.csv"><i class="material-icons md-18">cloud_download</i> 2016</a></td>
+                                <td>05-08-2016</td>
+                            </tr>
+                            <tr>
+                                <td>11. ¿Cómo se gasta en tu región? - ¿Quién gasta?</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/quien_.csv"><i class="material-icons md-18">cloud_download</i> 2016</a></td>
+                                <td>05-08-2016</td>
+                            </tr>
+                            <tr>
+                                <td>12. ¿Cómo se gasta en tu región? - ¿En qué se gasta?</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/En_que.csv"><i class="material-icons md-18">cloud_download</i> 2016</a></td>
+                                <td>05-08-2016</td>
+                            </tr>
+                            <tr>
+                                <td>13. ¿En qué gasta tu Municipio? - ¿Cuánto gasta tu municipio? - Cifras Globales</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/CifrasGlobales-Municipios_x_Area.csv"><i class="material-icons md-18">cloud_download</i> 2016</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>14. ¿En qué gasta tu Municipio? - ¿Cuánto gasta tu municipio? - Mirada en el tiempo</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Mirada_tiempo.csv"><i class="material-icons md-18">cloud_download</i> 2008 a 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>15. ¿En qué gasta tu Municipio? - ¿Dónde se concentran los gastos? - Áreas y Programas</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Termometro_V4.csv"><i class="material-icons md-18">cloud_download</i> 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>16. ¿En qué gasta tu Municipio? - ¿Dónde se concentran los gastos? - Cuentas de interés</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Termometro_V4.csv"><i class="material-icons md-18">cloud_download</i> 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>17. ¿En qué gasta tu Municipio? - ¿Dónde se concentran los gastos? - Clasificación económica</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/Termometro_V4.csv"><i class="material-icons md-18">cloud_download</i> 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>18. ¿En qué gasta tu Municipio? - Mapa de indicadores y resultados</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/mapa_e_indicadores_prepared.rar"><i class="material-icons md-18">cloud_download</i> 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>
+                            <tr>
+                                <td>19. ¿En qué gasta tu Municipio? - Si tu fueras el alcalde... ¿Cuál sería tu comuna?</td>
+                                <td><a class="btn btn-xs" target="_blank" href="http://observatoriofiscal.cl/ARCHIVOS/datasets/DatosAppMunicipal.csv"><i class="material-icons md-18">cloud_download</i> 2015</a></td>
+                                <td>09-09-2016</td>
+                            </tr>*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </article>
+</section>
+
+
+

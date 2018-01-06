@@ -1,0 +1,196 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+    ViewData["menu4"] = "active";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="cuadro-contenido">
+            <figure>
+                <img src="~/Content/images/seccion/4001.png" class="img-fluid" />
+            </figure>
+            <div class="cuadro-padding-interno">
+                <h1>Observatorio Ciudadano de Compras Municipales</h1>
+            </div>
+            <hr />
+            <div class="cuadro-padding-interno">
+                <div class="list-group">
+                    <a onclick="menuproyecto(1)"><span id="1" class="list-group-item seleccionado"><i class="material-icons md-36 celeste">description</i> Descripción</span></a>
+                    <a onclick="menuproyecto(2)"><span id="2" class="list-group-item"><i class="material-icons md-36 celeste">filter_tilt_shift</i> Objetivos</span></a>
+                    <a onclick="menuproyecto(3)"><span id="3" class="list-group-item"><i class="material-icons md-36 celeste">change_history</i> Etapas</span></a>
+                    <a onclick="menuproyecto(4)"><span id="4" class="list-group-item"><i class="material-icons md-36 celeste">comment</i> Noticias</span></a>
+                    <a onclick="menuproyecto(5)"><span id="5" class="list-group-item"><i class="material-icons md-36 celeste">file_download</i> Documentos</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 " id="Descripcion">
+        <div class="cuadro-contenido cuadro-padding minproyecto">
+            <h2 class="text-left">Descripción</h2>
+            <h6 class="text-left">Antecedentes</h6>
+            <hr />
+            <p>
+                <br /><br />
+                Uno de los principales focos de riesgo de corrupción son las compras públicas, las cuales por su magnitud en términos de montos como de volumen de transacciones, se vuelven altamente sensibles a manifestar este riesgo, por ejemplo, a través de adjudicaciones criteriosas que privilegien a un proveedor sobre otro, o bien, por entrega de información que permita a una empresa mejorar las condiciones de su oferta antes de su publicación. Junto con ello, producto de la magnitud mencionada, también encontramos un riesgo de ineficiencia propio de los procesos de estas características, lo que implica que la información debe ser lo más transparente y clara posible, para poder evaluar de mejor forma posible los resultados de las distintas adjudicaciones.
+                <br /><br />
+                Por otra parte, dado el gran volumen de datos que el sistema del Mercado Público genera, el acceso por parte de los ciudadanos a información relevante, completa, entendible y oportuna sobre las compras públicas resulta un aspecto fundamental para disminuir los niveles de incertidumbre y a su vez para potenciarlos en su rol de coproductores de control y evaluación de la gestión pública. 
+                <br /><br />
+                En marzo del 2017, la Fundación Konrad Adenauer firmó un convenio de colaboración con el Observatorio para empezar a gestionar un “Observatorio ciudadano de compras municipales”, dedicado a la publicación de análisis en formato de visualizaciones.
+                <br /><br />
+                En abril del 2017, el Observatorio firmó un convenio de colaboración con ChileCompra, lo que permitió obtener acceso a bases de datos de compras públicas para desarrollar análisis en los datos históricos y actuales de las compras púbicas.
+                <br /><br /><br />
+            </p>
+            <h6 class="text-left">El Proyecto</h6>
+            <hr />
+            <p>
+                El proyecto consiste en la publicación de una sección web en www.observatoriofiscal.cl denominada “Observatorio ciudadano de compras municipales”, la cual estará dedicada a la publicación de análisis en formato de visualizaciones; se trata de una sección que va a contar con actualizaciones periódicas, de forma continua durante el año. 
+                <br /><br />
+                En su desarrollo se plantea el análisis y la publicación de datos con apoyo en la Inteligencia de Negocios y el Data Science, con visualizaciones de la información que permiten resumir de forma analítica grandes volúmenes de datos – como en este caso-, favoreciendo a su vez la interpretación y obtención de conclusiones a usuarios no expertos, dado que por la forma en que el cerebro humano procesa la información, los diagramas y representaciones gráficas resultan mucho más fáciles de comprender que grandes tablas con datos o reportes.
+                <br /><br /><br /><br />
+            </p>
+            <h6 class="text-left">Convenios</h6>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-right">
+                        <img src="~/Content/images/convenio/konrad.png" class="img-fluid" />
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="text-left">
+                        <img src="~/Content/images/convenio/chilecompra_logo.png" class="img-fluid" />
+                    </p>
+                </div>
+            </div>
+            <p>
+            </p>
+            <h6 class="text-left">Ámbitos de análisis a desarrollar:</h6>
+            <hr />
+            <p class="text-center">
+                <img src="~/Content/images/seccion/4001_ambitos.png" alt="ambitos de analisis" class="img-fluid" />
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Objetivos">
+        <div class="cuadro-contenido cuadro-padding-interno  minproyecto">
+            <h2 class="text-left">Objetivos</h2>
+            <h6 class="text-left">especificos</h6>
+            <hr />
+            <p>
+                <br /><br />
+                <i class="material-icons md-24 celeste">check_circle</i> Aumentar el interés y las capacidades ciudadanas de evaluación del mercado público, influyendo directamente desde la sociedad civil en la mejora del sistema de compras públicas.
+                <br /><br />
+            </p>
+            <p>
+                <i class="material-icons md-24 celeste">check_circle</i> Ayudar a disminuir las brechas existentes hoy en día en términos de accesibilidad y usabilidad de la información de compras públicas a través de la generación y publicación de análisis con visualizaciones gráficas atractivas y relevante
+            </p>
+
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Etapas">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Etapas</h2>
+            <h6 class="text-left">Enumeración</h6>
+            <hr />
+            <img class="img-fluid" src="~/Content/images/seccion/4001_etapa.png" />
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="noticias">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <div class="row">
+
+                <div class="col-12">
+                    <h2 class="text-left">Noticias</h2>
+                    <h6 class="text-left">Actividades de este proyecto</h6>
+                    <hr />
+                </div>
+
+                @foreach (var item in ViewBag.noticias)
+                {
+                    <div class="col-2 align-self-center">
+                        <figure>
+                            <img src="~/Content/images/noticia/@item.Imagen" class="img-fluid" />
+                        </figure>
+                    </div>
+                    <div class="col-10">
+                        <h5><a href="@item.Urldireccion">@item.Titulo</a></h5>
+                        <p>
+                            @item.Descripcion
+                        </p>
+                        <p class="text-left small">@item.Fecha</p>
+                        <hr />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 hidden" id="Documentos">
+        <div class="cuadro-contenido cuadro-padding-interno minproyecto">
+            <h2 class="text-left">Documentos</h2>
+            <h6 class="text-left">Archivos creados para este proyecto.</h6>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="cuadro-contenido">
+                        <p></p>
+                        <h3 class="text-center">Convenio con ChileCompra</h3>
+                        <div class="cuadro-padding-interno">
+                            <hr />
+                            <p class="text-center">
+                                <a href="http://observatoriofiscal.cl/ARCHIVOS/convenio/chilecompra.pdf" class="btn" target="_blank">
+                                    <i class="material-icons md-48 celeste">archive</i> Descarga
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</div>
+</div>
+@section Scripts
+{
+<script>
+    function menuproyecto(aux) {
+        $('#Descripcion').addClass("hidden");
+        $('#Objetivos').addClass("hidden");
+        $('#Etapas').addClass("hidden");
+        $('#noticias').addClass("hidden");
+        $('#Documentos').addClass("hidden");
+        $('.list-group-item').removeClass("seleccionado");
+        $('#' + aux).addClass("seleccionado");
+        switch (aux) {
+            case 1:
+                $('#Descripcion').removeClass("hidden");
+                break;
+            case 2:
+                $('#Objetivos').removeClass("hidden");
+                break;
+            case 3:
+                $('#Etapas').removeClass("hidden");
+                break;
+            case 4:
+                $('#noticias').removeClass("hidden");
+                break;
+            case 5:
+                $('#Documentos').removeClass("hidden");
+                break;
+        }
+
+    }
+</script>
+}

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FINALObservatorioNet.Models.PreguntasFrecuentes>
+@{
+    ViewData["Resumen"] = "Somos una iniciativa sin fines de lucro integrada por personas de diversas visiones políticas y experiencias, pero con un objetivo común: contribuir vía la generación de información a un gasto público eficiente y centrado en las necesidades reales de las personas.";
+    ViewData["menu14"] = "active";
+    ViewData["Titulo"] = "Faq | Observatorio Fiscal";
+}
+
+<div class="row">
+    <div class="cuadro-contenido">
+        <div class="cuadro-padding">
+            <h1>FAQ</h1>
+            <h5>Preguntas Frecuentes</h5>
+            <hr />
+            <div class="row">
+                @foreach (var item in Model)
+            {
+                    <div class="col-md-6 rowdiv">
+                        <div class="cuadro-contenido">
+                            <div class="cuadro-padding-interno">
+                                <h2 class="celeste">@item.Pregunta</h2>
+                                <hr />
+                                <p> @item.Respuesta</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

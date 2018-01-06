@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="576e4d0dfdf447d9871df935d722a487" Name="Diagram1" ZoomLevel="18">
+        <EntityTypeShape EntityType="base999Model.Abuelo_Biblioteca" Width="1.5" PointX="21" PointY="1.25" />
+        <EntityTypeShape EntityType="base999Model.AbueloCirculosVarios" Width="1.5" PointX="3" PointY="8.875" />
+        <EntityTypeShape EntityType="base999Model.AplicacionQuiz" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="base999Model.AppMunicipalidad" Width="1.5" PointX="0.75" PointY="22.75" />
+        <EntityTypeShape EntityType="base999Model.Area_googleChart_Area" Width="1.5" PointX="7.5" PointY="4.125" />
+        <EntityTypeShape EntityType="base999Model.Barra_amChart_HorizontalBar" Width="1.5" PointX="22" PointY="19" />
+        <EntityTypeShape EntityType="base999Model.Categoria_Plotly_Listbox" Width="1.5" PointX="12" PointY="9" />
+        <EntityTypeShape EntityType="base999Model.Circulos_Grafico_d3Object_Bubble" Width="1.5" PointX="22" PointY="14" />
+        <EntityTypeShape EntityType="base999Model.Cuadrados_d3Object_TreeMap" Width="1.5" PointX="15" PointY="19" />
+        <EntityTypeShape EntityType="base999Model.Datos_googleChart_Area" Width="1.5" PointX="9.75" PointY="4.125" />
+        <EntityTypeShape EntityType="base999Model.Datos_googleChart_Line" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="base999Model.Datos_Grafico_Plotly_Line" Width="1.5" PointX="23.25" PointY="10" />
+        <EntityTypeShape EntityType="base999Model.DatosAPP" Width="1.5" PointX="2.75" PointY="22.75" />
+        <EntityTypeShape EntityType="base999Model.DatosApp2" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="base999Model.DatosdupliCirculosVarios" Width="1.5" PointX="3" PointY="13.125" />
+        <EntityTypeShape EntityType="base999Model.DatosSoloUnoCirculosVarios" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="base999Model.Encuesta" Width="1.5" PointX="15.75" PointY="23.75" />
+        <EntityTypeShape EntityType="base999Model.Estudio" Width="1.5" PointX="13" PointY="24" />
+        <EntityTypeShape EntityType="base999Model.EstudioCategoria" Width="1.5" PointX="10.75" PointY="24.5" />
+        <EntityTypeShape EntityType="base999Model.FeedSocial" Width="1.5" PointX="10" PointY="16.375" />
+        <EntityTypeShape EntityType="base999Model.FeedSocial2" Width="1.5" PointX="10" PointY="13.375" />
+        <EntityTypeShape EntityType="base999Model.Formulario" Width="1.5" PointX="17.75" PointY="23.75" />
+        <EntityTypeShape EntityType="base999Model.Grafico_amChart_HorizontalBar" Width="1.5" PointX="19.75" PointY="19.625" />
+        <EntityTypeShape EntityType="base999Model.Grafico_Biblioteca" Width="1.5" PointX="18.75" PointY="1.5" />
+        <EntityTypeShape EntityType="base999Model.Grafico_d3Object_Bubble" Width="1.5" PointX="19.75" PointY="14.75" />
+        <EntityTypeShape EntityType="base999Model.Grafico_d3Object_TreeMap" Width="1.5" PointX="12.75" PointY="19.5" />
+        <EntityTypeShape EntityType="base999Model.Grafico_googleChart_Area" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="base999Model.Grafico_googleChart_Line" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="base999Model.Grafico_googleChart_Pie" Width="1.5" PointX="0.75" PointY="19.25" />
+        <EntityTypeShape EntityType="base999Model.Grafico_Plotly_Line" Width="1.5" PointX="18.75" PointY="10.25" />
+        <EntityTypeShape EntityType="base999Model.Grafico_Plotly_Listbox" Width="1.5" PointX="9.75" PointY="9.125" />
+        <EntityTypeShape EntityType="base999Model.Grafico_Timeline" Width="1.5" PointX="12.75" PointY="14.625" />
+        <EntityTypeShape EntityType="base999Model.GraficoCircularesVarios" Width="1.5" PointX="0.75" PointY="11.875" />
+        <EntityTypeShape EntityType="base999Model.GraficoLineasSeparadas" Width="1.5" PointX="11.75" PointY="1.5" />
+        <EntityTypeShape EntityType="base999Model.Hijo_Biblioteca" Width="1.5" PointX="25.5" PointY="1" />
+        <EntityTypeShape EntityType="base999Model.Hijo_Grafico_Timeline" Width="1.5" PointX="17.25" PointY="14" />
+        <EntityTypeShape EntityType="base999Model.HijoCirculosVarios" Width="1.5" PointX="7.5" PointY="9" />
+        <EntityTypeShape EntityType="base999Model.HijoLineasSeparadas" Width="1.5" PointX="16.25" PointY="1" />
+        <EntityTypeShape EntityType="base999Model.Indicadores" Width="1.5" PointX="19.75" PointY="23.75" />
+        <EntityTypeShape EntityType="base999Model.Json" Width="1.5" PointX="11.75" PointY="5.125" />
+        <EntityTypeShape EntityType="base999Model.JsonVistas" Width="1.5" PointX="14" PointY="4.875" />
+        <EntityTypeShape EntityType="base999Model.Lineas_googleChart_Line" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="base999Model.Lineas_Grafico_Plotly_Line" Width="1.5" PointX="21" PointY="10" />
+        <EntityTypeShape EntityType="base999Model.Lineas_Plotly_Listbox" Width="1.5" PointX="16.5" PointY="8" />
+        <EntityTypeShape EntityType="base999Model.nivel1" Width="1.5" PointX="18.75" PointY="5.125" />
+        <EntityTypeShape EntityType="base999Model.nivel11" Width="1.5" PointX="5.75" PointY="21.125" />
+        <EntityTypeShape EntityType="base999Model.nivel2" Width="1.5" PointX="21" PointY="5" />
+        <EntityTypeShape EntityType="base999Model.nivel22" Width="1.5" PointX="8" PointY="21" />
+        <EntityTypeShape EntityType="base999Model.nivel3" Width="1.5" PointX="23.25" PointY="5" />
+        <EntityTypeShape EntityType="base999Model.nivel4" Width="1.5" PointX="25.5" PointY="5" />
+        <EntityTypeShape EntityType="base999Model.nivel5" Width="1.5" PointX="27.75" PointY="5.375" />
+        <EntityTypeShape EntityType="base999Model.Noticias" Width="1.5" PointX="21.75" PointY="23.75" />
+        <EntityTypeShape EntityType="base999Model.Padre_Biblioteca" Width="1.5" PointX="23.25" PointY="1.25" />
+        <EntityTypeShape EntityType="base999Model.Padre_Grafico_Timeline" Width="1.5" PointX="15" PointY="14.125" />
+        <EntityTypeShape EntityType="base999Model.PadreLineasSeparados" Width="1.5" PointX="14" PointY="1.125" />
+        <EntityTypeShape EntityType="base999Model.PapaCirculosVarios" Width="1.5" PointX="5.25" PointY="8.25" />
+        <EntityTypeShape EntityType="base999Model.PreguntasFrecuentes" Width="1.5" PointX="23.75" PointY="23.75" />
+        <EntityTypeShape EntityType="base999Model.RegistroAppMunicipal" Width="1.5" PointX="4.75" PointY="24.75" />
+        <EntityTypeShape EntityType="base999Model.Secciones" Width="1.5" PointX="7.75" PointY="13.125" />
+        <EntityTypeShape EntityType="base999Model.SubCategoria_Plotly_Listbox" Width="1.5" PointX="14.25" PointY="9.25" />
+        <EntityTypeShape EntityType="base999Model.SubCirculos_Grafico_d3Object_Bubble" Width="1.5" PointX="24.25" PointY="14.125" />
+        <EntityTypeShape EntityType="base999Model.SubCuadrados_d3Object_TreeMap" Width="1.5" PointX="17.25" PointY="19.125" />
+        <EntityTypeShape EntityType="base999Model.Tabla_amChart_HorizontalBar" Width="1.5" PointX="24.25" PointY="19.375" />
+        <EntityTypeShape EntityType="base999Model.Torta_Grafico_googleChart_Pie" Width="1.5" PointX="3" PointY="19" />
+        <EntityTypeShape EntityType="base999Model.view_ListaSeccionAplicacion" Width="1.5" PointX="6.75" PointY="24.75" />
+        <EntityTypeShape EntityType="base999Model.view_ListaSeccionEtiqueta" Width="1.5" PointX="25.75" PointY="9.75" />
+        <EntityTypeShape EntityType="base999Model.view_ListaSeccionNoticia" Width="1.5" PointX="25.75" PointY="22.75" />
+        <EntityTypeShape EntityType="base999Model.view_ListaSeccionPublicacion" Width="1.5" PointX="26.75" PointY="13.75" />
+        <EntityTypeShape EntityType="base999Model.view_ListaSeccionVisualizacion" Width="1.5" PointX="26.75" PointY="18.75" />
+        <AssociationConnector Association="base999Model.FK__Abuelo_Bi__Idgra__25869641" />
+        <AssociationConnector Association="base999Model.FK__Padre_Bib__IdAbu__0A9D95DB" />
+        <AssociationConnector Association="base999Model.FK__AbueloCir__IdGra__2A4B4B5E" />
+        <AssociationConnector Association="base999Model.FK__PapaCircu__IdAbu__160F4887" />
+        <AssociationConnector Association="base999Model.FK__Area_goog__IdGra__38996AB5" />
+        <AssociationConnector Association="base999Model.FK__Datos_goo__IdLin__5812160E" />
+        <AssociationConnector Association="base999Model.FK__Barra_amC__IdGra__46E78A0C" />
+        <AssociationConnector Association="base999Model.FK__Tabla_amC__idlin__3A4CA8FD" />
+        <AssociationConnector Association="base999Model.FK__Categoria__IdGra__4BAC3F29" />
+        <AssociationConnector Association="base999Model.FK__SubCatego__IdCat__2645B050" />
+        <AssociationConnector Association="base999Model.FK__Circulos___IdGra__5070F446" />
+        <AssociationConnector Association="base999Model.FK__SubCircul__IdCir__3493CFA7" />
+        <AssociationConnector Association="base999Model.FK__Cuadrados__IdGra__5535A963" />
+        <AssociationConnector Association="base999Model.FK__SubCuadra__IdCir__37703C52" />
+        <AssociationConnector Association="base999Model.FK__Datos_goo__IdLin__5AEE82B9" />
+        <AssociationConnector Association="base999Model.FK__Datos_Gra__IdLin__6383C8BA" />
+        <AssociationConnector Association="base999Model.FK__Datosdupl__IdGra__6A30C649" />
+        <AssociationConnector Association="base999Model.FK__DatosSolo__IdGra__6D0D32F4" />
+        <AssociationConnector Association="base999Model.FK__Estudio__IdEstud__76969D2E" />
+        <AssociationConnector Association="base999Model.FK__FeedSocia__IdSec__7D439ABD" />
+        <AssociationConnector Association="base999Model.FK__FeedSocia__IdSec__00200768" />
+        <AssociationConnector Association="base999Model.FK__Grafico_g__IdLin__35BCFE0A" />
+        <AssociationConnector Association="base999Model.FK__Lineas_go__IdGra__32E0915F" />
+        <AssociationConnector Association="base999Model.FK__Torta_Gra__IdGra__3D2915A8" />
+        <AssociationConnector Association="base999Model.FK__Lineas_Gr__IdGra__60A75C0F" />
+        <AssociationConnector Association="base999Model.FK__Lineas_Pl__IdGra__29221CFB" />
+        <AssociationConnector Association="base999Model.FK__Padre_Gra__IdGra__10566F31" />
+        <AssociationConnector Association="base999Model.FK__PadreLine__IdGra__1BC821DD" />
+        <AssociationConnector Association="base999Model.FK__Hijo_Bibl__IdPad__0D7A0286" />
+        <AssociationConnector Association="base999Model.FK__Hijo_Graf__IdPad__1332DBDC" />
+        <AssociationConnector Association="base999Model.FK__HijoCircu__IdPad__18EBB532" />
+        <AssociationConnector Association="base999Model.FK__HijoLinea__IdPad__1EA48E88" />
+        <AssociationConnector Association="base999Model.FK__JsonVista__IdJso__236943A5" />
+        <AssociationConnector Association="base999Model.FK__Lineas_Pl__IdSub__2A164134" />
+        <AssociationConnector Association="base999Model.FK__nivel2__Fk_IdNiv__0A688BB1" />
+        <AssociationConnector Association="base999Model.FK__nivel22__Fk_IdNi__1D7B6025" />
+        <AssociationConnector Association="base999Model.FK__nivel3__Fk_IdNiv__0D44F85C" />
+        <AssociationConnector Association="base999Model.FK__nivel4__Fk_IdNiv__10216507" />
+        <AssociationConnector Association="base999Model.FK__nivel5__Fk_IdNiv__12FDD1B2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

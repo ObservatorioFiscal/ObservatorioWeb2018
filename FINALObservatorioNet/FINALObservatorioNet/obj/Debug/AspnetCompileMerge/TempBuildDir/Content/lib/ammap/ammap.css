@@ -1,0 +1,130 @@
+.ammapAlert
+{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size:12px;
+    color:#CC0000;
+}
+
+.ammapDescriptionWindow
+{
+   font-size:11px;
+   font-family:verdana,helvetica,arial,sans-serif;
+   background-color:#FFFFFF;
+   border-style:solid;
+   border-color:#DADADA;
+   border-width:1px;
+   color:#000000;
+   padding:8px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.ammapDescriptionTitle
+{
+   font-size:12px;
+   font-weight:bold;
+   font-family:verdana,helvetica,arial,sans-serif;
+   padding-bottom:5px;
+}
+
+.ammapDescriptionWindowCloseButton
+{
+
+}
+
+.ammapObjectList ul
+{
+    padding-left:20px;
+    list-style:square outside;
+    color:#999999;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 12px;
+}
+
+.ammapObjectList ul ul
+{
+    padding-left:14px;
+}
+
+.ammapObjectList a
+{
+    color:#000000;
+}
+
+.ammapObjectList a
+{
+    color:#000000;
+    text-decoration:none;
+    display:block;
+    padding:2px;
+}
+
+.ammapObjectList a:hover
+{
+    color:#CC0000;
+    text-decoration:none;
+    background:#FFFFFF;
+    cursor:pointer;
+    display:block;
+}
+
+.ammapDescriptionText
+{
+	overflow: auto;
+}
+
+
+.amChartsPlotArea
+{
+
+}
+
+.cuadraditomin {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    display: inline-block;
+}
+
+.cuadraditomax {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #F21818;
+    display: inline-block;
+}
+
+.node {
+    border: solid 1px white;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #4e4e4e;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+    .node:hover {
+        box-shadow: 0 0 16px rgba(43, 43, 43, 0.6);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        font-size: 38px;
+        overflow: hidden;
+    }
+
+.textos {
+    text-anchor: middle;
+    pointer-events: none;
+    font-size: 14px;
+    color: #4e4e4e;
+    font-family: lato,helvetica neue, helvetica, arial, sans-serif;
+}

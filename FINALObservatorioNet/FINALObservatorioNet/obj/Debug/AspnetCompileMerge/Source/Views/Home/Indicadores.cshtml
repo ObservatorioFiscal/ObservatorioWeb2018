@@ -1,0 +1,249 @@
+﻿@{
+    ViewData["Titulo"] = "Datos e indicadores de interés | Observatorio Fiscal";
+    ViewData["Resumen"] = "Entérate de las principales cifras financieras que nos dejó el ejercicio fiscal del año 2016,  abarcando desde los ingresos y gastos del Gobierno Central y los Municipios, hasta la deuda y activos con los que se cerró el periodo. Visualiza estos montos globales y per cápita, expresados tanto en pesos, dólares, o como porcentaje del PIB.";
+    ViewData["menu17"] = "active";
+}
+
+<section class="row cuadro-contenido">
+    <article class="cuadro-padding">
+        <header class="col-md-12">
+            <h1>Datos e indicadores de interés</h1>
+            <h6>Las grandes cifras del gasto público</h6>
+            <hr />
+        </header>
+        <section class="row">
+            <div class="col-md-12">
+                <p>
+                    Entérate de las principales cifras financieras que nos dejó el ejercicio fiscal del año 2016,  abarcando desde los ingresos y gastos del Gobierno Central y los Municipios, hasta la deuda y activos con los que se cerró el periodo. Visualiza estos montos globales y per cápita, expresados tanto en pesos, dólares, o como porcentaje del PIB.
+                    <br /><br /><br />
+                </p>
+            </div>
+        </section>
+
+
+        <div class="row">
+            <div class="col-md-12" id="filtrobtn">
+                <h6 class="sinmargen celeste text-right">
+                    <a onclick="MostrarFiltro()" class="btn btn-border">Filtrar Contenido <i class="material-icons">filter_list</i> </a>
+                </h6>
+                <hr />
+            </div>
+            <aside id="Filtro" class="col-md-2 border-right filtro">
+                <div class="row">
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Tipo</h5>
+                        <ul id="tag-Busqueda">
+                            <li><a name="1" class="tags-ingreso"><h6 class="tags tags-selecter">Ingresos</h6></a></li>
+                            <li><a name="2" class="tags-ingreso"><h6 class="tags ">Gastos</h6></a></li>
+                            <li><a name="3" class="tags-ingreso"><h6 class="tags ">Resultados</h6></a></li>
+                            <li><a name="4" class="tags-ingreso"><h6 class="tags ">Deuda Pública</h6></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">bubble_chart</i> Indicador</h5>
+                        <ul id="orden-Busqueda">
+                            <li><a name="1" class="tags-indicador"><h6 class="tags tags-selecter">Valor percapita</h6></a></li>
+                            <li><a name="2" class="tags-indicador"><h6 class="tags">Valor relativo al PIB</h6></a></li>
+                            <li><a name="3" class="tags-indicador"><h6 class="tags">Valor total</h6></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 busqueda">
+                        <h5 class="celeste"><i class="material-icons md-24">reorder</i> Unidad</h5>
+                        <ul id="orden-Busqueda">
+                            <li><a name="1" class="tags-unidad"><h6 class="tags tags-selecter">Pesos</h6></a></li>
+                            <li><a name="2" class="tags-unidad"><h6 class="tags">Porcentaje</h6></a></li>
+                            <li><a name="3" class="tags-unidad"><h6 class="tags">USD</h6></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <section id="Contenido" class="col-md-10">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row" id="divIndicador1">
+
+                        </div>
+                    </div>
+                        <div class="col-md-6">
+                            <div class="row" id="divIndicador2">
+
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+    </article>
+</section>
+
+
+
+@section Scripts{
+<script>
+    var ingreso     = "1";
+    var indicador   = "1";
+    var unidad      = "1";
+
+    document.addEventListener("DOMContentLoaded", function () {
+        filtroAplicacion();
+    }, false);
+
+    function filtroAplicacion() {
+        $.ajax({
+            cache: false,
+            async: false,
+            type: 'POST',
+            data: {
+                ingreso: ingreso,
+                indicador: indicador,
+                unidad: unidad
+            },
+            url: '../../Home/FiltroListadoIndicador',
+            dataType: 'json',
+            success: function (data) {
+                $("#divIndicador1").empty();
+                $("#divIndicador2").empty();
+                var sino = true;
+                $.each(data, function (i, item) {
+                    if (sino == true) {
+                        $("#divIndicador1").append(nuevaIndicador(item));
+                        sino = false;
+                    }
+                    else {
+                        $("#divIndicador2").append(nuevaIndicador(item));
+                        sino = true
+                    }
+                });
+            },
+            error: function (msg) {
+                $('#btnagendar').attr('disabled', false);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $(".tags-ingreso").click(function () {
+            if (ingreso != $(this).attr('name')) {
+                $(".tags-ingreso").children(".tags").removeClass("tags-selecter");
+                $(this).children(".tags").addClass("tags-selecter");
+                ingreso = $(this).attr('name');
+                filtroAplicacion()
+            }
+        });
+
+        $(".tags-indicador").click(function () {
+            if (indicador != $(this).attr('name')) {
+                $(".tags-indicador").children(".tags").removeClass("tags-selecter");
+                $(this).children(".tags").addClass("tags-selecter");
+                indicador = $(this).attr('name');
+                filtroAplicacion()
+            }
+        });
+
+        $(".tags-unidad").click(function () {
+            if (unidad != $(this).attr('name')) {
+                $(".tags-unidad").children(".tags").removeClass("tags-selecter");
+                $(this).children(".tags").addClass("tags-selecter");
+                unidad = $(this).attr('name');
+                filtroAplicacion()
+            }
+        });
+
+        
+
+    });
+
+    function filtroVisualizacion() {
+        //var lista1 = $("#cuadro1").html()
+        //lista1 = lista1.substr(17)
+        //lista1 = lista1.substr(0, lista1.length - 6);
+        //var lista2 = $("#cuadro2").html()
+        //lista2 = lista2.substr(17)
+        //lista2 = lista2.substr(0, lista2.length - 6);
+        //var lista3 = $("#cuadro3").html()
+        //lista3 = lista3.substr(17)
+        //lista3 = lista3.substr(0, lista3.length - 6);
+
+        var lista = $("#cuadro1").html() + $("#cuadro2").html() + $("#cuadro3").html();
+        lista = lista.replace(/ hidden/g, "");
+        lista = lista.trim();
+        var CORTADO = lista.split('<div class="col-md-12 rowdiv">');
+        lista = null;
+        $("#cuadro1").empty();
+        $("#cuadro2").empty();
+        $("#cuadro3").empty();
+        CORTADO.shift();
+        var aux = 0;
+        for (var i = 0; i < CORTADO.length; i++) {
+            var ddddd = 0;
+            if (etiqueta != "") {
+                ddddd = CORTADO[i].indexOf(etiqueta);
+            }
+            if (orden != "") {
+                if (ddddd != -1) {
+                    ddddd = CORTADO[i].indexOf(orden);
+                }
+            }
+            if (ddddd == -1) {
+                CORTADO[i] = '<div class="col-md-12 rowdiv hidden">' + CORTADO[i] + '</div>';
+                $("#cuadro1").append(CORTADO[i]);
+            }
+            else {
+                CORTADO[i] = '<div class="col-md-12 rowdiv">' + CORTADO[i] + '</div>';
+                var aux2 = aux % 3;
+                aux++;
+                switch (aux2) {
+                    case 0:
+                        $("#cuadro1").append(CORTADO[i]);
+                        break;
+                    case 1:
+                        $("#cuadro2").append(CORTADO[i]);
+                        break;
+                    case 2:
+                        $("#cuadro3").append(CORTADO[i]);
+                        break;
+                }
+            }
+
+
+        }
+
+    }
+
+    function nuevaIndicador(item) {
+        return '\
+                <article class="col-md-12 rowdiv div-item-aplicacion">\
+                    <div class="cuadro-contenido">\
+                        <div class="div-relative">\
+                            <div class="cuadro-padding">\
+                                <div class="row">\
+                                    <div class="col-12">\
+                                        <header>\
+                                            <h5><i class="material-icons celeste">trending_up</i> ' + item.Nombre + '</h5>\
+                                        </header>\
+                                        <section>\
+                                            <p class="cuadro-texto">'+ item.Nota + '</p>\
+                                            <p class="small tag-cuadro">'+ item.Unidadmedida + '</p>\
+                                        </section>\
+                                        <footer>\
+                                            <hr />\
+                                            <div class="row">\
+                                                <div class="col-12">\
+                                                    <h2 class="text-right sinmargen">'+ item.Valor + '</h2>\
+                                                </div>\
+                                            </div>\
+                                        </footer>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div> \
+                </article>\
+                ';
+    }
+    
+</script>
+    }

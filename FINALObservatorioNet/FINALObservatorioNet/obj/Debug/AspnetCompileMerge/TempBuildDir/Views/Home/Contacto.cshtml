@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Titulo"] = "Contacto | Observatorio Fiscal";
+    ViewData["Resumen"] = "Comunicate con nosotros. Para realizar alguna consulta, compartir información, denunciar o apoyar.";
+    ViewData["menu13"] = "active";
+}
+
+<section class="row"> 
+        <article class="col-md-6">
+            <div class=" cuadro-contenido cuadro-padding-interno">
+                <h2>¡Participa!</h2>
+                <hr class="conmargen" />
+                <form class="form-horizontal" enctype="multipart/form-data" method="post" action="@Url.Action("contacto", "home")">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Nombre</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="height:30px" id="Nombre" name="Nombre" placeholder="">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" style="height:30px" id="Email" name="Email" placeholder="">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Quiero participar en:</label>
+                        <div class="col-sm-8">
+                            <select class="form-control form-control-sm" id="Quiero" name="Quiero">
+                                <option value="Consulta">Consulta General</option>
+                                <option value="Compartir">Compartir Informacion de Gasto Publico</option>
+                                <option value="Denunciar">Denunciar hechos de falta de transparencia</option>
+                                <option value="Apoyar">Apoyar al observatorio mediante donacion</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Descripcion</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="6" id="Descripcion" name="Descripcion"></textarea>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </article>
+        <article class="col-md-6">
+            <div class="cuadro-padding-interno cuadro-contenido">
+                <h2>¡Contáctanos!</h2>
+                <hr class="conmargen" />
+                <ul class="list-unstyled">
+                    <li><br /></li>
+                    <li><i class="material-icons md-24 celeste">local_phone</i>&nbsp;&nbsp; +562 23862850</li>
+                    <li><br /></li>
+                    <li><i class="material-icons md-24 celeste">mail_outline</i>&nbsp;&nbsp; contacto@observatoriofiscal.cl</li>
+                    <li><br /></li>
+                    <li><i class="material-icons md-24 celeste">location_on</i>&nbsp;&nbsp; Apoquindo 3910, piso 3, Las Condes, Santiago, Chile</li>
+                    <li><br /></li>
+                    <li><i class="material-icons md-24 celeste">markunread_mailbox</i>&nbsp;&nbsp; 7550029</li>
+                    <li><br /></li>
+                </ul>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6660.6240980995935!2d-70.58935!3d-33.415108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf1631f9be2d%3A0x5d4071ad3d58340d!2sAv.+Apoquindo+3910%2C+Las+Condes%2C+Regi%C3%B3n+Metropolitana%2C+Chile!5e0!3m2!1ses!2scl!4v1466784284960" width="95%" height="294" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </article>
+</section>

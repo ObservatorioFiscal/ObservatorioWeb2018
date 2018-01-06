@@ -1,0 +1,194 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+
+@{
+    ViewBag.Titulo = "Editar";
+}
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm("Edit", "Secciones", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Secciones</h4>
+        <hr />
+        @Html.HiddenFor(model => model.IdSecciones)
+        <div class="form-group">
+            Retroalimentacion
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Retroalimentacion)
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            Dataset
+            <div class="col-md-10">
+                <input name="Files" class="form-control" type="file" />
+                @Html.HiddenFor(model => model.Archivo)
+                @*@Html.EditorFor(model => model.Archivo, new { htmlAttributes = new { @class = "form-control" } })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+           Periodo Datasets
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dataset, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            Titulo Pregunta (entrada a seccion)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TituloPregunta, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Titulo Redes sociales
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TituloRedes, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Resumen (redes y entrada)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Resumen, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Imagen
+            <div class="col-md-10">
+                <input name="Files2" class="form-control" type="file" />
+                @Html.HiddenFor(model => model.ImagenUrl)
+            </div>
+        </div>
+
+        <div class="form-group">
+            Url Direccion
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UrlDireccion, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Titulo (interno de seccion)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TituloInterna, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Subtitulo
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SubTitulo, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Descripcion superior
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DescripcionSuperior, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Descripcion central
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DescripcionCentral, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Descripcion central(MOVIL)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DescripcionCentralM, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Descripcion inferior
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DescripcionInferior, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Descripcion Script
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DescripcionScript, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Tipo ( aplicacion=1 - visualizacion=2 - publicacion=3)
+            <div class="col-md-10">
+                <input type="number" class="form-control" name="Tipo" id="Tipo" value="@Model.Tipo" />
+            </div>
+        </div>
+        <div class="form-group">
+            Etiquetas (GobiernoCentral= 1 - Regional= 2 - Municipal= 3 - Leydepresupuesto= 4 - PersonaldelEstado= 5 - Calidaddedatos= 6 - Transparencia= 7 - RendiciondeCuentas= 8 - Compraspublicas= 9 - ModernizacionEstado= 10)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Etiquetas, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Fecha
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fecha2, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Destacar
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Destacar)
+                    @Html.ValidationMessageFor(model => model.Destacar, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            Cantidad Me Gusta
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Megusta, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Autor (solo publicacion   Guillermo= 1 - Jeannete= 2 - Jose= 3 - Manuel= 4 - Orlando= 5 - Matias= 6 - Paula= 7)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.autor, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Tipo Publicacion (Columna=1 - Estudio=2 - Infografia=3 - Informe=4 - Principio=5 - Reportaje=6)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TipoPublicacion, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Recomendados (el ID-ID)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Recomendado, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver a la Lista", "Index")
+</div>

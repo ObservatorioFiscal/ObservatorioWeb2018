@@ -1,0 +1,1203 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+    ViewData["menu2"] = "active";
+}
+
+
+<style>
+    #mujer1div {
+        display: none
+    }
+
+    #mujer2div {
+        display: block
+    }
+
+    #mujer3div {
+        display: none
+    }
+
+    #hombre1div {
+        display: none
+    }
+
+    #hombre2div {
+        display: none
+    }
+
+    #hombre3div {
+        display: none
+    }
+
+    .imgchica1 {
+        left: 70px;
+        position: absolute;
+        top: 43px;
+        visibility: hidden
+    }
+
+    .imgchica2 {
+        left: 101px;
+        position: absolute;
+        top: 131px;
+        visibility: hidden
+    }
+
+    .imgchica3 {
+        left: 40px;
+        position: absolute;
+        top: 206px;
+        visibility: hidden
+    }
+
+    .imgchica4 {
+        left: 32px;
+        position: absolute;
+        top: 167px;
+        visibility: hidden
+    }
+
+    .imgchica5 {
+        left: 62px;
+        position: absolute;
+        top: 195px;
+        visibility: hidden
+    }
+
+    .imgchica6 {
+        left: 74px;
+        position: absolute;
+        top: 199px;
+        visibility: hidden
+    }
+
+    .imgchica7 {
+        left: 10px;
+        position: absolute;
+        top: 160px;
+        visibility: hidden
+    }
+
+    .imgchica8 {
+        left: 145px;
+        position: absolute;
+        top: 175px;
+        visibility: hidden
+    }
+
+    .imgchica9 {
+        left: 175px;
+        position: absolute;
+        top: 155px;
+        visibility: hidden
+    }
+
+    .imgchica10 {
+        left: 10px;
+        position: absolute;
+        top: 230px;
+        visibility: hidden
+    }
+
+    .iconos {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 113px;
+        min-height: 80px;
+        /*min-width: 100px*/
+    }
+
+    .popover__content {
+        padding: 0.5rem
+    }
+    .table th, .table td {
+        padding: 0
+    }
+
+    .selecapp {
+        border-radius: .2em;
+        box-shadow: 0 1px 2px 0 #a1acbd;
+    }
+</style>
+
+<section class="row cuadro-contenido">
+    <article class="cuadro-padding">
+        <div class="col-md-12">
+            <h2>¿Cuánto aportas tú al Estado?</h2>
+            <p>A continuación te presentamos una aplicación para saber, aproximadamente, cuánto contribuyes al Estado anualmente vía tus impuestos. Para ello, hicimos una estimación de gasto en función del ingreso basado en datos de la Encuesta de Presupuesto Familiar del Instituto Nacional de Estadísticas (INE). Con lo anterior, estimamos el nivel de consumo y, con ello, se aplican diversos tipos de impuestos, como el impuesto sobre la renta, IVA, u otros específicos con los que puedes alternar.</p>
+            <p>Pero basta de tecnicismos… <b>¡a jugar con las opciones!</b></p>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="circular">
+                    <h3 class="azul">Lo primero es seleccionar tus ingresos mensuales</h3>
+                    <p>(Incluye todo ingreso: salario bruto, dividendos, rentas de propiedades etc.) <a onclick="abrir()" class=""> Ver mas.</a></p>
+                    <div class="hidden" id="oculto">
+                        <p>
+                            Los ingresos brutos están compuestos tanto por rentas del trabajo (sueldos, pensiones y rentas accesorias); como por rentas del capital (retiro de utilidades y/o dividendos como socio o accionista de una empresa). Estos ingresos son brutos y anules, por lo que debes considerar tu monto de forma anual y antes de cualquier impuesto.<br />
+                            Para el Impuesto a la Renta que pagas como persona natural, se utilizará el Impuesto Global Complementario (Art. 52 del DL N°824 de 1974), que incorpora todas las rentas antes mencionada en el caso que una persona reciba más de una de ellas. Así como también, sus tasas de impuestos son equivalentes a las del Impuesto Único de Segunda Categoría (Art. 42 y 43 del DL N°824 de 1974), si estas las lleváramos de forma anual.<br />
+                            En el caso de recibir dividendos o realizar retiro de utilidades, se considerará que las empresas se encuentran acogidas al Régimen Tributario establecido en la letra A) del artículo 14 del DL N°824 de 1974, Régimen de la Renta Atribuida con imputación total del crédito por Impuesto de Primera Categoría (tasa del 25%), contra el impuesto Global Complementario.<br />
+                            Para la determinación del Impuesto Renta, no se considerarán como créditos contra el Impuesto Global Complementario los créditos por Impuesto de Primera Categoría pagados por las empresas, así como tampoco los créditos por Impuesto Único de Segunda Categoría retenidos durante el año, puesto que este cálculo tiene el objetivo de unificar y determinar un impuesto universal para todas las rentas y, por lo tanto, no busca determinar el total a pagar o la posible devolución de impuesto luego de una reliquidación.<br />
+                            *En este cálculo de impuesto quedan fuera las personas no domiciliadas ni residentes en Chile.
+                        </p>
+                    </div>
+                    <div class="row marginrange">
+                        <div class="col-md-12 marginrange" style="padding: 5px 15px;">
+                            <div class="row ">
+                                <div class="col-md-8 align-self-center">
+                                    <input type="range" class="marginrange  slider-width100" id="sueldo" name="sueldo" min="250000" max="10000000" step="10000" value="250000">
+                                </div>
+                                <div class="col-md-2 align-self-center">
+                                    <input type="text" id="valor" class="marginrange form-control form-control-sm text-center center-block" value="250.000" disabled="">
+                                </div>
+                                <div class="col-md-2 align-self-center">
+                                    <button type="button" onclick="AsignarSueldo()" class="marginrange btn btn-primary btn-sm btn-block"><strong> Aceptar </strong></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="tituloapp">Tu ingreso es de: <span id="resultado" class="celeste"></span></h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="circular">
+                    <h3 class="azul">Selecciona el personaje con el que te identificas</h3>
+                    
+                    <div class="row">
+                        <div class="col-1 align-self-center">
+                            <p class="text-right">Soy</p>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <select class="form-control form-control-sm" id="genero">
+                                <option value="1">Mujer</option>
+                                <option value="0">Hombre</option>
+                            </select>
+                        </div>
+                        <div class="col-2 align-self-center">
+                            <p>y me identifico con...</p>
+                        </div>
+                    </div>
+                        <br />
+                        <br />
+                        <div class="row justify-content-center" id="mujer">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="text-center">
+                                    <label class="radio">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0"> ¡Ahorro para el<br /> mañana!
+                                    </label>
+                                    <div>
+                                        <img src="~/Content/images/app/app1/mujer1.png" class="img-fluid">
+                                    </div>
+                                    <div id="mujer1div">
+                                        <div>
+                                            <img src="~/Content/images/app/app1/Iconos1.png" class="imgchica1" width="70" />
+                                            <img src="~/Content/images/app/app1/Iconos2.png" class="imgchica2" width="40" />
+                                            <img src="~/Content/images/app/app1/Iconos3.png" class="imgchica3" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos4.png" class="imgchica4" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos5.png" class="imgchica5" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos6.png" class="imgchica6" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos7.png" class="imgchica7" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos8.png" class="imgchica8" width="150" />
+                                            <img src="~/Content/images/app/app1/Iconos9.png" class="imgchica9" width="90" />
+                                            <img src="~/Content/images/app/app1/Iconos10.png" class="imgchica10" width="120" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="text-center">
+                                    <label class="radio">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" checked="checked">¡Gasto pero no me<br />excedo!
+                                    </label>
+                                    <div>
+                                        <img src="~/Content/images/app/app1/mujer2.png" class="img-fluid">
+                                    </div>
+                                    <div id="mujer2div">
+                                        <div>
+                                            <img src="~/Content/images/app/app1/Iconos1.png" class="imgchica1" width="70" />
+                                            <img src="~/Content/images/app/app1/Iconos2.png" class="imgchica2" width="40" />
+                                            <img src="~/Content/images/app/app1/Iconos3.png" class="imgchica3" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos4.png" class="imgchica4" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos5.png" class="imgchica5" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos6.png" class="imgchica6" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos7.png" class="imgchica7" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos8.png" class="imgchica8" width="150" />
+                                            <img src="~/Content/images/app/app1/Iconos9.png" class="imgchica9" width="90" />
+                                            <img src="~/Content/images/app/app1/Iconos10.png" class="imgchica10" width="120" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="text-center">
+                                    <label class="radio">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">¡Mañana es ahora,<br />Me encanta gastar!
+                                    </label>
+                                    <div>
+                                        <img src="~/Content/images/app/app1/mujer3.png" class="img-fluid">
+                                    </div>
+                                    <div id="mujer3div">
+                                        <div>
+                                            <img src="~/Content/images/app/app1/Iconos1.png" class="imgchica1" width="70" />
+                                            <img src="~/Content/images/app/app1/Iconos2.png" class="imgchica2" width="40" />
+                                            <img src="~/Content/images/app/app1/Iconos3.png" class="imgchica3" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos4.png" class="imgchica4" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos5.png" class="imgchica5" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos6.png" class="imgchica6" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos7.png" class="imgchica7" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos8.png" class="imgchica8" width="150" />
+                                            <img src="~/Content/images/app/app1/Iconos9.png" class="imgchica9" width="90" />
+                                            <img src="~/Content/images/app/app1/Iconos10.png" class="imgchica10" width="120" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center hidden" id="hombre">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class=" text-center">
+                                    <label class="radio">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="0"> ¡Ahorro para el <br />mañana!
+                                    </label>
+                                    <div>
+                                        <img src="~/Content/images/app/app1/hombre1.png" class="img-fluid">
+                                    </div>
+                                    <div id="hombre1div">
+                                        <div>
+                                            <img src="~/Content/images/app/app1/Iconos1.png" class="imgchica1" width="70" />
+                                            <img src="~/Content/images/app/app1/Iconos2.png" class="imgchica2" width="40" />
+                                            <img src="~/Content/images/app/app1/Iconos3.png" class="imgchica3" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos4.png" class="imgchica4" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos5.png" class="imgchica5" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos6.png" class="imgchica6" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos7.png" class="imgchica7" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos8.png" class="imgchica8" width="150" />
+                                            <img src="~/Content/images/app/app1/Iconos9.png" class="imgchica9" width="90" />
+                                            <img src="~/Content/images/app/app1/Iconos10.png" class="imgchica10" width="120" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class=" text-center">
+                                    <label class="radio">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="1"> ¡Gasto pero no me <br />excedo!
+                                    </label>
+                                    <div>
+                                        <img src="~/Content/images/app/app1/hombre2.png" class="img-fluid">
+                                    </div>
+                                    <div id="hombre2div">
+                                        <div>
+                                            <img src="~/Content/images/app/app1/Iconos1.png" class="imgchica1" width="70" />
+                                            <img src="~/Content/images/app/app1/Iconos2.png" class="imgchica2" width="40" />
+                                            <img src="~/Content/images/app/app1/Iconos3.png" class="imgchica3" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos4.png" class="imgchica4" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos5.png" class="imgchica5" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos6.png" class="imgchica6" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos7.png" class="imgchica7" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos8.png" class="imgchica8" width="150" />
+                                            <img src="~/Content/images/app/app1/Iconos9.png" class="imgchica9" width="90" />
+                                            <img src="~/Content/images/app/app1/Iconos10.png" class="imgchica10" width="120" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="text-center">
+                                    <label class="radio">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="2"> ¡Mañana es ahora,<br />Me encanta gastar!
+                                    </label>
+                                    <div>
+                                        <img src="~/Content/images/app/app1/hombre3.png" class="img-fluid">
+                                    </div>
+                                    <div id="hombre3div">
+                                        <div>
+                                            <img src="~/Content/images/app/app1/Iconos1.png" class="imgchica1" width="70" />
+                                            <img src="~/Content/images/app/app1/Iconos2.png" class="imgchica2" width="40" />
+                                            <img src="~/Content/images/app/app1/Iconos3.png" class="imgchica3" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos4.png" class="imgchica4" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos5.png" class="imgchica5" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos6.png" class="imgchica6" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos7.png" class="imgchica7" width="30" />
+                                            <img src="~/Content/images/app/app1/Iconos8.png" class="imgchica8" width="150" />
+                                            <img src="~/Content/images/app/app1/Iconos9.png" class="imgchica9" width="90" />
+                                            <img src="~/Content/images/app/app1/Iconos10.png" class="imgchica10" width="120" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="circular">
+                    <h3 class="azul">Elige tus hábitos de consumo</h3>
+
+                    <div class="form-group">
+                        <div class="popover__wrapper">
+                            <a href="#">
+                                <span class="popover__title"><i class="material-icons md-24 azul">help</i></span>
+                            </a>
+                            <div class="push popover__content">
+                                <p> Según su ingreso, para una mujer u hombre, lo que se entiende como poco o mucho gasto en este ítem, se ejemplifica:</p>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td colspan="3" rowspan="2"></td>
+                                        <td colspan="4">Ingresos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$250.000</td>
+                                        <td>$500.000</td>
+                                        <td>$1.000.000</td>
+                                        <td>$10.000.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" rowspan="2">Gasto máximo mensual en alcohol</td>
+                                        <td>Poco</td>
+                                        <td>2.670</td>
+                                        <td>3.768</td>
+                                        <td>5.907</td>
+                                        <td>33.100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mucho</td>
+                                        <td>16.021</td>
+                                        <td>22.605</td>
+                                        <td>35.442</td>
+                                        <td>198.660</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <label for="alcohol">¿Cuánto alcohol consumes?</label>
+                        <select class="form-control form-control-sm" id="alcohol">
+                            <option value="0">No Consumo</option>
+                            <option value="1">Poco</option>
+                            <option value="2">Mucho</option>
+                        </select>
+                        
+                        
+                    </div>
+                    <div class="form-group">
+                        <div class="popover__wrapper">
+                            <a href="#">
+                                <span class="popover__title"><i class="material-icons md-24 azul">help</i></span>
+                            </a>
+                            <div class="push popover__content">
+                                <p>Según su ingreso, para una mujer u hombre, lo que se entiende como poco o mucho gasto en este ítem, se ejemplifica:</p>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="4">Ingresos</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td>$250.000</td>
+                                        <td>$500.000</td>
+                                        <td>$1.000.000</td>
+                                        <td>$10.000.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">Gasto máximo mensual en bebidas</td>
+                                        <td>poco</td>
+                                        <td>5.826</td>
+                                        <td>8.398</td>
+                                        <td>13.494</td>
+                                        <td>75.660</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mucho</td>
+                                        <td>8.739</td>
+                                        <td>12.597</td>
+                                        <td>20.241</td>
+                                        <td>113.490</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <label for="bebida">¿Cuánta bebida azucarada consumes?</label>
+                        
+                        <select class="form-control form-control-sm" id="bebida">
+                            <option value="0">No Consumo</option>
+                            <option value="1">Poco</option>
+                            <option value="2">Mucho</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="popover__wrapper">
+                            <a href="#">
+                                <span class="popover__title"><i class="material-icons md-24 azul">help</i></span>
+                            </a>
+                            <div class="push popover__content">
+                                <p>Según su ingreso, para una mujer u hombre, lo que se entiende como poco o mucho gasto en este ítem, se ejemplifica:</p>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="4">Ingresos</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td>$250.000</td>
+                                        <td>$500.000</td>
+                                        <td>$1.000.000</td>
+                                        <td>$10.000.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">Gasto máximo mensual en tabaco</td>
+                                        <td>Poco</td>
+                                        <td>2.876</td>
+                                        <td>4.199</td>
+                                        <td>6.747</td>
+                                        <td>37.830</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mucho</td>
+                                        <td>8.628</td>
+                                        <td>12.597</td>
+                                        <td>20.241</td>
+                                        <td>113.490</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <label for="fuma">¿Cuánto fumas?</label>
+                        <select class="form-control form-control-sm" id="fuma">
+                            <option value="0">No Fumo</option>
+                            <option value="1">Poco</option>
+                            <option value="2">Mucho</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group-sm apptext">
+                        <div class="popover__wrapper">
+                            <a href="#">
+                                <span class="popover__title"><i class="material-icons md-24 azul">help</i></span>
+                            </a>
+                            <div class="push popover__content">
+                                <p>Según su ingreso, para una mujer u hombre, lo que se entiende como poco o mucho gasto en este ítem, se ejemplifica:</p>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="4">Ingresos</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td>$250.000</td>
+                                        <td>$500.000</td>
+                                        <td>$1.000.000</td>
+                                        <td>$10.000.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">Gasto máximo mensual en combustible</td>
+                                        <td>Poco</td>
+                                        <td>12.138</td>
+                                        <td>17.125</td>
+                                        <td>26.850</td>
+                                        <td>150.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mucho</td>
+                                        <td>36.413</td>
+                                        <td>51.375</td>
+                                        <td>80.550</td>
+                                        <td>451.500</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <label for="auto">¿Cuánto usas tu auto?</label>
+                        <select class="form-control form-control-sm" id="auto">
+                            <option value="0">No tengo auto</option>
+                            <option value="1">Poco</option>
+                            <option value="2">Mucho</option>
+                        </select>
+                    </div>
+                    <p class="text-center"><br />Te preguntamos respecto de estos ítems porque tienen impuestos específicos que cambian el resultado<br /></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="circular hidden azulB" id="divdatos">
+                    <h3 class="resultado blanco">Su ingreso anual es de <span id="resultadofinalsueldo"></span> y con eso tú aportas al Estado anualmente: <strong><span id="resultadofinal"></span> <br /></strong>   (Imp Renta: <span id="resultadofinal2"></span> +  Impuesto al consumo: <span id="resultadofinal3"></span>)</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 conmargen">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3><i class="material-icons md-36 azul">keyboard_arrow_right</i>Y esto se gasta de la siguiente manera:</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Protección social</span></p>
+                                <a href="#" onclick="cambio1(1)"><img src="~/Content/images/app/app1/app1.png" alt="" id="img1" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA1">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Asuntos económicos</span></p>
+                                <a href="#" onclick="cambio1(2)"><img src="~/Content/images/app/app1/app2.png" alt="" id="img2" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA2">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Defensa</span></p>
+                                <a href="#" onclick="cambio1(3)"><img src="~/Content/images/app/app1/app3.png" alt="" id="img3" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA3">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Protección del medio ámbiente</span></p>
+                                <a href="#" onclick="cambio1(4)"><img src="~/Content/images/app/app1/app4.png" alt="" id="img4" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA4">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Vivienda y serviciós comunitarios</span></p>
+                                <a href="#" onclick="cambio1(5)"><img src="~/Content/images/app/app1/app5.png" alt="" id="img5" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA5">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Salud</span></p>
+                                <a href="#" onclick="cambio1(6)"><img src="~/Content/images/app/app1/app6.png" alt="" id="img6" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA6">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Servicios públicos generales</span></p>
+                                <a href="#" onclick="cambio1(7)"><img src="~/Content/images/app/app1/app7.png" alt="" id="img7" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA7">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Orden público y seguridad</span></p>
+                                <a href="#" onclick="cambio1(8)"><img src="~/Content/images/app/app1/app8.png" alt="" id="img8" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA8">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Educación</span></p>
+                                <a href="#" onclick="cambio1(9)"><img src="~/Content/images/app/app1/app9.png" alt="" id="img9" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA9">0</b></p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="text-center iconos"><span>Actividades recreativas y cultura...</span></p>
+                                <a href="#" onclick="cambio1(10)"><img src="~/Content/images/app/app1/app10.png" alt="" id="img10" class="img-fluid selecapp2"></a>
+                                <p class="text-center"><b id="datoA10">0</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="blue" />
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="text-center" id="subtituloelegido"></h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="subapp1" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Desempleo</span></p>
+                                <img src="~/Content/images/app/app1/app1-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Edad Avanzada</span></p>
+                                <img src="~/Content/images/app/app1/app1-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Enfermedad e Incapacidad</span></p>
+                                <img src="~/Content/images/app/app1/app1-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Familia e Hijos</span></p>
+                                <img src="~/Content/images/app/app1/app1-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S4">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Vivienda</span></p>
+                                <img src="~/Content/images/app/app1/app1-5.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S5">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Exclusión Social</span></p>
+                                <img src="~/Content/images/app/app1/app1-6.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S6">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Investigación y Desarrollo relacionados con Protección Social</span></p>
+                                <img src="~/Content/images/app/app1/app1-7.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S7">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Protección Social n.e.p</span></p>
+                                <img src="~/Content/images/app/app1/app1-8.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA1S8">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp2" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Agricultura, Silvicultura, Pesca y Caza</span></p>
+                                <img src="~/Content/images/app/app1/app2-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Asuntos Económicos, Comerciales y Laborales en General</span></p>
+                                <img src="~/Content/images/app/app1/app2-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Asuntos Económicos n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app2-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Combustibles y Energía</span></p>
+                                <img src="~/Content/images/app/app1/app2-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S4">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Comunicaciones</span></p>
+                                <img src="~/Content/images/app/app1/app2-5.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S5">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Investigación y Desarrollo relacionados con Asuntos Económicos</span></p>
+                                <img src="~/Content/images/app/app1/app2-6.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S6">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Minería, Manufacturas y Construcción</span></p>
+                                <img src="~/Content/images/app/app1/app2-8.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S7">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Otras Industrias</span></p>
+                                <img src="~/Content/images/app/app1/app2-9.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S8">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Transporte</span></p>
+                                <img src="~/Content/images/app/app1/app2-10.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA2S9">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp3" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Defesa Militar</span></p>
+                                <img src="~/Content/images/app/app1/app3-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA3S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Investigación y Desarrollo relacionados con la Defensa</span></p>
+                                <img src="~/Content/images/app/app1/app3-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA3S2">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp4" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Protección a la diversidad Biológica y del Paisaje</span></p>
+                                <img src="~/Content/images/app/app1/app4-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA4S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Protección del Medio Ambiente n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app4-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA4S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Reducción de la Contaminación</span></p>
+                                <img src="~/Content/images/app/app1/app4-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA4S3">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp5" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Abastecimiento de Agua</span></p>
+                                <img src="~/Content/images/app/app1/app5-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA5S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Desarrollo Comunitario</span></p>
+                                <img src="~/Content/images/app/app1/app5-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA5S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Urbanización</span></p>
+                                <img src="~/Content/images/app/app1/app5-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA5S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Vivienda y Servicios Comunitarios n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app5-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA5S4">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp6" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Productos, Útiles y Equipos Médicos</span></p>
+                                <img src="~/Content/images/app/app1/app6-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA6S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Salud n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app6-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA6S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios de Salud Pública</span></p>
+                                <img src="~/Content/images/app/app1/app6-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA6S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Hospitalarios</span></p>
+                                <img src="~/Content/images/app/app1/app6-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA6S4">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Para Pacientes Externos</span></p>
+                                <img src="~/Content/images/app/app1/app6-5.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA6S5">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp7" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Ayuda Económica Exterior</span></p>
+                                <img src="~/Content/images/app/app1/app7-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA7S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Investigación Básica</span></p>
+                                <img src="~/Content/images/app/app1/app7-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA7S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Generales</span></p>
+                                <img src="~/Content/images/app/app1/app7-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA7S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Públicos Generales n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app7-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA7S4">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Organos Ejecutivos y Legislativos, Asuntos Financieros,Fiscales y Exteriores</span></p>
+                                <img src="~/Content/images/app/app1/app7-5.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA7S5">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Transacciones de la Deuda Pública</span></p>
+                                <img src="~/Content/images/app/app1/app7-6.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA7S6">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp8" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Orden Público y Seguridad n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app8-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA8S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Prisiones</span></p>
+                                <img src="~/Content/images/app/app1/app8-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA8S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicio de Policia</span></p>
+                                <img src="~/Content/images/app/app1/app8-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA8S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios de Protección contra Incendios</span></p>
+                                <img src="~/Content/images/app/app1/app8-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA8S4">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Tribunales de Justicia</span></p>
+                                <img src="~/Content/images/app/app1/app8-5.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA8S5">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp9" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Enseñanza n.e.p.</span></p>
+                                <img src="~/Content/images/app/app1/app9-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA9S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Enseñanza no atribuible a ningun nivel</span></p>
+                                <img src="~/Content/images/app/app1/app9-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA9S2">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Enseñanza Preescolar, Primaria y Secundaria</span></p>
+                                <img src="~/Content/images/app/app1/app9-3.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA9S3">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Enseñanza Terciaria</span></p>
+                                <img src="~/Content/images/app/app1/app9-4.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA9S4">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Auxiliares de la Educación</span></p>
+                                <img src="~/Content/images/app/app1/app9-5.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA9S5">0</b></p>
+                            </div>
+                        </div>
+                        <div id="subapp10" class="hidden row justify-content-center">
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Culturales</span></p>
+                                <img src="~/Content/images/app/app1/app10-1.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA10S1">0</b></p>
+                            </div>
+                            <div class="col-md-1">
+                                <p class="text-center iconos"><span>Servicios Recreativos y Deportivos</span></p>
+                                <img src="~/Content/images/app/app1/app10-2.png" alt="" class="img-fluid">
+                                <p class="text-center"><b id="datoA10S2">0</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    Para la distribución de los recursos se hizo el supuesto que los aportes realizados por los ciudadanos vía impuestos se concentran en el Tesoro Público, para luego ser distribuidos en las distintas categorías funcionales de gasto de acuerdo al porcentaje de participación que cada categoría tiene en el gasto total anual. Lo anterior no es exacto, pues existen algunos tipos de gasto cuyo financiamiento no proviene solo del Tesoro, sino que de ingresos recaudados por la entidad a cargo de ese gasto. El supuesto indicado se debe entender, entonces, como la mejor aproximación disponible, pero implica una cierta distorsión en el resultado obtenido.
+                </p>
+                <p>
+                    Esta aplicación no busca estimar exactamente tus impuestos pagados durante un año. Sin embargo, para generar el juego se utilizó un algoritmo de cálculo ajustado a la realidad, en base a los datos de la Encuesta de Presupuesto Familiar, utilizando un modelo de red neuronal artificial. Los detalles los puedes encontrar en el documento de <a href="../../../images/Achivos/Varios/Metodología_de_la_Aplicación-v1.pdf" target="_blank">metodología</a>.<br />
+                    La base de datos que contiene los cálculos la puedes solicitar via correo electrónico, pues pesa sobre 50 mb.
+                </p>
+                <p>Los impuestos considerados para esta aplicación corresponden a: Impuesto a las Ventas y Servicios, Impuesto a las Bebidas Alcohólicas, Analcohólicas y Productos Similares, Impuesto a los Tabacos, Impuesto a los Combustibles e Impuesto de Renta.</p>
+            </div>
+        </div>
+
+        <div class="col-12 hidden-print">
+            <hr />
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    @if (Model.Archivo != "")
+                    {
+                        <h4 class="text-left sinmargen">
+                            <a target="_blank" href="~/Content/datasets/@Model.Archivo" class="btn btn-xs btn-border"><i class="material-icons celeste">cloud_download</i> Descarga Dataset</a>
+                        </h4>
+                    }
+
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <p class="text-right sinmargen celeste">
+                        Compartir:
+                        <a onclick="redesclick('facebook')" class="nav-link-redes facebook"></a>
+                        <a onclick="redesclick('linkedin')" class="nav-link-redes linkedin"></a>
+                        <a onclick="redesclick('twitter')" class="nav-link-redes twitter"></a>
+                    </p>
+                </div>
+            </div>
+
+            <input type="hidden" id="IdVista" value="@Model.IdSecciones" />
+            @if (Model.Retroalimentacion == true)
+            {
+                Html.RenderPartial("_Feedback");
+            }
+        </div>
+
+    </article>
+</section>
+
+@section Scripts
+{
+    <script>
+        function AsignarSueldo() {
+            $("#resultado").text($("#valor").val());
+            Consulta();
+        }
+        function ponerpuntos(numero) {
+            var number = numero.toString();
+            var result = '';
+            while (number.length > 3) {
+                result = '.' + number.substr(number.length - 3) + result;
+                number = number.substring(0, number.length - 3);
+            }
+            result = number + result;
+            return result;
+        }
+        function Consulta() {
+            $("#resultado").text($("#valor").val());
+            $("#divdatos").removeClass("hidden");
+            var sueldo = String($("#sueldo").val());
+            var sexo = String($("#genero").val());
+            var tipo = String($('input[name="inlineRadioOptions"]:checked').val());
+            var alcohol = String($("#alcohol").val());
+            var bebida = String($("#bebida").val());
+            var fuma = String($("#fuma").val());
+            var auto = String($("#auto").val());
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    sueldo: sueldo,
+                    sexo: sexo,
+                    tipo: tipo,
+                    alcohol: alcohol,
+                    bebida: bebida,
+                    fuma: fuma,
+                    auto: auto
+                },
+                url: '../../AjaxGraficos/ConsultaApp',
+                dataType: 'json',
+                success: function (data, textStatus, jqXHR) {
+                    $("#resultadofinalsueldo").text("$ " + ponerpuntos(sueldo * 12));
+                    $("#resultadofinal").text("$ " + ponerpuntos(data.valor1));
+                    $("#resultadofinal2").text("$ " + ponerpuntos(data.valor2));
+                    $("#resultadofinal3").text("$ " + ponerpuntos(data.valor3));
+                    for (var i = 0; i < 10; i++) {
+                        var aux = i + 1;
+                        $("#datoA" + aux).text("$ " + ponerpuntos(data.valor4[i]));
+                    }
+
+                    for (var i = 10; i < 18; i++) {
+                        var aux = i - 9;
+                        $("#datoA1S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 18; i < 27; i++) {
+                        var aux = i - 17;
+                        $("#datoA2S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 27; i < 29; i++) {
+                        var aux = i - 26;
+                        $("#datoA3S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 29; i < 32; i++) {
+                        var aux = i - 28;
+                        $("#datoA4S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 32; i < 36; i++) {
+                        var aux = i - 31;
+                        $("#datoA5S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 36; i < 41; i++) {
+                        var aux = i - 35;
+                        $("#datoA6S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 41; i < 47; i++) {
+                        var aux = i - 40;
+                        $("#datoA7S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 47; i < 52; i++) {
+                        var aux = i - 46;
+                        $("#datoA8S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 52; i < 57; i++) {
+                        var aux = i - 51;
+                        $("#datoA9S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                    for (var i = 57; i < 59; i++) {
+                        var aux = i - 56;
+                        $("#datoA10S" + aux).html("$ " + ponerpuntos(data.valor4[i]));
+                    }
+                },
+                error: function () {
+                    //alert('error');
+                }
+            });
+        }
+        function abrir() {
+            if ($("#oculto").hasClass('hidden')) {
+                $("#oculto").removeClass("hidden");
+            } else {
+                $("#oculto").addClass("hidden");
+            }
+
+
+        }
+        function cambio1(aux) {
+            for (var i = 1; i < 11; i++) {
+                $("#subapp" + i).removeClass("show");
+                $("#subapp" + i).addClass("hidden");
+                $("#img" + i).removeClass("selecapp");
+            }
+            $("#subapp" + aux).removeClass("hidden");
+            $("#subapp" + aux).addClass("show");
+            $("#img" + aux).addClass("selecapp");
+
+            switch (aux) {
+                case 1:
+                    aux = "Protección social";
+                    break;
+                case 2:
+                    aux = "Asuntos económicos";
+                    break;
+                case 3:
+                    aux = "Defensa";
+                    break;
+                case 4:
+                    aux = "Protección del medio ámbiente";
+                    break;
+                case 5:
+                    aux = "Vivienda y serviciós comunitarios";
+                    break;
+                case 6:
+                    aux = "Salud";
+                    break;
+                case 7:
+                    aux = "Servicios públicos generales";
+                    break;
+                case 8:
+                    aux = "Orden público y seguridad";
+                    break;
+                case 9:
+                    aux = "Educación";
+                    break;
+                case 10:
+                    aux = "Actividades recreativas y cultura...";
+                    break;
+            }
+            $("#subtituloelegido").html('<strong>' + aux + '</strong><br/> <i class="material-icons">expand_more</i>');
+        }
+        function cambioderadio(dato) {
+            $('#mujer1div').css("display", "none");
+            $('#mujer2div').css("display", "none");
+            $('#mujer3div').css("display", "none");
+            $('#hombre1div').css("display", "none");
+            $('#hombre2div').css("display", "none");
+            $('#hombre3div').css("display", "none");
+            var aux = dato;
+            switch (aux) {
+                case "0":
+                    $('#mujer1div').css("display", "block");
+                    $('#hombre1div').css("display", "block");
+                    break;
+                case "1":
+                    $('#mujer2div').css("display", "block");
+                    $('#hombre2div').css("display", "block");
+                    break;
+                case "2":
+                    $('#mujer3div').css("display", "block");
+                    $('#hombre3div').css("display", "block");
+                    break;
+            }
+            Consulta();
+        }
+        $('a[href="#"]').click(function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        $(function () {
+            $('input[name="inlineRadioOptions"]').change(function () {
+                var aux = $(this).val();
+                cambioderadio(aux.toString());
+            });
+            $('#alcohol').change(function () {
+                var aux = $(this).val();
+                $('.imgchica4').css("visibility", "hidden");
+                $('.imgchica5').css("visibility", "hidden");
+                switch (aux) {
+                    case "1":
+                        $('.imgchica5').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                    case "2":
+                        $('.imgchica4').css("visibility", "visible");
+                        $('.imgchica5').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                }
+                Consulta();
+            });
+            $('#bebida').change(function () {
+                var aux = $(this).val();
+                $('.imgchica6').css("visibility", "hidden");
+                $('.imgchica7').css("visibility", "hidden");
+                switch (aux) {
+                    case "1":
+                        $('.imgchica6').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                    case "2":
+                        $('.imgchica6').css("visibility", "visible");
+                        $('.imgchica7').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                }
+                Consulta();
+            });
+            $('#fuma').change(function () {
+                var aux = $(this).val();
+                $('.imgchica1').css("visibility", "hidden");
+                $('.imgchica2').css("visibility", "hidden");
+                $('.imgchica3').css("visibility", "hidden");
+                switch (aux) {
+                    case "1":
+                        $('.imgchica2').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                    case "2":
+                        $('.imgchica3').css("visibility", "visible");
+                        $('.imgchica1').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                }
+                Consulta();
+            });
+            $('#auto').change(function () {
+                var aux = $(this).val();
+                $('.imgchica8').css("visibility", "hidden");
+                $('.imgchica9').css("visibility", "hidden");
+                switch (aux) {
+                    case "1":
+                        $('.imgchica9').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                    case "2":
+                        $('.imgchica8').css("visibility", "visible");
+                        $('.imgchica9').css("visibility", "visible");
+                        $('.imgchica10').css("visibility", "visible");
+                        break
+                }
+                Consulta();
+            });
+            $('#genero').change(function () {
+                if ($('#genero').val() == "0") {
+                    $("#hombre").removeClass("hidden");
+                    $("#hombre").addClass("show");
+                    $("#mujer").addClass("show");
+                    $("#mujer").addClass("hidden");
+                    $("#inlineRadio5").prop("checked", true);
+                    cambioderadio("1");
+                }
+                else {
+                    $("#mujer").addClass("show");
+                    $("#mujer").removeClass("hidden");
+                    $("#hombre").addClass("hidden");
+                    $("#hombre").removeClass("show");
+                    $("#inlineRadio2").prop("checked", true);
+                    cambioderadio("1");
+                }
+                Consulta();
+            });
+            
+            var elInput1 = document.querySelector('#sueldo');
+            if (elInput1) {
+                var etiqueta1 = document.querySelector('#valor');
+                if (etiqueta1) {
+                    etiqueta1.value = "$" + ponerpuntos(elInput1.value);
+                    elInput1.addEventListener('input', function () {
+                        etiqueta1.value = "$" + ponerpuntos(elInput1.value);
+                    }, false);
+                }
+            }
+        })
+
+</script>
+}

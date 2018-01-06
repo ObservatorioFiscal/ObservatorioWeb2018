@@ -1,0 +1,813 @@
+﻿@model FINALObservatorioNet.Models.Secciones
+@{
+    ViewData["Titulo"] = Model.TituloRedes;
+    ViewData["Resumen"] = Model.Resumen;
+    ViewData["Imagen"] = "seccion/" + Model.ImagenUrl;
+    ViewData["Url"] = Model.UrlDireccion;
+
+    ViewData["menu2"] = "active";
+}
+
+<section class="row cuadro-contenido">
+    <article class="cuadro-padding">
+        <div class="col-md-12">
+            <h2>¡Ahora tú eres el Alcalde/sa!</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            ¿Cuánto destinarias a cada área para lograr mejorar tu comuna?<br />
+                            Distribuye tus recursos y descubre si existe una municipalidad que gaste igual que tú, y cuáles son algunos de sus resultados.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 conmargen">
+                        <h4 class="celeste">Selecciona tu cargo:</h4>
+                        <div class="text-center">
+                            <label class="radio">
+                                <input type="radio" name="alcaldeapp" id="inlineRadio1" value="1" checked="checked"> Alcaldesa
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="alcaldeapp" id="inlineRadio2" value="2"> Alcalde
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="alcalde" style="position:relative;">
+                            <div class="row">
+                                <div class="col-12" id="alcaldemujer">
+                                    <img class="img-fluid" src="~/Content/images/app/app2/alcaldesa.png" />
+                                </div>
+                                <div class="col-12 hidden" id="alcaldemujercartel">
+                                        <img class=" img-fluid"  src="~/Content/images/app/app2/alcaldecartelmujer.png" />
+                                        <div class="cuadrarcartel div-absolute">
+                                            <h4 id="alcaldemujertext">HOLA MUNDO</h4>
+                                        </div>
+                                </div>
+                                <div class="col-12 hidden" id="alcaldemujerno">
+                                    <img class="img-fluid" src="~/Content/images/app/app2/alcaldemujerno.png" />
+                                </div>
+                            </div>
+                            
+                                                            
+                            </div>
+                        <div id="alcaldesa" style="position:relative;" class="hidden">
+                            <div class="row">
+                                <div class="col-12" id="alcaldehombre">
+                                    <img class="img-fluid" src="~/Content/images/app/app2/alcalde.png" />
+                                </div>
+                                <div class="col-12 hidden" id="alcaldehombrecartel">
+                                    <img class="div-relative img-fluid" src="~/Content/images/app/app2/alcaldecartelhombre.png" />
+                                    <div class="cuadrarcartel div-absolute">
+                                        <h4 id="alcaldehombretext">HOLA MUNDO</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 hidden" id="alcaldehombreno">
+                                    <img class="img-fluid" src="~/Content/images/app/app2/alcaldehombreno.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+
+                
+                <div class="cuadro-contenido rojoB">
+                    <div class="cuadro-padding-interno">
+                        Nota: Existen municipios que cuya información no ha sido recepcionada por el SINIM con fecha de corte 17-04-2017, para ver el detalle presione
+                        <a target="_blank" href="../../ARCHIVOS/Avisos/App.pdf"> aquí</a>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        <br />
+                        <b>Fuentes:</b><br />
+                        -Datos: Sistema Nacional de Información Municipal (SINIM). Extracción Abril 2017<br />
+                        -Presupuestos participativos: Foro chileno de presupuesto participativo. Extracción Abril 2017<br />
+                        -Alcalde y partido político: Servicio Electoral de Chile. Extracción Diciembre 2016
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div id="primario">
+                        <div class="circular">
+                            <h3 class="text-center celeste">¡Reparte los recursos!</h3>
+                            <hr />
+                            <div class="row miform">
+                                <div class="col-12">
+                                    <p>Educación</p>
+                                    <div class="row">
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/monedas.png" alt="" class="img-fluid" />
+                                        </div>
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/2app1.png" alt="" id="img1" class="img-fluid" />
+                                        </div>
+                                        <div class="col-7 align-self-center">
+                                            <input type="range" id="rangeapp1" value="0" min="0" max="100" />
+                                        </div>
+                                        <div class="col-3 align-self-center">
+                                            <input type="text" id="inputapp1" class="form-control text-center" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <p>Funcionamiento interno</p>
+                                    <div class="row">
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/monedas.png" alt="" class="img-fluid" />
+                                        </div>
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/2app5.png" alt="" id="img1" class="img-fluid" />
+                                        </div>
+                                        <div class="col-7 align-self-center">
+                                            <input type="range" id="rangeapp3" value="0" min="0" max="100" />
+                                        </div>
+                                        <div class="col-3 align-self-center">
+                                            <input type="text" id="inputapp3" class="form-control text-center" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <p>Programas Sociales, culturales y Recreacionales</p>
+                                    <div class="row">
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/monedas.png" alt="" class="img-fluid" />
+                                        </div>
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/2app3.png" alt="" id="img1" class="img-fluid" />
+                                        </div>
+                                        <div class="col-7 align-self-center">
+                                            <input type="range" id="rangeapp4" value="0" min="0" max="100" />
+                                        </div>
+                                        <div class="col-3 align-self-center">
+                                            <input type="text" id="inputapp4" class="form-control text-center" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <p>Salud</p>
+                                    <div class="row">
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/monedas.png" alt="" class="img-fluid" />
+                                        </div>
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/2app2.png" alt="" id="img1" class="img-fluid" />
+                                        </div>
+                                        <div class="col-7 align-self-center">
+                                            <input type="range" id="rangeapp2" value="0" min="0" max="100" />
+                                        </div>
+                                        <div class="col-3 align-self-center">
+                                            <input type="text" id="inputapp2" class="form-control text-center" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <p>Servicios a la Comunidad y cementerios</p>
+                                    <div class="row">
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/monedas.png" alt="" class="img-fluid" />
+                                        </div>
+                                        <div class="col-1 align-self-center">
+                                            <img src="~/Content/images/app/app2/2app4.png" alt="" id="img1" class="img-fluid" />
+                                        </div>
+                                        <div class="col-7 align-self-center">
+                                            <input type="range" id="rangeapp5" value="0" min="0" max="100" />
+                                        </div>
+                                        <div class="col-3 align-self-center">
+                                            <input type="text" id="inputapp5" class="form-control text-center" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-center">
+                                        <br />
+                                        Tienes:<b><span id="conteo">100</span> </b> <img src="~/Content/images/app/app2/monedas.png" width="40" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center"><a onclick="ValidarParecido(); return false;" class="btn btn-primary">¡Descubre quién gasta como quieres! <i class="material-icons md-24">input</i></a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="hidden" id="NOseacerco">
+                        <div class="circular">
+                            <h5 style="color:#ff9900"><strong>Oh! No existe un municipio que gaste como tu</strong></h5>
+                            <p>Puedes ver los rangos de gastos de todos los municipios del país en el gráfico de abajo y ver en qué áreas estás gastando muy distinto a todos.</p>
+                            <div style="position:relative; height:200px; width:499px" class="center-block">
+                                <img src="~/Content/images/app/app2/fondograficomuni.png" width="499" style="position:absolute" />
+                                <div class="circulo" id="valor1"></div>
+                                <div class="circulo" id="valor2"></div>
+                                <div class="circulo" id="valor3"></div>
+                                <div class="circulo" id="valor4"></div>
+                                <div class="circulo" id="valor5"></div>
+                            </div>
+                        </div>
+                        <p class="text-center"><a onclick="Volver(); return false;" class="btn btn-primary"><i class="material-icons md-24">keyboard_arrow_left</i> Volver</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="SIseacerco" class="hidden">
+                        <div class="circular">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2 style="color:#ff9900" class="text-center"><strong>Eres el Alcalde de: <span id="Nombremuni"></span></strong></h2>
+                                    <h3>Así de parecida es tu forma de gastar</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="chart"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-center" style="position: inherit;top: 25px;">TU GASTO</h5>
+                                    <div id="chart_div3" style="margin: 0 auto;width: 250px;margin-top: -35px;"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-center" style="position: inherit;top: 25px;" id="nombrecomuna3"></h5>
+                                    <div id="chart_div4" style="margin: 0 auto;width: 250px;margin-top: -35px;"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5 class="text-center">GASTO TOTAL 2015: MM$<span id="totalcomuna"></span></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>Así se compara tu forma de gastar con todos los municipios</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="position:relative; height:200px; width:499px" class="center-block">
+                                        <img src="~/Content/images/app/app2/fondograficomuni.png" width="499" style="position:absolute" />
+                                        <div class="circulo" id="valor11"></div>
+                                        <div class="circulo" id="valor22"></div>
+                                        <div class="circulo" id="valor33"></div>
+                                        <div class="circulo" id="valor44"></div>
+                                        <div class="circulo" id="valor55"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Informacion de interés de <span id="nombretitulo"></span></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p><i class="material-icons celeste">chevron_right</i> Cantidad de población : <b id="result1"></b></p>
+                                    <p><i class="material-icons celeste">chevron_right</i> Distancia a Capital regional (KM) : <b id="result2"></b></p>
+                                    <p><i class="material-icons celeste">chevron_right</i> % de pobreza : <b id="result3"></b></p>
+                                    <p><i class="material-icons celeste">chevron_right</i> Alcalde actual : <b id="result4"></b></p>
+                                    <p><i class="material-icons celeste">chevron_right</i> Partido político : <b id="result5"></b></p>
+                                    <p><i class="material-icons celeste">chevron_right</i> Votos Alcalde : <b id="result6"></b></p>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>¿En qué comuna vives?</h3>
+                                    <p> Con este dato generaremos estadística de las preferencias y la entregaremos a tu municipio.</p>
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword3">Comuna</label>
+                                            <select class="form-control form-control-sm" id="comuna">
+                                                @foreach (var item in ViewBag.Comunas)
+                                                {
+                                                    <option value="@item">@item</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        <button class="btn btn-success" onclick="comuna()">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center"><a onclick="Volver(); return false;" class="btn btn-primary"><i class="material-icons md-24">keyboard_arrow_left</i> Volver</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12 hidden-print">
+            <hr />
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    @if (Model.Archivo != "")
+                    {
+                        <h4 class="text-left sinmargen">
+                            <a target="_blank" href="~/Content/datasets/@Model.Archivo" class="btn btn-xs btn-border"><i class="material-icons celeste">cloud_download</i> Descarga Dataset</a>
+                        </h4>
+                    }
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <p class="text-right sinmargen celeste">
+                        Compartir:
+                        <a onclick="redesclick('facebook')" class="nav-link-redes facebook"></a>
+                        <a onclick="redesclick('linkedin')" class="nav-link-redes linkedin"></a>
+                        <a onclick="redesclick('twitter')" class="nav-link-redes twitter"></a>
+                    </p>
+                </div>
+            </div>
+
+            <input type="hidden" id="IdVista" value="@Model.IdSecciones" />
+            @if (Model.Retroalimentacion == true)
+            {
+                Html.RenderPartial("_Feedback");
+            }
+        </div>
+
+    </article>
+</section>
+
+@section Scripts{ 
+
+<script src="~/Content/lib/amchart/RadarChart.js"></script>
+<script src="~/Content/lib/amchart/amcharts.js"></script>
+<script src="~/Content/lib/amchart/light.js"></script>
+<script src="~/Content/lib/amchart/serial.js"></script>
+
+<script>
+    var elInput1 = document.querySelector('#rangeapp1');
+    var elInput2 = document.querySelector('#rangeapp2');
+    var elInput3 = document.querySelector('#rangeapp3');
+    var elInput4 = document.querySelector('#rangeapp4');
+    var elInput5 = document.querySelector('#rangeapp5');
+
+    function declararmax(auxiliar) {
+        var aux = 100 - (parseInt(elInput1.value) + parseInt(elInput2.value) + parseInt(elInput3.value) + parseInt(elInput4.value) + parseInt(elInput5.value));
+        $("#conteo").html(aux);
+        var text = 0;
+        text = parseInt(elInput1.value) + aux;
+        if (text > 100) {
+
+            $('#rangeapp1').attr('max', "100");
+        } else {
+            $('#rangeapp1').attr('max', text);
+        }
+
+        text = parseInt(elInput2.value) + aux;
+        if (text > 100) {
+
+            $('#rangeapp2').attr('max', "100");
+        } else {
+            $('#rangeapp2').attr('max', text);
+        }
+
+        text = parseInt(elInput3.value) + aux;
+        if (text > 100) {
+
+            $('#rangeapp3').attr('max', "100");
+        } else {
+            $('#rangeapp3').attr('max', text);
+        }
+
+        text = parseInt(elInput4.value) + aux;
+        if (text > 100) {
+
+            $('#rangeapp4').attr('max', "100");
+        } else {
+            $('#rangeapp4').attr('max', text);
+        }
+
+        text = parseInt(elInput5.value) + aux;
+        if (text > 100) {
+
+            $('#rangeapp5').attr('max', "100");
+        } else {
+            $('#rangeapp5').attr('max', text);
+        }
+
+    }
+
+    if (elInput1) {
+        var etiqueta1 = document.querySelector('#inputapp1');
+        if (etiqueta1) {
+            etiqueta1.value = elInput1.value;
+            elInput1.addEventListener('input', function () {
+                etiqueta1.value = elInput1.value;
+                declararmax(elInput1.value);
+            }, false);
+        }
+    }
+    if (elInput2) {
+        var etiqueta2 = document.querySelector('#inputapp2');
+        if (etiqueta2) {
+            etiqueta2.value = elInput2.value;
+            elInput2.addEventListener('input', function () {
+                etiqueta2.value = elInput2.value;
+                declararmax(elInput2.value);
+            }, false);
+        }
+    }
+    if (elInput3) {
+        var etiqueta3 = document.querySelector('#inputapp3');
+        if (etiqueta3) {
+            etiqueta3.value = elInput3.value;
+            elInput3.addEventListener('input', function () {
+                etiqueta3.value = elInput3.value;
+                declararmax(elInput3.value);
+            }, false);
+        }
+    }
+    if (elInput4) {
+        var etiqueta4 = document.querySelector('#inputapp4');
+        if (etiqueta4) {
+            etiqueta4.value = elInput4.value;
+            elInput4.addEventListener('input', function () {
+                etiqueta4.value = elInput4.value;
+                declararmax(elInput4.value);
+            }, false);
+        }
+    }
+    if (elInput5) {
+        var etiqueta5 = document.querySelector('#inputapp5');
+        if (etiqueta5) {
+            etiqueta5.value = elInput5.value;
+            elInput5.addEventListener('input', function () {
+                etiqueta5.value = elInput5.value;
+                declararmax(elInput5.value);
+            }, false);
+        }
+    }
+
+    $(document).ready(function () {
+        $('input[name="alcaldeapp"]').change(function () {
+            var aux = $(this).val();
+            switch (aux) {
+                case "1":
+                    $('#alcaldesa').removeClass("show");
+                    $('#alcaldesa').addClass("hidden");
+                    $('#alcalde').removeClass("hidden");
+                    $('#alcalde').addClass("show");
+                    break
+                case "2":
+                    $('#alcalde').removeClass("show");
+                    $('#alcalde').addClass("hidden");
+                    $('#alcaldesa').removeClass("hidden");
+                    $('#alcaldesa').addClass("show");
+                    break
+            }
+        });
+
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.load("current2", { packages: ["corechart"] });
+
+    });
+
+    function comuna() {
+
+        $.ajax({
+            cache: false,
+            async: false,
+            type: 'POST',
+            data: {
+                Valor1: elInput1,
+                Valor2: elInput2,
+                Valor3: elInput3,
+                Valor4: elInput4,
+                Valor5: elInput5,
+                valorC: $("#comuna").val()
+            },
+            url: '../../../AjaxGraficos/SetAPPMunicipal',
+            dataType: 'json',
+            success: function (data, textStatus, jqXHR) {
+
+            },
+            error: function () {
+                alert('error');
+            }
+        });
+    }
+    function nocuadra() {
+        var aux1 = Math.round((90 - parseInt(elInput1.value)) * 1.6);
+        var aux2 = Math.round((90 - parseInt(elInput2.value)) * 1.6);
+        var aux3 = Math.round((90 - parseInt(elInput3.value)) * 1.6);
+        var aux4 = Math.round((90 - parseInt(elInput4.value)) * 1.6);
+        var aux5 = Math.round((90 - parseInt(elInput5.value)) * 1.6);
+        $("#valor1").css("top", aux1);
+        $("#valor2").css("top", aux3);
+        $("#valor3").css("top", aux4);
+        $("#valor4").css("top", aux2);
+        $("#valor5").css("top", aux5);
+        $("#valor11").css("top", aux1);
+        $("#valor22").css("top", aux3);
+        $("#valor33").css("top", aux4);
+        $("#valor44").css("top", aux2);
+        $("#valor55").css("top", aux5);
+    }
+
+</script>
+
+<script type="text/javascript">
+
+
+        function ponerpuntos(numero) {
+            var number = numero.toString();
+            var result = '';
+            while (number.length > 3) {
+                result = '.' + number.substr(number.length - 3) + result;
+                number = number.substring(0, number.length - 3);
+            }
+            result = number + result;
+            return result;
+        }
+
+        function Volver() {
+            $('#NOseacerco').addClass("hidden");
+            $('#SIseacerco').addClass("hidden");
+            $('#primario').removeClass("hidden");
+            $('input[name="alcaldeapp"]').val() == "1";
+            $("#alcaldemujer").removeClass("hidden");
+            $("#alcaldemujercartel").addClass("hidden");
+            $("#alcaldemujerno").addClass("hidden");
+            $("#alcaldehombre").removeClass("hidden");
+            $("#alcaldehombrecartel").addClass("hidden");
+            $("#alcaldehombreno").addClass("hidden");
+            $('input[name=alcaldeapp]').attr("disabled", false);
+        }
+
+        function ValidarParecido() {
+            var elInput1 = document.querySelector('#rangeapp1').value;
+            var elInput2 = document.querySelector('#rangeapp2').value;
+            var elInput3 = document.querySelector('#rangeapp3').value;
+            var elInput4 = document.querySelector('#rangeapp4').value;
+            var elInput5 = document.querySelector('#rangeapp5').value;
+
+            $.ajax({
+                cache: false,
+                async: false,
+                type: 'POST',
+                data: {
+                    Valor1: elInput1,
+                    Valor2: elInput2,
+                    Valor3: elInput3,
+                    Valor4: elInput4,
+                    Valor5: elInput5
+                },
+                url: '../../../AjaxGraficos/GetDatosAPPMunicipalidades',
+                dataType: 'json',
+                success: function (data, textStatus, jqXHR) {
+                    $('input[name=alcaldeapp]').attr("disabled", true);
+                    if (data == false) {
+                        nocuadra();
+                        $('#NOseacerco').removeClass("hidden");
+                        $('#SIseacerco').addClass("hidden");
+                        $('#primario').addClass("hidden");
+
+
+                        //$('input[name="alcaldeapp"]').val()
+                        if ($('input:radio[name=alcaldeapp]:checked').val() == "1") {
+                            $("#alcaldemujer").addClass("hidden");
+                            $("#alcaldemujercartel").addClass("hidden");
+                            $("#alcaldemujerno").removeClass("hidden");
+                        }
+                        else {
+                            $("#alcaldehombrecartel").addClass("hidden");
+                            $("#alcaldehombre").addClass("hidden");
+                            $("#alcaldehombreno").removeClass("hidden");
+                        }
+
+
+                    }
+                    else {
+                        nocuadra();
+                        google.charts.setOnLoadCallback(drawChart3(data));
+                        google.charts.setOnLoadCallback(drawChart5(data));
+                        drawChart1(data)
+                        $('#SIseacerco').removeClass("hidden");
+                        $('#NOseacerco').addClass("hidden");
+                        $('#primario').addClass("hidden");
+
+
+                        $('#nombretitulo').text(data.Nombre);
+                        $('#Nombremuni').text(data.Nombre);
+                        $('#nombrecomuna3').text(data.Nombre);
+                        $('#totalcomuna').text(ponerpuntos(data.Total));
+                        $('#result1').text(ponerpuntos(data.Poblacion));
+                        $('#result2').text(ponerpuntos(data.Distancia));
+                        $('#result3').text(data.Pobreza + "%");
+                        $('#result4').text(data.Alcalde);
+                        $('#result5').text(data.Partido);
+                        $('#result6').text(ponerpuntos(data.Votos));
+
+                        if ($('input:radio[name=alcaldeapp]:checked').val() == "1") {
+                            $("#alcaldemujercartel").removeClass("hidden");
+                            $("#alcaldemujertext").html(data.Nombre);
+                            $("#alcaldemujer").addClass("hidden");
+                            $("#alcaldemujerno").addClass("hidden");
+                        }
+                        else {
+                            $("#alcaldehombrecartel").removeClass("hidden");
+                            $("#alcaldehombre").addClass("hidden");
+                            $("#alcaldehombretext").html(data.Nombre);
+                            $("#alcaldehombreno").addClass("hidden");
+                        }
+                    }
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        }
+
+        function drawChart3(datox) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'TuGasto');
+            data.addColumn('number', 'Valor');
+            data.addRows([
+                ['Educacion', parseInt(elInput1.value)],
+                ['Interno', parseInt(elInput3.value)],
+                ['Cultural', parseInt(elInput4.value)],
+                ['Salud', parseInt(elInput2.value)],
+                ['Comunidad', parseInt(elInput5.value)]
+            ]);
+
+            var options = {
+                pieSliceText: 'none',
+                legend: 'none',
+                'width': 300,
+                'height': 300,
+                backgroundColor: 'transparent',
+                chartArea: {
+                    left: 30
+                    //top:0,
+                    //width:'50%',
+                    //height:'75%'
+                },
+                slices: {
+                    0: { color: '#c79d75' },
+                    1: { color: '#ffbf87' },
+                    2: { color: '#f27f1a' },
+                    3: { color: '#c46715' },
+                    4: { color: '#ff7700' }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
+            chart.draw(data, options);
+        }
+        function drawChart5(datox) {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'TuGasto');
+            data.addColumn('number', 'Valor');
+            data.addRows([
+                ['Educacion', parseInt(datox.Educacion)],
+                ['Interno', parseInt(datox.Interno)],
+                ['Cultural', parseInt(datox.Cultural)],
+                ['Salud', parseInt(datox.Salud)],
+                ['Comunidad', parseInt(datox.Comunidad)]
+            ]);
+
+            var options = {
+                pieSliceText: 'none',
+                legend: 'none',
+                'width': 300,
+                'height': 300,
+                backgroundColor: 'transparent',
+                chartArea: {
+                    left: 30
+                    //top:0,
+                    //width:'50%',
+                    //height:'75%'
+                },
+                slices: {
+                    0: { color: '#e1f1f6' },
+                    1: { color: '#59bad0' },
+                    2: { color: '#3b97ad' },
+                    3: { color: '#a2d6e4' },
+                    4: { color: '#286c7b' }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div4'));
+            chart.draw(data, options);
+        }
+        function drawChart1(data) {
+            var w = 400,
+                h = 350;
+
+            var colorscale = d3.scale.category10();
+
+            //Legend titles
+            var LegendOptions = ['Comuna', 'Tu gasto'];
+            var elInput1 = parseInt(document.querySelector('#rangeapp1').value);
+            var elInput2 = parseInt(document.querySelector('#rangeapp2').value);
+            var elInput3 = parseInt(document.querySelector('#rangeapp3').value);
+            var elInput4 = parseInt(document.querySelector('#rangeapp4').value);
+            var elInput5 = parseInt(document.querySelector('#rangeapp5').value);
+            //Data
+            var d = [
+                [
+                    { axis: "Educacion", value: data.Educacion },
+                    { axis: "Comunidad", value: data.Comunidad },
+                    { axis: "Salud", value: data.Salud },
+                    { axis: "Social", value: data.Cultural },
+                    { axis: "Funcionamiento", value: data.Interno }
+
+                ], [
+                    { axis: "Educacion", value: parseInt(elInput1) },
+                    { axis: "Comunidad", value: parseInt(elInput5) },
+                    { axis: "Salud", value: parseInt(elInput2) },
+                    { axis: "Social", value: parseInt(elInput4) },
+                    { axis: "Funcionamiento", value: parseInt(elInput3) }
+
+
+                ]
+            ];
+            var auxiliarS = elInput1;
+            if (elInput1 < elInput2)
+                auxiliarS = elInput2;
+            if (auxiliarS < elInput3)
+                auxiliarS = elInput3;
+            if (auxiliarS < elInput4)
+                auxiliarS = elInput4;
+            if (auxiliarS < elInput5)
+                auxiliarS = elInput5;
+            auxiliarS = auxiliarS + 5;
+            auxiliarS = parseInt(auxiliarS);
+            //Options for the Radar chart, other than default
+            var mycfg = {
+                w: w,
+                h: h,
+                maxValue: auxiliarS,
+                levels: 10,
+                ExtraWidthX: 150
+            }
+
+            //Call function to draw the Radar chart
+            //Will expect that data is in %'s
+            RadarChart.draw("#chart", d, mycfg);
+
+            //////////////////////////////////////////////
+            ///////////// Initiate legend ////////////////
+            //////////////////////////////////////////////
+
+            var svg = d3.select('#body')
+                .selectAll('svg')
+                .append('svg')
+                .attr("width", w + 550)
+                .attr("height", h)
+
+            ////Crear el título de la leyenda
+            //var text = svg.append("text")
+            //  .attr("class", "title")
+            //  .attr('transform', 'translate(90,0)')
+            //  .attr("x", w - 50)
+            //  .attr("y", 10)
+            //  .attr("font-size", "12px")
+            //  .attr("fill", "#404040")
+            //  .text("");
+
+            //Iniciar la leyenda
+            //var legend = svg.append("g")
+            //  .attr("class", "legend")
+            //  .attr("height", 100)
+            //  .attr("width", 550)
+            //  .attr('transform', 'translate(90,20)')
+            //;
+            ////Crear cuadrados de colores
+            //legend.selectAll('rect')
+            //  .data(LegendOptions)
+            //  .enter()
+            //  .append("rect")
+            //  .attr("x", w - 65)
+            //  .attr("y", function (d, i) { return i * 20; })
+            //  .attr("width", 5)
+            //  .attr("height", 5)
+            //  .style("fill", function (d, i) { return "#000000"; })
+            //;
+            ////Crear texto junto a las plazas
+            //legend.selectAll('text')
+            //  .data(LegendOptions)
+            //  .enter()
+            //  .append("text")
+            //  .attr("x", w - 30)
+            //  .attr("y", function (d, i) { return i * 20 + 9; })
+            //  .attr("font-size", "11px")
+            //  .attr("fill", "#737373")
+            //  .text(function (d) { return d; })
+            //;
+        }
+
+</script>
+}

@@ -1,0 +1,117 @@
+﻿
+
+<div class="row">
+    <div class="col-md-12 align-self-center" id="retro1">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-center">¿Te resulto útil esta información?</h5>
+            </div>
+            <div class="col-6">
+                <p class="text-right">
+                    <a class="sino verde" onclick="formulario1(1)">
+                        <i class="material-icons md-48">sentiment_very_satisfied</i> Si
+                    </a>
+                </p>
+            </div>
+            <div class="col-6">
+                <p class=" text-left">
+                    <a class="sino rojo" onclick="formulario1(0)">
+                        <i class="material-icons md-48">sentiment_very_dissatisfied</i> No
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden col-md-12 align-self-center" id="retro2">
+        <h4>¿Porqué no te resultó útil?</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <div onclick="formulario2(1)" class="cuadro-contenido cuadro-padding-interno btn-red">
+                    <p class="sinmargen"><i class="material-icons md-36">sentiment_dissatisfied</i> La información no es relevante</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="formulario2(2)" class="cuadro-contenido cuadro-padding-interno btn-red">
+                    <p class="sinmargen"><i class="material-icons md-36">report_problem</i> Los datos son erróneos</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="formulario2(3)" class="cuadro-contenido cuadro-padding-interno btn-red">
+                    <p class="sinmargen"><i class="material-icons md-36">assessment</i> No entendí la visualización</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="formulario2(4)" class="cuadro-contenido cuadro-padding-interno btn-red">
+                    <p class="sinmargen"><i class="material-icons md-36">comment</i> Otra razón</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="retro3" class="hidden col-md-12 cuadro-contenido cuadro-padding-interno align-self-center verdeB">
+        <p>
+            <i class="material-icons md-36">sentiment_very_satisfied</i> ¡Gracias por tu opinión!  <br />
+            Nos alegramos de que la sección sea de tu utilidad!
+        </p>
+    </div>
+
+    <div id="retro4" class="hidden col-md-12 cuadro-contenido cuadro-padding-interno align-self-center naranjoB" >
+        <p>
+            <i class="material-icons md-36">info_outline</i> Ya recogimos tu opinion, gracias por opinar!
+        </p>
+    </div>
+
+    <div id="retro5" class="hidden col-md-12 align-self-center">
+        <textarea class="form-control pull-left" id="notegustofed" rows="2" placeholder="¿Como podriamos mejorar?"></textarea>
+        <input type="button" onclick="formulario4()" class="btn btn-primary" value="Enviar" />
+    </div>
+
+    <div id="retro6" class="hidden col-md-12 cuadro-contenido cuadro-padding-interno align-self-center verdeB">
+        <p>
+            <i class="material-icons md-36">sentiment_satisfied</i> ¡Gracias por tu opinión!  <br />
+            Esta información nos ayuda a mejorar!
+        </p>
+    </div>
+
+</div>
+            
+<div id="retro6" class="hidden alert verdeB">
+    <p>
+        <i class="material-icons md-36">sentiment_satisfied</i> ¡Gracias por tu opinión!  <br />
+        Esta información nos ayuda a mejorar!
+    </p>
+</div>
+
+<div class="row">
+<div class="col-12">
+    <p class="text-center">
+        <a class="btn btn-border" id="linkform2" onclick="mostrarfeed2()">¿Cómo podemos mejorar esta sección?</a>
+    </p>
+</div>
+</div>
+        
+<div class="hidden" id="comentarioF">
+<h4>¿Cómo podemos mejorar esta sección?</h4>
+<div>
+    <div id="unretro1" class="form-group">
+        <textarea class="form-control" id="sugerenciafed" name="sugerenciafed" rows="2" placeholder="Sugerencias, ideas, reclamos son de enorme utilidad"></textarea>
+        <div>
+            <p class="text-right">
+                <input type="button" onclick="formulario3()" class="btn btn-primary" value="Enviar" />
+            </p>
+        </div>
+    </div>
+    <div id="unretro2" class="hidden verdeB">
+        <p>
+            <i class="material-icons md-36">done</i>¡Gracias por tu opinión!  <br />
+            Esta información nos ayuda a mejorar!
+        </p>
+    </div>
+    <div id="unretro3" class="hidden naranjoB">
+        <p>
+            <i class="material-icons md-36">info_outline</i>  Tu opinión ya fue registrada, gracias!
+        </p>
+    </div>
+</div>
+</div>

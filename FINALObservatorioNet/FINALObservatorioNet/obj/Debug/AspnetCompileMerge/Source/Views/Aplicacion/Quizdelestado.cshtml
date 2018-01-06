@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Titulo"] = "Quiz del Estado";
+}
+<style>
+    .lado {
+        cursor:pointer;
+    }
+        .lado:hover .cuadro-contenido {
+            box-shadow: 0 1px 2px 0 #292b2d;
+        }
+
+    .lado {
+    }
+    .ladoB {
+    }
+</style>
+<section class="row cuadro-contenido">
+    <article class="cuadro-padding">
+        <div class="col-md-12">
+            <h2>A jugar!!!! </h2>
+            <h6>Demuestranos cuanto sabes del Estado </h6>
+            <hr />
+        </div>
+        <div class="col-md-12">
+            <div class="cuadro-contenido">
+                <div class="cuadro-padding">
+                    <div id="Presentacion">
+                        <h4 class="text-center conmargen">Debes seleccionar donde crees que tuvo el mayor gasto.</h4>
+                        <h5 class="text-center conmargen">Listo</h5>
+                        <h3 class="text-center conmargen"><a class="btn btn-primary">¡A Jugar!</a></h3>
+                        <p class="small text-center">Estos datos corresponden a en qué gasta el Estado por área de gasto</p>
+                        <p class="small text-center">Derechos reservados a Observatorio del Gasto Fiscal en Chile</p>
+                    </div>
+                    <div id="Preguntas">
+                        <h4 class="text-center conmargen">En cúal se genero mayor gasto.</h4>
+                        <div class="row">
+                            <div class="col-6 lado ladoA" onclick="">
+                                <div class="cuadro-contenido celesteB">
+                                    <div class="cuadro-padding">
+                                        <h4 class="text-center blanco">Servicios Hospitalarios</h4>
+                                        <h6 class="text-center blanco">Salud</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 lado ladoB" onclick="">
+                                <div class="cuadro-contenido naranjoB">
+                                    <div class="cuadro-padding">
+                                        <h4 class="text-center blanco">Enseñanza Preescolar</h4>
+                                        <h6 class="text-center blanco">Educación</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-center conmargen"><a class="btn btn-primary">¡A Jugar!</a></h3>
+                        <p class="small text-center">Estos datos corresponden a en qué gasta el Estado por área de gasto</p>
+                        <p class="small text-center">Derechos reservados a Observatorio del Gasto Fiscal en Chile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h3 class="text-center ">Pregunta</h3>
+            <div class="row">
+                <div class="col-6">
+                    <h4></h4>
+                </div>
+                <div class="col-6">
+
+                </div>
+            </div>
+            <h6>Demuestranos cuanto sabes del Estado </h6>
+        </div>
+
+    </article>
+</section>
+
+@section Scripts{
+
+    
+    <script>
+    
+    </script>
+}
