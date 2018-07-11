@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>GRAFICO</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script type="text/javascript" src="/Content/lib/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 </head>
@@ -340,7 +340,7 @@
     var className = "Gastos";
     var ID = "0";
     var nivel = 1;
-    function classes(root) {
+    function classes(data) {
         var classes = [];
 
         var colores = [
@@ -380,7 +380,7 @@
                 });
             }
         }
-        recurse(null, root);
+        recurse(null, data);
         return {
             children: classes
         };
@@ -393,16 +393,16 @@
         var margin = { top: 10, right: 10, bottom: 10, left: 10 };
         var width = document.getElementById("chart_div").parentElement.clientWidth - margin.left - margin.right;
         var height = 400;//document.getElementById("chart_div").parentElement.clientHeight - margin.top - margin.bottom;
-        var treemap = d3.layout.treemap().size([width, height]).sticky(true).round(true).sort(function (a, b) { return b.value - a.value; }).value(function (d) { return d.value; });
+        var treemap = d3.treemap().size([width, height]);
         var div = d3.select("body").select("#chart_div").append("div").attr("id", "treeChart").style("position", "relative").style("height", (height + margin.top + margin.bottom) + "px").style("top", margin.top + "px");
         var tooltip = d3.select("body").append("div").attr('class', 'tooltiptremap');
         var url = "@Url.Action("GetDatosQuienInvierte29999nivel1", "Pruebas")" + "/" + FUNCECONO + ";" + nivel + ";" + IDPAPA;
 
-        d3.json(url, function (error, root) {
-            var Format = root.Format;
+        d3.json(url, function (error, data) {
+            var Format = data.Format;
             var Formato;
             var node = div.selectAll(".node")
-                .data(treemap.nodes(classes(root, null)))
+                .data(treemap.nodes(classes(data, null)))
                 .enter().append("div")
                 .attr("class", "node")
                 .attr("Id", function (d) {
@@ -576,25 +576,15 @@
         } 
     }
 
-        function puntos(aux) {
-            aux = aux.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
-            aux = aux.split('').reverse().join('').replace(/^[\.]/, '');
-            return aux;
-        }
+    function puntos(aux) {
+        aux = aux.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+        aux = aux.split('').reverse().join('').replace(/^[\.]/, '');
+        return aux;
+    }
     
-    function devolver(nivell, Idpapa, funci, valor, nombre) {
-
-            //var iiii = $("#miga" + nivell).children(".contenmiga");
-            //iiii.className = "contenmiga seleccionadomiga";
-        
-                $("#miga" + nivell).find(".contenmiga").addClass("seleccionadomiga");
-            
-
-
-
-            var i = nivell + 1;
-
-
+    function devolver(nivell, Idpapa, funci, valor, nombre) {      
+        $("#miga" + nivell).find(".contenmiga").addClass("seleccionadomiga");
+        var i = nivell + 1;
         for (i; i < 5; i++) {
             $("#miga"+i).remove();
         }
@@ -605,9 +595,7 @@
         document.getElementById("IDPAPA").value = Idpapa;
         document.getElementById("COLOR").value = "";
         document.getElementById("FUNCECONO").value = funci;
-
         document.getElementById("Titulo").innerHTML = nombre + "<span> ( $" + puntos(valor) + " millones) </span>"
-
         drawChart(1);
     }
     function back() {
@@ -624,8 +612,7 @@
             drawChart(1);
         });
         
-
-        });
+    });
 
         function cambio(aux) {
             $("#FUNCECONO").val(aux);

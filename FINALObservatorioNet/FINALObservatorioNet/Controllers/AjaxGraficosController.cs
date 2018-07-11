@@ -1356,30 +1356,30 @@ namespace FINALObservatorioNet.Controllers
             }
 
             #region VALOR PARA MOSTRAR
-            GraficoCircularesVarios infoGrafico = _context.GraficoCircularesVarios.Find(13);//
-            d3Object_Bubble_Pack grafico = new d3Object_Bubble_Pack();//
-            if (tipoValor == "percapita")//
-            {//
-                grafico.Load(infoGrafico, "percapita");//
-            }//
-            else//
-            {//
-                grafico.Load(infoGrafico, "nominal");//
-            }//
-            string json = grafico.getJson();//
+            //GraficoCircularesVarios infoGrafico = _context.GraficoCircularesVarios.Find(13);//
+            //d3Object_Bubble_Pack grafico = new d3Object_Bubble_Pack();//
+            //if (tipoValor == "percapita")//
+            //{//
+            //    grafico.Load(infoGrafico, "percapita");//
+            //}//
+            //else//
+            //{//
+            //    grafico.Load(infoGrafico, "nominal");//
+            //}//
+            //string json = grafico.getJson();//
             #endregion
             #region FINAL EN PRODUCCION
-            //string json = _context.Json.Find(2).JsonVistas.Single(r => r.Titulo == id).Texto;
+            string json = _context.Json.Find(2).JsonVistas.Single(r => r.Titulo == id).Texto;
 
-            //TempData["datos"] = json;
-            //TempData["tipo"] = tipoValor;
+            TempData["datos"] = json;
+            TempData["tipo"] = tipoValor;
 
-            JsonVistas auxiliar = new JsonVistas();//
-            auxiliar.IdJsonFK = 2;//
-            auxiliar.Titulo = id;//
-            auxiliar.Texto = json;//
-            _context.JsonVistas.Add(auxiliar);//
-            _context.SaveChanges();//
+            //JsonVistas auxiliar = new JsonVistas();//
+            //auxiliar.IdJsonFK = 2;//
+            //auxiliar.Titulo = id;//
+            //auxiliar.Texto = json;//
+            //_context.JsonVistas.Add(auxiliar);//
+            //_context.SaveChanges();//
             #endregion
             return this.Content(json, "application/json");
         }
@@ -1452,18 +1452,18 @@ namespace FINALObservatorioNet.Controllers
 
             string json = _context.Json.Find(1).JsonVistas.Single(r => r.Titulo == busqueda).Texto;
 
-            //Grafico_Plotly_Listbox infoGrafico = db.Grafico_Plotly_Listbox.Find(4);//
-            //plotly_Line_Listbox grafico = new plotly_Line_Listbox();//
+           // Grafico_Plotly_Listbox infoGrafico = _context.Grafico_Plotly_Listbox.Find(4);//
+           // plotly_Line_Listbox grafico = new plotly_Line_Listbox();//
 
-            //grafico.Load(infoGrafico, busqueda);//
-            //string json = grafico.getJson();//
+           //grafico.Load(infoGrafico, busqueda);//
+           // string json = grafico.getJson();//
 
-            //JsonVistas auxiliar = new JsonVistas();//
-            //auxiliar.IdJsonFK = 1;//
-            //auxiliar.Titulo = busqueda;//
-            //auxiliar.Texto = json;//
-            //db.JsonVistas.Add(auxiliar);//
-            //db.SaveChanges();//
+           // JsonVistas auxiliar = new JsonVistas();//
+           // auxiliar.IdJsonFK = 1;//
+           // auxiliar.Titulo = busqueda;//
+           // auxiliar.Texto = json;//
+           // _context.JsonVistas.Add(auxiliar);//
+           // _context.SaveChanges();//
 
             return this.Content(json, "application/json");
         }

@@ -34,10 +34,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/12/2017 13:20:46</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>12/15/2017 12:02:14</publishTime>
+      <publishTime>06/26/2018 13:34:38</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>12/15/2017 12:02:14</publishTime>
+      <publishTime>06/26/2018 13:34:38</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 04:32:26</publishTime>
@@ -103,10 +103,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>01/28/2015 04:04:36</publishTime>
     </File>
     <File Include="bin/FINALObservatorioNet.dll">
-      <publishTime>12/15/2017 11:59:57</publishTime>
+      <publishTime>06/26/2018 13:34:30</publishTime>
     </File>
     <File Include="bin/FINALObservatorioNet.pdb">
-      <publishTime>12/15/2017 11:59:57</publishTime>
+      <publishTime>06/26/2018 13:34:30</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
@@ -367,10 +367,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>10/24/2017 11:19:58</publishTime>
     </File>
     <File Include="Content/css/stylefinal.css">
-      <publishTime>12/11/2017 14:24:14</publishTime>
+      <publishTime>06/20/2018 10:26:32</publishTime>
     </File>
     <File Include="Content/css/stylefinal.min.css">
-      <publishTime>10/03/2017 17:39:10</publishTime>
+      <publishTime>06/18/2018 12:15:53</publishTime>
     </File>
     <File Include="Content/images/1.jpg">
       <publishTime>10/02/2017 22:21:30</publishTime>
@@ -690,8 +690,11 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Content/images/convenio/vitacura_logo.png">
       <publishTime>10/10/2017 14:34:06</publishTime>
     </File>
+    <File Include="Content/images/frase.jpg">
+      <publishTime>06/07/2018 12:11:36</publishTime>
+    </File>
     <File Include="Content/images/graf.png">
-      <publishTime>10/02/2017 22:21:30</publishTime>
+      <publishTime>04/24/2018 11:28:40</publishTime>
     </File>
     <File Include="Content/images/graf3_nivel.png">
       <publishTime>06/13/2016 22:06:00</publishTime>
@@ -766,7 +769,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/14/2017 16:27:42</publishTime>
     </File>
     <File Include="Content/js/Bubble_Pack.js">
-      <publishTime>10/23/2017 18:10:15</publishTime>
+      <publishTime>04/26/2018 19:31:59</publishTime>
     </File>
     <File Include="Content/js/d3Object_Bubble.js">
       <publishTime>09/14/2017 18:28:56</publishTime>
@@ -1096,10 +1099,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/12/2017 13:16:36</publishTime>
     </File>
     <File Include="Models/Model1.edmx.diagram">
-      <publishTime>12/14/2017 10:52:18</publishTime>
+      <publishTime>06/20/2018 16:43:09</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>12/15/2017 12:02:07</publishTime>
+      <publishTime>06/26/2018 13:34:31</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>09/29/2017 00:57:44</publishTime>
@@ -1147,7 +1150,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/29/2017 00:57:44</publishTime>
     </File>
     <File Include="Views/Aplicacion/Situfueraselalcalde.cshtml">
-      <publishTime>10/19/2017 18:50:00</publishTime>
+      <publishTime>04/25/2018 18:11:57</publishTime>
     </File>
     <File Include="Views/Etiqueta/Index.cshtml">
       <publishTime>10/11/2017 11:02:54</publishTime>
@@ -1159,7 +1162,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/29/2017 00:57:44</publishTime>
     </File>
     <File Include="Views/Home/Contacto.cshtml">
-      <publishTime>11/02/2017 11:25:46</publishTime>
+      <publishTime>05/22/2018 18:36:10</publishTime>
     </File>
     <File Include="Views/Home/CorreoEnviado.cshtml">
       <publishTime>09/29/2017 00:57:44</publishTime>
@@ -1170,17 +1173,26 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Views/Home/Datasets.cshtml">
       <publishTime>11/02/2017 11:27:36</publishTime>
     </File>
+    <File Include="Views/Home/Donacion.cshtml">
+      <publishTime>06/26/2018 13:12:33</publishTime>
+    </File>
+    <File Include="Views/Home/DonacionCancelada.cshtml">
+      <publishTime>06/07/2018 14:39:06</publishTime>
+    </File>
+    <File Include="Views/Home/DonacionRealizada.cshtml">
+      <publishTime>06/20/2018 12:32:08</publishTime>
+    </File>
     <File Include="Views/Home/Faq.cshtml">
       <publishTime>10/04/2017 10:04:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/13/2017 09:44:43</publishTime>
+      <publishTime>06/26/2018 13:27:05</publishTime>
     </File>
     <File Include="Views/Home/Indicadores.cshtml">
       <publishTime>11/08/2017 10:51:43</publishTime>
     </File>
     <File Include="Views/Home/Nosotros.cshtml">
-      <publishTime>10/04/2017 14:43:18</publishTime>
+      <publishTime>06/26/2018 13:32:00</publishTime>
     </File>
     <File Include="Views/Mail/CorreoContacto.html.cshtml">
       <publishTime>09/29/2017 01:46:28</publishTime>
@@ -1204,22 +1216,22 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/29/2017 00:57:44</publishTime>
     </File>
     <File Include="Views/Noticia/Index.cshtml">
-      <publishTime>12/11/2017 15:57:39</publishTime>
+      <publishTime>05/14/2018 09:15:16</publishTime>
     </File>
     <File Include="Views/Proyecto/ComprasPublicas.cshtml">
-      <publishTime>12/11/2017 15:06:49</publishTime>
+      <publishTime>12/18/2017 12:31:52</publishTime>
     </File>
     <File Include="Views/Proyecto/DatosEntendibles.cshtml">
-      <publishTime>12/11/2017 15:06:47</publishTime>
+      <publishTime>06/13/2018 10:29:03</publishTime>
     </File>
     <File Include="Views/Proyecto/GastoAmigable.cshtml">
-      <publishTime>12/11/2017 15:06:48</publishTime>
+      <publishTime>12/18/2017 12:31:52</publishTime>
     </File>
     <File Include="Views/Proyecto/Index.cshtml">
       <publishTime>09/28/2017 23:52:10</publishTime>
     </File>
     <File Include="Views/Pruebas/Index.cshtml">
-      <publishTime>12/15/2017 11:50:25</publishTime>
+      <publishTime>02/02/2018 01:22:01</publishTime>
     </File>
     <File Include="Views/Pruebas/Index2.cshtml">
       <publishTime>12/15/2017 11:44:40</publishTime>
@@ -1231,13 +1243,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>12/15/2017 11:55:41</publishTime>
     </File>
     <File Include="Views/Publicacion/Index.cshtml">
-      <publishTime>10/16/2017 12:59:18</publishTime>
+      <publishTime>05/14/2018 09:39:08</publishTime>
     </File>
     <File Include="Views/ReddeObservadores/Index.cshtml">
       <publishTime>09/27/2017 19:24:54</publishTime>
     </File>
     <File Include="Views/Secciones/Create.cshtml">
-      <publishTime>10/24/2017 15:23:50</publishTime>
+      <publishTime>05/07/2018 10:15:11</publishTime>
     </File>
     <File Include="Views/Secciones/CreateNoticias.cshtml">
       <publishTime>10/19/2017 15:47:32</publishTime>
@@ -1249,7 +1261,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>10/11/2017 12:39:00</publishTime>
     </File>
     <File Include="Views/Secciones/Edit.cshtml">
-      <publishTime>12/08/2017 20:24:53</publishTime>
+      <publishTime>05/07/2018 10:15:05</publishTime>
     </File>
     <File Include="Views/Secciones/EditNoticias.cshtml">
       <publishTime>10/19/2017 15:46:20</publishTime>
@@ -1270,7 +1282,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>10/10/2017 16:43:06</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/21/2017 10:42:07</publishTime>
+      <publishTime>06/26/2018 13:33:35</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>10/19/2017 12:03:20</publishTime>
@@ -1288,7 +1300,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/12/2017 13:16:38</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/15/2017 12:00:07</publishTime>
+      <publishTime>04/26/2018 19:09:51</publishTime>
     </File>
   </ItemGroup>
 </Project>

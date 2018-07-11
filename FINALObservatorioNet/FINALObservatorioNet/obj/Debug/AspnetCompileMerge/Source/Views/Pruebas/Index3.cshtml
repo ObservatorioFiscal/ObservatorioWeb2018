@@ -441,7 +441,7 @@
                 .on("mouseover", function (d) {
                     tooltip.append("p").attr("id", "texto3").attr("class", "titulo").text(d.className);
                     tooltip.append("p").attr("id", "texto33").attr("class", "descrip").text(d.descripcion);
-                    tooltip.append("p").attr("id", "texto1").attr("class", "conten").text("Gastado:");
+                    tooltip.append("p").attr("id", "texto1").attr("class", "conten").text("Recibidos:");
                     tooltip.append("p").attr("id", "texto11").attr("class", "conten2").text("$" + d.valueTooltip1 + " millones");
 
                     var aux1 = "Equivale al " + d.porcentaje1 + "% del ingreso de " + NombrePapa + ".";
@@ -526,7 +526,7 @@
                     var x = d.dx;
                     var y = d.dy;
                     if (((largo / 3) < d.dx) && (d.dy > 80)) {
-                        return d.children ? null : "Ingreso: $" + puntos(d.value) +" millones";
+                        return d.children ? null : "$" + puntos(d.value) +" millones";
                     }
                     else {
                     }

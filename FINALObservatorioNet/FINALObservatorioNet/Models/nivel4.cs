@@ -14,12 +14,6 @@ namespace FINALObservatorioNet.Models
     
     public partial class nivel4
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public nivel4()
-        {
-            this.nivel5 = new HashSet<nivel5>();
-        }
-    
         public int IdNivel4 { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> Valor { get; set; }
@@ -31,7 +25,5 @@ namespace FINALObservatorioNet.Models
         public string Descripcion { get; set; }
     
         public virtual nivel3 nivel3 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<nivel5> nivel5 { get; set; }
     }
 }

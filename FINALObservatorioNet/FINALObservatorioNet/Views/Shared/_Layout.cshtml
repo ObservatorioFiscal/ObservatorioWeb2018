@@ -51,6 +51,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Content/css/stylefinal.css?v=2.0" />
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6688820728145368",
+            enable_page_level_ads: true
+        });
+    </script>
 </head>
 <body>
     <header class="container">
@@ -131,8 +138,8 @@
                         <div class="col-md-4  align-self-center">
                             <p class="text-center">
                                 <i class="material-icons celeste md-36">add_location</i><br />
-                                <a href="https://goo.gl/maps/SJcvaSZwbXM2">
-                                    Apoquindo 3910, piso 3<br />
+                                <a href="https://goo.gl/maps/wn2rNBYGVJw">
+                                    Don Carlos 2986, Oficina 3<br />
                                     Las Condes<br />
                                     Santiago, Chile<br />
                                 </a>
@@ -159,7 +166,8 @@
                     <ul class="nav men-top justify-content-center">
                         <li class="nav-item @ViewData["menu15"]">@Html.ActionLink("Contenido Copyright", "creativecommons", "home", null, new { @class = "nav-link" })</li>
                         <li class="nav-item @ViewData["menu12"]">@Html.ActionLink("Datasets", "Datasets", "home", null, new { @class = "nav-link" })</li>
-                        <li class="nav-item @ViewData["menu14"]">@Html.ActionLink("FAQ", "faq", "home", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item @ViewData[" menu14"]">@Html.ActionLink("FAQ", "faq", "home", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item @ViewData["menu14"]">@Html.ActionLink("Donación", "Donacion", "home", null, new { @class = "nav-link" })</li>
 
                     </ul>
                     @Html.Partial("_LoginPartial")
@@ -237,16 +245,6 @@
         gtag('config', 'UA-84666147-1');
     </script>
 
-
-    <div id="AFICHE" style="position:fixed;bottom:0px;right:0">
-        <div onclick="cerrar()" style="cursor:pointer;background-color:#2199a6;border-radius:50%;width:30px;height:30px;position:absolute;top:-12px;left:-12px;">
-            <span style="top: 7px;left: 10px;position: absolute;font-weight: 700;color: white;">X</span>
-        </div>
-        <a href="http://www.opendataday.cl/rally/" alt="Ir al Sitio web.">
-            <img src="~/Content/images/finalfinalfinalfinalfinalfinalAhoraSIqueSIesteSI.jpg" style="border: 3px solid #00b5e6;
-    border-radius: 3px;" height="300" />
-        </a>
-    </div>
 
     <script>
         function cerrar() {

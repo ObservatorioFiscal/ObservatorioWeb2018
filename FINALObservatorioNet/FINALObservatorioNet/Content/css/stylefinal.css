@@ -1060,6 +1060,10 @@ fieldset[disabled] a.btn {
     padding: 5px 10px
 }
 
+.btn-xl {
+    padding: 15px 90px
+}
+
 .btn-block {
     width: 100%
 }
@@ -2573,7 +2577,7 @@ body {
 
     .div-item-publicaciones figure img {
         position: absolute;
-        right: -13%;
+        right: -28%;
     }
 
 
@@ -2969,7 +2973,7 @@ input[type=range] {
 }
 
 .verdeB {
-    background-color: #98DF8A;
+    background-color: #e91692;
     color: #FFF
 }
 
@@ -3041,3 +3045,26 @@ input[type=range] {
     }
 }
 
+.frase{
+    font-size:29px;
+}
+
+.align-middle{
+    vertical-align:middle;
+}
+
+.dona {
+    margin: 5px;
+    min-width: 160px;
+    font-size: 16px;
+    color: white;
+}
+
+
+#frases {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}

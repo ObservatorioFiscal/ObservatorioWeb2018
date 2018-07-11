@@ -34,16 +34,19 @@
                         <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Tipo</h5>
                         @Html.DropDownList("orden-TipoPublicacion", (SelectList)ViewBag.tipo, new { @class = "form-control form-control-sm" })
                         
+                        <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Autor</h5>
+                        @Html.DropDownList("orden-AutorPublicacion", (SelectList)ViewBag.autor, new { @class = "form-control form-control-sm" })
+
                         @*<select class="input" id="orden-TipoPublicacion">
 
-                            <option value=" ">Todas</option>
-                            <option value="1">Columnas</option>
-                            <option value="2">Estudios</option>
-                            <option value="3">Infografías</option>
-                            <option value="4">Informes</option>
-                            <option value="5">Principios</option>
-                            <option value="6">Reportajes</option>
-                        </select>*@
+            <option value=" ">Todas</option>
+            <option value="1">Columnas</option>
+            <option value="2">Estudios</option>
+            <option value="3">Infografías</option>
+            <option value="4">Informes</option>
+            <option value="5">Principios</option>
+            <option value="6">Reportajes</option>
+        </select>*@
                     </div>
                     <div class="col-md-12 busqueda">
                         <h5 class="celeste"><i class="material-icons md-24">label_outline</i> Temas</h5>
@@ -89,6 +92,7 @@
         var pagina = 0;
         var etiqueta = "";
         var orden = "";
+        var autor = "";
         var TipoPublicacion = $("#tipp").val();
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -104,6 +108,7 @@
                     pagina: pagina,
                     tags: etiqueta,
                     orden: orden,
+                    autor: autor,
                     tipo: TipoPublicacion
                 },
                 url: '../../Publicacion/FiltroListadoPublicacion',
@@ -209,6 +214,12 @@
 
             $("#orden-TipoPublicacion").change(function () {
                 TipoPublicacion = $(this).val();
+                pagina = 0;
+                $("#divPublicaciones").empty();
+                filtroPublicacion();
+            });
+            $("#orden-AutorPublicacion").change(function () {
+                autor = $(this).val();
                 pagina = 0;
                 $("#divPublicaciones").empty();
                 filtroPublicacion();

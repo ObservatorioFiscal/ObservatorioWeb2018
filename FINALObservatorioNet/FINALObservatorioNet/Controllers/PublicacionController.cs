@@ -30,9 +30,23 @@ namespace FINALObservatorioNet.Controllers
                 {"3", "Infografías"},
                 {"4", "Informes"},
                 {"5", "Principios"},
-                {"6", "Reportajes"}
+                {"6", "Reportajes"},
+                {"7", "Análisis"}
             };
             ViewBag.tipo = new SelectList(lista, "key", "value", id);
+
+            Dictionary<string, string> lista2 = new Dictionary<string, string>
+            {
+                {"", "Todos"},
+                {"1", "Guillermo Patillo"},
+                {"2", "Jeannette von Wolfersdorff"},
+                {"3", "Jose Mora"},
+                {"4", "Manuel Henriquez"},
+                {"5", "Orlando Rojas"},
+                {"6", "Matias Jara"},
+                {"7", "Paula Diaz"}
+            };
+            ViewBag.autor = new SelectList(lista2, "key", "value", id);
 
             ViewBag.Tags = EtiquetasPublicacion.diccionario.ToList();
             ViewBag.i = (string.IsNullOrEmpty(id)) ? "" : id;
@@ -43,25 +57,26 @@ namespace FINALObservatorioNet.Controllers
             return View(seccion);
         }
 
-        public async Task<JsonResult> FiltroListadoPublicacion(int pagina, string tags, string orden, string tipo)
+        public async Task<JsonResult> FiltroListadoPublicacion(int pagina, string tags, string orden, string autor, string tipo)
         {
             int i = 9 * pagina;
             List<view_ListaSeccionPublicacion> secciones = new List<view_ListaSeccionPublicacion>();
 
             tipo = (tipo == "") ? " " : tipo;
+            autor = (autor == "") ? " " : autor;
 
             if (!string.IsNullOrEmpty(tags))
             {
                 switch (orden)
                 {
                     case "2":
-                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.TipoPublicacion.Contains(tipo) && r.Etiqueta.Contains("-" + tags + "-")).OrderByDescending(r => r.Megusta).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
+                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.autor.Contains(autor) && r.TipoPublicacion.Contains(tipo) && r.Etiqueta.Contains("-" + tags + "-")).OrderByDescending(r => r.Megusta).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
                         break;
                     case "3":
-                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.TipoPublicacion.Contains(tipo) && r.Etiqueta.Contains("-" + tags + "-")).OrderBy(r => r.Destacar).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
+                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.autor.Contains(autor) && r.TipoPublicacion.Contains(tipo) && r.Etiqueta.Contains("-" + tags + "-")).OrderBy(r => r.Destacar).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
                         break;
                     default:
-                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.TipoPublicacion.Contains(tipo) && r.Etiqueta.Contains("-" + tags + "-")).OrderByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
+                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.autor.Contains(autor) && r.TipoPublicacion.Contains(tipo) && r.Etiqueta.Contains("-" + tags + "-")).OrderByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
                         break;
                 }
             }
@@ -70,16 +85,18 @@ namespace FINALObservatorioNet.Controllers
                 switch (orden)
                 {
                     case "2":
-                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.TipoPublicacion.Contains(tipo)).OrderByDescending(r => r.Megusta).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
+                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.autor.Contains(autor) && r.TipoPublicacion.Contains(tipo)).OrderByDescending(r => r.Megusta).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
                         break;
                     case "3":
-                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.TipoPublicacion.Contains(tipo)).OrderBy(r => r.Destacar).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
+                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.autor.Contains(autor) && r.TipoPublicacion.Contains(tipo)).OrderBy(r => r.Destacar).ThenByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
                         break;
                     default:
-                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.TipoPublicacion.Contains(tipo)).OrderByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
+                        secciones = await _context.view_ListaSeccionPublicacion.Where(r => r.autor.Contains(autor) && r.TipoPublicacion.Contains(tipo)).OrderByDescending(r => r.FechaFecha).Skip(i).Take(9).ToListAsync();
                         break;
                 }
             }
+
+
 
 
 

@@ -237,6 +237,18 @@
     <Compile Include="Models\Area_googleChart_Area.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Barra_amChart_HorizontalBar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -268,6 +280,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Datos_Grafico_Plotly_Line.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\donacion.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Encuesta.cs">
@@ -387,9 +402,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\nivel4.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\nivel5.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Noticias.cs">
@@ -563,6 +575,7 @@
     <Content Include="Content\images\convenio\penalolen.png" />
     <Content Include="Content\images\convenio\recoleta.png" />
     <Content Include="Content\images\convenio\vitacura_logo.png" />
+    <Content Include="Content\images\frase.jpg" />
     <Content Include="Content\images\graf.png" />
     <Content Include="Content\images\graf3_nivel.png" />
     <Content Include="Content\images\graf3_presupuestario.png" />
@@ -807,6 +820,9 @@
     <Content Include="Views\Pruebas\Index2.cshtml" />
     <Content Include="Views\Pruebas\Index3.cshtml" />
     <Content Include="Views\Pruebas\Index4.cshtml" />
+    <Content Include="Views\Home\DonacionCancelada.cshtml" />
+    <Content Include="Views\Home\DonacionRealizada.cshtml" />
+    <Content Include="Views\Home\Donacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

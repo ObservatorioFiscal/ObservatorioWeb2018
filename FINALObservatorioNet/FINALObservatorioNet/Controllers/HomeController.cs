@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 
@@ -71,7 +73,50 @@ namespace FINALObservatorioNet.Controllers
             return View();
         }
 
-        
+        public ActionResult Donacion()
+        {
+            return View();
+        }
+
+
+        public JsonResult AgregarPosibleDonacion(string Nombre, string Email,string Monto)
+        {
+            if(!string.IsNullOrEmpty(Nombre) && !string.IsNullOrEmpty(Nombre))
+            {
+                try
+                {
+                    donacion item = new donacion
+                    {
+                        Email = Email,
+                        Nombre = Nombre,
+                        Estado = Monto
+                    };
+                    _context.donacion.Add(item);
+                    _context.SaveChanges();
+
+                    return Json(true, JsonRequestBehavior.AllowGet);
+                }
+                catch
+                {
+                    return Json(false, JsonRequestBehavior.AllowGet);
+                }
+            }
+            return Json(false, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public ActionResult DonacionCancelada()
+        {
+            return View();
+        }
+
+        public ActionResult DonacionRealizada()
+        {
+            return View();
+        }
+
+
+
 
         public JsonResult FiltroListadoIndicador(int ingreso, int indicador, int unidad)
         {

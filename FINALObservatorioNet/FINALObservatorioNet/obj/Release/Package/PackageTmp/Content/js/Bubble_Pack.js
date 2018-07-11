@@ -454,6 +454,8 @@ document.write('<input id="typeFamily" name="typeFamily" type="hidden" />');
                     });
                 }
                 else if (ids2 != "") {
+                    ids2 = ids2.substr(1);
+                    ids2 = ids2.slice(0, -1);
                     var circle = svg.selectAll("circle")
                     .data(nodes)
                     .enter().append("circle")

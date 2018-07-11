@@ -3087,7 +3087,7 @@ namespace FINALObservatorioNet.Classes
             this.colorGlobal = "blue";
             List<int?> con = new List<int?>();
             List<int?> con2 = new List<int?>();
-            for (int i = 0; i < 9; i++) //EL 9 es por los 9 años que estan en la tabla 1998-2016
+            for (int i = 0; i < 10; i++) //EL 10 es por los 10 años que estan en la tabla 1998-2017
             {
                 con.Add(0);
                 con2.Add(0);
@@ -3102,6 +3102,7 @@ namespace FINALObservatorioNet.Classes
             auxComunaAños.Add("2014");
             auxComunaAños.Add("2015");
             auxComunaAños.Add("2016");
+            auxComunaAños.Add("2017");
 
             int contador = 0;
             List<int?> auxComunaValor = new List<int?>();
@@ -3124,10 +3125,11 @@ namespace FINALObservatorioNet.Classes
                         auxComunaValor.Add(var.ano7);
                         auxComunaValor.Add(var.ano8);
                         auxComunaValor.Add(var.ano9);
+                        auxComunaValor.Add(var.ano10);
                     }
                     else
                     {
-                        var auxiliar = item2.Lineas_Plotly_Listbox.GroupBy(r => r.IdSubCategoriaFK).Select(r => new { ano1 = r.Sum(l => l.ano1), ano2 = r.Sum(l => l.ano2), ano3 = r.Sum(l => l.ano3), ano4 = r.Sum(l => l.ano4), ano5 = r.Sum(l => l.ano5), ano6 = r.Sum(l => l.ano6), ano7 = r.Sum(l => l.ano7), ano8 = r.Sum(l => l.ano8), ano9 = r.Sum(l => l.ano9) }).First();
+                        var auxiliar = item2.Lineas_Plotly_Listbox.GroupBy(r => r.IdSubCategoriaFK).Select(r => new { ano1 = r.Sum(l => l.ano1), ano2 = r.Sum(l => l.ano2), ano3 = r.Sum(l => l.ano3), ano4 = r.Sum(l => l.ano4), ano5 = r.Sum(l => l.ano5), ano6 = r.Sum(l => l.ano6), ano7 = r.Sum(l => l.ano7), ano8 = r.Sum(l => l.ano8), ano9 = r.Sum(l => l.ano9), ano10 = r.Sum(l => l.ano10) }).First();
                         contador2++;
                         auxComunaValor.Add(auxiliar.ano1);
                         auxComunaValor.Add(auxiliar.ano2);
@@ -3138,6 +3140,7 @@ namespace FINALObservatorioNet.Classes
                         auxComunaValor.Add(auxiliar.ano7);
                         auxComunaValor.Add(auxiliar.ano8);
                         auxComunaValor.Add(auxiliar.ano9);
+                        auxComunaValor.Add(auxiliar.ano10);
                     }
 
                     List<int?> copia1 = new List<int?>(auxComunaValor);

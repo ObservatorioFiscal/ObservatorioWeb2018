@@ -1,0 +1,242 @@
+﻿@{
+    ViewData["Titulo"] = "";
+}
+
+<section class="row cuadro-contenido">
+    <article class="cuadro-padding">
+        <header class="col-md-12">
+            <h1 class="text-center">Donaciones, ¡ayudanos!</h1>
+            @*<h6>subtitulo</h6>*@
+            <hr />
+        </header>
+        <section class="conmargen row">
+            <div class="col-md-12">
+                <div id="frases">
+
+                </div>
+                @*<p id="frase1" class="frase text-center">"Aquellos que tienen el privilegio de saber tienen la obligación de actuar."<br /><small>Albert Einstein</small><br /><br /></p>
+        <p id="frase2" class="frase text-center hidden">"más ojos que miranel gasto público, mejor será su calidad y eficiencia, y menor el espacio discrecional que facilita la corrupción.."<br /><small>Equipo Observatorio</small><br /><br /></p>*@
+                <hr />
+                <h2 class="text-center"><br />¿Te gusta lo que hacemos?</h2>
+                <p class="text-center">Ayúdanos a mantener este trabajo para beneficio de los ciudadanos!</p>
+            </div>
+            <div class="row" style="background-image: url(../../Content/images/apoyo.jpg);
+    width: 100%;
+    background-size: cover;
+    background-color: #00c9ea;
+    border-radius: 10px;
+    border: 2px solid #00394a;
+    box-shadow: 1px 1px 5px #00394a;">
+                <div class="col-md-6 align-self-center">
+                    <img src="~/Content/images/donar.png" class="img-fluid" />
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <h3 class="text-center blanco" style="font-size:30px">Monto de tu aporte: <span id="valor"></span><br /><br /></h3>
+                    <div id="primero">
+                        <p class="text-center blanco">
+                            <a onclick="" class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" /> $3.000</a>
+                            <a onclick="" class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" />$5.000</a>
+                            <a onclick="" class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" />$10.000</a>
+                            <a onclick="" class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" />$15.000</a>
+                            <a onclick="" class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" />$20.000</a>
+                            <a onclick="" class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" />$25.000</a>
+                            <a class="btn btn-transparente dona"><img src="~/Content/images/monedas.png" class="img-fluid align-middle" />Otro monto</a>
+                        </p>
+                    </div>
+                    <div id="segundo" class="hidden">
+                        <label class="blanco">Nombre</label> <input type="text"  id="Nombre" nombre="Nombre" class="form-control" />
+                        <label class="blanco">Correo</label> <input type="email" id="email" nombre="email" class="form-control" />
+                        <p class="text-center">
+                            <a onclick="monto(0)" class="btn btn-transparente blanco"><img src="~/Content/images/transfe.png" class="img-fluid" /></a>
+                            <a onclick="monto(1)" class="btn btn-transparente blanco"><img src="~/Content/images/paypal.png" class="img-fluid" /> <small></small></a>
+                        </p>
+                        <p class="text-left"><a onclick="volverdona(2)" class="blanco btn btn-xs"> << volver</a></p>
+                    </div>
+                    <div id="tercero" class="hidden">
+                        <h3 class="text-center blanco">
+                            Fundación Observatorio del Gasto Fiscal<br />
+                            RUT 65.059.401-0<br />
+                            Banco BICE<br />
+                            Cuenta Corriente: 15771593<br />
+                            Mail: contacto@observatoriofiscal.cl<br />
+                        </h3>
+                        <p class="text-left"><a onclick="volverdona(1)" class="blanco btn btn-xs" > << volver</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center"><br /><br /><br /><br /><br /><br /><br /><b>El comercio es bueno. La publicidad no es mala. Pero no es apropiada aquí. No en el Observatorio.</b></p>
+                <iframe width="100%" height="540px" src="https://www.youtube.com/embed/pyWiEvWXWBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+        @*<footer class="conmargen">
+                descripcioninterior
+            </footer>*@
+        <div class="hidden">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario1">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario2">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario3">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario4">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario5">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario6">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formulario7">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+        </div>
+    </article>
+</section>
+
+@section Scripts{
+    <script>
+        $(".dona").click(function () {
+            $("#primero").addClass("hidden");
+            $("#segundo").removeClass("hidden");
+            $("#valor").text($(this).text())
+
+        });
+
+        function volverdona(aux) {
+            if (aux == 2) {
+                $("#segundo").addClass("hidden");
+                $("#primero").removeClass("hidden");
+                $("#valor").text("");
+            }
+            else {
+                $("#tercero").addClass("hidden");
+                $("#segundo").removeClass("hidden");
+            }
+        }
+
+        function monto(aux) {
+            if ($("#Nombre").val() != "" && $("#email").val() != "") {
+                $.ajax({
+                    cache: false,
+                    async: false,
+                    type: 'POST',
+                    data: {
+                        Nombre: $("#Nombre").val(),
+                        Email: $("#email").val(),
+                        Monto: $("#valor").val()
+                    },
+                    url: '../../Home/AgregarPosibleDonacion',
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data == true) {
+                            if (aux == 0) {
+                                $("#segundo").addClass("hidden");
+                                $("#tercero").removeClass("hidden");
+
+                            } else {
+                                var aux2 = $("#valor").text();
+                                switch (aux2) {
+                                    case "$3.000":
+                                        $('form#formulario1').submit();
+                                        break;
+                                    case "$5.000":
+                                        $('form#formulario2').submit();
+                                        break;
+                                    case "$10.000":
+                                        $('form#formulario3').submit();
+                                        break;
+                                    case "$15.000":
+                                        $('form#formulario4').submit();
+                                        break;
+                                    case "$20.000":
+                                        $('form#formulario5').submit();
+                                        break;
+                                    case "$25.000":
+                                        $('form#formulario6').submit();
+                                        break;
+                                    default:
+                                        $('form#formulario7').submit();
+                                        break;
+                                }
+                                $('form#formulario').submit();
+                            }
+                        }
+                    }
+                });
+            }
+            else {
+
+            }
+            
+        }
+
+
+    </script>
+
+
+    <script>
+        function frases_alea() {
+
+            frases = new Array();
+
+            frases[0] = '<p class="frase text-center">"Aquellos que tienen el privilegio de saber tienen la obligación de actuar."<br /><small>Albert Einstein</small><br /><br /></p>';
+            frases[1] = '<p class="frase text-center">"Más ojos que miran el gasto público, mejor será su calidad y eficiencia, y menor el espacio discrecional que facilita la corrupción.."<br /><small>Equipo Observatorio</small><br /><br /></p>';
+            
+            aleatorio = Math.floor(Math.random() * 2);
+
+            return frases[aleatorio];
+
+        }
+        onload = function () {
+            document.getElementById('frases').innerHTML = frases_alea();
+            setInterval(function () {
+                document.getElementById('frases').style.opacity = 0;
+                document.getElementById('frases').innerHTML = frases_alea();
+                document.getElementById('frases').style.opacity = 1;
+            }, 5000)
+        }
+    </script>
+}

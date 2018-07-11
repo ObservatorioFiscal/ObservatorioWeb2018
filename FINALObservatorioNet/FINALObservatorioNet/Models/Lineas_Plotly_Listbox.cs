@@ -29,6 +29,7 @@ namespace FINALObservatorioNet.Models
         public Nullable<int> ano7 { get; set; }
         public Nullable<int> ano8 { get; set; }
         public Nullable<int> ano9 { get; set; }
+        public Nullable<int> ano10 { get; set; }
     
         public virtual Grafico_Plotly_Listbox Grafico_Plotly_Listbox { get; set; }
         public virtual SubCategoria_Plotly_Listbox SubCategoria_Plotly_Listbox { get; set; }

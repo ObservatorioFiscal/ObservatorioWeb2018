@@ -63,6 +63,57 @@
     <Property Name="Color" Type="nvarchar" MaxLength="7" />
     <Property Name="IdGraficoFK" Type="int" />
   </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
   <EntityType Name="Barra_amChart_HorizontalBar">
     <Key>
       <PropertyRef Name="IdCuadrado" />
@@ -191,6 +242,15 @@
     <Property Name="Titulo" Type="nvarchar" MaxLength="500" />
     <Property Name="IdGraficoFK" Type="int" />
     <Property Name="numeroOpcion" Type="int" />
+  </EntityType>
+  <EntityType Name="donacion">
+    <Key>
+      <PropertyRef Name="IdDonacion" />
+    </Key>
+    <Property Name="IdDonacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Encuesta">
     <Key>
@@ -488,6 +548,7 @@
     <Property Name="ano7" Type="int" />
     <Property Name="ano8" Type="int" />
     <Property Name="ano9" Type="int" />
+    <Property Name="ano10" Type="int" />
   </EntityType>
   <EntityType Name="nivel1">
     <Key>
@@ -500,7 +561,7 @@
     <Property Name="Valor2" Type="int" />
     <Property Name="PorcentajeGastadoAlPapa" Type="nvarchar" MaxLength="5" />
     <Property Name="PorcentajePresupeustadoAlPapa" Type="nvarchar" MaxLength="5" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="120" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="nivel11">
     <Key>
@@ -513,7 +574,7 @@
     <Property Name="Valor2" Type="int" />
     <Property Name="PorcentajeGastadoAlPapa" Type="nvarchar" MaxLength="5" />
     <Property Name="PorcentajePresupeustadoAlPapa" Type="nvarchar" MaxLength="5" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="120" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="nivel2">
     <Key>
@@ -527,7 +588,7 @@
     <Property Name="Valor2" Type="int" />
     <Property Name="PorcentajeGastadoAlPapa" Type="nvarchar" MaxLength="5" />
     <Property Name="PorcentajePresupeustadoAlPapa" Type="nvarchar" MaxLength="5" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="120" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="nivel22">
     <Key>
@@ -541,7 +602,7 @@
     <Property Name="Valor2" Type="int" />
     <Property Name="PorcentajeGastadoAlPapa" Type="nvarchar" MaxLength="5" />
     <Property Name="PorcentajePresupeustadoAlPapa" Type="nvarchar" MaxLength="5" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="120" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="nivel3">
     <Key>
@@ -555,7 +616,7 @@
     <Property Name="Valor2" Type="int" />
     <Property Name="PorcentajeGastadoAlPapa" Type="nvarchar" MaxLength="5" />
     <Property Name="PorcentajePresupeustadoAlPapa" Type="nvarchar" MaxLength="5" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="120" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="nivel4">
     <Key>
@@ -569,18 +630,7 @@
     <Property Name="Valor2" Type="int" />
     <Property Name="PorcentajeGastadoAlPapa" Type="nvarchar" MaxLength="5" />
     <Property Name="PorcentajePresupeustadoAlPapa" Type="nvarchar" MaxLength="5" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="120" />
-  </EntityType>
-  <EntityType Name="nivel5">
-    <Key>
-      <PropertyRef Name="IdNivel5" />
-    </Key>
-    <Property Name="IdNivel5" Type="int" Nullable="false" />
-    <Property Name="Nombre" Type="nvarchar" MaxLength="500" />
-    <Property Name="Valor" Type="int" />
-    <Property Name="Tipo" Type="bit" />
-    <Property Name="Fk_IdNivel4" Type="int" />
-    <Property Name="Valor2" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="Noticias">
     <Key>
@@ -1147,7 +1197,7 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__nivel2__Fk_IdNiv__0A688BB1">
+  <Association Name="FK__nivel2__Fk_IdNiv__6442E2C9">
     <End Role="nivel1" Type="Self.nivel1" Multiplicity="0..1" />
     <End Role="nivel2" Type="Self.nivel2" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1159,7 +1209,7 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__nivel22__Fk_IdNi__1D7B6025">
+  <Association Name="FK__nivel22__Fk_IdNi__6EC0713C">
     <End Role="nivel11" Type="Self.nivel11" Multiplicity="0..1" />
     <End Role="nivel22" Type="Self.nivel22" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1171,7 +1221,7 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__nivel3__Fk_IdNiv__0D44F85C">
+  <Association Name="FK__nivel3__Fk_IdNiv__671F4F74">
     <End Role="nivel2" Type="Self.nivel2" Multiplicity="0..1" />
     <End Role="nivel3" Type="Self.nivel3" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1183,7 +1233,7 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__nivel4__Fk_IdNiv__10216507">
+  <Association Name="FK__nivel4__Fk_IdNiv__69FBBC1F">
     <End Role="nivel3" Type="Self.nivel3" Multiplicity="0..1" />
     <End Role="nivel4" Type="Self.nivel4" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1192,18 +1242,6 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       </Principal>
       <Dependent Role="nivel4">
         <PropertyRef Name="Fk_IdNivel3" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__nivel5__Fk_IdNiv__12FDD1B2">
-    <End Role="nivel4" Type="Self.nivel4" Multiplicity="0..1" />
-    <End Role="nivel5" Type="Self.nivel5" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="nivel4">
-        <PropertyRef Name="IdNivel4" />
-      </Principal>
-      <Dependent Role="nivel5">
-        <PropertyRef Name="Fk_IdNivel4" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1315,12 +1353,73 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="base999ModelStoreContainer">
     <EntitySet Name="Abuelo_Biblioteca" EntityType="Self.Abuelo_Biblioteca" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AbueloCirculosVarios" EntityType="Self.AbueloCirculosVarios" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AplicacionQuiz" EntityType="Self.AplicacionQuiz" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AppMunicipalidad" EntityType="Self.AppMunicipalidad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Area_googleChart_Area" EntityType="Self.Area_googleChart_Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Barra_amChart_HorizontalBar" EntityType="Self.Barra_amChart_HorizontalBar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categoria_Plotly_Listbox" EntityType="Self.Categoria_Plotly_Listbox" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Circulos_Grafico_d3Object_Bubble" EntityType="Self.Circulos_Grafico_d3Object_Bubble" Schema="dbo" store:Type="Tables" />
@@ -1332,6 +1431,7 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
     <EntitySet Name="DatosApp2" EntityType="Self.DatosApp2" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DatosdupliCirculosVarios" EntityType="Self.DatosdupliCirculosVarios" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DatosSoloUnoCirculosVarios" EntityType="Self.DatosSoloUnoCirculosVarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="donacion" EntityType="Self.donacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Encuesta" EntityType="Self.Encuesta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Estudio" EntityType="Self.Estudio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EstudioCategoria" EntityType="Self.EstudioCategoria" Schema="dbo" store:Type="Tables" />
@@ -1366,7 +1466,6 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
     <EntitySet Name="nivel22" EntityType="Self.nivel22" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="nivel3" EntityType="Self.nivel3" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="nivel4" EntityType="Self.nivel4" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="nivel5" EntityType="Self.nivel5" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Padre_Biblioteca" EntityType="Self.Padre_Biblioteca" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Padre_Grafico_Timeline" EntityType="Self.Padre_Grafico_Timeline" Schema="dbo" store:Type="Tables" />
@@ -1554,25 +1653,21 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
       <End Role="SubCategoria_Plotly_Listbox" EntitySet="SubCategoria_Plotly_Listbox" />
       <End Role="Lineas_Plotly_Listbox" EntitySet="Lineas_Plotly_Listbox" />
     </AssociationSet>
-    <AssociationSet Name="FK__nivel2__Fk_IdNiv__0A688BB1" Association="Self.FK__nivel2__Fk_IdNiv__0A688BB1">
+    <AssociationSet Name="FK__nivel2__Fk_IdNiv__6442E2C9" Association="Self.FK__nivel2__Fk_IdNiv__6442E2C9">
       <End Role="nivel1" EntitySet="nivel1" />
       <End Role="nivel2" EntitySet="nivel2" />
     </AssociationSet>
-    <AssociationSet Name="FK__nivel22__Fk_IdNi__1D7B6025" Association="Self.FK__nivel22__Fk_IdNi__1D7B6025">
+    <AssociationSet Name="FK__nivel22__Fk_IdNi__6EC0713C" Association="Self.FK__nivel22__Fk_IdNi__6EC0713C">
       <End Role="nivel11" EntitySet="nivel11" />
       <End Role="nivel22" EntitySet="nivel22" />
     </AssociationSet>
-    <AssociationSet Name="FK__nivel3__Fk_IdNiv__0D44F85C" Association="Self.FK__nivel3__Fk_IdNiv__0D44F85C">
+    <AssociationSet Name="FK__nivel3__Fk_IdNiv__671F4F74" Association="Self.FK__nivel3__Fk_IdNiv__671F4F74">
       <End Role="nivel2" EntitySet="nivel2" />
       <End Role="nivel3" EntitySet="nivel3" />
     </AssociationSet>
-    <AssociationSet Name="FK__nivel4__Fk_IdNiv__10216507" Association="Self.FK__nivel4__Fk_IdNiv__10216507">
+    <AssociationSet Name="FK__nivel4__Fk_IdNiv__69FBBC1F" Association="Self.FK__nivel4__Fk_IdNiv__69FBBC1F">
       <End Role="nivel3" EntitySet="nivel3" />
       <End Role="nivel4" EntitySet="nivel4" />
-    </AssociationSet>
-    <AssociationSet Name="FK__nivel5__Fk_IdNiv__12FDD1B2" Association="Self.FK__nivel5__Fk_IdNiv__12FDD1B2">
-      <End Role="nivel4" EntitySet="nivel4" />
-      <End Role="nivel5" EntitySet="nivel5" />
     </AssociationSet>
     <AssociationSet Name="FK__Padre_Bib__IdAbu__0A9D95DB" Association="Self.FK__Padre_Bib__IdAbu__0A9D95DB">
       <End Role="Abuelo_Biblioteca" EntitySet="Abuelo_Biblioteca" />
@@ -1609,6 +1704,22 @@ advertencia 6002: La tabla o vista 'base2017.dbo.view_ListaSeccionVisualizacion'
     <AssociationSet Name="FK__Torta_Gra__IdGra__3D2915A8" Association="Self.FK__Torta_Gra__IdGra__3D2915A8">
       <End Role="Grafico_googleChart_Pie" EntitySet="Grafico_googleChart_Pie" />
       <End Role="Torta_Grafico_googleChart_Pie" EntitySet="Torta_Grafico_googleChart_Pie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -30,6 +30,10 @@ namespace FINALObservatorioNet.Models
         public virtual DbSet<AplicacionQuiz> AplicacionQuiz { get; set; }
         public virtual DbSet<AppMunicipalidad> AppMunicipalidad { get; set; }
         public virtual DbSet<Area_googleChart_Area> Area_googleChart_Area { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Barra_amChart_HorizontalBar> Barra_amChart_HorizontalBar { get; set; }
         public virtual DbSet<Categoria_Plotly_Listbox> Categoria_Plotly_Listbox { get; set; }
         public virtual DbSet<Circulos_Grafico_d3Object_Bubble> Circulos_Grafico_d3Object_Bubble { get; set; }
@@ -75,7 +79,6 @@ namespace FINALObservatorioNet.Models
         public virtual DbSet<nivel22> nivel22 { get; set; }
         public virtual DbSet<nivel3> nivel3 { get; set; }
         public virtual DbSet<nivel4> nivel4 { get; set; }
-        public virtual DbSet<nivel5> nivel5 { get; set; }
         public virtual DbSet<Noticias> Noticias { get; set; }
         public virtual DbSet<Padre_Biblioteca> Padre_Biblioteca { get; set; }
         public virtual DbSet<Padre_Grafico_Timeline> Padre_Grafico_Timeline { get; set; }
@@ -94,5 +97,6 @@ namespace FINALObservatorioNet.Models
         public virtual DbSet<view_ListaSeccionNoticia> view_ListaSeccionNoticia { get; set; }
         public virtual DbSet<view_ListaSeccionPublicacion> view_ListaSeccionPublicacion { get; set; }
         public virtual DbSet<view_ListaSeccionVisualizacion> view_ListaSeccionVisualizacion { get; set; }
+        public virtual DbSet<donacion> donacion { get; set; }
     }
 }

@@ -43,7 +43,8 @@ namespace FINALObservatorioNet.Controllers
         {
             secciones.Recomendado = secciones.Recomendado ?? "";
             secciones.dataset = secciones.dataset ?? "";
-            secciones.autor = secciones.autor ?? "";
+            secciones.autor = " " + secciones.autor;
+            //secciones.autor = secciones.autor ?? " ";
             if (secciones.TipoPublicacion == null)
             {
                 secciones.TipoPublicacion = "";

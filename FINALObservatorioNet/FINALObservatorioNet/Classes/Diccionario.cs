@@ -186,6 +186,7 @@ namespace FINALObservatorioNet
         public static int Informe       = 4;
         public static int Principio     = 5;
         public static int Reportaje     = 6;
+        public static int Analisis      = 7;
 
         public static Dictionary<int, string> diccionarioTipoPublicacion = new Dictionary<int, string>
         {
@@ -194,7 +195,8 @@ namespace FINALObservatorioNet
             {Infografia, "Infografias"},
             {Informe, "Informes"},
             {Principio, "Principios"},
-            {Reportaje, "Reportajes"}
+            {Reportaje, "Reportajes"},
+            {Analisis, "Análisis"}
         };
     }
 }
