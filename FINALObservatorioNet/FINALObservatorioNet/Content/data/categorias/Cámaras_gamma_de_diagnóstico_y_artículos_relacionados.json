@@ -1,0 +1,1 @@
+{"Cámaras_gamma_de_diagnóstico_y_artículos_relacionados": [ {"nodes": [{"id": "San Juan de la Costa", "group": 1, "monto": 12241948, "cantidad": 1},{"id": "W.REICHMANN Y CIA. LTDA.", "group": 2, "monto": 12241948, "cantidad": 1}],"links": [{"source": "W.REICHMANN Y CIA. LTDA.", "target": "San Juan de la Costa", "monto": 12241948, "cantidad": 1}]	} ] }

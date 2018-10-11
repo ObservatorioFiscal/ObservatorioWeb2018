@@ -1,0 +1,1 @@
+{"Construcciones_religiosas": [ {"nodes": [{"id": "Lampa", "group": 1, "monto": 175446, "cantidad": 1},{"id": "Comercializadora Cabello Ltda.", "group": 2, "monto": 175446, "cantidad": 1}],"links": [{"source": "Comercializadora Cabello Ltda.", "target": "Lampa", "monto": 175446, "cantidad": 1}]	} ] }

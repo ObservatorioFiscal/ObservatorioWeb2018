@@ -1,0 +1,1 @@
+{"Diplomacia": [ {"nodes": [{"id": "Valdivia", "group": 1, "monto": 594588, "cantidad": 2},{"id": "Cortocircuito", "group": 2, "monto": 594588, "cantidad": 2}],"links": [{"source": "Cortocircuito", "target": "Valdivia", "monto": 594588, "cantidad": 2}]	} ] }

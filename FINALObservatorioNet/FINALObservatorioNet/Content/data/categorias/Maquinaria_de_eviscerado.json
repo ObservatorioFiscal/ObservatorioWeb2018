@@ -1,0 +1,1 @@
+{"Maquinaria_de_eviscerado": [ {"nodes": [{"id": "Nueva Imperial", "group": 1, "monto": 1374988, "cantidad": 1},{"id": "Finning Chile S.A.", "group": 2, "monto": 1374988, "cantidad": 1}],"links": [{"source": "Finning Chile S.A.", "target": "Nueva Imperial", "monto": 1374988, "cantidad": 1}]	} ] }

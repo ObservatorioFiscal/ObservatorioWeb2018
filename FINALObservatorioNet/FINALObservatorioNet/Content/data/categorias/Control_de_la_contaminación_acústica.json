@@ -1,0 +1,1 @@
+{"Control_de_la_contaminación_acústica": [ {"nodes": [{"id": "Coihueco", "group": 1, "monto": 2336183, "cantidad": 1},{"id": "SERVICIOS PANRUAX LTDA.", "group": 2, "monto": 2336183, "cantidad": 1}],"links": [{"source": "SERVICIOS PANRUAX LTDA.", "target": "Coihueco", "monto": 2336183, "cantidad": 1}]	} ] }

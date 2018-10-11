@@ -1,0 +1,1 @@
+{"Mobiliario_de_demostración": [ {"nodes": [{"id": "Chimbarongo", "group": 1, "monto": 296700, "cantidad": 1},{"id": "Victor Rene", "group": 2, "monto": 296700, "cantidad": 1}],"links": [{"source": "Victor Rene", "target": "Chimbarongo", "monto": 296700, "cantidad": 1}]	} ] }

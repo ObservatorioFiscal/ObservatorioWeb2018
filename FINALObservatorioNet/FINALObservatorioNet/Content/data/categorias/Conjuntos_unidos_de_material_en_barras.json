@@ -1,0 +1,1 @@
+{"Conjuntos_unidos_de_material_en_barras": [ {"nodes": [{"id": "Antofagasta", "group": 1, "monto": 2436250, "cantidad": 1},{"id": "Servicios Generales Claudio Badilla Saavedra EIRL", "group": 2, "monto": 2436250, "cantidad": 1}],"links": [{"source": "Servicios Generales Claudio Badilla Saavedra EIRL", "target": "Antofagasta", "monto": 2436250, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Losas_refractarias": [ {"nodes": [{"id": "Torres del Paine", "group": 1, "monto": 382354, "cantidad": 1},{"id": "pablo eduardo jose luengo muñoz", "group": 2, "monto": 382354, "cantidad": 1}],"links": [{"source": "pablo eduardo jose luengo muñoz", "target": "Torres del Paine", "monto": 382354, "cantidad": 1}]	} ] }

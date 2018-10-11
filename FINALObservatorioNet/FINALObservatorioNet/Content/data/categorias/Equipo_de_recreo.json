@@ -1,0 +1,1 @@
+{"Equipo_de_recreo": [ {"nodes": [{"id": "Curacaví", "group": 1, "monto": 263531, "cantidad": 1},{"id": "El Rorro", "group": 2, "monto": 263531, "cantidad": 1}],"links": [{"source": "El Rorro", "target": "Curacaví", "monto": 263531, "cantidad": 1}]	} ] }

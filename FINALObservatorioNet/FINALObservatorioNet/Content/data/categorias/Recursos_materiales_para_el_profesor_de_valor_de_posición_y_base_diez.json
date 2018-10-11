@@ -1,0 +1,1 @@
+{"Recursos_materiales_para_el_profesor_de_valor_de_posición_y_base_diez": [ {"nodes": [{"id": "Nueva Imperial", "group": 1, "monto": 322458, "cantidad": 1},{"id": "LEONARDO DANIEL", "group": 2, "monto": 322458, "cantidad": 1}],"links": [{"source": "LEONARDO DANIEL", "target": "Nueva Imperial", "monto": 322458, "cantidad": 1}]	} ] }

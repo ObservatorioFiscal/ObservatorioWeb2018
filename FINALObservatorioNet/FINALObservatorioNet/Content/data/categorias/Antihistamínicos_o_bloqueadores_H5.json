@@ -1,0 +1,1 @@
+{"Antihistamínicos_o_bloqueadores_H5": [ {"nodes": [{"id": "Cabrero", "group": 1, "monto": 985476, "cantidad": 3},{"id": "ETHON PHARMACEUTICALS SPA.", "group": 2, "monto": 985476, "cantidad": 3}],"links": [{"source": "ETHON PHARMACEUTICALS SPA.", "target": "Cabrero", "monto": 985476, "cantidad": 3}]	} ] }

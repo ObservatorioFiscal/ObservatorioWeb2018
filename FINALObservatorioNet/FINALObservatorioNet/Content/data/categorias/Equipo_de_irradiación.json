@@ -1,0 +1,1 @@
+{"Equipo_de_irradiación": [ {"nodes": [{"id": "El Monte", "group": 1, "monto": 1425189, "cantidad": 1},{"id": "F y F Ltda.", "group": 2, "monto": 1425189, "cantidad": 1}],"links": [{"source": "F y F Ltda.", "target": "El Monte", "monto": 1425189, "cantidad": 1}]	} ] }

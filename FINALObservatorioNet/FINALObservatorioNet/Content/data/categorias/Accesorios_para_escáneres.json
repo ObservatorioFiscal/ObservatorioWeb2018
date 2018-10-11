@@ -1,0 +1,1 @@
+{"Accesorios_para_escáneres": [ {"nodes": [{"id": "Providencia", "group": 1, "monto": 330869, "cantidad": 1},{"id": "EDAPI S.A.", "group": 2, "monto": 330869, "cantidad": 1}],"links": [{"source": "EDAPI S.A.", "target": "Providencia", "monto": 330869, "cantidad": 1}]	} ] }

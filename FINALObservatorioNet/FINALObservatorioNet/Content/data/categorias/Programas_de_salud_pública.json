@@ -1,0 +1,1 @@
+{"Programas_de_salud_pública": [ {"nodes": [{"id": "El Tabo", "group": 1, "monto": 645599, "cantidad": 1},{"id": "LEONARDO ENRIQUE", "group": 2, "monto": 645599, "cantidad": 1}],"links": [{"source": "LEONARDO ENRIQUE", "target": "El Tabo", "monto": 645599, "cantidad": 1}]	} ] }

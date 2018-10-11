@@ -1,0 +1,1 @@
+{"Agentes_cardioplégicos": [ {"nodes": [{"id": "Talca", "group": 1, "monto": 372640, "cantidad": 1},{"id": "COMERCIAL DIPROSALUD LTDA", "group": 2, "monto": 372640, "cantidad": 1}],"links": [{"source": "COMERCIAL DIPROSALUD LTDA", "target": "Talca", "monto": 372640, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Piedras_preciosas_o_semipreciosas_industriales": [ {"nodes": [{"id": "Cochrane", "group": 1, "monto": 142745, "cantidad": 1},{"id": "JOSE GUILLERMO MELERO REYES E HIJOS LTDA", "group": 2, "monto": 142745, "cantidad": 1}],"links": [{"source": "JOSE GUILLERMO MELERO REYES E HIJOS LTDA", "target": "Cochrane", "monto": 142745, "cantidad": 1}]	} ] }

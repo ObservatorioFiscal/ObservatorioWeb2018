@@ -1,0 +1,1 @@
+{"Equipo_de_medición_de_rocas_y_estratos": [ {"nodes": [{"id": "Puerto Montt", "group": 1, "monto": 1288158, "cantidad": 1},{"id": "incoval", "group": 2, "monto": 1288158, "cantidad": 1}],"links": [{"source": "incoval", "target": "Puerto Montt", "monto": 1288158, "cantidad": 1}]	} ] }

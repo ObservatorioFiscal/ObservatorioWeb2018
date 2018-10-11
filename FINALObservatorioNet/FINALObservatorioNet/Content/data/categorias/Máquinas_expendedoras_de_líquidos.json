@@ -1,0 +1,1 @@
+{"Máquinas_expendedoras_de_líquidos": [ {"nodes": [{"id": "Lago Ranco", "group": 1, "monto": 1277650, "cantidad": 1},{"id": "Comercial Maquinet Limitada", "group": 2, "monto": 1277650, "cantidad": 1}],"links": [{"source": "Comercial Maquinet Limitada", "target": "Lago Ranco", "monto": 1277650, "cantidad": 1}]	} ] }

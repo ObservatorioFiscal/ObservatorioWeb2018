@@ -1,0 +1,1 @@
+{"Servicios_misioneros": [ {"nodes": [{"id": "Santa María", "group": 1, "monto": 835679, "cantidad": 3},{"id": "IMPRENTA AMPUERO", "group": 2, "monto": 835679, "cantidad": 3}],"links": [{"source": "IMPRENTA AMPUERO", "target": "Santa María", "monto": 835679, "cantidad": 3}]	} ] }

@@ -1,0 +1,1 @@
+{"Piezas_estiradas": [ {"nodes": [{"id": "Machalí", "group": 1, "monto": 2621352, "cantidad": 1},{"id": "Ferreteria Machali", "group": 2, "monto": 2621352, "cantidad": 1}],"links": [{"source": "Ferreteria Machali", "target": "Machalí", "monto": 2621352, "cantidad": 1}]	} ] }

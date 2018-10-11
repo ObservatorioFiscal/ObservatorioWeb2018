@@ -1,0 +1,1 @@
+{"Material_de_referencia_o_manuales_de_software_electrónico": [ {"nodes": [{"id": "Santiago", "group": 1, "monto": 118017, "cantidad": 1},{"id": "Inversol SpA", "group": 2, "monto": 118017, "cantidad": 1}],"links": [{"source": "Inversol SpA", "target": "Santiago", "monto": 118017, "cantidad": 1}]	} ] }

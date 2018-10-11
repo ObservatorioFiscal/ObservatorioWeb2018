@@ -1,0 +1,1 @@
+{"Política_comercial": [ {"nodes": [{"id": "Loncoche", "group": 1, "monto": 228650, "cantidad": 1},{"id": "SIEPL LTDA.", "group": 2, "monto": 228650, "cantidad": 1}],"links": [{"source": "SIEPL LTDA.", "target": "Loncoche", "monto": 228650, "cantidad": 1}]	} ] }

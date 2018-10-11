@@ -1,0 +1,1 @@
+{"Accesorios_de_producción_de_barrenas_hacia_abajo": [ {"nodes": [{"id": "Peralillo", "group": 1, "monto": 301400, "cantidad": 1},{"id": "Karen  francisca", "group": 2, "monto": 301400, "cantidad": 1}],"links": [{"source": "Karen  francisca", "target": "Peralillo", "monto": 301400, "cantidad": 1}]	} ] }

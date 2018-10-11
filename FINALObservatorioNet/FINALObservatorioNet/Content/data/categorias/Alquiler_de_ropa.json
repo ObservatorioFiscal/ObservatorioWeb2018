@@ -1,0 +1,1 @@
+{"Alquiler_de_ropa": [ {"nodes": [{"id": "Río Negro", "group": 1, "monto": 428571, "cantidad": 3},{"id": "Nancy Olivia", "group": 2, "monto": 428571, "cantidad": 3}],"links": [{"source": "Nancy Olivia", "target": "Río Negro", "monto": 428571, "cantidad": 3}]	} ] }

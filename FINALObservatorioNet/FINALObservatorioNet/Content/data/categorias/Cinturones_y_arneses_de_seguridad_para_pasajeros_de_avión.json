@@ -1,0 +1,1 @@
+{"Cinturones_y_arneses_de_seguridad_para_pasajeros_de_avión": [ {"nodes": [{"id": "El Carmen", "group": 1, "monto": 1826305, "cantidad": 1},{"id": "ComercialrRossy", "group": 2, "monto": 1826305, "cantidad": 1}],"links": [{"source": "ComercialrRossy", "target": "El Carmen", "monto": 1826305, "cantidad": 1}]	} ] }

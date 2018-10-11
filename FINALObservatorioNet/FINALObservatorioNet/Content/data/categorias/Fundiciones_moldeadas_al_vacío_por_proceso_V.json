@@ -1,0 +1,1 @@
+{"Fundiciones_moldeadas_al_vacío_por_proceso_V": [ {"nodes": [{"id": "Nueva Imperial", "group": 1, "monto": 169149, "cantidad": 1},{"id": "KAUFMANN S.A. Vehículos Motorizados", "group": 2, "monto": 169149, "cantidad": 1}],"links": [{"source": "KAUFMANN S.A. Vehículos Motorizados", "target": "Nueva Imperial", "monto": 169149, "cantidad": 1}]	} ] }

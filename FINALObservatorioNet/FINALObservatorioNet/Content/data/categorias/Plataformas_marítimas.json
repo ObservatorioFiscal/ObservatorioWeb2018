@@ -1,0 +1,1 @@
+{"Plataformas_marítimas": [ {"nodes": [{"id": "La Serena", "group": 1, "monto": 19579832, "cantidad": 1},{"id": "GABRIEL", "group": 2, "monto": 19579832, "cantidad": 1}],"links": [{"source": "GABRIEL", "target": "La Serena", "monto": 19579832, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Suministros_de_cuarto_oscuro": [ {"nodes": [{"id": "Sagrada Familia", "group": 1, "monto": 28356, "cantidad": 1},{"id": "COMERCIALIZADORA Y DISTRIBUIDORA DE LIBROS LIMITAD", "group": 2, "monto": 28356, "cantidad": 1}],"links": [{"source": "COMERCIALIZADORA Y DISTRIBUIDORA DE LIBROS LIMITAD", "target": "Sagrada Familia", "monto": 28356, "cantidad": 1}]	} ] }

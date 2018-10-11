@@ -1,0 +1,1 @@
+{"Sistemas_de_control_principal_del_avión": [ {"nodes": [{"id": "San Ignacio", "group": 1, "monto": 6664821, "cantidad": 3},{"id": "Sistemas Modulares de Computación Ltda.", "group": 2, "monto": 6664821, "cantidad": 3}],"links": [{"source": "Sistemas Modulares de Computación Ltda.", "target": "San Ignacio", "monto": 6664821, "cantidad": 3}]	} ] }

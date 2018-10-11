@@ -1,0 +1,1 @@
+{"Proyectos_curriculares_de_artes_integradas": [ {"nodes": [{"id": "Colchane", "group": 1, "monto": 2402405, "cantidad": 1},{"id": "Ravi Kumar Thadani", "group": 2, "monto": 2402405, "cantidad": 1}],"links": [{"source": "Ravi Kumar Thadani", "target": "Colchane", "monto": 2402405, "cantidad": 1}]	} ] }

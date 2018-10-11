@@ -1,0 +1,1 @@
+{"Hormonas_de_la_pituitaria_posterior": [ {"nodes": [{"id": "Cabrero", "group": 1, "monto": 541710, "cantidad": 1},{"id": "PFIZER CHILE S.A.", "group": 2, "monto": 541710, "cantidad": 1}],"links": [{"source": "PFIZER CHILE S.A.", "target": "Cabrero", "monto": 541710, "cantidad": 1}]	} ] }

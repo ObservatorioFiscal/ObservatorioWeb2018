@@ -1,0 +1,1 @@
+{"Productos_de_transcripción_y_traducción_in_vitro": [ {"nodes": [{"id": "Rengo", "group": 1, "monto": 872740, "cantidad": 1},{"id": "COMERCIALIZADORA ILHABELLA EIRL", "group": 2, "monto": 872740, "cantidad": 1}],"links": [{"source": "COMERCIALIZADORA ILHABELLA EIRL", "target": "Rengo", "monto": 872740, "cantidad": 1}]	} ] }

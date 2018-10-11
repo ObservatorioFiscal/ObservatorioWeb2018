@@ -1,0 +1,1 @@
+{"Planificación_y_control_de_la_producción": [ {"nodes": [{"id": "Lolol", "group": 1, "monto": 9076377, "cantidad": 1},{"id": "Roberto Andres Ramirez Flores", "group": 2, "monto": 9076377, "cantidad": 1}],"links": [{"source": "Roberto Andres Ramirez Flores", "target": "Lolol", "monto": 9076377, "cantidad": 1}]	} ] }

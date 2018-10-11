@@ -1,0 +1,1 @@
+{"Aparejos_del_campo_petrolífero": [ {"nodes": [{"id": "Quemchi", "group": 1, "monto": 335000, "cantidad": 1},{"id": "DANIEL ANTONIO", "group": 2, "monto": 335000, "cantidad": 1}],"links": [{"source": "DANIEL ANTONIO", "target": "Quemchi", "monto": 335000, "cantidad": 1}]	} ] }

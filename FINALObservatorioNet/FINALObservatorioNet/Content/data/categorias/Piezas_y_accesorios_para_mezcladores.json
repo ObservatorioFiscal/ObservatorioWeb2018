@@ -1,0 +1,1 @@
+{"Piezas_y_accesorios_para_mezcladores": [ {"nodes": [{"id": "Santo Domingo", "group": 1, "monto": 302286, "cantidad": 1},{"id": "IMPLEMENTA SPA", "group": 2, "monto": 302286, "cantidad": 1}],"links": [{"source": "IMPLEMENTA SPA", "target": "Santo Domingo", "monto": 302286, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Sistemas_de_posicionamiento_y_navegación_aeroespacial": [ {"nodes": [{"id": "Pinto", "group": 1, "monto": 5199213, "cantidad": 3},{"id": "Karin Patricia", "group": 2, "monto": 5199213, "cantidad": 3}],"links": [{"source": "Karin Patricia", "target": "Pinto", "monto": 5199213, "cantidad": 3}]	} ] }

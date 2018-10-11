@@ -1,0 +1,1 @@
+{"Maquinaria_de_procesamiento_y_fabricación_electrónica": [ {"nodes": [{"id": "San Joaquín", "group": 1, "monto": 54992, "cantidad": 1},{"id": "E-Certchile", "group": 2, "monto": 54992, "cantidad": 1}],"links": [{"source": "E-Certchile", "target": "San Joaquín", "monto": 54992, "cantidad": 1}]	} ] }

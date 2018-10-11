@@ -1,0 +1,1 @@
+{"Fármacos_de_tratamiento_de_la_esclerosis_lateral_amiotrófica_(ELA)": [ {"nodes": [{"id": "Puerto Montt", "group": 1, "monto": 1633897, "cantidad": 2},{"id": "PHARMA INVESTI DE CHILE S.A.", "group": 2, "monto": 1633897, "cantidad": 2}],"links": [{"source": "PHARMA INVESTI DE CHILE S.A.", "target": "Puerto Montt", "monto": 1633897, "cantidad": 2}]	} ] }

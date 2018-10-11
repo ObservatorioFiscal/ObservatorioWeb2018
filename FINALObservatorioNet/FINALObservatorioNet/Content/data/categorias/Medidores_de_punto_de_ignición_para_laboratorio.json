@@ -1,0 +1,1 @@
+{"Medidores_de_punto_de_ignición_para_laboratorio": [ {"nodes": [{"id": "Pinto", "group": 1, "monto": 698911, "cantidad": 1},{"id": "Ferretería San Sebastián", "group": 2, "monto": 698911, "cantidad": 1}],"links": [{"source": "Ferretería San Sebastián", "target": "Pinto", "monto": 698911, "cantidad": 1}]	} ] }

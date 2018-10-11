@@ -1,0 +1,1 @@
+{"Conjuntos_de_placas_soldadas": [ {"nodes": [{"id": "Providencia", "group": 1, "monto": 262542, "cantidad": 1},{"id": "AREVALO VALENZUELA JORGE OSVALDO Y OTRO", "group": 2, "monto": 262542, "cantidad": 1}],"links": [{"source": "AREVALO VALENZUELA JORGE OSVALDO Y OTRO", "target": "Providencia", "monto": 262542, "cantidad": 1}]	} ] }

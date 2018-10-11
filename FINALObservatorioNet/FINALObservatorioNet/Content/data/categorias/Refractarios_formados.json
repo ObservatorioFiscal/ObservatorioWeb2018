@@ -1,0 +1,1 @@
+{"Refractarios_formados": [ {"nodes": [{"id": "Lota", "group": 1, "monto": 5338713, "cantidad": 3},{"id": "ivan escobar", "group": 2, "monto": 5338713, "cantidad": 3}],"links": [{"source": "ivan escobar", "target": "Lota", "monto": 5338713, "cantidad": 3}]	} ] }

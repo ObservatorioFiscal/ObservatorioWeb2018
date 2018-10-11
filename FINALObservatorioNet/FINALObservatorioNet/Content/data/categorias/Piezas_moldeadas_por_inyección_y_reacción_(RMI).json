@@ -1,0 +1,1 @@
+{"Piezas_moldeadas_por_inyección_y_reacción_(RMI)": [ {"nodes": [{"id": "Curanilahue", "group": 1, "monto": 191144, "cantidad": 1},{"id": "VIDRIOS BIZAMA", "group": 2, "monto": 191144, "cantidad": 1}],"links": [{"source": "VIDRIOS BIZAMA", "target": "Curanilahue", "monto": 191144, "cantidad": 1}]	} ] }

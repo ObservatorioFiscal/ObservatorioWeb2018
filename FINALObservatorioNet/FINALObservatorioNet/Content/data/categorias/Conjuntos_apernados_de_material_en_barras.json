@@ -1,0 +1,1 @@
+{"Conjuntos_apernados_de_material_en_barras": [ {"nodes": [{"id": "San Fabián", "group": 1, "monto": 2659958, "cantidad": 2},{"id": "tallermecanicodonjose", "group": 2, "monto": 2659958, "cantidad": 2}],"links": [{"source": "tallermecanicodonjose", "target": "San Fabián", "monto": 2659958, "cantidad": 2}]	} ] }

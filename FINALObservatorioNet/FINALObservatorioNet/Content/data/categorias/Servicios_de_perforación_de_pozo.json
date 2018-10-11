@@ -1,0 +1,1 @@
+{"Servicios_de_perforación_de_pozo": [ {"nodes": [{"id": "Nueva Imperial", "group": 1, "monto": 6118224, "cantidad": 2},{"id": "TUBOS Y PLASTICOS TIGRE-ADS DE CHILE LIMITADA", "group": 2, "monto": 6118224, "cantidad": 2}],"links": [{"source": "TUBOS Y PLASTICOS TIGRE-ADS DE CHILE LIMITADA", "target": "Nueva Imperial", "monto": 6118224, "cantidad": 2}]	} ] }

@@ -1,0 +1,1 @@
+{"Maquinaria_para_procesamiento_del_petróleo": [ {"nodes": [{"id": "Pencahue", "group": 1, "monto": 529411, "cantidad": 1},{"id": "Comercial San Agustin", "group": 2, "monto": 529411, "cantidad": 1}],"links": [{"source": "Comercial San Agustin", "target": "Pencahue", "monto": 529411, "cantidad": 1}]	} ] }

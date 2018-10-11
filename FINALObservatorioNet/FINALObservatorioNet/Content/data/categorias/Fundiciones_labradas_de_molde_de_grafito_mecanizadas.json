@@ -1,0 +1,1 @@
+{"Fundiciones_labradas_de_molde_de_grafito_mecanizadas": [ {"nodes": [{"id": "Paredones", "group": 1, "monto": 318538, "cantidad": 1},{"id": "Gilda Isabel Giovanetti Fuenzalida", "group": 2, "monto": 318538, "cantidad": 1}],"links": [{"source": "Gilda Isabel Giovanetti Fuenzalida", "target": "Paredones", "monto": 318538, "cantidad": 1}]	} ] }

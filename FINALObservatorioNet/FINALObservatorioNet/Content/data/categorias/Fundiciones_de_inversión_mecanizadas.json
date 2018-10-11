@@ -1,0 +1,1 @@
+{"Fundiciones_de_inversión_mecanizadas": [ {"nodes": [{"id": "Penco", "group": 1, "monto": 8150000, "cantidad": 1},{"id": "Gabriel Alex", "group": 2, "monto": 8150000, "cantidad": 1}],"links": [{"source": "Gabriel Alex", "target": "Penco", "monto": 8150000, "cantidad": 1}]	} ] }

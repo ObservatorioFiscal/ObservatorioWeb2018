@@ -1,0 +1,1 @@
+{"Asesorías_de_inversiones": [ {"nodes": [{"id": "La Florida", "group": 1, "monto": 1373229, "cantidad": 1},{"id": "Informes Garantizados S.A.", "group": 2, "monto": 1373229, "cantidad": 1}],"links": [{"source": "Informes Garantizados S.A.", "target": "La Florida", "monto": 1373229, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Maquinaria_de_recepción": [ {"nodes": [{"id": "Pichidegua", "group": 1, "monto": 1223865, "cantidad": 1},{"id": "Comercial Maquinet Limitada", "group": 2, "monto": 1223865, "cantidad": 1}],"links": [{"source": "Comercial Maquinet Limitada", "target": "Pichidegua", "monto": 1223865, "cantidad": 1}]	} ] }

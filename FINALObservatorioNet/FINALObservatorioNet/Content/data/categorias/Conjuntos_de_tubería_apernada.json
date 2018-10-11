@@ -1,0 +1,1 @@
+{"Conjuntos_de_tubería_apernada": [ {"nodes": [{"id": "Chillán Viejo", "group": 1, "monto": 576274, "cantidad": 1},{"id": "CONSTRUCTORA INVERCIC LTDA", "group": 2, "monto": 576274, "cantidad": 1}],"links": [{"source": "CONSTRUCTORA INVERCIC LTDA", "target": "Chillán Viejo", "monto": 576274, "cantidad": 1}]	} ] }

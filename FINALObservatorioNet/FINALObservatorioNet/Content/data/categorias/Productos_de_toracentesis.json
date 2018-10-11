@@ -1,0 +1,1 @@
+{"Productos_de_toracentesis": [ {"nodes": [{"id": "Yerbas Buenas", "group": 1, "monto": 98451, "cantidad": 1},{"id": "Awad Artículos Médicos", "group": 2, "monto": 98451, "cantidad": 1}],"links": [{"source": "Awad Artículos Médicos", "target": "Yerbas Buenas", "monto": 98451, "cantidad": 1}]	} ] }

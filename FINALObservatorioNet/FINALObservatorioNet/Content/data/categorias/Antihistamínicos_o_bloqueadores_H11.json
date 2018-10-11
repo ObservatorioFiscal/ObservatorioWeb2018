@@ -1,0 +1,1 @@
+{"Antihistamínicos_o_bloqueadores_H11": [ {"nodes": [{"id": "Osorno", "group": 1, "monto": 50245, "cantidad": 1},{"id": "Salcobrand S.A.", "group": 2, "monto": 50245, "cantidad": 1}],"links": [{"source": "Salcobrand S.A.", "target": "Osorno", "monto": 50245, "cantidad": 1}]	} ] }

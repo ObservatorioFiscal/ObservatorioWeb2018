@@ -1,0 +1,1 @@
+{"Fijadores": [ {"nodes": [{"id": "Los Muermos", "group": 1, "monto": 146973, "cantidad": 1},{"id": "Mantenciones y negocios del Sur Ltda.", "group": 2, "monto": 146973, "cantidad": 1}],"links": [{"source": "Mantenciones y negocios del Sur Ltda.", "target": "Los Muermos", "monto": 146973, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Piezas_forjadas_mecanizadas_de_anillo_cilindrado": [ {"nodes": [{"id": "Marchigüe", "group": 1, "monto": 524966, "cantidad": 1},{"id": "Expro Dental (SCL)", "group": 2, "monto": 524966, "cantidad": 1}],"links": [{"source": "Expro Dental (SCL)", "target": "Marchigüe", "monto": 524966, "cantidad": 1}]	} ] }

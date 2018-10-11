@@ -1,0 +1,1 @@
+{"Ingeniería_de_petróleo_y_gas": [ {"nodes": [{"id": "Curepto", "group": 1, "monto": 1070971, "cantidad": 4},{"id": "victor eduardo", "group": 2, "monto": 1070971, "cantidad": 4}],"links": [{"source": "victor eduardo", "target": "Curepto", "monto": 1070971, "cantidad": 4}]	} ] }

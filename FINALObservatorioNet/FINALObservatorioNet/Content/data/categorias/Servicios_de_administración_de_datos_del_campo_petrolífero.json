@@ -1,0 +1,1 @@
+{"Servicios_de_administración_de_datos_del_campo_petrolífero": [ {"nodes": [{"id": "Lo Barnechea", "group": 1, "monto": 84821343, "cantidad": 2},{"id": "Fundación Educacional Barnechea", "group": 2, "monto": 84821343, "cantidad": 2}],"links": [{"source": "Fundación Educacional Barnechea", "target": "Lo Barnechea", "monto": 84821343, "cantidad": 2}]	} ] }

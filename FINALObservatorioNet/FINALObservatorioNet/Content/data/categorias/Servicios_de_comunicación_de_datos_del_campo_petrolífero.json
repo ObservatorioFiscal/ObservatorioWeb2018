@@ -1,0 +1,1 @@
+{"Servicios_de_comunicación_de_datos_del_campo_petrolífero": [ {"nodes": [{"id": "Santo Domingo", "group": 1, "monto": 400930, "cantidad": 1},{"id": "Universidad de Concepción", "group": 2, "monto": 400930, "cantidad": 1}],"links": [{"source": "Universidad de Concepción", "target": "Santo Domingo", "monto": 400930, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Productos_secuenciadores_de_ácido_desoxirribonucleico_(ADN)": [ {"nodes": [{"id": "Carahue", "group": 1, "monto": 2995734, "cantidad": 1},{"id": "Expro Dental (SUR)", "group": 2, "monto": 2995734, "cantidad": 1}],"links": [{"source": "Expro Dental (SUR)", "target": "Carahue", "monto": 2995734, "cantidad": 1}]	} ] }

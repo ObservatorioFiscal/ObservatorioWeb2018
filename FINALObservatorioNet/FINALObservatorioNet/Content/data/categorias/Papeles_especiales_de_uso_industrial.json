@@ -1,0 +1,1 @@
+{"Papeles_especiales_de_uso_industrial": [ {"nodes": [{"id": "Lonquimay", "group": 1, "monto": 6767189, "cantidad": 1},{"id": "ADOLFO MAURICIO RIOS RIOS", "group": 2, "monto": 6767189, "cantidad": 1}],"links": [{"source": "ADOLFO MAURICIO RIOS RIOS", "target": "Lonquimay", "monto": 6767189, "cantidad": 1}]	} ] }

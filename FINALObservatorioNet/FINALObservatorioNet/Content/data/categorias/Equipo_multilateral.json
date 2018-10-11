@@ -1,0 +1,1 @@
+{"Equipo_multilateral": [ {"nodes": [{"id": "Puyehue", "group": 1, "monto": 917961, "cantidad": 1},{"id": "Roberto", "group": 2, "monto": 917961, "cantidad": 1}],"links": [{"source": "Roberto", "target": "Puyehue", "monto": 917961, "cantidad": 1}]	} ] }

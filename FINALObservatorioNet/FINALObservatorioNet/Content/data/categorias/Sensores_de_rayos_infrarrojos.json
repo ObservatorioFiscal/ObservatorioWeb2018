@@ -1,0 +1,1 @@
+{"Sensores_de_rayos_infrarrojos": [ {"nodes": [{"id": "Futrono", "group": 1, "monto": 80658, "cantidad": 1},{"id": "x-ray proteccion radiologica ltda.", "group": 2, "monto": 80658, "cantidad": 1}],"links": [{"source": "x-ray proteccion radiologica ltda.", "target": "Futrono", "monto": 80658, "cantidad": 1}]	} ] }

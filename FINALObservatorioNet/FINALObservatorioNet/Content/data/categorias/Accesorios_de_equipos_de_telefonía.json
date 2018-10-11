@@ -1,0 +1,1 @@
+{"Accesorios_de_equipos_de_telefonía": [ {"nodes": [{"id": "Penco", "group": 1, "monto": 322130, "cantidad": 1},{"id": "Claudio Echeberria Bravo", "group": 2, "monto": 322130, "cantidad": 1}],"links": [{"source": "Claudio Echeberria Bravo", "target": "Penco", "monto": 322130, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Tabaco_y_substitutos": [ {"nodes": [{"id": "Chépica", "group": 1, "monto": 49701, "cantidad": 1},{"id": "CLAUDIO ANTONIO VALENZUELA OLIVARES", "group": 2, "monto": 49701, "cantidad": 1}],"links": [{"source": "CLAUDIO ANTONIO VALENZUELA OLIVARES", "target": "Chépica", "monto": 49701, "cantidad": 1}]	} ] }

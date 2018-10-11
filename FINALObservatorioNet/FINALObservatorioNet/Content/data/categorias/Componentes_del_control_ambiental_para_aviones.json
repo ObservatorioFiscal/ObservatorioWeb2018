@@ -1,0 +1,1 @@
+{"Componentes_del_control_ambiental_para_aviones": [ {"nodes": [{"id": "Navidad", "group": 1, "monto": 1388580, "cantidad": 3},{"id": "Supermercado San Roberto", "group": 2, "monto": 1388580, "cantidad": 3}],"links": [{"source": "Supermercado San Roberto", "target": "Navidad", "monto": 1388580, "cantidad": 3}]	} ] }

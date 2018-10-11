@@ -1,0 +1,1 @@
+{"Equipo_de_registro_de_superficie": [ {"nodes": [{"id": "Diego de Almagro", "group": 1, "monto": 4172530, "cantidad": 1},{"id": "CLAUDIO ULLOA STEFFENS", "group": 2, "monto": 4172530, "cantidad": 1}],"links": [{"source": "CLAUDIO ULLOA STEFFENS", "target": "Diego de Almagro", "monto": 4172530, "cantidad": 1}]	} ] }

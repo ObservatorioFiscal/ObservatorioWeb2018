@@ -1,0 +1,1 @@
+{"Conjuntos_estructurales_apernados": [ {"nodes": [{"id": "Nacimiento", "group": 1, "monto": 323500, "cantidad": 1},{"id": "ADOLFO MAURICIO", "group": 2, "monto": 323500, "cantidad": 1}],"links": [{"source": "ADOLFO MAURICIO", "target": "Nacimiento", "monto": 323500, "cantidad": 1}]	} ] }

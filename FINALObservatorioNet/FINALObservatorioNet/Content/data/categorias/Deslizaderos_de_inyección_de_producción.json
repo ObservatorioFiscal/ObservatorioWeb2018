@@ -1,0 +1,1 @@
+{"Deslizaderos_de_inyección_de_producción": [ {"nodes": [{"id": "Colbún", "group": 1, "monto": 380612, "cantidad": 1},{"id": "Castro Caamaño Norma Ester Comercializadora E.I.R.", "group": 2, "monto": 380612, "cantidad": 1}],"links": [{"source": "Castro Caamaño Norma Ester Comercializadora E.I.R.", "target": "Colbún", "monto": 380612, "cantidad": 1}]	} ] }

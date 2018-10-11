@@ -1,0 +1,1 @@
+{"Pieza_moldeada_en_arena": [ {"nodes": [{"id": "San Pablo", "group": 1, "monto": 351454, "cantidad": 1},{"id": "FERRETERIAS WEITZLER S.A.", "group": 2, "monto": 351454, "cantidad": 1}],"links": [{"source": "FERRETERIAS WEITZLER S.A.", "target": "San Pablo", "monto": 351454, "cantidad": 1}]	} ] }

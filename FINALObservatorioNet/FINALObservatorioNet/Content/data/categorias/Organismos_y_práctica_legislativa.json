@@ -1,0 +1,1 @@
+{"Organismos_y_práctica_legislativa": [ {"nodes": [{"id": "Alto BíoBio", "group": 1, "monto": 1263672, "cantidad": 1},{"id": "ASOCIACIÓN CHILENA DE MUNICIPALIDADES", "group": 2, "monto": 1263672, "cantidad": 1}],"links": [{"source": "ASOCIACIÓN CHILENA DE MUNICIPALIDADES", "target": "Alto BíoBio", "monto": 1263672, "cantidad": 1}]	} ] }

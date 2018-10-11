@@ -1,0 +1,1 @@
+{"Conjuntos_de_placas_remachadas": [ {"nodes": [{"id": "Trehuaco", "group": 1, "monto": 422961, "cantidad": 1},{"id": "MULTICOMERCIAL CHILLAN LTDA", "group": 2, "monto": 422961, "cantidad": 1}],"links": [{"source": "MULTICOMERCIAL CHILLAN LTDA", "target": "Trehuaco", "monto": 422961, "cantidad": 1}]	} ] }

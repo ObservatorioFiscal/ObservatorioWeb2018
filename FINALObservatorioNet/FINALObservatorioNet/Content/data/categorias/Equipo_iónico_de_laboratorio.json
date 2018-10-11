@@ -1,0 +1,1 @@
+{"Equipo_iónico_de_laboratorio": [ {"nodes": [{"id": "Puerto Varas", "group": 1, "monto": 6115404, "cantidad": 3},{"id": "Roche Chile Ltda. Roche Pharma", "group": 2, "monto": 6115404, "cantidad": 3}],"links": [{"source": "Roche Chile Ltda. Roche Pharma", "target": "Puerto Varas", "monto": 6115404, "cantidad": 3}]	} ] }

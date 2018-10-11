@@ -1,0 +1,1 @@
+{"Conjuntos_de_láminas_soldada_por_solvente": [ {"nodes": [{"id": "Temuco", "group": 1, "monto": 148956, "cantidad": 1},{"id": "Dijar Limitada", "group": 2, "monto": 148956, "cantidad": 1}],"links": [{"source": "Dijar Limitada", "target": "Temuco", "monto": 148956, "cantidad": 1}]	} ] }

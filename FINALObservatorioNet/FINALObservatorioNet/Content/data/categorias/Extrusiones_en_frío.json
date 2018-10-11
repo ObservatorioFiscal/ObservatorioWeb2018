@@ -1,0 +1,1 @@
+{"Extrusiones_en_frío": [ {"nodes": [{"id": "Curanilahue", "group": 1, "monto": 3315648, "cantidad": 4},{"id": "Carlos Espejo y Cía. Ltda.-", "group": 2, "monto": 3315648, "cantidad": 4}],"links": [{"source": "Carlos Espejo y Cía. Ltda.-", "target": "Curanilahue", "monto": 3315648, "cantidad": 4}]	} ] }

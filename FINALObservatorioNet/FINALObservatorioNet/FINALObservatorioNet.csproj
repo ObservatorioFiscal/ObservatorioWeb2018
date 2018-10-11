@@ -465,6 +465,7 @@
     <Content Include="Content\css\deboot.css" />
     <Content Include="Content\css\grid-bootstrap.css" />
     <Content Include="Content\css\grid-bootstrap.min.css" />
+    <Content Include="Content\css\jose.css" />
     <Content Include="Content\css\normalize.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\css\stylefinal.css" />
@@ -599,12 +600,16 @@
     <Content Include="Content\images\redes\twit.png" />
     <Content Include="Content\images\redes\yout.png" />
     <Content Include="Content\images\volver.png" />
+    <Content Include="Content\js\color.js" />
+    <Content Include="Content\js\d3-legend.js" />
     <Content Include="Content\js\d3Object_Bubble.js" />
     <Content Include="Content\js\googleChart_Line.js" />
     <Content Include="Content\js\amChart_HorizontalBar.js" />
     <Content Include="Content\js\amChartMapa.js" />
     <Content Include="Content\js\Bubble_Pack.js" />
+    <Content Include="Content\js\main.js" />
     <Content Include="Content\js\plotlyListbox.js" />
+    <Content Include="Content\js\select2.full.js" />
     <Content Include="Content\js\treemapMapa.js" />
     <Content Include="Content\js\site.js" />
     <Content Include="Content\lib\amchart\amcharts.js" />

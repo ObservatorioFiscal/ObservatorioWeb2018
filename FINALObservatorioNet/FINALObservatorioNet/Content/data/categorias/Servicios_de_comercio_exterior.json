@@ -1,0 +1,1 @@
+{"Servicios_de_comercio_exterior": [ {"nodes": [{"id": "Marchigüe", "group": 1, "monto": 1411244, "cantidad": 1},{"id": "Salud Imagenes Radiologicas Santa Cruz Ltda.", "group": 2, "monto": 1411244, "cantidad": 1}],"links": [{"source": "Salud Imagenes Radiologicas Santa Cruz Ltda.", "target": "Marchigüe", "monto": 1411244, "cantidad": 1}]	} ] }

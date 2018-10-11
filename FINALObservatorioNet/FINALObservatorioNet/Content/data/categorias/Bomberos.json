@@ -1,0 +1,1 @@
+{"Bomberos": [ {"nodes": [{"id": "Futrono", "group": 1, "monto": 9919948, "cantidad": 1},{"id": "Sociedad Cordero Quintana S.A.", "group": 2, "monto": 9919948, "cantidad": 1}],"links": [{"source": "Sociedad Cordero Quintana S.A.", "target": "Futrono", "monto": 9919948, "cantidad": 1}]	} ] }

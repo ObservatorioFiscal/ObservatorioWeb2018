@@ -1,0 +1,1 @@
+{"Organismos_políticos": [ {"nodes": [{"id": "Palmilla", "group": 1, "monto": 152505, "cantidad": 1},{"id": "I JURIDICA", "group": 2, "monto": 152505, "cantidad": 1}],"links": [{"source": "I JURIDICA", "target": "Palmilla", "monto": 152505, "cantidad": 1}]	} ] }

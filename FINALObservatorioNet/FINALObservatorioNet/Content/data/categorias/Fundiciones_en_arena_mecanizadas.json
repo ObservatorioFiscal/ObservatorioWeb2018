@@ -1,0 +1,1 @@
+{"Fundiciones_en_arena_mecanizadas": [ {"nodes": [{"id": "Villarrica", "group": 1, "monto": 146888, "cantidad": 1},{"id": "M-DENT LTDA.", "group": 2, "monto": 146888, "cantidad": 1}],"links": [{"source": "M-DENT LTDA.", "target": "Villarrica", "monto": 146888, "cantidad": 1}]	} ] }

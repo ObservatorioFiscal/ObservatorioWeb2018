@@ -1,0 +1,1 @@
+{"Dispositivos_de_seguridad_personal": [ {"nodes": [{"id": "Conchalí", "group": 1, "monto": 2442748, "cantidad": 2},{"id": "AGROMAIPO LTDA.", "group": 2, "monto": 2442748, "cantidad": 2}],"links": [{"source": "AGROMAIPO LTDA.", "target": "Conchalí", "monto": 2442748, "cantidad": 2}]	} ] }

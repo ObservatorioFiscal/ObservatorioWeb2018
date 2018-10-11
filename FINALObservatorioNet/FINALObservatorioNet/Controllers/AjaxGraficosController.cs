@@ -15,7 +15,7 @@ namespace FINALObservatorioNet.Controllers
 
         public ActionResult GetDatosEnQueGastaElEstado1(string id)
         {
-            Grafico_d3Object_Bubble infoGrafico = _context.Grafico_d3Object_Bubble.Find(7);
+            Grafico_d3Object_Bubble infoGrafico = _context.Grafico_d3Object_Bubble.Find(8);
             d3Object_Bubble grafico = new d3Object_Bubble();
             if (id == "2")
             {

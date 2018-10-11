@@ -1,0 +1,1 @@
+{"Servicios_de_elevación_por_presión_de_gas": [ {"nodes": [{"id": "Villarrica", "group": 1, "monto": 38121, "cantidad": 1},{"id": "Expro Dental (SUR)", "group": 2, "monto": 38121, "cantidad": 1}],"links": [{"source": "Expro Dental (SUR)", "target": "Villarrica", "monto": 38121, "cantidad": 1}]	} ] }

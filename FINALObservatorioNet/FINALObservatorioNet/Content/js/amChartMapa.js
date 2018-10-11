@@ -14,7 +14,7 @@ document.write('<script src="../../Content/lib/ammap/maps/js/ChileSVG.js"></scri
 document.write('<script src="../../Content/lib/amchart/amcharts.js"></script>');
 document.write('<script src="../../Content/lib/amchart/light.js"></script>');
 document.write('<script src="../../Content/lib/amchart/serial.js"></script>');
-document.write('<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>');
+document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>');
 
 
 

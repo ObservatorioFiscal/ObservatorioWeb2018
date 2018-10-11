@@ -1,0 +1,1 @@
+{"Materiales_o_recursos_educativos_de_pre_cálculo_y_cálculo": [ {"nodes": [{"id": "Vilcún", "group": 1, "monto": 45216, "cantidad": 1},{"id": "Libreria Eureka", "group": 2, "monto": 45216, "cantidad": 1}],"links": [{"source": "Libreria Eureka", "target": "Vilcún", "monto": 45216, "cantidad": 1}]	} ] }

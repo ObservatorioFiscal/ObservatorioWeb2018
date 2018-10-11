@@ -1,0 +1,1 @@
+{"Servicios_de_restaurar_el_sitio_del_pozo": [ {"nodes": [{"id": "San Nicolás", "group": 1, "monto": 382728, "cantidad": 1},{"id": "Guillermo Enrique", "group": 2, "monto": 382728, "cantidad": 1}],"links": [{"source": "Guillermo Enrique", "target": "San Nicolás", "monto": 382728, "cantidad": 1}]	} ] }

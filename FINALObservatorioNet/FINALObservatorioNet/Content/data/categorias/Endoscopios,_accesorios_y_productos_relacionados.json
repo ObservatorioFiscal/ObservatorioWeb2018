@@ -1,0 +1,1 @@
+{"Endoscopios,_accesorios_y_productos_relacionados": [ {"nodes": [{"id": "Purranque", "group": 1, "monto": 4264538, "cantidad": 1},{"id": "TECNIGEN S.A.", "group": 2, "monto": 4264538, "cantidad": 1}],"links": [{"source": "TECNIGEN S.A.", "target": "Purranque", "monto": 4264538, "cantidad": 1}]	} ] }

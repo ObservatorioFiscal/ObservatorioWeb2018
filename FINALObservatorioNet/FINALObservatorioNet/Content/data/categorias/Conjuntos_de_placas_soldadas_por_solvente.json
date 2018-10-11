@@ -1,0 +1,1 @@
+{"Conjuntos_de_placas_soldadas_por_solvente": [ {"nodes": [{"id": "Victoria", "group": 1, "monto": 97422, "cantidad": 2},{"id": "rodrigo alberto", "group": 2, "monto": 97422, "cantidad": 2}],"links": [{"source": "rodrigo alberto", "target": "Victoria", "monto": 97422, "cantidad": 2}]	} ] }

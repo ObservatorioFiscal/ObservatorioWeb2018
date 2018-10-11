@@ -1,0 +1,1 @@
+{"Sistemas_de_etiquetado_y_detección_de_ácidos_nucleícos": [ {"nodes": [{"id": "San Juan de la Costa", "group": 1, "monto": 2011639, "cantidad": 1},{"id": "DCD LTDA", "group": 2, "monto": 2011639, "cantidad": 1}],"links": [{"source": "DCD LTDA", "target": "San Juan de la Costa", "monto": 2011639, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Aeronave_de_ala_rotatoria_civil_y_comercial": [ {"nodes": [{"id": "Lebu", "group": 1, "monto": 8657086, "cantidad": 6},{"id": "JUAN CARLOS PAUL RETAMAL", "group": 2, "monto": 8657086, "cantidad": 6}],"links": [{"source": "JUAN CARLOS PAUL RETAMAL", "target": "Lebu", "monto": 8657086, "cantidad": 6}]	} ] }

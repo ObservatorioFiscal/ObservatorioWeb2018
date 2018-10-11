@@ -1,0 +1,1 @@
+{"Maquinaria_de_control_para_tratamiento_de_telas": [ {"nodes": [{"id": "Bulnes", "group": 1, "monto": 5328202, "cantidad": 1},{"id": "parcon", "group": 2, "monto": 5328202, "cantidad": 1}],"links": [{"source": "parcon", "target": "Bulnes", "monto": 5328202, "cantidad": 1}]	} ] }

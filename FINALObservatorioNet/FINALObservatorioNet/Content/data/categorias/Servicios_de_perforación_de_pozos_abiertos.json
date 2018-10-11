@@ -1,0 +1,1 @@
+{"Servicios_de_perforación_de_pozos_abiertos": [ {"nodes": [{"id": "Las Condes", "group": 1, "monto": 5711505, "cantidad": 1},{"id": "MENDEZ ASOCIADOS LTDA (ATIS LTDA)", "group": 2, "monto": 5711505, "cantidad": 1}],"links": [{"source": "MENDEZ ASOCIADOS LTDA (ATIS LTDA)", "target": "Las Condes", "monto": 5711505, "cantidad": 1}]	} ] }

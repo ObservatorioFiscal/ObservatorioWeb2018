@@ -1,0 +1,1 @@
+{"Piezas_formadas_por_estiramiento_por_presión": [ {"nodes": [{"id": "Florida", "group": 1, "monto": 50073, "cantidad": 1},{"id": "ALPASERVICE LTDA", "group": 2, "monto": 50073, "cantidad": 1}],"links": [{"source": "ALPASERVICE LTDA", "target": "Florida", "monto": 50073, "cantidad": 1}]	} ] }

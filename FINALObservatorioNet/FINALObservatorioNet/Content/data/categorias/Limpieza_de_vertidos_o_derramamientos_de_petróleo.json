@@ -1,0 +1,1 @@
+{"Limpieza_de_vertidos_o_derramamientos_de_petróleo": [ {"nodes": [{"id": "El Bosque", "group": 1, "monto": 866850, "cantidad": 1},{"id": "Del Pilar", "group": 2, "monto": 866850, "cantidad": 1}],"links": [{"source": "Del Pilar", "target": "El Bosque", "monto": 866850, "cantidad": 1}]	} ] }

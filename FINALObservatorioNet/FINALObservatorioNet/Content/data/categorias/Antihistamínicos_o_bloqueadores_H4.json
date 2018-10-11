@@ -1,0 +1,1 @@
+{"Antihistamínicos_o_bloqueadores_H4": [ {"nodes": [{"id": "Lota", "group": 1, "monto": 202594, "cantidad": 1},{"id": "MEDIPHARM S.A.", "group": 2, "monto": 202594, "cantidad": 1}],"links": [{"source": "MEDIPHARM S.A.", "target": "Lota", "monto": 202594, "cantidad": 1}]	} ] }

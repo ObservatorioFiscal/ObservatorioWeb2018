@@ -1,0 +1,1 @@
+{"Antiemulsionante": [ {"nodes": [{"id": "Pemuco", "group": 1, "monto": 811466, "cantidad": 2},{"id": "KAUFMANN S.A. Vehículos Motorizados", "group": 2, "monto": 811466, "cantidad": 2}],"links": [{"source": "KAUFMANN S.A. Vehículos Motorizados", "target": "Pemuco", "monto": 811466, "cantidad": 2}]	} ] }

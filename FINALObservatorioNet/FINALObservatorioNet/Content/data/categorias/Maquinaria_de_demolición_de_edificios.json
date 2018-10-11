@@ -1,0 +1,1 @@
+{"Maquinaria_de_demolición_de_edificios": [ {"nodes": [{"id": "San Pablo", "group": 1, "monto": 2258748, "cantidad": 1},{"id": "EQUIPOS INDUSTRIALES PUERTO MONTT LTDA", "group": 2, "monto": 2258748, "cantidad": 1}],"links": [{"source": "EQUIPOS INDUSTRIALES PUERTO MONTT LTDA", "target": "San Pablo", "monto": 2258748, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Equipos_de_enseñanza_de_ciencia_forense_y_suministros": [ {"nodes": [{"id": "Concepción", "group": 1, "monto": 31576045, "cantidad": 3},{"id": "Prodelab", "group": 2, "monto": 31576045, "cantidad": 3}],"links": [{"source": "Prodelab", "target": "Concepción", "monto": 31576045, "cantidad": 3}]	} ] }

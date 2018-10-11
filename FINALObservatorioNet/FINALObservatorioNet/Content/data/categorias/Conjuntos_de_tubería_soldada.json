@@ -1,0 +1,1 @@
+{"Conjuntos_de_tubería_soldada": [ {"nodes": [{"id": "Carahue", "group": 1, "monto": 2179902, "cantidad": 2},{"id": "MAQUINARIAS Y CONSTRUCCIONES LA OLLETA LIMITADA", "group": 2, "monto": 2179902, "cantidad": 2}],"links": [{"source": "MAQUINARIAS Y CONSTRUCCIONES LA OLLETA LIMITADA", "target": "Carahue", "monto": 2179902, "cantidad": 2}]	} ] }

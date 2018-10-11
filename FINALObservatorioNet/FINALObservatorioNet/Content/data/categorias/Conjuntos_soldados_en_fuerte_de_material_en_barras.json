@@ -1,0 +1,1 @@
+{"Conjuntos_soldados_en_fuerte_de_material_en_barras": [ {"nodes": [{"id": "Dalcahue", "group": 1, "monto": 321767, "cantidad": 1},{"id": "ELECTROCOM  S.A.", "group": 2, "monto": 321767, "cantidad": 1}],"links": [{"source": "ELECTROCOM  S.A.", "target": "Dalcahue", "monto": 321767, "cantidad": 1}]	} ] }

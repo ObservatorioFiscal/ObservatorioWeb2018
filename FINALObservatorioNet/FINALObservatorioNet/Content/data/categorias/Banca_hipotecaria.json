@@ -1,0 +1,1 @@
+{"Banca_hipotecaria": [ {"nodes": [{"id": "San José de Maipo", "group": 1, "monto": 350512, "cantidad": 1},{"id": "Fundacion Vivienda", "group": 2, "monto": 350512, "cantidad": 1}],"links": [{"source": "Fundacion Vivienda", "target": "San José de Maipo", "monto": 350512, "cantidad": 1}]	} ] }

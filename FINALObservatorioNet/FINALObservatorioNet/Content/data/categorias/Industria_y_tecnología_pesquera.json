@@ -1,0 +1,1 @@
+{"Industria_y_tecnología_pesquera": [ {"nodes": [{"id": "Florida", "group": 1, "monto": 55400, "cantidad": 1},{"id": "supermercado los aromos", "group": 2, "monto": 55400, "cantidad": 1}],"links": [{"source": "supermercado los aromos", "target": "Florida", "monto": 55400, "cantidad": 1}]	} ] }

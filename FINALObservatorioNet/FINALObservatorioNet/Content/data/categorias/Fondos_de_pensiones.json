@@ -1,0 +1,1 @@
+{"Fondos_de_pensiones": [ {"nodes": [{"id": "San Felipe", "group": 1, "monto": 1, "cantidad": 1},{"id": "Drews Consultores", "group": 2, "monto": 1, "cantidad": 1}],"links": [{"source": "Drews Consultores", "target": "San Felipe", "monto": 1, "cantidad": 1}]	} ] }

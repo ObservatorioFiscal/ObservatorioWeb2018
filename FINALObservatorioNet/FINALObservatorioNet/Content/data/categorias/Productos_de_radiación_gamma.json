@@ -1,0 +1,1 @@
+{"Productos_de_radiación_gamma": [ {"nodes": [{"id": "Torres del Paine", "group": 1, "monto": 168784, "cantidad": 1},{"id": "Jorge Alberto Alfsen Seron", "group": 2, "monto": 168784, "cantidad": 1}],"links": [{"source": "Jorge Alberto Alfsen Seron", "target": "Torres del Paine", "monto": 168784, "cantidad": 1}]	} ] }

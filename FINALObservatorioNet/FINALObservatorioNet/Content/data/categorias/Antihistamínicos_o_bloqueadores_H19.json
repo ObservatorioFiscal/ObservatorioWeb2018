@@ -1,0 +1,1 @@
+{"Antihistamínicos_o_bloqueadores_H19": [ {"nodes": [{"id": "Coronel", "group": 1, "monto": 202289, "cantidad": 1},{"id": "SYNTHON CHILE LTDA", "group": 2, "monto": 202289, "cantidad": 1}],"links": [{"source": "SYNTHON CHILE LTDA", "target": "Coronel", "monto": 202289, "cantidad": 1}]	} ] }

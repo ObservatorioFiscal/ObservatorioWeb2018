@@ -1,0 +1,1 @@
+{"Piezas_forjadas_a_martinete": [ {"nodes": [{"id": "Arica", "group": 1, "monto": 1000205, "cantidad": 1},{"id": "LEONARDO ISAAC DEBERNARDI PIZARRO E.I.R.L.", "group": 2, "monto": 1000205, "cantidad": 1}],"links": [{"source": "LEONARDO ISAAC DEBERNARDI PIZARRO E.I.R.L.", "target": "Arica", "monto": 1000205, "cantidad": 1}]	} ] }

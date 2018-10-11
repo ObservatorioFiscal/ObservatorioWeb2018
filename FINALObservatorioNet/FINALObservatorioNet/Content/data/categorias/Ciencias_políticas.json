@@ -1,0 +1,1 @@
+{"Ciencias_políticas": [ {"nodes": [{"id": "Peumo", "group": 1, "monto": 353437, "cantidad": 1},{"id": "Mario Esteban Pinto Cañete", "group": 2, "monto": 353437, "cantidad": 1}],"links": [{"source": "Mario Esteban Pinto Cañete", "target": "Peumo", "monto": 353437, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Cárceles": [ {"nodes": [{"id": "Primavera", "group": 1, "monto": 2132715, "cantidad": 1},{"id": "uno producciones", "group": 2, "monto": 2132715, "cantidad": 1}],"links": [{"source": "uno producciones", "target": "Primavera", "monto": 2132715, "cantidad": 1}]	} ] }

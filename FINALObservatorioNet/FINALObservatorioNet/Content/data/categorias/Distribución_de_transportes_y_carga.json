@@ -1,0 +1,1 @@
+{"Distribución_de_transportes_y_carga": [ {"nodes": [{"id": "Peralillo", "group": 1, "monto": 12434531, "cantidad": 1},{"id": "Transportes Santa Teresa Ltda.", "group": 2, "monto": 12434531, "cantidad": 1}],"links": [{"source": "Transportes Santa Teresa Ltda.", "target": "Peralillo", "monto": 12434531, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Equipo_de_planchado": [ {"nodes": [{"id": "Cabo de Hornos", "group": 1, "monto": 2448074, "cantidad": 1},{"id": "INNOVATECH LTDA.", "group": 2, "monto": 2448074, "cantidad": 1}],"links": [{"source": "INNOVATECH LTDA.", "target": "Cabo de Hornos", "monto": 2448074, "cantidad": 1}]	} ] }

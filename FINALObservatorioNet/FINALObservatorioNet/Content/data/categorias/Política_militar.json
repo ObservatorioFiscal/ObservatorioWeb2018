@@ -1,0 +1,1 @@
+{"Política_militar": [ {"nodes": [{"id": "El Carmen", "group": 1, "monto": 626890, "cantidad": 1},{"id": "CORP DE AYUDA AL LIMITADO VISUAL", "group": 2, "monto": 626890, "cantidad": 1}],"links": [{"source": "CORP DE AYUDA AL LIMITADO VISUAL", "target": "El Carmen", "monto": 626890, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Productos_de_braquiterapia": [ {"nodes": [{"id": "Alto Hospicio", "group": 1, "monto": 512672, "cantidad": 1},{"id": "OSM Ltda.", "group": 2, "monto": 512672, "cantidad": 1}],"links": [{"source": "OSM Ltda.", "target": "Alto Hospicio", "monto": 512672, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Estudios_de_títulos": [ {"nodes": [{"id": "Arauco", "group": 1, "monto": 21542, "cantidad": 1},{"id": "PROVEEDORA EDUCACIONAL LIMITADA", "group": 2, "monto": 21542, "cantidad": 1}],"links": [{"source": "PROVEEDORA EDUCACIONAL LIMITADA", "target": "Arauco", "monto": 21542, "cantidad": 1}]	} ] }

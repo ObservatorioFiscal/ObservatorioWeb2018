@@ -1,0 +1,1 @@
+{"Secaderos_de_madera_y_equipo_y_accesorios": [ {"nodes": [{"id": "Pozo al Monte", "group": 1, "monto": 356595, "cantidad": 1},{"id": "norteverdeltda", "group": 2, "monto": 356595, "cantidad": 1}],"links": [{"source": "norteverdeltda", "target": "Pozo al Monte", "monto": 356595, "cantidad": 1}]	} ] }

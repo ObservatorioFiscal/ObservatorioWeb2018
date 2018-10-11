@@ -165,6 +165,7 @@ namespace FINALObservatorioNet
         public static int Orlando = 5;
         public static int Matias = 6;
         public static int Paula = 7;
+        public static int Denise = 8;
 
         public static Dictionary<int, string> diccionarioAutor = new Dictionary<int, string>
         {
@@ -174,7 +175,8 @@ namespace FINALObservatorioNet
             {Guillermo, "Guillermo Patillo"},
             {Orlando, "Orlando Rojas"},
             {Matias, "Matias Jara"},
-            {Paula, "Paula Diaz"}
+            {Paula, "Paula Diaz"},
+            {Denise, "Denise Laroze"}
         };
     }
 

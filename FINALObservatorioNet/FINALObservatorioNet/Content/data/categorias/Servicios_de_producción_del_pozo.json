@@ -1,0 +1,1 @@
+{"Servicios_de_producción_del_pozo": [ {"nodes": [{"id": "San Fernando", "group": 1, "monto": 151621, "cantidad": 1},{"id": "CEYFRA SERVICIOS LTDA.", "group": 2, "monto": 151621, "cantidad": 1}],"links": [{"source": "CEYFRA SERVICIOS LTDA.", "target": "San Fernando", "monto": 151621, "cantidad": 1}]	} ] }

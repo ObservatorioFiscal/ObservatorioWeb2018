@@ -1,0 +1,1 @@
+{"Bombas_de_exportación": [ {"nodes": [{"id": "Tirúa", "group": 1, "monto": 1195000, "cantidad": 1},{"id": "Manuel", "group": 2, "monto": 1195000, "cantidad": 1}],"links": [{"source": "Manuel", "target": "Tirúa", "monto": 1195000, "cantidad": 1}]	} ] }

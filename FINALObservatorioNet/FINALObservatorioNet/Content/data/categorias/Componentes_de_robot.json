@@ -1,0 +1,1 @@
+{"Componentes_de_robot": [ {"nodes": [{"id": "San Ramón", "group": 1, "monto": 1587791, "cantidad": 1},{"id": "Aula Editores", "group": 2, "monto": 1587791, "cantidad": 1}],"links": [{"source": "Aula Editores", "target": "San Ramón", "monto": 1587791, "cantidad": 1}]	} ] }

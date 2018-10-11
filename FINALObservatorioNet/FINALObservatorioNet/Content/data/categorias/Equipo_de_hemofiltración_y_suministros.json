@@ -1,0 +1,1 @@
+{"Equipo_de_hemofiltración_y_suministros": [ {"nodes": [{"id": "Diego de Almagro", "group": 1, "monto": 3269302, "cantidad": 2},{"id": "Pentafarma S.A.", "group": 2, "monto": 3269302, "cantidad": 2}],"links": [{"source": "Pentafarma S.A.", "target": "Diego de Almagro", "monto": 3269302, "cantidad": 2}]	} ] }

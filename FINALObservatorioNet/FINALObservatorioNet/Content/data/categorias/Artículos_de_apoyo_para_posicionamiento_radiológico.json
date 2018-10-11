@@ -1,0 +1,1 @@
+{"Artículos_de_apoyo_para_posicionamiento_radiológico": [ {"nodes": [{"id": "Coquimbo", "group": 1, "monto": 214752, "cantidad": 1},{"id": "Skill Training Ltda.", "group": 2, "monto": 214752, "cantidad": 1}],"links": [{"source": "Skill Training Ltda.", "target": "Coquimbo", "monto": 214752, "cantidad": 1}]	} ] }

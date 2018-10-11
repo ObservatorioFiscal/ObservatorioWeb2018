@@ -1,0 +1,1 @@
+{"Aleaciones_de_acero_inoxidable": [ {"nodes": [{"id": "La Cisterna", "group": 1, "monto": 1210410, "cantidad": 2},{"id": "Ferreteria Trancura", "group": 2, "monto": 1210410, "cantidad": 2}],"links": [{"source": "Ferreteria Trancura", "target": "La Cisterna", "monto": 1210410, "cantidad": 2}]	} ] }

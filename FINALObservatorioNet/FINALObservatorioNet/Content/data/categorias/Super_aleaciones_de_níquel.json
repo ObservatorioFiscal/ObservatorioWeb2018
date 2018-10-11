@@ -1,0 +1,1 @@
+{"Super_aleaciones_de_níquel": [ {"nodes": [{"id": "El Carmen", "group": 1, "monto": 51647, "cantidad": 1},{"id": "ComercialrRossy", "group": 2, "monto": 51647, "cantidad": 1}],"links": [{"source": "ComercialrRossy", "target": "El Carmen", "monto": 51647, "cantidad": 1}]	} ] }

@@ -1,0 +1,1 @@
+{"Fundiciones_en_molde_permanente_mecanizadas": [ {"nodes": [{"id": "Puerto Montt", "group": 1, "monto": 190633168, "cantidad": 8},{"id": "MAYORDENT", "group": 2, "monto": 190633168, "cantidad": 8}],"links": [{"source": "MAYORDENT", "target": "Puerto Montt", "monto": 190633168, "cantidad": 8}]	} ] }

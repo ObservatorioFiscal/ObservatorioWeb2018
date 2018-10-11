@@ -1,0 +1,1 @@
+{"Matrices_génicas": [ {"nodes": [{"id": "Talca", "group": 1, "monto": 114352477, "cantidad": 8},{"id": "Coldiab y CÍa Ltda.", "group": 2, "monto": 114352477, "cantidad": 8}],"links": [{"source": "Coldiab y CÍa Ltda.", "target": "Talca", "monto": 114352477, "cantidad": 8}]	} ] }
