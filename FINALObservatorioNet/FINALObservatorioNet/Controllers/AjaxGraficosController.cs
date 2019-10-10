@@ -1343,36 +1343,36 @@ namespace FINALObservatorioNet.Controllers
         public ActionResult GetDatosMunicipio1(string id)
         {
             string tipoValor = id;
-            string oli = TempData["tipo"] as string;
-            if (oli != null)
-            {
-                if (oli == id)
-                {
-                    string json2 = TempData["datos"] as string;
-                    TempData["datos"] = json2;
-                    TempData["tipo"] = tipoValor;
-                    return this.Content(json2, "application/json");
-                }
-            }
+            //////////////////////////////string oli = TempData["tipo"] as string;
+            //////////////////////////////if (oli != null)
+            //////////////////////////////{
+            //////////////////////////////    if (oli == id)
+            //////////////////////////////    {
+            //////////////////////////////        string json2 = TempData["datos"] as string;
+            //////////////////////////////        TempData["datos"] = json2;
+            //////////////////////////////        TempData["tipo"] = tipoValor;
+            //////////////////////////////        return this.Content(json2, "application/json");
+            //////////////////////////////    }
+            //////////////////////////////}
 
             #region VALOR PARA MOSTRAR
-            //GraficoCircularesVarios infoGrafico = _context.GraficoCircularesVarios.Find(13);//
-            //d3Object_Bubble_Pack grafico = new d3Object_Bubble_Pack();//
-            //if (tipoValor == "percapita")//
-            //{//
-            //    grafico.Load(infoGrafico, "percapita");//
-            //}//
-            //else//
-            //{//
-            //    grafico.Load(infoGrafico, "nominal");//
-            //}//
-            //string json = grafico.getJson();//
+            GraficoCircularesVarios infoGrafico = _context.GraficoCircularesVarios.Find(13);//
+            d3Object_Bubble_Pack grafico = new d3Object_Bubble_Pack();//
+            if (tipoValor == "percapita")//
+            {//
+                grafico.Load(infoGrafico, "percapita");//
+            }//
+            else//
+            {//
+                grafico.Load(infoGrafico, "nominal");//
+            }//
+            string json = grafico.getJson();//
             #endregion
             #region FINAL EN PRODUCCION
-            string json = _context.Json.Find(2).JsonVistas.Single(r => r.Titulo == id).Texto;
+            //////////////////////////////string json = _context.Json.Find(2).JsonVistas.Single(r => r.Titulo == id).Texto;
 
-            TempData["datos"] = json;
-            TempData["tipo"] = tipoValor;
+            //////////////////////////////TempData["datos"] = json;
+            //////////////////////////////TempData["tipo"] = tipoValor;
 
             //JsonVistas auxiliar = new JsonVistas();//
             //auxiliar.IdJsonFK = 2;//
