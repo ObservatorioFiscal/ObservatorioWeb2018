@@ -224,7 +224,6 @@ function redraw(origen) {
     drawChart("Nivel2", null, sizeDimension(), idFormato);
 }
 
-
 function redrawChange(origen) {
 
     var familia = $("#typeFamily").val();

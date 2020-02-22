@@ -51,15 +51,26 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Content/css/stylefinal.css?v=2.0" />
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- Google Tag Manager -->
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-6688820728145368",
-            enable_page_level_ads: true
-        });
-    </script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MMDGK4G');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMDGK4G"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="container">
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-10 col-10 align-self-center">
@@ -190,8 +201,8 @@
     <script>
         function Menu() {
             var display = $(".Menucelular").css("display");
-            if (display == "none"){
-                $(".Menucelular").css("display","block")
+            if (display == "none") {
+                $(".Menucelular").css("display", "block")
             }
             else {
                 $(".Menucelular").css("display", "none")
@@ -201,50 +212,6 @@
             history.back();
         }
     </script>
-
-
-    <script type="application/ld+json">
-        {
-        "@@context": "http://schema.org",
-        "@@type": "Organization",
-        "name": "Observatorio del gasto fiscal en Chile",
-        "url": "http://observatoriofiscal.cl/",
-        "sameAs": [
-        "https://www.facebook.com/observafiscalcl",
-        "https://twitter.com/observafiscalcl",
-        "https://www.linkedin.com/company/15086872",
-        "https://plus.google.com/113548614432745922065"
-        ],
-        "potentialAction": {
-        "@@type": "SearchAction",
-        "target": "http://observatoriofiscal.cl/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-        }
-        }
-    </script>
-    <script>
-        (function () {
-            var cx = '006131131978246849826:car7wfwk7de';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
-    </script>
-    <gcse:search></gcse:search>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84666147-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-84666147-1');
-    </script>
-
 
     <script>
         function cerrar() {

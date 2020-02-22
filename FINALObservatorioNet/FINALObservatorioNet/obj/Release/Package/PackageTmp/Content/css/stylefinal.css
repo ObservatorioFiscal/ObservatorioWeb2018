@@ -2565,11 +2565,18 @@ body {
     }
 
 .div-item-publicaciones .cuadro-contenido {
-    max-height: 200px
+    max-height: 240px
 }
 
+@media (max-width: 540px) {
+    .div-item-publicaciones .cuadro-contenido {
+        max-height: 100%;
+    }
+}
+
+
 .div-item-publicaciones figure {
-    height: 195px;
+    height: 212px;
     overflow: hidden;
     position: relative;
     transition: all .2s ease-in-out

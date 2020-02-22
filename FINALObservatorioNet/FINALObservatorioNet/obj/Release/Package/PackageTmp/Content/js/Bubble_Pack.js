@@ -134,7 +134,7 @@ document.write('<input id="typeFamily" name="typeFamily" type="hidden" />');
                             tooltip.html("REGION: " + d.name + "<br/>" /*+ "GASTO MONTO: $" + d.tooltipGasto*/);
                         }
                         else {
-                            tooltip.html("REGION: " + d.tooltipRegion + "<br/>" + "MUNICIPIO: " + d.name + "<br/>" + "GASTO MONTO: " + d.tooltipGasto);
+                            tooltip.html("REGION: " + d.tooltipRegion + "<br/>" + "MUNICIPIO: " + d.name + "<br/>" + "GASTO MONTO: $" + separadordemile(d.value));
                         }
                     }
                     tooltip.style("visibility", "visible");
